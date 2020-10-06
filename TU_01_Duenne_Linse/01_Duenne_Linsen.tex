@@ -1,0 +1,260 @@
+\documentclass{article}
+
+\usepackage{url} 
+
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{ngerman}
+
+
+\usepackage{floatrow}
+\usepackage[tableposition=top]{caption}
+\floatsetup[table]{capposition=top}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[numbib]{tocbibind}
+
+
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
+}
+
+
+
+\lhead{Dünne Linsen}
+\rhead{\today\\T. Maier, J. Winkler}
+%\cfoot{\twodigits{\thepage}~/ \pageref{LastPage}}
+\cfoot{{\thepage}~/ \pageref{LastPage}}
+
+\begin{document}
+
+\parindent0cm
+
+\includepdf{Deckblatt.pdf}
+
+
+\pagestyle{fancy}
+
+\section{Aufgabenstellung}
+
+\begin{enumerate}
+\item Justieren der optischen Anordnung mittels Laser und Lochblende.
+\item Die Brennweite einer dünnen Sammellinse ist nach \ref{sec:laplace} 10 mal für verschiedene Gegenstands und Bildweiten zu messen.
+
+Deren Unsicherheiten sind nach Größtunsicherheitsmethode zu bestimmen -- Das endgültige Messergebnis wird statistische ermittelt.
+\item Bestimmung der Brennweite durch grafische Auswertung der $b^{-1}$ über $g^{-1}$ Darstellung auf mm-Papier (oder mit einem Programm) gemäß Gleichung \eqref{eq:laplace} mit Angabe der Unsicherheiten $\Delta(g^{-1})$ und $\Delta(b^{-1})$.
+
+\item Für 5 verschiedene Gesamtabstände $a$ (siehe Abb. \ref{fig:bessel}) ist die Brennweite derselben Linse nach dem Bessel'schen Verfahren (Abschnitt \ref{sec:bessel}) zu kontrollieren.
+
+\item Es ist nach Abschnitt \ref{sec:zerstr_methode1} die Brennweite der Zerstreuungslinse 10 mal für verschiedene Gegenstands- und Bildweiten zu messen. Das Messergebnis ist statistisch zu ermitteln.
+
+\item Einige Linsenfehler/Unsicherheitsfaktoren sollten durch geeignetes Experimentieren dargestellt bzw. abgeschätzt werden.
+\end{enumerate}
+
+
+\section{Grundlagen und Versuchsaufbau}
+
+\subsection{Sammellinse}
+
+\subsubsection{Laplace'sche Methode}
+\label{sec:laplace}
+
+Durch Messen von $g$ und $b$ bei \textit{scharfer} Abbildung kann die Brennweite $f$ einer dünnen Sammellinse aus der Laplace'schen Abbildungsgleichung bestimmt werden:
+\begin{align}\label{eq:laplace}
+\frac1f = \frac1g + \frac1b
+\end{align}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{laplace.png}
+\caption{Schema des Aufbaues. Bildkonstruktion für einen Objektpunkt nach der geometrischen Optik. $g$ Gegenstandsweite, $b$ Bildweite, $f$ Brennweite, $F_1$, $F_2$ Brennpunkte.}
+\label{fig:laplace}
+\end{figure}
+
+
+\subsubsection{Bessel'sches Verfahren}
+\label{sec:bessel}
+
+Hier wird der Grundsatz von der Umkehrbarkeit der Lichtwege ausgenützt. Es gelingt unter der Voraussetzung $g+b >4\cdot f$ für zwei Gegenstands- bzw. Bildweiten je eine reelle Abbildung zu erhalten (Abb. \ref{fig:bessel}). Die Brennweite steht mit der dazu notwendigen Verschiebung $e$ und dem Gesamtabstand $g+b=a$ in folgendem Zusammenhang:
+\begin{align}
+\label{eq:bessel}
+f = \frac14 \cdot \left( \frac{a^2-e^2}{a}\right)
+\end{align}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{bessel.png}
+\caption{Die Bessel'sche Anordnung zur Messung der Brennweite. $G$ Gegenstand, $L$ Linse, $B_I$, $B_{II}$ Abbildungen, $e$ Verschiebung, $a$ Gesamtabstand, $g_I$, $g_{II}$ Gegenstandsweiten, $b_I$, $b_{II}$ Bildweiten.}
+\label{fig:bessel}
+\end{figure}
+
+
+
+
+\subsection{Zerstreuungslinse}
+
+Mit einer Zerstreuungslinse allein gelingt keine reelle Abbildung. Gegenstand und Bild liegenauf derselben Seite. Die Messung der Brennweite erfolgt in diesem Fall durch Kombination miteiner Sammellinse geeigneter Brennweite nach zwei Methoden:
+
+
+\subsubsection{Methode 1}
+\label{sec:zerstr_methode1}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{zerstreuungslinse.png}
+\caption{Kombination einer Sammelinse $L_1$ mit einer Zerstreuungslinse $L_2$. $G$ Gegenstand, $B^\prime$ Bild mit $L_1$ ohne $L_2$, $B$ Bild mit $L_1$ und $L_2$, $g$, $g^\prime$ Gegenstandsweite, $b$, $b^\prime$ Bildweite.}
+\label{fig:zerstreuungslinse}
+\end{figure}
+
+
+\subsubsection{Methode 2}
+Verändert man den Abstand der Zerstreuungslinse $L_2$ von $B^\prime$ derart, dass $g^\prime = -f_2$ wird, so rückt das Bild $B$ ins Unendliche, was mit einem auf \textit{Unendlich} justierten Fernrohr festgestellt werden kann, und eine direkte Brennweitenbestimmung leicht ermöglicht.
+
+\newpage
+
+\section{Geräteliste}
+
+\begin{table}[H]
+\caption{Liste der verwendeten Geräte}
+
+~
+
+\begin{tabular}{l|ll}
+Bezeichnung & Inventarnummer & Unsicherheit \\
+\hline
+Sammellinse & & \\
+Zerstreuungslinse & & \\
+Lampe & & \\
+Gegenstand & & \\
+Schirm & & \\
+Maßband & & $\pm1~$mm
+\end{tabular}
+
+\end{table}
+
+
+
+
+\section{Durchführung und Messwerte}
+
+\subsection{Brennweite der Sammellinse nach Laplace}
+
+Es werden 10 Messungen durchgeführt. Bei jeder Messung wird die Position die Gegenstands- und Bildweite, sowie die Position der Linse gemessen. Die Positionen werden relativ zu einem Fixpunkt gemessen. Die Messwerte sind in Tabelle \ref{tab:laplace_messung} dargestellt.
+
+\begin{table}[H]
+\caption{Messwerte der Methode nach Laplace. $G$ Gegenstandsposition, $B$ Bildposition, $L$ Linsenposition}
+\label{tab:laplace_messung}
+\centering
+\input{laplace_messwerte}
+\end{table}
+
+\subsection{Brennweite der Sammellinse nach Bessel}
+
+Hier wird bei gegebener Position von Gegenstand und Bild die Linse auf die Positionen $L_1$ und $L_2$ verschoben. Es wird für 5 Fälle gemessen.
+
+
+\begin{table}[H]
+\caption{Messwerte der Methode nach Bessel. $G$ Gegenstandsposition, $B$ Bildposition, $L_1$, $L_2$ Linsenpositionen}
+\label{tab:bessel_messung}
+\centering
+\input{bessel_messwerte}
+\end{table}
+
+
+\subsection{Brennweite der Zerstreuungslinse}
+
+
+
+\begin{table}[H]
+\caption{Messwerte für die Zerstreuungslinse. $G$ Gegenstandsposition, $B^\prime$ Bildposition nur für Sammellinse,  $B$ Bildposition, $L_1$ Position v. Sammellinse, $L_2$ Positin von Zerstreuungslinse}
+\label{tab:zerstreuungslinse_messung}
+\centering
+\input{zerstreuungslinse_messwerte}
+\end{table}
+
+
+
+
+\section{Auswertung}
+
+
+
+\subsection{Laplace}
+
+Die Größtunsicherheitsmethode für die Brennweite nach Laplace aus Gleichung \eqref{eq:laplace} ergibt
+\begin{align*}
+\Delta f = \left|\frac{\partial f}{\partial g}\right| \cdot \Delta g +  \left|\frac{\partial f}{\partial b}\right| \cdot \Delta b  = \left(\frac1g + \frac1b\right)^{-2}\cdot \left(\frac{\Delta g}{g^2} + \frac{\Delta b}{b^2}\right)
+\end{align*}
+
+~ 
+
+Mit diesen Erkentnissen wird die Tabelle \ref{tab:laplace_messung} ausgewertet.
+
+\begin{table}[H]
+\caption{Auswertung für die Laplace-Methode. $g = G-L$ Gegenstandsweite, $b = L-B$ Bildweite, $f$ berechnete Brennweite, $\Delta f$ Unsicherheit}
+\label{tab:laplace_auswertung}
+\centering
+\input{laplace_auswertung}
+\end{table}
+
+
+
+\subsection{Bessel}
+
+Die Größtunsicherheitsmethode für die Brennweite nach Bessel aus Gleichung \eqref{eq:bessel} ergibt
+\begin{align*}
+\Delta f = \left|\frac{\partial f}{\partial a}\right| \cdot \Delta a +  \left|\frac{\partial f}{\partial e}\right| \cdot \Delta e  = \frac{1}{4\cdot a^2}\cdot \left[ \left(a^2+e^2\right)\cdot \Delta a + 2\cdot a\cdot e \cdot \Delta e\right]
+\end{align*}
+
+
+\begin{table}[H]
+\caption{Auswertung für die Bessel-Methode. $a = G-B$ Gesamtabstand, $e = |L_1-L_2|$ Verschiebung der Linse, $f$ berechnete Brennweite, $\Delta f$ Unsicherheit}
+\label{tab:bessel_auswertung}
+\centering
+\input{bessel_auswertung}
+\end{table}
+
+
+\subsection{Zerstreuungslinse}
+
+Die Brennweite berechnet sich in dem Fall analog zur Laplace Methode mit
+\begin{align}
+\frac1f = \frac{1}{g^\prime} + \frac1b
+\end{align}
+
+
+\begin{table}[H]
+\caption{Auswertung für die Zerstreuungslinse. $g^\prime = B^\prime - L_2$, $b = L_2 -B$, $f$ berechnete Brennweite, $\Delta f$ Unsicherheit}
+\label{tab:zerstreuungslinse_auswertung}
+\centering
+\input{zerstreuungslinse_auswertung}
+\end{table}
+
+
+
+
+\section{Zusammenfassung und Diskussion}
+
+Für die Brennweite nach der Laplace-Messung gilt durch Mittelung 
+\input{laplace_ergebnis}
+
+Für die Brennweite nach der Bessel-Messung gilt durch Mittelung 
+\input{bessel_ergebnis}
+
+Für die Zerstreuungslinse gilt durch Mittelung 
+\input{zerstreuungslinse_ergebnis}
+
+
+Die Methoden nach Laplace und Bessel ergeben unter Berücksichtigung der Unsicherheit dasselbe Ergebnis.
+
+Bei der Messung der Zerstreuungslinse werden zwei Linsenpositionen gemessen, was den höheren Fehler erklärt.
+
+
+\end{document}
