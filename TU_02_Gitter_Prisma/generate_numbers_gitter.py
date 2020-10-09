@@ -53,7 +53,7 @@ print(wellenlaenge_pro_farbe_in_nm)
 
 #Auflösevermögen
 
-b = 2 * 10**-2 # 2.2 cm Breite
+b = 2 * 10**-2 # 2 cm Breite
 
 print("Auflösung: " + str(b/g))
 
