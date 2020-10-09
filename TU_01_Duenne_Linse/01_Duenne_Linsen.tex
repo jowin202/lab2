@@ -6,7 +6,7 @@
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \usepackage{ngerman}
-
+\usepackage{listings}
 
 \usepackage{floatrow}
 \usepackage[tableposition=top]{caption}
@@ -251,12 +251,47 @@ Für die Brennweite nach der Bessel-Messung gilt durch Mittelung
 Für die Zerstreuungslinse gilt durch Mittelung 
 \input{zerstreuungslinse_ergebnis}
 
+Die Methoden nach Laplace und Bessel ergeben unter Berücksichtigung der Unsicherheit dasselbe Ergebnis. Bei der Messung der Zerstreuungslinse werden zwei Linsenpositionen gemessen, was den höheren Fehler erklärt.
 
-Die Methoden nach Laplace und Bessel ergeben unter Berücksichtigung der Unsicherheit dasselbe Ergebnis.
+Die angenommene Unsicherheit setzt sich zusammen aus der Unsicherheit des Maßbandes ($\pm$ 0.1~cm), mit dem der jeweilige Linsenabstand gemessen wurde und der Unsicherheit die entsteht, wenn man ein Objekt scharf stellt (Schärfebereich), welche mit $\pm$ 0.2~cm abgeschätzt wurde.
+Unbedingt zu beachten ist auch, dass bei der Ermittlung der Brennweite nach Bessel der Gegenstand und der Schirm relativ weit voneinander zu platzieren sind, um sichergehen zu können, dass auch immer ein Abstand von 4 Mal der Brennweite eingehalten werden kann, da sonst das Bessel'sche Verfahren nicht wirksam wäre. 
 
-Bei der Messung der Zerstreuungslinse werden zwei Linsenpositionen gemessen, was den höheren Fehler erklärt. 
 
-Was außerdem zu möglichen Unsicherheiten führt ist, dass man die Scharfstellung nicht exakt an einem Punkt zu erkennen ist, sondern dass diese über einen Bereich geht. Insbesondere bei der Messung der Brennweite der Zerstreuungslinse ergibt sich dadurch das Problem, dass das Bild in einem relativ großen Bereich scharf gestellt ist, teilweise sogar über 1cm. Daher muss man zur Abweichung des Maßbandes noch eine weitere Toleranz dazu addieren.
+\newpage 
+\appendix
+\section{Python Skript}
+
+
+
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{weborange}{RGB}{255,165,0}
+\definecolor{frenchplum}{RGB}{129,20,83}
+
+\lstdefinelanguage{python}{
+    morekeywords={def, for, range, abs, return},
+    otherkeywords={<-,->, |>, \%\{, \}, \{, \, (, )},
+    sensitive=true,
+    morecomment=[l]{\#},
+    morecomment=[n]{/*}{*/},
+    morecomment=[s][\color{purple}]{:}{\ },
+    morestring=[s][\color{orange}]"",
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{eminence},
+    stringstyle=\color{red},
+	basicstyle=\ttfamily,
+	breaklines,
+	showstringspaces=false,
+	frame=tb
+}
+\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Laplace Auswertung}]{generate_numbers_laplace.py}
+
+\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Bessel Auswertung}]{generate_numbers_bessel.py}
+
+
+\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Zerstreuungslinse Auswertung}]{generate_numbers_zerstreuungslinse.py}
+
+
 
 
 \end{document}

@@ -12,9 +12,9 @@ B = [15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
 L = [136.2, 135.7, 135.2, 134.5, 134.9, 134.0, 133.9, 133.6, 132.9, 131.9]
 
 #unsicherheit fuer laengenmessung in cm
-delta_l = 0.01
-delta_b = 0.01*2
-delta_g = 0.01*2
+delta_l = 0.3
+delta_b = 0.3*2
+delta_g = 0.3*2
 
 file = open("laplace_messwerte.tex", "w")
 file.write("\\begin{tabular}{c|rrr}\n")

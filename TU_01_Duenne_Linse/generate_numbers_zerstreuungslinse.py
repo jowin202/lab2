@@ -10,15 +10,15 @@
 #G, B fix, L messen, alles in cm
 
 G = [160, 160, 160, 160, 160, 160, 160, 160, 160, 160]
-B = [65, 35.5, 56.6, 50, 60.3, 33, 22.3, 66, 69.6, 17.3]
+B = [65, 35.5, 56.6, 50, 60.3, 22.6, 54.1, 35.9, 69.8, 69.6]
 B1 = [77, 77, 77, 77, 77, 77, 77, 77, 77, 77]
 L1 = [112, 112, 112, 112, 112, 112, 112, 112, 112, 112]
-L2 = [90, 94.5, 92, 93, 91, 95, 96, 89, 88, 96]
+L2 = [90, 94.5, 92, 93, 91, 96, 92.5, 95, 88, 87.5]
 
 #unsicherheit fuer laengenmessung in cm
-delta_l = 0.01
-delta_b = 0.01*2
-delta_g = 0.01*2
+delta_l = 0.3
+delta_b = 0.3*2
+delta_g = 0.3*2
 
 file = open("zerstreuungslinse_messwerte.tex", "w")
 file.write("\\begin{tabular}{c|rrrrr}\n")
