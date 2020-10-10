@@ -1,4 +1,9 @@
-
+def custom_round(num,n=2):
+    if n == 1:
+        return '{:.1f}'.format(round(num,1))
+    else:
+        return '{:.2f}'.format(round(num,2))
+        
 #Messen der Zerstreuungslinse
 
 #G Gegenstandsposition
@@ -26,12 +31,17 @@ file.write("Nr. & $G$ / cm & $B^\\prime$ / cm & $B$ / cm & $L_1$ / cm & $L_2$ / 
 file.write("\hline\n")
 
 for i in range(10):
-    file.write(str(i+1) + " & " + str(round(G[i],2)) + " & " + str(round(B1[i],2)) + " & " + str(round(B[i],2)) + " & " + str(round(L1[i],2)) + " & " + str(round(L2[i],2)))
+    file.write(str(i+1) + " & " + str(round(G[i],2)) + " & " + str(round(B1[i],2)) + " & " + str(custom_round(B[i],1)) + " & " + str(round(L1[i],2)) + " & " + str(custom_round(L2[i],1)))
     if i != 9:
         file.write("\\\\")
     file.write("\n")
 file.write("\\end{tabular}\n")
 file.close()
+
+
+
+
+
 
 
 g1 = [0] * 10
@@ -51,7 +61,7 @@ file.write("Nr. & $g^\\prime$ / cm & $b$ / cm & $f$ / cm & $\\Delta f$ / cm \\\\
 file.write("\hline\n")
 
 for i in range(10):
-    file.write(str(i+1) + " & " + str(round(g1[i],2)) + " & " + str(round(b[i],2)) + " & " + str(round(f[i],2)) + " & " + str(round(delta_f[i],2)))
+    file.write(str(i+1) + " & " + str(custom_round(g1[i],1)) + " & " + str(custom_round(b[i],1)) + " & " + str(custom_round(f[i],2)) + " & " + str(round(delta_f[i],2)))
     if i != 9:
         file.write("\\\\")
     file.write("\n")

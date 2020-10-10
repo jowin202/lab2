@@ -1,0 +1,233 @@
+\documentclass{article}
+
+\usepackage{url} 
+
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{ngerman}
+\usepackage{listings}
+
+\usepackage{floatrow}
+\usepackage[tableposition=top]{caption}
+\floatsetup[table]{capposition=top}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[numbib]{tocbibind}
+
+
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
+}
+
+
+
+\lhead{Gitter, Prisma}
+\rhead{9. Oktober 2020\\T. Maier, J. Winkler}
+%\cfoot{\twodigits{\thepage}~/ \pageref{LastPage}}
+\cfoot{{\thepage}~/ \pageref{LastPage}}
+
+\begin{document}
+
+\parindent0cm
+
+\includepdf{Deckblatt.pdf}
+
+
+\pagestyle{fancy}
+
+\section{Aufgabenstellung}
+
+Gitter:
+\begin{enumerate}
+\item Justieren des Spektrometers
+\item Bestimmng der Gitterkonstanten mittels Na-Dampflampe. Die Wellenlängen der gelben NA-Doppellinien sind 588.995~nm und 589.592~nm. Messung erfolgt in 2. Ordnungund wird 5 mal nach links und rechts ausgeführt. Auswertung durch Mittelwert und Standardabweichung. Bestimmung der Gitterkonstante durch Formel \eqref{eq:gitterkonst}
+\item Besitmmung der Wellenlängen der gut sichtbaren Linien der Hg-Lampe. 5 Farben sollen dabei ausgewählt werden. Messungen erfolgen in 2. Ordnung einmal links und einmal rechts. Formel \eqref{eq:gitterkonst} wird zur Bestimmung der Wellenlängen genutzt.
+\item Berechnung des Auflösevermögens des Gitters mit Formel \eqref{eq:aufl_gitter}
+\end{enumerate}
+
+
+Prisma: 
+\begin{enumerate}
+\item Justieren des Spektrometers
+\item Besitmmung des brechenden Winkels des Prismas durch Messung des Reflexionswinkels. Messung 5 mal links und 5 mal rechts. Statistische Auswertung mit Mittelwert und Standardabweichung. Formel 22
+\item Bestimmung des Brechungsindex/Dispersionskurve $n(\lambda)$ des Prismas für 5 sichtbare Linien einer Hg-Lampe nach der Methode der minimalen Ablenkung. Messung links und rechts ausführen ($\delta = \omega/2$). Mit Hilfe der formel 17 kann der Brechungsindex für die jeweilige Spektrallinie berechnet werden. Dispersionskurve plotten! Fehlerbalken!
+\end{enumerate}
+
+
+\section{Grundlagen und Versuchsaufbau}
+
+\begin{align}
+\label{eq:gitterkonst}
+\sin(\phi) = \frac{z\cdot \lambda}{g}
+\end{align}
+
+Auflösung des Gitters mit 
+\begin{align}
+\label{eq:aufl_gitter}
+\frac{\lambda}{\Delta \lambda} = \frac{b}{g}
+\end{align}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.5]{gitter.png}
+\caption{Aufbau zur Messung mit dem Gitter.}
+\label{fig:gitter}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.5]{prisma1.png}
+\caption{Vermessung des Prismas.}
+\label{fig:prisma}
+\end{figure}
+
+\newpage
+
+\section{Geräteliste}
+
+\begin{table}[H]
+\caption{Liste der verwendeten Geräte}
+
+~
+
+\begin{tabular}{l|ll}
+Bezeichnung & Inventarnummer & Unsicherheit \\
+\hline
+Na-Lampe & & \\
+Hg-Lampe & & \\
+Spektrometer & & \\
+Gitter & & \\
+Prisma & & \\
+Winkelmesser & & $\pm~0.1~^\circ$ \\
+Maßband & & $\pm~1~$mm
+\end{tabular}
+
+\end{table}
+
+
+
+
+\section{Durchführung und Messwerte}
+
+
+\subsection{Gitter}
+
+\begin{table}[H]
+\caption{Messwerte des Gitters mit Na-Dampflampe}
+\label{tab:na_dampflampe}
+\centering
+\input{tab2}
+\end{table}
+
+
+
+
+\begin{table}[H]
+\caption{Messwerte des Gitters mit Hg-Lampe}
+\label{tab:hg_lampe}
+\centering
+\input{tab3}
+\end{table}
+
+\subsection{Prisma}
+
+\section{Auswertung}
+
+\subsection{Gitter}
+Für die Gitterkonstante gilt nach Größtfehlermethode
+\begin{align*}
+g = \frac{2\cdot \lambda}{\sin(\phi)}
+\end{align*}
+ wobei $\phi = (42.51 \pm 0.2) ~^\circ$ ist. Für die Unsicherheit gilt
+\begin{align*}
+\Delta g = \frac{2\cdot\Delta \lambda}{\sin(\phi)} + \frac{2\cdot\lambda}{\sin^2(\phi)}\cdot \cos(\phi)\cdot \Delta\phi
+\end{align*}
+sofern $\phi$, $\Delta\phi$ ins Bogenmaß umgerechnet wird. Als Fehler der Wellenlänge der Na-Lampe nehmen wir $\Delta\lambda = 1~$nm an. Insgesamt ergibt sich daraus 
+\input{gitterkonst.tex}
+
+
+
+Für die Wellenlänge der Farben gilt
+\begin{align*}
+\lambda = \frac{g\cdot \sin(\phi)}{2}
+\end{align*}
+und dessen Unsicherheit ist
+\begin{align*}
+\Delta \lambda = \frac{\Delta g\cdot \sin(\phi)}{2} + \frac{g\cdot \cos(\phi)\cdot \Delta\phi}{2}
+\end{align*}
+
+
+
+\begin{table}[H]
+\caption{Auswertung der Wellenlängen mit der Hg-Lampe}
+\label{tab:hg_lampe_auswertung}
+\centering
+\input{tab5}
+\end{table}
+
+
+Die Auflösung des Gitters ist
+\begin{align*}
+\texttt{res} = \frac{b}{g} 
+\end{align*}
+mit der Unsicherheit
+\begin{align*}
+\Delta\texttt{res} = \frac{\Delta b}{g} + \frac{b}{g^2}\cdot\Delta g
+\end{align*}
+
+Die Vermessung der Blende hat $b=2.1~$cm ergeben, wobei beachtet werden musste, dass das Gitter nicht beschädigt wird. Desewgen ist die Messung ungenau mit $\Delta b = 0.3~$cm.
+Insgesamt ergibt sich für die Auflösung
+\input{aufl_gitter}
+
+
+\subsection{Prisma}
+
+\section{Zusammenfassung und Diskussion}
+
+
+
+%\newpage 
+%\appendix
+%\section{Python Skript}
+
+
+
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{weborange}{RGB}{255,165,0}
+\definecolor{frenchplum}{RGB}{129,20,83}
+
+\lstdefinelanguage{python}{
+    morekeywords={def, for, range, abs, return},
+    otherkeywords={<-,->, |>, \%\{, \}, \{, \, (, )},
+    sensitive=true,
+    morecomment=[l]{\#},
+    morecomment=[n]{/*}{*/},
+    morecomment=[s][\color{purple}]{:}{\ },
+    morestring=[s][\color{orange}]"",
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{eminence},
+    stringstyle=\color{red},
+	basicstyle=\ttfamily,
+	breaklines,
+	showstringspaces=false,
+	frame=tb
+}
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Laplace Auswertung}]{generate_numbers_laplace.py}
+
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Bessel Auswertung}]{generate_numbers_bessel.py}
+
+
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Zerstreuungslinse Auswertung}]{generate_numbers_zerstreuungslinse.py}
+
+
+
+
+\end{document}

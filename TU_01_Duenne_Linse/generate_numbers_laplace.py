@@ -1,4 +1,9 @@
-
+def custom_round(num,n=2):
+    if n == 1:
+        return '{:.1f}'.format(round(num,1))
+    else:
+        return '{:.2f}'.format(round(num,2))
+    
 #Messen nach Laplace
 
 #G Gegenstandsposition
@@ -47,7 +52,7 @@ file.write("Nr. & $g$ / cm & $b$ / cm & $f$ / cm & $\\Delta f$ / cm \\\\\n")
 file.write("\hline\n")
 
 for i in range(10):
-    file.write(str(i+1) + " & " + str(round(g[i],2)) + " & " + str(round(b[i],2)) + " & " + str(round(f[i],2)) + " & " + str(round(delta_f[i],2)))
+    file.write(str(i+1) + " & " + str(round(g[i],2)) + " & " + str(round(b[i],2)) + " & " + str(custom_round(f[i],2)) + " & " + str(custom_round(delta_f[i],2)))
     if i != 9:
         file.write("\\\\")
     file.write("\n")
