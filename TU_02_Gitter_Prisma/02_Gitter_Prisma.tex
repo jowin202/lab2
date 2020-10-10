@@ -62,16 +62,34 @@ Prisma:
 
 \section{Grundlagen und Versuchsaufbau}
 
+\subsection{Gitter}
+
+Ein ebenes Strichgitter besteht aus lichtdurchlässigen Öffnungen und lichtundurchlässigen Balken, welche in genau gleichen Abständen abwechselnd aufeinander folgen. Fällt Licht auf ein solches Gitter, so wird es gebeugt und gemäß dem Huygens'schen Prinzip gehen von jedem Punkt einer Öffnung Kugelwellen aus, die sich je nach der Richtung und der Wellenlänge durch Interferenz verstärken oder schwächen.
+
+Ein Maximum der Lichtintensität in der Richtung $\phi$ wird dann beobachtet, wenn ein Bündel parallelen Lichtes senkrecht auf das Gitter trifft und der Gangunterschied $\Delta$ zwischen zwei von benachbarten Gitteröffnungen ausgehenden Elementarwelle dabei ein ganzzahliges Vielfaches der Wellenlänge $\lambda$ ist.
+
+Somit ergibt sich die Bedingung für das Helligkeitsmaximum der Wellenlänge $\lambda$
+
 \begin{align}
+\Delta &= g\cdot \sin(\phi) \\
 \label{eq:gitterkonst}
-\sin(\phi) = \frac{z\cdot \lambda}{g}
+z\cdot \lambda &= g\cdot \sin(\phi)
 \end{align}
 
-Auflösung des Gitters mit 
+wobei $z$ die Ordnungszahl des Beugungsmaximums, $\lambda$ die Wellenlänge des Lichts und $g$ der Abstand zwischen zwei Gitteröffnungen (Gitterkonstante) ist.
+
+Für unterschiedliche Wellenlängen (d.h. unterschiedliche Farben) des einfallenden Lichts ergibt sich also eine Abfolge an Beugungsmaxima, die man als Spektrum bezeichnet. Die Ordnungszahlen $z = 1,2,3, \dots$ entsprechen dabei den Spektren 1., 2., 3. Ordnung. Je höher die Ordnungszahl $z$ ist, desto größer ist der Einfallswinkel $\phi$. Spektren verschiedener Ordnung können sich auch überdecken, da zum gleichen Winkel $\phi$ Beugungsmaxima verschiedener Ordnung für verschiedene Wellenlängen gehören.
+
+
+
+Die Fähigkeit, zwei verschiedene Wellenlängen im Abstand $\Delta\lambda$ noch getrennt zu beobachten wird Auflösungsvermögen genannt und kann mit einem Gitterspektrographen berechnet werden. Dabei gilt die Beziehung
 \begin{align}
 \label{eq:aufl_gitter}
-\frac{\lambda}{\Delta \lambda} = \frac{b}{g}
+\frac{\lambda}{\Delta \lambda} = z\cdot N = \frac{z\cdot D}{g} =  \frac{b}{g}
 \end{align}
+wobei $z$ wieder die Ordnungszahl und $N$ die Anzahl aller vom Licht getroffenen Gitterstriche ist. Das Auflösungsvermögen nimmt proportional zur Ordnung des Spektrums und zur Anzahl der beleuchteten Gitterstriche zu.
+
+
 
 \begin{figure}[H]
 \centering
@@ -79,6 +97,38 @@ Auflösung des Gitters mit
 \caption{Aufbau zur Messung mit dem Gitter.}
 \label{fig:gitter}
 \end{figure}
+
+
+\subsection{Prisma}
+
+Der Brechungsindex $n$ eines Mediums ist das Verhältnis der Lichtgeschwindigkeit $c$ im Vakuum zur Lichtgeschwindigkeit $u$ im Medium
+\begin{align*}
+n = \frac{c}{u}
+\end{align*}
+
+Beim Übergang von einem Medium in das andere wird der Lichtstrahl gebrochen bzw. reflektiert, wenn die Medien unterschiedliche Brechungsindizes (Ausbreitungsgeschwindigkeit im jeweiligen Medium) besitzen. Dabei gilt das Brechungsgesetz von Snellius
+\begin{align*}
+n_1\cdot\sin(\alpha) = n_2\cdot\sin(\beta)
+\end{align*}
+Der Brechungsindex des Vakuums wird dabei mit $n_0 = 1$ definiert. Die Abhängigkeit $n(\lambda)$ des Brechungsindex eines Mediums von der Wellenlänge wird als Dispersionskurve bezeichnet, die Ableitung als Dispersion $D$ bei der Wellenlänge $\lambda$.
+\begin{align*}
+D = \frac{dn}{d\lambda}
+\end{align*}
+Das Auflösungsvermögen eines Prismas ist durch
+\begin{align*}
+\frac{\lambda}{\Delta\lambda} = t\cdot \frac{dn}{d\lambda}
+\end{align*}
+gegeben, wobei $t$ die Basislänge des wirksamen Strahlenbündels im Prisma darstellt ist.
+
+Der Brechungswinkel hängt daher nicht nur vom Einfallswinkel, sondern auch von der Wellenlänge des Lichts ab - mehrfarbiges Licht (also unterschiedliche Wellenlängen) wird bei der Brechung also immer in seine Bestandteile (spektral) zerlegt. Mithilfe eines Prismas kann man sowohl die Dispersion bestimmen als auch die spektralen Eigenschaften des Lichts untersuchen. Im Sonderfall des symmetrischen Strahlenganges gilt außerdem
+\begin{align*}
+\alpha_1 = \alpha_2 \qquad \beta_1 = \beta_2
+\end{align*}
+und damit
+\begin{align}
+\label{eq:brechung}
+n = \frac{\sin\left(\frac{\gamma + \delta}{2}\right)}{\sin\left(\frac{\gamma}{2}\right)}
+\end{align}
 
 
 \begin{figure}[H]
@@ -97,16 +147,16 @@ Auflösung des Gitters mit
 
 ~
 
-\begin{tabular}{l|ll}
-Bezeichnung & Inventarnummer & Unsicherheit \\
+\begin{tabular}{l|llll}
+Bezeichnung & Hersteller & Typ & Inv. Nr. & Unsicherheit \\
 \hline
-Na-Lampe & & \\
-Hg-Lampe & & \\
-Spektrometer & & \\
+Na-Lampe & Philips & 58230AH \\
+Hg-Lampe & Philips & 40656085W \\
+Spektrometer & & & V/341 \\
 Gitter & & \\
 Prisma & & \\
-Winkelmesser & & $\pm~0.1~^\circ$ \\
-Maßband & & $\pm~1~$mm
+Winkelmesser & & & $\pm~0.1~^\circ$ \\
+Maßband & & & $\pm~1~$mm
 \end{tabular}
 
 \end{table}
@@ -150,8 +200,7 @@ Das Prisma wurde von der Hg-Hochdrucklampe bestrahlt und der Reflexionswinkel je
 \caption{Messwerte des Prismas mit Hg-Lampe}
 \label{tab:hg_lampe_prisma}
 \centering
-TODO
-%\input{tab4}
+\input{tab_prisma_messen_1}
 \end{table}
 
 Dann wurde das Prisma durch Hin- und Herschwenken an der Stelle der minimalen Ablenkung (Umkehrung des Drehsinnes) platziert und die Ablenkung von fünf gut sichtbaren Farblinien gemessen. Dieser Vorgang wurde für genauere Ergebnisse an zwei einfallenden Strahlen (links und rechts) durchgeführt. Die Ergebnisse sind in Tabelle \ref{tab:hg_lampe_prisma_2} dargestellt.
@@ -160,8 +209,7 @@ Dann wurde das Prisma durch Hin- und Herschwenken an der Stelle der minimalen Ab
 \caption{TODO}
 \label{tab:hg_lampe_prisma_2}
 \centering
-TOOD
-%\input{tab5}
+\input{tab_prisma_messen_2}
 \end{table}
 
 
@@ -215,6 +263,22 @@ Insgesamt ergibt sich für die Auflösung
 
 
 \subsection{Prisma}
+
+Zuerst wurde der brechende Winkel $\gamma$ aus den Messungen des Reflexionswinkels berechnet. Hierbei handelt es sich um die Hälfte der Differenz der Werte aus Tabelle \ref{tab:hg_lampe_prisma}. Es ergibt sich 
+\input{prisma_gamma}
+
+
+
+
+\begin{table}[H]
+\caption{Berechnung des Brechungsindx}
+\label{tab:prisma_brechung}
+\centering
+\input{prisma_auswertung}
+\end{table}
+
+Dann wurde der Brechungsindex der einzelnen Farben mithilfe von Formel \eqref{eq:brechung} berechnet. Die Winkel $\delta$ wurden dabei halbiert und in Radianten umgewandelt. Die Ergebnisse sind in Tabelle \ref{tab:prisma_brechung}.
+
 
 \section{Zusammenfassung und Diskussion}
 

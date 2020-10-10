@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  10 OCT 2020 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  10 OCT 2020 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,12 +434,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<gitter.png, id=70, 217.5327pt x 129.3633pt>
-File: gitter.png Graphic file (type png)
-<use gitter.png>
-Package pdftex.def Info: gitter.png  used on input line 78.
-(pdftex.def)             Requested size: 326.29822pt x 194.04443pt.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 22.54448pt.
@@ -447,35 +441,55 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<prisma1.png, id=79, 127.4361pt x 151.767pt>
+<gitter.png, id=76, 217.5327pt x 129.3633pt>
+File: gitter.png Graphic file (type png)
+<use gitter.png>
+Package pdftex.def Info: gitter.png  used on input line 96.
+(pdftex.def)             Requested size: 326.29822pt x 194.04443pt.
+ [3 <./gitter.png>]
+Overfull \hbox (2.01671pt too wide) in paragraph at lines 112--114
+\OT1/cmr/m/n/10 Der Bre-chungs-in-dex des Va-ku-ums wird da-bei mit $\OML/cmm/m
+/it/10 n[] \OT1/cmr/m/n/10 = 1$ de-fi-niert. Die Abh[]angig-
+ []
+
+<prisma1.png, id=83, 127.4361pt x 151.767pt>
 File: prisma1.png Graphic file (type png)
 <use prisma1.png>
-Package pdftex.def Info: prisma1.png  used on input line 86.
+Package pdftex.def Info: prisma1.png  used on input line 136.
 (pdftex.def)             Requested size: 191.15366pt x 227.64992pt.
- [3 <./gitter.png> <./prisma1.png>] (./tab2.tex) (./tab3.tex) [4] (./gitterkons
-t.tex) (./tab5.tex)
-(./aufl_gitter.tex [5]) 
+[4] [5 <./prisma1.png>]
+Overfull \hbox (12.01443pt too wide) in paragraph at lines 172--173
+\OT1/cmr/m/n/10 sung wur-de das Git-ter kurz ver-scho-ben und die be-schrie-be-
+ne Ver-suchs-durchf[]uhrung
+ []
+
+(./tab2.tex) (./tab3.tex) [6] (./tab_prisma_messen_1.tex)
+(./tab_prisma_messen_2.tex) [7] (./gitterkonst.tex) (./tab5.tex)
+(./aufl_gitter.tex) (./prisma_gamma.tex [8]) (./prisma_auswertung.tex)
+
 AED: lastpage setting LastPage
-[6] (./02_Gitter_Prisma.aux) ) 
+[9] (./02_Gitter_Prisma.aux) ) 
 Here is how much of TeX's memory you used:
- 7602 strings out of 481239
- 110433 string characters out of 5920377
- 363398 words of memory out of 5000000
- 22748 multiletter control sequences out of 15000+600000
+ 7618 strings out of 481239
+ 110752 string characters out of 5920377
+ 364430 words of memory out of 5000000
+ 22756 multiletter control sequences out of 15000+600000
  535751 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,45p,450b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,45p,546b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 02_Gitter_Prisma.pdf (6 pages, 238378 bytes).
+nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on 02_Gitter_Prisma.pdf (9 pages, 266153 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

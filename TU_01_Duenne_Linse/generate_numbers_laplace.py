@@ -63,7 +63,7 @@ file.close()
 
 file = open("laplace_ergebnis.tex", "w")
 file.write("\\begin{align*}\n")
-file.write("f = (" + str(round(sum(f)/10,2)) + " \pm " + str(round(sum(delta_f)/10,2)) + ")~\\text{cm}\\\\")
+file.write("f = (" + str(custom_round(sum(f)/10,2)) + " \pm " + str(custom_round(sum(delta_f)/10,2)) + ")~\\text{cm}\\\\")
 file.write("\\end{align*}\n")
 
 
