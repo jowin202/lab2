@@ -122,3 +122,41 @@ for i in range(5):
     f.write("\n")
 f.write("\\end{tabular}")
 f.close()
+
+
+
+def calc_beta(alpha, offset, l):
+    res = 0
+    for i in range(5):
+        res += alpha[i]-offset[i]
+    res /= 5
+    
+    ret = [res]*5
+    ret[1] += 180
+    ret[2] -= 180
+    ret[3] += 360
+    ret[4] -= 360
+    
+    for i in range(5):
+        ret[i] /= l
+    return ret
+
+
+f = open("kristall_auswertung_tab.tex", "w", encoding='utf-8')
+f.write("\\begin{tabular}{rrrrr}\\\\\n")
+f.write(" $x$ / ${}^\\circ$ & $\\beta_1$ / ${}^\\circ$ & $\\beta_2$ / ${}^\\circ$ & $\\beta_3$ / ${}^\\circ$ & $\\beta_4$ / ${}^\\circ$  \\\\\n ")
+beta1 = calc_beta(a1, aoff, avg(d1))
+beta2 = calc_beta(a2, aoff, avg(d2))
+beta3 = calc_beta(a3, aoff, avg(d3))
+beta4 = calc_beta(a4, aoff, avg(d4))
+
+x_winkel = [0, 180, -180, 360, -360]
+
+f.write("\\hline\n")
+for i in range(5):
+    f.write("$" + str(x_winkel[i]) + "~^\\circ$ & " + str(custom_round(beta1[i],2)) + " & " + str(custom_round(beta2[i],2)) + " & " + str(custom_round(beta3[i],2)) + " & " + str(custom_round(beta4[i],2)))
+    if i != 4:
+        f.write("\\\\")
+    f.write("\n")
+f.write("\\end{tabular}")
+f.close()
