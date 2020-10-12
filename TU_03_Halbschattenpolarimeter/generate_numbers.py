@@ -69,8 +69,9 @@ winkel /= len(a1)
 laenge_in_dm = laenge/100 
 delta_laenge_in_dm = delta_laenge/100
 
+print(laenge_in_dm)
 konzentration = winkel/(66.5 * laenge_in_dm)
-delta_konzentration = delta_alpha/(66.5 * laenge_in_dm) + winkel/(66.5 * laenge_in_dm**2) * laenge_in_dm
+delta_konzentration = delta_alpha/(66.5 * laenge_in_dm) + winkel/(66.5 * laenge_in_dm**2) * delta_laenge_in_dm
 
 f = open("rohrzucker_konzentration.tex", "w", encoding='utf-8')
 f.write("\\begin{align*}\\\\\n")
