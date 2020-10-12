@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  12 OCT 2020 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  12 OCT 2020 14:12
 entering extended mode
 **./03_Halbschalenpolarimeter.tex
 (03_Halbschalenpolarimeter.tex
@@ -464,29 +464,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--155
 
  []
 
+(rohrzucker_konzentration.tex [4])
+Underfull \hbox (badness 10000) in paragraph at lines 3--163
+
+ []
+
 
 AED: lastpage setting LastPage
-[4] [5] (03_Halbschalenpolarimeter.aux) ) 
+[5] (03_Halbschalenpolarimeter.aux) ) 
 Here is how much of TeX's memory you used:
- 7111 strings out of 492946
- 106225 string characters out of 3124934
+ 7114 strings out of 492946
+ 106372 string characters out of 3124934
  189048 words of memory out of 3000000
  10891 multiletter control sequences out of 15000+200000
  6549 words of font info for 26 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,43p,1008b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/WinkleJo/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/WinkleJo/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Us
-ers/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr10.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr5.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/WinkleJo/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/W
-inkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb>
-Output written on 03_Halbschalenpolarimeter.pdf (5 pages, 114471 bytes).
+<C:/Users/WinkleJo/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/WinkleJo/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
+WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr5.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/WinkleJo/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Winkl
+eJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+
+Output written on 03_Halbschalenpolarimeter.pdf (5 pages, 114791 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

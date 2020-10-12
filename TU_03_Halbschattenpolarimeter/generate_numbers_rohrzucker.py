@@ -25,6 +25,7 @@ aoff = [0,0,0,0,0,0,0,0,0,0]
 a1 = [4.4, 4.4, 4.5, 4.6, 4.7, 4.4, 4.4, 4.45, 4.50, 4.35]
 
 delta_l = 0.01 #mm
+delta_alpha = 0.1
 
 
 f = open("rohrzucker_abmessungen_tab.tex", "w", encoding='utf-8')
@@ -65,8 +66,19 @@ for i in range(len(a1)):
     winkel += a1[i] - aoff[i]
 winkel /= len(a1)
 
+laenge_in_dm = laenge/100 
+delta_laenge_in_dm = delta_laenge/100
 
-print(winkel/(66.5 * (laenge/100)))
+konzentration = winkel/(66.5 * laenge_in_dm)
+delta_konzentration = delta_alpha/(66.5 * laenge_in_dm) + winkel/(66.5 * laenge_in_dm**2) * laenge_in_dm
+
+f = open("rohrzucker_konzentration.tex", "w", encoding='utf-8')
+f.write("\\begin{align*}\\\\\n")
+f.write("c = (" + str(custom_round(konzentration*10**3,2)) + " \\pm" + str(custom_round(delta_konzentration*10**3,2)) + ")~\\text{mg}/\\text{cm}^3 \\\\\n")
+f.write("\\end{align*}\\\\\n")
+f.close()
+
+
 
 
 
