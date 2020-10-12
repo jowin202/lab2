@@ -47,7 +47,7 @@ Gitter:
 \begin{enumerate}
 \item Justieren des Spektrometers
 \item Bestimmng der Gitterkonstanten mittels Na-Dampflampe. Die Wellenlängen der gelben NA-Doppellinien sind 588.995~nm und 589.592~nm. Messung erfolgt in 2. Ordnungund wird 5 mal nach links und rechts ausgeführt. Auswertung durch Mittelwert und Standardabweichung. Bestimmung der Gitterkonstante durch Formel \eqref{eq:gitterkonst}
-\item Besitmmung der Wellenlängen der gut sichtbaren Linien der Hg-Lampe. 5 Farben sollen dabei ausgewählt werden. Messungen erfolgen in 2. Ordnung einmal links und einmal rechts. Formel \eqref{eq:gitterkonst} wird zur Bestimmung der Wellenlängen genutzt.
+\item Bestimmung der Wellenlängen der gut sichtbaren Linien der Hg-Lampe. 5 Farben sollen dabei ausgewählt werden. Messungen erfolgen in 2. Ordnung einmal links und einmal rechts. Formel \eqref{eq:gitterkonst} wird zur Bestimmung der Wellenlängen genutzt.
 \item Berechnung des Auflösevermögens des Gitters mit Formel \eqref{eq:aufl_gitter}
 \end{enumerate}
 
@@ -55,7 +55,7 @@ Gitter:
 Prisma: 
 \begin{enumerate}
 \item Justieren des Spektrometers
-\item Besitmmung des brechenden Winkels des Prismas durch Messung des Reflexionswinkels. Messung 5 mal links und 5 mal rechts. Statistische Auswertung mit Mittelwert und Standardabweichung. Formel 22
+\item Bestimmung des brechenden Winkels des Prismas durch Messung des Reflexionswinkels. Messung 5 mal links und 5 mal rechts. Statistische Auswertung mit Mittelwert und Standardabweichung. Formel 22
 \item Bestimmung des Brechungsindex/Dispersionskurve $n(\lambda)$ des Prismas für 5 sichtbare Linien einer Hg-Lampe nach der Methode der minimalen Ablenkung. Messung links und rechts ausführen ($\delta = \omega/2$). Mit Hilfe der formel 17 kann der Brechungsindex für die jeweilige Spektrallinie berechnet werden. Dispersionskurve plotten! Fehlerbalken!
 \end{enumerate}
 
@@ -155,8 +155,8 @@ Hg-Lampe & Philips & 40656085W \\
 Spektrometer & & & V/341 \\
 Gitter & & \\
 Prisma & & \\
-Winkelmesser & & & $\pm~0.1~^\circ$ \\
-Maßband & & & $\pm~1~$mm
+Winkelmesser & & & & $\pm~0.1~^\circ$ \\
+Maßband & & & & $\pm~1~$mm
 \end{tabular}
 
 \end{table}
@@ -206,7 +206,7 @@ Das Prisma wurde von der Hg-Hochdrucklampe bestrahlt und der Reflexionswinkel je
 Dann wurde das Prisma durch Hin- und Herschwenken an der Stelle der minimalen Ablenkung (Umkehrung des Drehsinnes) platziert und die Ablenkung von fünf gut sichtbaren Farblinien gemessen. Dieser Vorgang wurde für genauere Ergebnisse an zwei einfallenden Strahlen (links und rechts) durchgeführt. Die Ergebnisse sind in Tabelle \ref{tab:hg_lampe_prisma_2} dargestellt.
 
 \begin{table}[H]
-\caption{TODO}
+\caption{Messwerte der Farblinien}
 \label{tab:hg_lampe_prisma_2}
 \centering
 \input{tab_prisma_messen_2}
@@ -266,22 +266,77 @@ Insgesamt ergibt sich für die Auflösung
 
 Zuerst wurde der brechende Winkel $\gamma$ aus den Messungen des Reflexionswinkels berechnet. Hierbei handelt es sich um die Hälfte der Differenz der Werte aus Tabelle \ref{tab:hg_lampe_prisma}. Es ergibt sich 
 \input{prisma_gamma}
+Wobei $\epsilon$ der Mittelwert der differenzierten Messungen aus Tabelle \ref{tab:hg_lampe_prisma} ist. Zum Fehler von $\gamma$ kann man sagen, dass jeder Wert aus Tabelle \ref{tab:hg_lampe_prisma} die Unsicherheit $\pm~0.1~^\circ$ hat. Die Differenz aus zwei Werten hat demnach die Unsicherheit $\pm~0.2~^\circ$. Gemäß angewandter Statistik muss man bei einem Mittelwert die Standardabweichung der einzelnen Größe durch die Wurzel der Anzahl der gemittelten Werte dividieren. Es ergibt sich daher eine Unsicherheit von $\pm~\frac{0.2~^\circ}{\sqrt{5}} \approx \pm~0.89$. Insgesamt erhält man daher für $\gamma$
+\input{prisma_gamma_mit_fehler}
 
 
+
+
+
+
+Dann wurde der Brechungsindex der einzelnen Farben mithilfe von Formel \eqref{eq:brechung} berechnet. Die Winkel $\delta$ wurden dabei in der Einheit Radianten eingesetzt. Die Fehlerrechnung erfolgt durch die Größtunsicherheitsmethode.
+\begin{align*}
+n &= \frac{\sin\left(\frac{\gamma + \delta}{2}\right)}{\sin\left(\frac{\gamma}{2}\right)} \\
+\Delta n &= \frac{\cos\left(\frac{\gamma + \delta}{2}\right)}{\sin\left(\frac{\gamma}{2}\right)}\cdot \frac{\Delta \delta}{2} + \frac{\cos\left(\frac{\gamma + \delta}{2}\right)\cdot \sin\left(\frac{\gamma}{2}\right) - \sin\left(\frac{\gamma + \delta}{2}\right)\cdot \cos\left(\frac{\gamma}{2}\right)}{\sin\left(\frac{\gamma}{2}\right)} \cdot\frac{\Delta \gamma}{2}
+\end{align*}
+Die Ergebnisse sind in Tabelle \ref{tab:prisma_brechung}.
 
 
 \begin{table}[H]
-\caption{Berechnung des Brechungsindx}
+\caption{Berechnung des Brechungsindex}
 \label{tab:prisma_brechung}
 \centering
 \input{prisma_auswertung}
 \end{table}
 
-Dann wurde der Brechungsindex der einzelnen Farben mithilfe von Formel \eqref{eq:brechung} berechnet. Die Winkel $\delta$ wurden dabei halbiert und in Radianten umgewandelt. Die Ergebnisse sind in Tabelle \ref{tab:prisma_brechung}.
 
+Mit den gegebenen Werten für $n$ und $\lambda$ kann eine Dispersionskurve gezeichnet werden.
+\begin{figure}[H]
+\label{fig:dispersion}
+\includegraphics[scale=0.7]{kurve.png}
+\caption{Dispersionskurve}
+\end{figure}
 
 \section{Zusammenfassung und Diskussion}
 
+Für die Gitterkonstante ergibt sich
+\input{gitterkonst.tex}
+
+Für die Wellenlängen der Hg-Lampe gilt zusammenfassend
+\begin{table}[H]
+\caption{Auswertung der Wellenlängen mit der Hg-Lampe}
+\centering
+\input{tab5}
+\end{table}
+
+Für das Auflösungsvermögen des Gitters gilt
+\input{aufl_gitter}
+
+Der Winkel des Prismas ist
+\input{prisma_gamma_mit_fehler}
+
+
+Für die Brechungsindizes gilt zusammenfassend
+\begin{table}[H]
+\caption{Zusammenfassung der Brechungsindizes}
+\centering
+\input{prisma_auswertung}
+\end{table}
+
+
+
+
+Die gemessenen Wellenlängen liegen verglichen mit den Literaturwerten \cite{other} in einem akzeptablen Bereich.
+Da es sich beim Prisma um ein gleichschenkliges Dreieck handelt, passt der berechnete Wert gut zum aufgrund der Geometrie erwarteten Wert von 60~${}^\circ$.
+Auch der Brechungsindex des Prismas stimmt sehr gut mit den gefundenen Literaturwerten \cite{wiki} überein. Da sich der Brechungsindex in einem Bereich um $1.7$ befindet lässt sich sogar sagen, dass das Prisma vermutlich aus Flintglas bzw. Schwerflintglas hergestellt wurde.
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{other} \url{https://www.tabelle.info/farben.htm}, 11.10.2020 19:52 Uhr
+\bibitem{wiki} \url{https://de.wikipedia.org/wiki/Optisches_Glas}, 11.10.2020 19:55 Uhr
+\end{thebibliography}
 
 
 %\newpage 

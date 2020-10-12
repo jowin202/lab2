@@ -1,79 +1,89 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  10 OCT 2020 19:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  12 OCT 2020 07:08
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**02_Gitter_Prisma.tex
-(./02_Gitter_Prisma.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14>
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+**./02_Gitter_Prisma.tex
+(02_Gitter_Prisma.tex
+LaTeX2e <2018-12-01>
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cl
+s"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo
+"
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
-\c@part=\count167
-\c@section=\count168
-\c@subsection=\count169
-\c@subsubsection=\count170
-\c@paragraph=\count171
-\c@subparagraph=\count172
-\c@figure=\count173
-\c@table=\count174
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen134
-)
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip16
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfpages\pdfpag
+es.sty"
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
+"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count175
-\calc@Bcount=\count176
-\calc@Adimen=\dimen135
-\calc@Bdimen=\dimen136
-\calc@Askip=\skip49
-\calc@Bskip=\skip50
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count177
-\calc@Cskip=\skip51
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
 )
-(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/eso-pic\eso-pic
+.sty"
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 
-(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\atbe
+gshi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infw
+arerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxc
+mds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2019/11/07 v1.0c TeX engine tests
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpd
+f.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval
+.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.s
+ty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\co
+lor.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pd
+ftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -86,303 +96,338 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cs.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.s
+ty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\gr
+aphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen137
-\Gin@req@width=\dimen138
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
 )
-\AM@pagewidth=\dimen139
-\AM@pageheight=\dimen140
+\AM@pagewidth=\dimen107
+\AM@pageheight=\dimen108
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfpages\pppdft
+ex.def"
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box45
+\AM@pagebox=\box27
 \AM@global@opts=\toks15
-\AM@pagecnt=\count178
 \AM@toc@title=\toks16
-\c@AM@survey=\count179
-\AM@templatesizebox=\box46
+\c@AM@survey=\count91
+\AM@templatesizebox=\box28
 )
-(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lastpage\lastpa
+ge.sty"
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyh
+dr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip52
-\f@nch@O@elh=\skip53
-\f@nch@O@erh=\skip54
-\f@nch@O@olh=\skip55
-\f@nch@O@orh=\skip56
-\f@nch@O@elf=\skip57
-\f@nch@O@erf=\skip58
-\f@nch@O@olf=\skip59
-\f@nch@O@orf=\skip60
+\f@nch@headwidth=\skip46
+\f@nch@O@elh=\skip47
+\f@nch@O@erh=\skip48
+\f@nch@O@olh=\skip49
+\f@nch@O@orh=\skip50
+\f@nch@O@elf=\skip51
+\f@nch@O@erf=\skip52
+\f@nch@O@olf=\skip53
+\f@nch@O@orf=\skip54
 )
-(/usr/share/texlive/texmf-dist/tex/generic/german/ngerman.sty v2.5e 1998-07-08
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/german\ngerma
+n.sty" v2.5e 1998-07-08
 Package: ngerman 1998/07/08 v2.5e Support for writing german texts (br)
-\grmnU@D=\dimen141
-ngerman -- \language number for naustrian undefined, default 46 used.
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count180
-\lst@gtempboxa=\box47
-\lst@token=\toks17
-\lst@length=\count181
-\lst@currlwidth=\dimen142
-\lst@column=\count182
-\lst@pos=\count183
-\lst@lostspace=\dimen143
-\lst@width=\dimen144
-\lst@newlines=\count184
-\lst@lineno=\count185
-\lst@maxwidth=\dimen145
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count186
-\lst@skipnumbers=\count187
-\lst@framebox=\box48
+\grmnU@D=\dimen109
+ngerman -- \language number for naustrian undefined, default 45 used.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2019/09/10 1.8c listings configuration
-))
-Package: listings 2019/09/10 1.8c (Carsten Heinz)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listin
+gs.sty"
+\lst@mode=\count92
+\lst@gtempboxa=\box29
+\lst@token=\toks17
+\lst@length=\count93
+\lst@currlwidth=\dimen110
+\lst@column=\count94
+\lst@pos=\count95
+\lst@lostspace=\dimen111
+\lst@width=\dimen112
+\lst@newlines=\count96
+\lst@lineno=\count97
+\lst@maxwidth=\dimen113
 
-(/usr/share/texlive/texmf-dist/tex/latex/floatrow/floatrow.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmis
+c.sty"
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+\c@lstnumber=\count98
+\lst@skipnumbers=\count99
+\lst@framebox=\box30
+)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listin
+gs.cfg"
+File: listings.cfg 2019/02/27 1.8b listings configuration
+))
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/floatrow\floatr
+ow.sty"
 Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen146
-\captionmargin@=\dimen147
-\captionwidth=\dimen148
-\caption@tempdima=\dimen149
-\caption@indent=\dimen150
-\caption@parindent=\dimen151
-\caption@hangindent=\dimen152
-Package caption Info: Standard document class detected.
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+3.sty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen114
+\captionmargin@=\dimen115
+\captionwidth=\dimen116
+\caption@tempdima=\dimen117
+\caption@indent=\dimen118
+\caption@parindent=\dimen119
+\caption@hangindent=\dimen120
 )
-\c@float@type=\count188
+\c@float@type=\count100
 \float@exts=\toks18
-\float@box=\box49
-\@floatcapt=\box50
+\float@box=\box31
+\@floatcapt=\box32
 Package floatrow Info: Modified float package code loaded on input line 455.
 Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 
 \FR@everyfloat=\toks19
 \flrow@foot=\insert199
-\FB@wd=\dimen153
-\FBo@wd=\dimen154
-\FBc@wd=\dimen155
-\FBo@ht=\skip61
-\FBc@ht=\skip62
-\FBf@ht=\skip63
-\FBo@max=\skip64
-\FBc@max=\skip65
-\FBf@max=\skip66
-\c@FBl@b=\count189
-\floatbox@depth=\count190
-\c@FRobj=\count191
-\c@FRsobj=\count192
-\Xhsize=\skip67
-\sXhsize=\skip68
-\Zhsize=\skip69
-\sZhsize=\skip70
-\flrow@rowbox=\box51
-\FR@Zunitlength=\dimen156
-\c@FBcnt=\count193
-\FPOScnt=\count194
-\LTleft=\skip71
-\LTright=\skip72
-\LTleft=\skip73
-\LTright=\skip74
+\FB@wd=\dimen121
+\FBo@wd=\dimen122
+\FBc@wd=\dimen123
+\FBo@ht=\skip55
+\FBc@ht=\skip56
+\FBf@ht=\skip57
+\FBo@max=\skip58
+\FBc@max=\skip59
+\FBf@max=\skip60
+\c@FBl@b=\count101
+\floatbox@depth=\count102
+\c@FRobj=\count103
+\c@FRsobj=\count104
+\Xhsize=\skip61
+\sXhsize=\skip62
+\Zhsize=\skip63
+\sZhsize=\skip64
+\flrow@rowbox=\box33
+\FR@Zunitlength=\dimen124
+\c@FBcnt=\count105
+\FPOScnt=\count106
+\LTleft=\skip65
+\LTright=\skip66
+\LTleft=\skip67
+\LTright=\skip68
 \flrow@types=\toks20
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/01/03 v3.4h Customizing captions (AR)
-\c@caption@flags=\count195
-\c@continuedfloat=\count196
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+.sty"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+\c@caption@flags=\count107
+\c@ContinuedFloat=\count108
 Package caption Info: float package is loaded.
 Package caption Info: floatrow package is loaded.
 Package caption Info: listings package is loaded.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip75
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath
+.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip69
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext
+.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.
+sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
-\ex@=\dimen157
+\ex@=\dimen125
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.
+sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen158
+\pmbraise@=\dimen126
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.
+sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count197
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count198
-\leftroot@=\count266
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count267
-\DOTSCASE@=\count268
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
-\big@size=\dimen159
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count269
-\c@MaxMatrixCols=\count270
-\dotsspace@=\muskip17
-\c@parentequation=\count271
-\dspbrk@lvl=\count272
+\inf@bad=\count109
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count110
+\leftroot@=\count111
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count112
+\DOTSCASE@=\count113
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box34
+\strutbox@=\box35
+\big@size=\dimen127
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
+\dotsspace@=\muskip11
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
 \tag@help=\toks22
-\row@=\count273
-\column@=\count274
-\maxfields@=\count275
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
 \andhelp@=\toks23
-\eqnshift@=\dimen160
-\alignsep@=\dimen161
-\tagshift@=\dimen162
-\tagwidth@=\dimen163
-\totwidth@=\dimen164
-\lineht@=\dimen165
+\eqnshift@=\dimen128
+\alignsep@=\dimen129
+\tagshift@=\dimen130
+\tagwidth@=\dimen131
+\totwidth@=\dimen132
+\lineht@=\dimen133
 \@envbody=\toks24
-\multlinegap=\skip76
-\multlinetaggap=\skip77
+\multlinegap=\skip70
+\multlinetaggap=\skip71
 \mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssym
+b.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfon
+ts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.s
+ty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks26
 \inpenc@posthook=\toks27
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocbibind\tocbi
+bind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
 
 
 Package tocbibind Note: Using section or other style headings.
 
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count276
-\l__pdf_internal_box=\box54
-)
-(./02_Gitter_Prisma.aux)
+) (02_Gitter_Prisma.aux)
 \openout1 = `02_Gitter_Prisma.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
-\AtBeginShipoutBox=\box55
+\AtBeginShipoutBox=\box36
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf
+.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
-\scratchdimen=\dimen166
-\scratchbox=\box56
-\nofMPsegments=\count278
-\nofMParguments=\count279
+\scratchcounter=\count121
+\scratchdimen=\dimen134
+\scratchbox=\box37
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count280
-\MPscratchDim=\dimen167
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen135
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks29
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
 )
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstop
+df-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext
+.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvde
+finekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvopti
+ons.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvse
+tkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etex
+cmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\iflu
+atex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdft
+excmds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\pdflsc
+ape.sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\lscape
+.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxet
+ex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 35.
-\c@lstlisting=\count283
+\c@lstlisting=\count127
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 <Deckblatt.pdf, id=1, 597.45204pt x 845.1575pt>
@@ -423,15 +468,16 @@ Overfull \hbox (7.93121pt too wide) in paragraph at lines 49--50
 e Wel-lenl[]angen
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Try loading font information for U+msa on input line 59.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.f
+d"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.f
+d"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
@@ -440,19 +486,20 @@ Make it at least 22.54448pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<gitter.png, id=76, 217.5327pt x 129.3633pt>
+[2{C:/Users/WinkleJo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<gitter.png, id=75, 217.5327pt x 129.3633pt>
 File: gitter.png Graphic file (type png)
 <use gitter.png>
 Package pdftex.def Info: gitter.png  used on input line 96.
 (pdftex.def)             Requested size: 326.29822pt x 194.04443pt.
- [3 <./gitter.png>]
+
+[3 <./gitter.png>]
 Overfull \hbox (2.01671pt too wide) in paragraph at lines 112--114
 \OT1/cmr/m/n/10 Der Bre-chungs-in-dex des Va-ku-ums wird da-bei mit $\OML/cmm/m
 /it/10 n[] \OT1/cmr/m/n/10 = 1$ de-fi-niert. Die Abh[]angig-
  []
 
-<prisma1.png, id=83, 127.4361pt x 151.767pt>
+<prisma1.png, id=82, 127.4361pt x 151.767pt>
 File: prisma1.png Graphic file (type png)
 <use prisma1.png>
 Package pdftex.def Info: prisma1.png  used on input line 136.
@@ -463,33 +510,43 @@ Overfull \hbox (12.01443pt too wide) in paragraph at lines 172--173
 ne Ver-suchs-durchf[]uhrung
  []
 
-(./tab2.tex) (./tab3.tex) [6] (./tab_prisma_messen_1.tex)
-(./tab_prisma_messen_2.tex) [7] (./gitterkonst.tex) (./tab5.tex)
-(./aufl_gitter.tex) (./prisma_gamma.tex [8]) (./prisma_auswertung.tex)
-
+(tab2.tex) (tab3.tex) [6] (tab_prisma_messen_1.tex) (tab_prisma_messen_2.tex)
+[7] (gitterkonst.tex) (tab5.tex) (aufl_gitter.tex) (prisma_gamma.tex [8])
+(prisma_gamma_mit_fehler.tex) (prisma_auswertung.tex)
+<kurve.png, id=105, 462.528pt x 346.896pt>
+File: kurve.png Graphic file (type png)
+<use kurve.png>
+Package pdftex.def Info: kurve.png  used on input line 296.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
+ [9] (gitterkonst.tex)
+(tab5.tex) (aufl_gitter.tex) (prisma_gamma_mit_fehler.tex [10 <./kurve.png>])
+(prisma_auswertung.tex) 
 AED: lastpage setting LastPage
-[9] (./02_Gitter_Prisma.aux) ) 
+[11] (02_Gitter_Prisma.aux) ) 
 Here is how much of TeX's memory you used:
- 7618 strings out of 481239
- 110752 string characters out of 5920377
- 364430 words of memory out of 5000000
- 22756 multiletter control sequences out of 15000+600000
- 535751 words of font info for 39 fonts, out of 8000000 for 9000
+ 7167 strings out of 492946
+ 107284 string characters out of 3124934
+ 188120 words of memory out of 3000000
+ 10916 multiletter control sequences out of 15000+200000
+ 7053 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,45p,546b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 02_Gitter_Prisma.pdf (9 pages, 266153 bytes).
+ 41i,18n,43p,665b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/WinkleJo/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/WinkleJo
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/WinkleJo/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/WinkleJo/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Us
+ers/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb>
+Output written on 02_Gitter_Prisma.pdf (11 pages, 310404 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 149 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

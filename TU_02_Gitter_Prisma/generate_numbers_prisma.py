@@ -8,6 +8,8 @@ def custom_round(num,n=2):
     
 from math import sin
 from math import cos
+from math import sqrt
+import matplotlib
 from math import pi
 
 
@@ -57,9 +59,16 @@ gamma_bogenmass = gamma/360 * 2 * pi
 
 f = open("prisma_gamma.tex", "w")
 f.write("\\begin{align*}\n")
-f.write("\\gamma = " + str(custom_round(gamma,2)) + "~^\\circ\n")
+f.write("\\gamma = \\frac{\\epsilon}{2} =  " + str(custom_round(gamma,2)) + "~^\\circ\n")
 f.write("\\end{align*}\n")
 f.close()
+
+f = open("prisma_gamma_mit_fehler.tex", "w")
+f.write("\\begin{align*}\n")
+f.write("\\gamma = (" + str(custom_round(gamma,2)) + " \pm 0.89)~^\\circ\n")
+f.write("\\end{align*}\n")
+f.close()
+
 
 
 
@@ -79,7 +88,7 @@ for i in range(5):
     print(halber_winkel[i])
     
 
-f = open("tab_prisma_messen_2.tex", "w")
+f = open("tab_prisma_messen_2.tex", "w", encoding='utf-8')
 f.write("\\begin{tabular}{c|rr}\n")
 f.write("Farbe & L / ${}^\circ$ & R / ${}^\circ$ \\\\\n")
 f.write("\\hline\n")
@@ -94,15 +103,17 @@ f.close()
 
 
 
-
-f = open("prisma_auswertung.tex", "w")
+delta_gamma = (0.2/sqrt(5))/360 * 2 * pi
+delta_delta = 0.2 / 360 * 2 * pi
+f = open("prisma_auswertung.tex", "w", encoding='utf-8')
 f.write("\\begin{tabular}{c|rrr}\n")
-f.write("Farbe  & n & $\Delta n$ \\\\\n")
+f.write("Farbe &  n & $\Delta n$ \\\\\n")
 f.write("\\hline\n")
 for i in range(5):
-    unsicherheit = 0
+    unsicherheit = cos( (halber_winkel_bogenmass[i] + gamma_bogenmass)/2) / sin( gamma_bogenmass/2) * delta_delta/2
+    unsicherheit += (cos( (gamma_bogenmass + halber_winkel_bogenmass[i])/2 ) * sin( gamma_bogenmass/2) - sin( (halber_winkel_bogenmass[i] + gamma_bogenmass)/2)*cos( gamma_bogenmass/2 ))/sin( gamma_bogenmass/2) * delta_gamma/2
     n = sin( (gamma_bogenmass + halber_winkel_bogenmass[i])/2 )/sin( gamma_bogenmass / 2)
-    f.write(farben[i] + " & " + str( custom_round(n,3) ))
+    f.write(farben[i] + "  & " + str( custom_round(n,3) ) + " & " + str(custom_round(unsicherheit,3)))
     if i != 4:
         f.write("\\\\")
     f.write("\n")
@@ -112,6 +123,15 @@ f.close()
 
 
 exit(1)
+
+
+
+
+
+
+
+
+
 
 
 
