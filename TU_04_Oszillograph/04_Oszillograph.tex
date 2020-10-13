@@ -1,0 +1,125 @@
+\documentclass{article}
+
+\usepackage{url} 
+
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{ngerman}
+\usepackage{listings}
+
+\usepackage{floatrow}
+\usepackage[tableposition=top]{caption}
+\floatsetup[table]{capposition=top}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[numbib]{tocbibind}
+
+
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
+}
+
+
+
+\lhead{Oszillograph}
+\rhead{16. Oktober 2020\\T. Maier, J. Winkler}
+%\cfoot{\twodigits{\thepage}~/ \pageref{LastPage}}
+\cfoot{{\thepage}~/ \pageref{LastPage}}
+
+\newcommand{\as}{\alpha_\text{spez}}
+
+\begin{document}
+
+\parindent0cm
+
+\includepdf{Deckblatt.pdf}
+
+
+\pagestyle{fancy}
+
+\section{Aufgabenstellung}
+
+
+\section{Grundlagen und Versuchsaufbau}
+
+
+\section{Geräteliste}
+
+\begin{table}[H]
+\caption{Liste der verwendeten Geräte}
+
+~
+
+\begin{tabular}{l|llll}
+Bezeichnung & Hersteller & Gerätenummer & Unsicherheit \\
+\hline
+Frequenzgenerator & Wavetek & 0161674  \\
+Trafo & \\
+Oszilloskop & RIGOL &DS1ET204711289 \\
+Widerstand $1$~k$\Omega$ & Rosenthal & & $\pm~1\%$ \\
+Widerstand $200~\Omega$ & Rosenthal & & $\pm~1\%$ \\
+Spule $n=500$ & & 843/3 \\
+Kondensator $1~\mu$F & Philips
+\end{tabular}
+
+\end{table}
+
+
+
+
+\section{Durchführung und Messwerte}
+
+
+\section{Auswertung}
+
+
+
+
+\section{Zusammenfassung und Diskussion}
+
+
+
+%\newpage 
+%\appendix
+%\section{Python Skript}
+
+
+
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{weborange}{RGB}{255,165,0}
+\definecolor{frenchplum}{RGB}{129,20,83}
+
+\lstdefinelanguage{python}{
+    morekeywords={def, for, range, abs, return},
+    otherkeywords={<-,->, |>, \%\{, \}, \{, \, (, )},
+    sensitive=true,
+    morecomment=[l]{\#},
+    morecomment=[n]{/*}{*/},
+    morecomment=[s][\color{purple}]{:}{\ },
+    morestring=[s][\color{orange}]"",
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{eminence},
+    stringstyle=\color{red},
+	basicstyle=\ttfamily,
+	breaklines,
+	showstringspaces=false,
+	frame=tb
+}
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Laplace Auswertung}]{generate_numbers_laplace.py}
+
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Bessel Auswertung}]{generate_numbers_bessel.py}
+
+
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Zerstreuungslinse Auswertung}]{generate_numbers_zerstreuungslinse.py}
+
+
+
+
+\end{document}
