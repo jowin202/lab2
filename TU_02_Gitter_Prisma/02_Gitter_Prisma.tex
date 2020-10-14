@@ -64,30 +64,27 @@ Prisma:
 
 \subsection{Gitter}
 
-Ein ebenes Strichgitter besteht aus lichtdurchlässigen Öffnungen und lichtundurchlässigen Balken, welche in genau gleichen Abständen abwechselnd aufeinander folgen. Fällt Licht auf ein solches Gitter, so wird es gebeugt und gemäß dem Huygens'schen Prinzip gehen von jedem Punkt einer Öffnung Kugelwellen aus, die sich je nach der Richtung und der Wellenlänge durch Interferenz verstärken oder schwächen.
-
+Ein ebenes Strichgitter besteht grundsätzlich aus Öffnungen, die Licht durchlassen und Balken, die kein Licht durchlassen. Öffnungen und Balken sind dabei in genau gleichen Abständen abwechselnd aufeinander folgend angeordnet. Fällt Licht auf ein solches Gitter, so wird es gebeugt und gemäß dem Huygens'schen Prinzip (Jeder Punkt einer Wellenfront ist Ausgangspunkt einer neuen Elementarwelle) gehen von jedem Punkt einer Öffnung Kugelwellen aus, die sich je nach der Richtung und der Wellenlänge verstärken (konstruktive Interferenz) oder abschwächen (destruktive Interferenz).
+\begin{align}
+\label{eq:gitterkonst}
+\sin(\phi) = \frac{z\cdot\lambda}{g}
+\end{align}
 Ein Maximum der Lichtintensität in der Richtung $\phi$ wird dann beobachtet, wenn ein Bündel parallelen Lichtes senkrecht auf das Gitter trifft und der Gangunterschied $\Delta$ zwischen zwei von benachbarten Gitteröffnungen ausgehenden Elementarwelle dabei ein ganzzahliges Vielfaches der Wellenlänge $\lambda$ ist.
 
-Somit ergibt sich die Bedingung für das Helligkeitsmaximum der Wellenlänge $\lambda$
-
+Somit ergibt sich als Bedingung für das Helligkeitsmaximum der Wellenlänge $\lambda$
 \begin{align}
-\Delta &= g\cdot \sin(\phi) \\
-\label{eq:gitterkonst}
-z\cdot \lambda &= g\cdot \sin(\phi)
+\Delta &= g\cdot \sin(\phi)\\
+z\cdot\lambda &= g\cdot\sin(\phi)
 \end{align}
-
 wobei $z$ die Ordnungszahl des Beugungsmaximums, $\lambda$ die Wellenlänge des Lichts und $g$ der Abstand zwischen zwei Gitteröffnungen (Gitterkonstante) ist.
 
-Für unterschiedliche Wellenlängen (d.h. unterschiedliche Farben) des einfallenden Lichts ergibt sich also eine Abfolge an Beugungsmaxima, die man als Spektrum bezeichnet. Die Ordnungszahlen $z = 1,2,3, \dots$ entsprechen dabei den Spektren 1., 2., 3. Ordnung. Je höher die Ordnungszahl $z$ ist, desto größer ist der Einfallswinkel $\phi$. Spektren verschiedener Ordnung können sich auch überdecken, da zum gleichen Winkel $\phi$ Beugungsmaxima verschiedener Ordnung für verschiedene Wellenlängen gehören.
+Für unterschiedliche Wellenlängen (d.h. unterschiedliche Farben) des einfallenden Lichts ergibt sich also eine Abfolge an Beugungsmaxima, die man als Spektrum bezeichnet. Die Ordnungszahlen $z = 1,2,3,\dots$ entsprechen dabei den Spektren 1., 2., 3. Ordnung. Je höher die Ordnungszahl $z$ ist desto größer ist der Einfallswinkel $\phi$. Spektren verschiedener Ordnung können sich auch überdecken, da zum gleichen Winkel $\phi$ Beugungsmaxima verschiedener Ordnung für verschiedene Wellenlängen gehören.
 
-
-
-Die Fähigkeit, zwei verschiedene Wellenlängen im Abstand $\Delta\lambda$ noch getrennt zu beobachten wird Auflösungsvermögen genannt und kann mit einem Gitterspektrographen berechnet werden. Dabei gilt die Beziehung
+Für die Auflösung eines Gitters gilt zusätzlich
 \begin{align}
 \label{eq:aufl_gitter}
 \frac{\lambda}{\Delta \lambda} = z\cdot N = \frac{z\cdot D}{g} =  \frac{b}{g}
 \end{align}
-wobei $z$ wieder die Ordnungszahl und $N$ die Anzahl aller vom Licht getroffenen Gitterstriche ist. Das Auflösungsvermögen nimmt proportional zur Ordnung des Spektrums und zur Anzahl der beleuchteten Gitterstriche zu.
 
 
 
@@ -100,35 +97,29 @@ wobei $z$ wieder die Ordnungszahl und $N$ die Anzahl aller vom Licht getroffenen
 
 
 \subsection{Prisma}
-
-Der Brechungsindex $n$ eines Mediums ist das Verhältnis der Lichtgeschwindigkeit $c$ im Vakuum zur Lichtgeschwindigkeit $u$ im Medium
+Der Brechungsindex $n$ beschreibt, wie schnell sich Licht in einem bestimmten Medium bewegt. Dabei gilt die Beziehung
 \begin{align*}
 n = \frac{c}{u}
 \end{align*}
+wobei $c$ die Lichtgeschwindigkeit und $u$ die Geschwindigkeit im jeweiligen Medium ist. Der Brechungsindex von Licht im Vakuum ist demnach 1.
 
-Beim Übergang von einem Medium in das andere wird der Lichtstrahl gebrochen bzw. reflektiert, wenn die Medien unterschiedliche Brechungsindizes (Ausbreitungsgeschwindigkeit im jeweiligen Medium) besitzen. Dabei gilt das Brechungsgesetz von Snellius
+Beim Übergang von einem Medium in das andere wird der Lichtstrahl gebrochen bzw. reflektiert, wenn die Medien unterschiedliche Brechungsindizes (also die Ausbreitungsgeschwindigkeit im jeweiligen Medium) besitzen.
+
+Nach dem Fermat'schen Prinzip nimmt das Licht dabei immer den Weg mit der kürzesten Zeit (was nicht unbedingt immer der kürzeste Weg in der Distanz sein muss). Diese Beobachtung ist durch die Wellennatur des Lichts erklärbar.
+
+Ausgehend vom Fermat'schen Prinzip lässt sich auch leicht das Brechungsgesetz von Snellius herleiten
 \begin{align*}
 n_1\cdot\sin(\alpha) = n_2\cdot\sin(\beta)
 \end{align*}
-Der Brechungsindex des Vakuums wird dabei mit $n_0 = 1$ definiert. Die Abhängigkeit $n(\lambda)$ des Brechungsindex eines Mediums von der Wellenlänge wird als Dispersionskurve bezeichnet, die Ableitung als Dispersion $D$ bei der Wellenlänge $\lambda$.
-\begin{align*}
-D = \frac{dn}{d\lambda}
-\end{align*}
-Das Auflösungsvermögen eines Prismas ist durch
-\begin{align*}
-\frac{\lambda}{\Delta\lambda} = t\cdot \frac{dn}{d\lambda}
-\end{align*}
-gegeben, wobei $t$ die Basislänge des wirksamen Strahlenbündels im Prisma darstellt ist.
-
-Der Brechungswinkel hängt daher nicht nur vom Einfallswinkel, sondern auch von der Wellenlänge des Lichts ab - mehrfarbiges Licht (also unterschiedliche Wellenlängen) wird bei der Brechung also immer in seine Bestandteile (spektral) zerlegt. Mithilfe eines Prismas kann man sowohl die Dispersion bestimmen als auch die spektralen Eigenschaften des Lichts untersuchen. Im Sonderfall des symmetrischen Strahlenganges gilt außerdem
-\begin{align*}
-\alpha_1 = \alpha_2 \qquad \beta_1 = \beta_2
-\end{align*}
-und damit
+Der Brechungswinkel hängt dabei nicht nur vom Einfallswinkel, sondern auch von der Wellenlänge des Lichts ab - mehrfarbiges Licht (also unterschiedliche Wellenlängen) wird bei der Brechung also immer in seine Bestandteile (spektral) zerlegt. Mithilfe eines Prismas kann man sowohl die Dispersion bestimmen als auch die spektralen Eigenschaften des Lichts untersuchen. Im Sonderfall des symmetrischen Strahlenganges gilt außerdem $\alpha_1 = \alpha_2$ bzw. $\beta_1 = \beta_2$ und damit
 \begin{align}
 \label{eq:brechung}
 n = \frac{\sin\left(\frac{\gamma + \delta}{2}\right)}{\sin\left(\frac{\gamma}{2}\right)}
 \end{align}
+Die Abhängigkeit $n(\lambda)$ des Brechungsindex eines Mediums von der Wellenlänge wird als Dispersionskurve bezeichnet.
+
+
+
 
 
 \begin{figure}[H]
@@ -138,7 +129,6 @@ n = \frac{\sin\left(\frac{\gamma + \delta}{2}\right)}{\sin\left(\frac{\gamma}{2}
 \label{fig:prisma}
 \end{figure}
 
-\newpage
 
 \section{Geräteliste}
 

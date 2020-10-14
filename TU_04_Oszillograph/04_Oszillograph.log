@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  13 OCT 2020 06:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  13 OCT 2020 06:34
 entering extended mode
-**./02_Gitter_Prisma.tex
-(02_Gitter_Prisma.tex
+**./04_Oszillograph.tex
+(04_Oszillograph.tex
 LaTeX2e <2018-12-01>
 
 ("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cl
@@ -333,21 +333,21 @@ Package tocbibind Info: The document has section divisions on input line 50.
 
 Package tocbibind Note: Using section or other style headings.
 
-) (02_Gitter_Prisma.aux)
-\openout1 = `02_Gitter_Prisma.aux'.
+) (04_Oszillograph.aux)
+\openout1 = `04_Oszillograph.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 \AtBeginShipoutBox=\box36
 
 ("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf
@@ -426,48 +426,43 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 35.
+(lastpage)             ! on input line 37.
 \c@lstlisting=\count127
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 <Deckblatt.pdf, id=1, 597.45204pt x 845.1575pt>
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf>
-Package pdftex.def Info: Deckblatt.pdf  used on input line 39.
+Package pdftex.def Info: Deckblatt.pdf  used on input line 41.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf>
-Package pdftex.def Info: Deckblatt.pdf  used on input line 39.
+Package pdftex.def Info: Deckblatt.pdf  used on input line 41.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 <Deckblatt.pdf, id=4, page=1, 597.45204pt x 845.1575pt>
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 39.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 39.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 562.06993pt x 795.10587pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 39.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 562.06993pt x 795.10587pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 39.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 562.06993pt x 795.10587pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 39.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 41.
 (pdftex.def)             Requested size: 562.06993pt x 795.10587pt.
  [1
 
  <./Deckblatt.pdf>]
-Overfull \hbox (7.93121pt too wide) in paragraph at lines 49--50
-[]\OT1/cmr/m/n/10 Bestimmng der Git-ter-kon-stan-ten mit-tels Na-Dampflampe. Di
-e Wel-lenl[]angen
- []
-
 LaTeX Font Info:    Try loading font information for U+msa on input line 59.
 
 ("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.f
@@ -479,7 +474,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 ("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.f
 d"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) 
+AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 22.54448pt.
@@ -487,62 +483,24 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [2{C:/Users/WinkleJo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<gitter.png, id=76, 217.5327pt x 129.3633pt>
-File: gitter.png Graphic file (type png)
-<use gitter.png>
-Package pdftex.def Info: gitter.png  used on input line 93.
-(pdftex.def)             Requested size: 326.29822pt x 194.04443pt.
-
-[3 <./gitter.png>]
-<prisma1.png, id=82, 127.4361pt x 151.767pt>
-File: prisma1.png Graphic file (type png)
-<use prisma1.png>
-Package pdftex.def Info: prisma1.png  used on input line 127.
-(pdftex.def)             Requested size: 191.15366pt x 227.64992pt.
- [4]
-Overfull \hbox (12.01443pt too wide) in paragraph at lines 162--163
-\OT1/cmr/m/n/10 sung wur-de das Git-ter kurz ver-scho-ben und die be-schrie-be-
-ne Ver-suchs-durchf[]uhrung
- []
-
-(tab2.tex) [5 <./prisma1.png>] (tab3.tex) (tab_prisma_messen_1.tex)
-(tab_prisma_messen_2.tex) [6] (gitterkonst.tex) (tab5.tex) [7] (aufl_gitter.tex
-) (prisma_gamma.tex) (prisma_gamma_mit_fehler.tex) (prisma_auswertung.tex)
-[8]
-<kurve.png, id=106, 462.528pt x 346.896pt>
-File: kurve.png Graphic file (type png)
-<use kurve.png>
-Package pdftex.def Info: kurve.png  used on input line 286.
-(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- (gitterkonst.tex) (tab5.tex) [9 <./kurve.png>] (aufl_gitter.tex)
-(prisma_gamma_mit_fehler.tex) (prisma_auswertung.tex)
-
-AED: lastpage setting LastPage
-[10] (02_Gitter_Prisma.aux) ) 
+(04_Oszillograph.aux) ) 
 Here is how much of TeX's memory you used:
- 7167 strings out of 492946
- 107284 string characters out of 3124934
- 190119 words of memory out of 3000000
- 10916 multiletter control sequences out of 15000+200000
- 7053 words of font info for 29 fonts, out of 3000000 for 9000
+ 7088 strings out of 492946
+ 105224 string characters out of 3124934
+ 183989 words of memory out of 3000000
+ 10883 multiletter control sequences out of 15000+200000
+ 5944 words of font info for 24 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,18n,43p,665b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/WinkleJo/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/WinkleJo
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/WinkleJo/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/WinkleJo/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Us
-ers/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmtt10.pfb>
-Output written on 02_Gitter_Prisma.pdf (10 pages, 309179 bytes).
+ 41i,18n,43p,284b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/WinkleJo/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/WinkleJo/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users
+/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb>
+Output written on 04_Oszillograph.pdf (2 pages, 142036 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
