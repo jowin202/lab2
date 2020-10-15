@@ -48,6 +48,51 @@
 
 \section{Grundlagen und Versuchsaufbau}
 
+\subsection{Oszilloskop}
+
+Ein Oszilloskop ist ein Gerät aus der Elektronik, mit dem man Spannungsschwankungen innerhalb zeitlicher Abläufe messen kann. Auf der $x$-Achse ist dabei die Zeit und auf der $y$-Achse die jeweilige Spannung abzulesen.
+
+Das Prinzip dahinter ist auf die Bewegung von Teilchen in einem elektrischen Feld und somit auf die Braun'sche Röhre zurückzuführen.
+
+Bei der Braun'schen Röhre (= Kathodenstrahlröhre) kann durch zwei parallel ausgerichtete Metallplatten Elektronenstrahl quer zu seiner Flugrichtung beeinflusst werden. Die Elektronen werden von der Kathode emittiert und durch eine angelegte Spannung zur Anode $A$ hin beschleunigt.
+
+Um den Strahl zu fokussieren werden zwei elektrische Linse $F$ und die angelegte Fokussierspannung $U_F$ genutzt.
+
+
+Zur Ablenkung des Elektronenstrahls werden dann vier weitere Platten nach der Anode angebracht. Diese werden zu zweit platziert und mit einer horizontalen Kippspannung ($U_x$) bzw. einer vertikalen Messspannung ($U_y$) versehen. Damit werden die Elektronen abgelenkt und treffen auf den Leuchtschirm am Ende der Röhre.
+
+Mithilfe der Spannung zwischen Kathode K und Wehnelt-Zylinder WZ kann dann noch die Helligkeit des am Schirm abgebildeten Leuchtpunktes variiert werden. \cite{braun} \cite{uniunterlagen}
+
+\subsection{RLC-Stromkreis}
+
+Ein RLC-Stromkreis besteht aus einem Kondensator mit der Kapazität $C$, einer Spule mit Induktivität $L$ und einem Widerstand mit der Größe $R$. Alle Bauteile sind hierfür in Reihe geschalten und somit gilt die Kirchhoff'sche Maschenregel
+\begin{align}
+\label{eq:maschen}
+U_C + U_L + U_R = 0
+\end{align}
+
+$U_C$ ist dabei die Spannung am Kondensator, $u_L$ die Spannung an der Spule und $u_R$ die Spannung am Widerstand. Durch Ersetzen von 
+\begin{align*}
+U_L &= L \cdot \frac{dI}{dt} \\
+U_R &= R_i \cdot I
+\end{align*}
+sowie differenzieren der Formel \eqref{eq:maschen} und ersetzen von 
+\begin{align*}
+I = i_C = C \cdot \frac{dU}{dt}
+\end{align*}
+ erhält man die Differentialgleichung des Schwingkreises
+\begin{align}
+\frac{d^2I}{dt^2} + \frac{R}{L}\cdot \frac{dI}{dt} + \frac{1}{L\cdot C}\cdot I = 0
+\end{align}
+Durch Lösung dieser Differentialgleichng ergeben sich im wesentlichen 3 mögliche Fälle
+\begin{enumerate}
+\item $R^2\cdot C - 4\cdot L > 0$: 2 Reelle Lösungen, Kriechfall
+\item $R^2\cdot C - 4\cdot L = 0$: 1 reelle Lösung, aperiodischer Grenzfall
+\item $R^2\cdot C - 4\cdot L < 0$: 2 konjugiert-komplexe Lösung, Schwingfall
+\end{enumerate}
+
+
+
 
 \section{Geräteliste}
 
@@ -120,6 +165,15 @@ Kondensator $1~\mu$F & Philips
 %\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Zerstreuungslinse Auswertung}]{generate_numbers_zerstreuungslinse.py}
 
 
+\begin{thebibliography}{9}
+\bibitem{braun} \url{https://www.leifiphysik.de/elektrizitaetslehre/bewegte-ladungen-feldern/ausblick/braunsche-roehre}
+\bibitem{youtube} \url{https://www.youtube.com/watch?v=TZQoyem7Jzo}
+\bibitem{signale} \url{https://www.rahner-edu.de/grundlagen/signale-richtig-verstehen/schwingkreise/}
+\bibitem{RLC} \url{https://itp.tugraz.at/wiki/index.php/RLC-Serienschwingkreis}
+\bibitem{kondensator} \url{https://www.leifiphysik.de/elektrizitaetslehre/kondensator-kapazitaet/grundwissen/ein-und-ausschalten-von-rc-kreisen}
+\bibitem{uniunterlagen} Unterlagen zum Versuch aus dem TeachCenter der TU Graz
+
+\end{thebibliography}
 
 
 \end{document}
