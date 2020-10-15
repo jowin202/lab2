@@ -59,13 +59,13 @@ gamma_bogenmass = gamma/360 * 2 * pi
 
 f = open("prisma_gamma.tex", "w")
 f.write("\\begin{align*}\n")
-f.write("\\gamma = \\frac{\\epsilon}{2} =  " + str(custom_round(gamma,2)) + "~^\\circ\n")
+f.write("\\gamma = \\frac{\\epsilon}{2} =  " + str(custom_round(gamma,2)) + "^\\circ\n")
 f.write("\\end{align*}\n")
 f.close()
 
 f = open("prisma_gamma_mit_fehler.tex", "w")
 f.write("\\begin{align*}\n")
-f.write("\\gamma = (" + str(custom_round(gamma,2)) + " \pm 0.89)~^\\circ\n")
+f.write("\\gamma = (" + str(custom_round(gamma,1)) + " \pm 0.9)^\\circ\n")
 f.write("\\end{align*}\n")
 f.close()
 
@@ -175,18 +175,6 @@ f.close()
 
 
 
-
-#Auflösevermögen
-
-b = 2.1 * 10**-2 # 2.1 cm Breite
-delta_b = 0.3 * 10**-2
-
-
-f = open("aufl_gitter.tex", "w")
-f.write("\\begin{align*}\n")
-f.write("\\texttt{res} = (" + str(round(b/g)) + " \\pm " + str(round(delta_b/g + b/g**2 * delta_g)) +  ")\\\\\n")
-f.write("\\end{align*}\n")
-f.close()
 
 
 print("Auflösung: " + str(b/g))

@@ -45,22 +45,24 @@
 
 Gitter:
 \begin{enumerate}
-\item Justieren des Spektrometers
-\item Bestimmng der Gitterkonstanten mittels Na-Dampflampe. Die Wellenlängen der gelben NA-Doppellinien sind 588.995~nm und 589.592~nm. Messung erfolgt in 2. Ordnungund wird 5 mal nach links und rechts ausgeführt. Auswertung durch Mittelwert und Standardabweichung. Bestimmung der Gitterkonstante durch Formel \eqref{eq:gitterkonst}
-\item Bestimmung der Wellenlängen der gut sichtbaren Linien der Hg-Lampe. 5 Farben sollen dabei ausgewählt werden. Messungen erfolgen in 2. Ordnung einmal links und einmal rechts. Formel \eqref{eq:gitterkonst} wird zur Bestimmung der Wellenlängen genutzt.
-\item Berechnung des Auflösevermögens des Gitters mit Formel \eqref{eq:aufl_gitter}
+\item Bestimmng der Gitterkonstanten mittels Na-Dampflampe. Die Wellenlängen der gelben NA-Doppellinien sind 588.995~nm und 589.592~nm.
+
+%Messung erfolgt in 2. Ordnungund wird 5 mal nach links und rechts ausgeführt. Auswertung durch Mittelwert und Standardabweichung. Bestimmung der Gitterkonstante durch Formel \eqref{eq:gitterkonst}
+\item Bestimmung der Wellenlängen der gut sichtbaren Linien der Hg-Lampe. 5 Farben sollen dabei ausgewählt werden. 
+
+%Messungen erfolgen in 2. Ordnung einmal links und einmal rechts. Formel \eqref{eq:gitterkonst} wird zur Bestimmung der Wellenlängen genutzt.
+\item Berechnung des Auflösevermögens des Gitters.% mit Formel \eqref{eq:aufl_gitter}
 \end{enumerate}
 
 
 Prisma: 
 \begin{enumerate}
-\item Justieren des Spektrometers
-\item Bestimmung des brechenden Winkels des Prismas durch Messung des Reflexionswinkels. Messung 5 mal links und 5 mal rechts. Statistische Auswertung mit Mittelwert und Standardabweichung. Formel 22
-\item Bestimmung des Brechungsindex/Dispersionskurve $n(\lambda)$ des Prismas für 5 sichtbare Linien einer Hg-Lampe nach der Methode der minimalen Ablenkung. Messung links und rechts ausführen ($\delta = \omega/2$). Mit Hilfe der formel 17 kann der Brechungsindex für die jeweilige Spektrallinie berechnet werden. Dispersionskurve plotten! Fehlerbalken!
+\item Bestimmung des brechenden Winkels des Prismas durch Messung des Reflexionswinkels. Messung 5 mal links und 5 mal rechts. %Statistische Auswertung mit Mittelwert und Standardabweichung. Formel 22
+\item Bestimmung des Brechungsindex/Dispersionskurve $n(\lambda)$ des Prismas für 5 sichtbare Linien einer Hg-Lampe nach der Methode der minimalen Ablenkung. %Messung links und rechts ausführen ($\delta = \omega/2$). Mit Hilfe der formel 17 kann der Brechungsindex für die jeweilige Spektrallinie berechnet werden. Dispersionskurve plotten! Fehlerbalken!
 \end{enumerate}
 
 
-\section{Grundlagen und Versuchsaufbau}
+\section{Grundlagen}
 
 \subsection{Gitter}
 
@@ -88,14 +90,6 @@ Für die Auflösung eines Gitters gilt zusätzlich
 
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=1.5]{gitter.png}
-\caption{Aufbau zur Messung mit dem Gitter.}
-\label{fig:gitter}
-\end{figure}
-
-
 \subsection{Prisma}
 Der Brechungsindex $n$ beschreibt, wie schnell sich Licht in einem bestimmten Medium bewegt. Dabei gilt die Beziehung
 \begin{align*}
@@ -119,7 +113,15 @@ n = \frac{\sin\left(\frac{\gamma + \delta}{2}\right)}{\sin\left(\frac{\gamma}{2}
 Die Abhängigkeit $n(\lambda)$ des Brechungsindex eines Mediums von der Wellenlänge wird als Dispersionskurve bezeichnet.
 
 
+\section{Versuchsaufbau}
 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.5]{gitter.png}
+\caption{Aufbau zur Messung mit dem Gitter.}
+\label{fig:gitter}
+\end{figure}
 
 
 \begin{figure}[H]
@@ -162,7 +164,7 @@ Maßband & & & & $\pm~1~$mm
 Zuerst wurde das Gitter in der Na-Lampe bestrahlt und währenddessen der Winkel der zwei Beugungsmaxima jeweils fünf Mal abgelesen. Nach jeder Messung wurde das Gitter kurz verschoben und die beschriebene Versuchsdurchführung wiederholt. Es wurden die inneren der beiden Linien verwendet. Die Ergebnisse sind in Tabelle \ref{tab:na_dampflampe} dargestellt.
 
 \begin{table}[H]
-\caption{Messwerte des Gitters mit Na-Dampflampe}
+\caption{Messwerte zur Bestimmung der Gitterkonstante mit Hilfe einer Na-Dampflampe}
 \label{tab:na_dampflampe}
 \centering
 \input{tab2}
@@ -173,7 +175,7 @@ Zuerst wurde das Gitter in der Na-Lampe bestrahlt und währenddessen der Winkel 
 Das Gitter wurde mit der Hg-Hochdrucklampe bestrahlt. Währenddessen wurde aus dem Beugungsmaximum der Winkel von fünf verschiedenen Farben bestimmt. Die Messung wurde wieder links und rechts durchgeführt. Die Ergebnisse sind in Tabelle \ref{tab:hg_lampe} dargestellt.
 
 \begin{table}[H]
-\caption{Messwerte des Gitters mit Hg-Lampe}
+\caption{Messwerte zur Bestimmung der Wellenlängen einer Hg-Lampe}
 \label{tab:hg_lampe}
 \centering
 \input{tab3}
@@ -210,7 +212,7 @@ Für die Gitterkonstante gilt nach Größtfehlermethode
 \begin{align*}
 g = \frac{2\cdot \lambda}{\sin(\phi)}
 \end{align*}
- wobei $\phi = (42.51 \pm 0.2) ~^\circ$ ist. Für die Unsicherheit gilt
+ wobei $\phi = (42.51 \pm 0.20) ~^\circ$ ist. Für die Unsicherheit gilt
 \begin{align*}
 \Delta g = \frac{2\cdot\Delta \lambda}{\sin(\phi)} + \frac{2\cdot\lambda}{\sin^2(\phi)}\cdot \cos(\phi)\cdot \Delta\phi
 \end{align*}
@@ -231,7 +233,7 @@ und dessen Unsicherheit ist
 
 
 \begin{table}[H]
-\caption{Auswertung der Wellenlängen mit der Hg-Lampe}
+\caption{Auswertung der Wellenlängen mit der Hg-Lampe. $\lambda$ Wellenlänge, $\Delta\lambda$ Fehler der Wellenlänge}
 \label{tab:hg_lampe_auswertung}
 \centering
 \input{tab5}
@@ -273,7 +275,7 @@ Die Ergebnisse sind in Tabelle \ref{tab:prisma_brechung}.
 
 
 \begin{table}[H]
-\caption{Berechnung des Brechungsindex}
+\caption{Berechnung des Brechungsindex: $n$ Brechungsindex, $\Delta n$ Fehler des Brechungsindex}
 \label{tab:prisma_brechung}
 \centering
 \input{prisma_auswertung}
@@ -284,10 +286,19 @@ Mit den gegebenen Werten für $n$ und $\lambda$ kann eine Dispersionskurve gezei
 \begin{figure}[H]
 \label{fig:dispersion}
 \includegraphics[scale=0.7]{kurve.png}
-\caption{Dispersionskurve}
+\caption{Dispersionskurve: Brechungsindex in Abhängigkeit der Wellenlänge}
 \end{figure}
 
-\section{Zusammenfassung und Diskussion}
+\section{Diskussion}
+
+Die gemessenen Wellenlängen liegen verglichen mit den Literaturwerten \cite{other} in einem akzeptablen Bereich.
+Da es sich beim Prisma um ein gleichschenkliges Dreieck handelt, passt der berechnete Wert gut zum aufgrund der Geometrie erwarteten Wert von 60~${}^\circ$.
+Auch der Brechungsindex des Prismas stimmt sehr gut mit den gefundenen Literaturwerten \cite{wiki} überein. Da sich der Brechungsindex in einem Bereich um $1.7$ befindet lässt sich sogar sagen, dass das Prisma vermutlich aus Flintglas bzw. Schwerflintglas hergestellt wurde.
+
+
+
+
+\section{Zusammenfassung}
 
 Für die Gitterkonstante ergibt sich
 \input{gitterkonst.tex}
@@ -313,12 +324,6 @@ Für die Brechungsindizes gilt zusammenfassend
 \input{prisma_auswertung}
 \end{table}
 
-
-
-
-Die gemessenen Wellenlängen liegen verglichen mit den Literaturwerten \cite{other} in einem akzeptablen Bereich.
-Da es sich beim Prisma um ein gleichschenkliges Dreieck handelt, passt der berechnete Wert gut zum aufgrund der Geometrie erwarteten Wert von 60~${}^\circ$.
-Auch der Brechungsindex des Prismas stimmt sehr gut mit den gefundenen Literaturwerten \cite{wiki} überein. Da sich der Brechungsindex in einem Bereich um $1.7$ befindet lässt sich sogar sagen, dass das Prisma vermutlich aus Flintglas bzw. Schwerflintglas hergestellt wurde.
 
 
 

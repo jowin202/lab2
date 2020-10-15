@@ -15,7 +15,7 @@ ax.errorbar(x, y,
             xerr=xerr,
             yerr=yerr, ls='None')
 
-ax.set_xlabel('Wellenlänge lambda')
-ax.set_ylabel('Brechungsindex n')
+ax.set_xlabel('Wellenlänge lambda / nm')
+ax.set_ylabel('Brechungsindex n / 1 ')
 
 plt.savefig("kurve.png")
