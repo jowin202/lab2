@@ -1,0 +1,17 @@
+\contentsline {section}{Inhaltsverzeichnis}{2}% 
+\contentsline {section}{\numberline {1}Aufgabenstellung}{3}% 
+\contentsline {section}{\numberline {2}Grundlagen}{3}% 
+\contentsline {subsection}{\numberline {2.1}Gitter}{3}% 
+\contentsline {subsection}{\numberline {2.2}Prisma}{4}% 
+\contentsline {section}{\numberline {3}Versuchsaufbau}{5}% 
+\contentsline {section}{\numberline {4}Ger\IeC {\"a}teliste}{6}% 
+\contentsline {section}{\numberline {5}Durchf\IeC {\"u}hrung und Messwerte}{6}% 
+\contentsline {subsection}{\numberline {5.1}Gitter mit Na-Lampe}{6}% 
+\contentsline {subsection}{\numberline {5.2}Gitter mit Hg-Lampe}{6}% 
+\contentsline {subsection}{\numberline {5.3}Prisma}{7}% 
+\contentsline {section}{\numberline {6}Auswertung}{8}% 
+\contentsline {subsection}{\numberline {6.1}Gitter}{8}% 
+\contentsline {subsection}{\numberline {6.2}Prisma}{9}% 
+\contentsline {section}{\numberline {7}Diskussion}{10}% 
+\contentsline {section}{\numberline {8}Zusammenfassung}{10}% 
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{11}% 

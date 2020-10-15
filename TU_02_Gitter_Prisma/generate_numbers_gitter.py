@@ -101,7 +101,7 @@ f.write("Farbe & $\\lambda$ / nm  & $\\Delta\\lambda$ / nm \\\\\n")
 f.write("\\hline\n")
 for i in range(5):
     unsicherheit = delta_g * sin(halber_winkel_bogenmass[i])/2 +  g * cos(halber_winkel_bogenmass[i]) * delta_phi_bogenmass /2
-    f.write(farben[i] + " & " + str(round(wellenlaenge_pro_farbe_in_nm[i],1)) + " & " + str( round(unsicherheit * 10**9, 1) ))
+    f.write(farben[i] + " & " + str(round(wellenlaenge_pro_farbe_in_nm[i])) + " & " + str( round(unsicherheit * 10**9) ))
     if i != 4:
         f.write("\\\\")
     f.write("\n")
