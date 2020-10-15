@@ -12,6 +12,6 @@
 \contentsline {section}{\numberline {6}Auswertung}{8}% 
 \contentsline {subsection}{\numberline {6.1}Gitter}{8}% 
 \contentsline {subsection}{\numberline {6.2}Prisma}{9}% 
-\contentsline {section}{\numberline {7}Diskussion}{10}% 
-\contentsline {section}{\numberline {8}Zusammenfassung}{10}% 
+\contentsline {section}{\numberline {7}Zusammenfassung}{10}% 
+\contentsline {section}{\numberline {8}Diskussion}{11}% 
 \contentsline {section}{\numberline {9}Literaturverzeichnis}{11}% 
