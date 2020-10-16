@@ -87,24 +87,24 @@ f.close()
 
 
 #Kristalldicken mm
-d1 = [6.99,6.98,6.99,6.98,6.99]
-d2 = [6.51,6.50,6.50,6.51,6.51]
-d3 = [9.17,9.16,9.17,9.16,9.16]
-d4 = [9.43,9.43,9.42,9.43,9.42]
+d1 = [6.98,6.99,6.99,6.99,6.99,6.98,6.99,6.98,6.99,6.99]
+d2 = [6.51,6.50,6.50,6.51,6.51,6.50,6.51,6.50,6.50,6.51]
+d3 = [9.17,9.16,9.17,9.16,9.16,9.16,9.17,9.16,9.16,9.16]
+d4 = [9.43,9.43,9.42,9.43,9.42,9.43,9.42,9.44,9.43,9.43]
 
-aoff = [14.9,15,15.1,15,15.1]
-a1 = [43.8,43.9,43.7,43.8,43.7]
-a2 = [53.8,53.6,53.7,53.5,53.5]
-a3 = [-5.1,-5.0,-4.9,-5.0,-4.9]
-a4 = [40.7,40.8,40.6,40.8,40.7]
+aoff = [0,0,0,0,0]
+a1 = [28.85,28.6,28.4,28.7,28.0]
+a2 = [39.75,39.8,39.0,39.6,39.8]
+a3 = [160.65,160.60,160.25,160.4,160.6]
+a4 = [25.7,25.35,25.3,26,25.5]
 
 f = open("kristall_abmessungen_tab.tex", "w", encoding='utf-8')
 f.write("\\begin{tabular}{rrrr}\\\\\n")
 f.write(" $d_1$ / mm & $d_2$ / mm & $d_3$ / mm & $d_4$ / mm  \\\\\n ")
 f.write("\\hline\n")
-for i in range(5):
+for i in range(10):
     f.write(str(custom_round(d1[i],2)) + " & " + str(custom_round(d2[i],2)) + " & " + str(custom_round(d3[i],2)) + " & " + str(custom_round(d4[i],2)))
-    if i != 4:
+    if i != 9:
         f.write("\\\\")
     f.write("\n")
 f.write("\\end{tabular}")
@@ -143,6 +143,13 @@ def calc_beta(alpha, offset, l):
     return ret
 
 
+def col(num):
+    if abs(abs(num)-21) <= 1:
+        return "{\\color{red} " + str(custom_round(num,2)) + "}"
+    else:
+        return str(custom_round(num,2))
+
+
 f = open("kristall_auswertung_tab.tex", "w", encoding='utf-8')
 f.write("\\begin{tabular}{rrrrr}\\\\\n")
 f.write(" $x$ / ${}^\\circ$ & $\\beta_1$ / ${}^\\circ$ & $\\beta_2$ / ${}^\\circ$ & $\\beta_3$ / ${}^\\circ$ & $\\beta_4$ / ${}^\\circ$  \\\\\n ")
@@ -155,7 +162,7 @@ x_winkel = [0, 180, -180, 360, -360]
 
 f.write("\\hline\n")
 for i in range(5):
-    f.write("$" + str(x_winkel[i]) + "~^\\circ$ & " + str(custom_round(beta1[i],2)) + " & " + str(custom_round(beta2[i],2)) + " & " + str(custom_round(beta3[i],2)) + " & " + str(custom_round(beta4[i],2)))
+    f.write("$" + str(x_winkel[i]) + "~^\\circ$ & " + str(col(beta1[i])) + " & " + str(col(beta2[i])) + " & " + str(col(beta3[i])) + " & " + str(col(beta4[i])))
     if i != 4:
         f.write("\\\\")
     f.write("\n")
