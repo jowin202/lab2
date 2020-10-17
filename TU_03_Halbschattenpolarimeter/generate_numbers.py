@@ -12,66 +12,78 @@ def avg(l):
 from math import sin
 from math import cos
 from math import sqrt
-import matplotlib
 from math import pi
+from statistics import stdev
+import matplotlib
 
 
 #Laenge Glas in mm
-Lges = [111.7, 111.65, 111.7,111.7, 111.6]
-L1 = [3.85,3.80,3.85,3.85,3.85]
-L2 = [3.85,3.85,3.80,3.85,3.85]
+#Lges = [111.7, 111.65, 111.7,111.7, 111.6]
+#L1 = [3.85,3.80,3.85,3.85,3.85]
+#L2 = [3.85,3.85,3.80,3.85,3.85]
 
-aoff = [0,0,0,0,0,0,0,0,0,0]
-a1 = [4.4, 4.4, 4.5, 4.6, 4.7, 4.4, 4.4, 4.45, 4.50, 4.35]
+aoff = [39.1,39.3,39.2,39.3,39.2]
+a1 = [26.2,25.2,26.6,25.5,25.3,26.3,26.5,26.1,25.5,26.6]
 
 delta_l = 0.01 #mm
 delta_alpha = 0.1
 
 
-f = open("rohrzucker_abmessungen_tab.tex", "w", encoding='utf-8')
-f.write("\\begin{tabular}{rrr}\\\\\n")
-f.write(" $\\ell_\\text{ges}$ / mm & $\\ell_1$ / mm & $\\ell_2$ /mm \\\\\n ")
+#$f = open("rohrzucker_abmessungen_tab.tex", "w", encoding='utf-8')
+#f.write("\\begin{tabular}{rrr}\\\\\n")
+#f.write(" $\\ell_\\text{ges}$ / mm & $\\ell_1$ / mm & $\\ell_2$ /mm \\\\\n ")
+#f.write("\\hline\n")
+#for i in range(5):
+#    f.write(str(custom_round(Lges[i],2)) + " & " + str(custom_round(L1[i],2)) + " & " + str(custom_round(L2[i],2)))
+#    if i != 4:
+#        f.write("\\\\")
+#    f.write("\n")
+#f.write("\\end{tabular}")
+#f.close()
+
+f = open("rohrzucker_winkel_offset_tab.tex", "w", encoding='utf-8')
+f.write("\\begin{tabular}{r|r}\\\\\n")
+f.write(" Nr. & $\\alpha_\\text{off}$ / ${}^\circ$  \\\\\n ")
 f.write("\\hline\n")
 for i in range(5):
-    f.write(str(custom_round(Lges[i],2)) + " & " + str(custom_round(L1[i],2)) + " & " + str(custom_round(L2[i],2)))
-    if i != 4:
-        f.write("\\\\")
+    f.write(str(i+1) + " & " + str(custom_round(aoff[i],2))  )
+    f.write("\\\\")
     f.write("\n")
+f.write("\\hline \\\n $\\overline{x}$ & " + str(custom_round(sum(aoff)/len(aoff),2)) + "\n")
 f.write("\\end{tabular}")
 f.close()
 
-f = open("rohrzucker_winkel_tab.tex", "w", encoding='utf-8')
+
+f = open("rohrzucker_winkel_alpha_tab.tex", "w", encoding='utf-8')
 f.write("\\begin{tabular}{r|r}\\\\\n")
-f.write(" $\\alpha_\\text{off}$ / ${}^\circ$ & $\\alpha_1$ / ${}^\circ$  \\\\\n ")
+f.write(" Nr & $\\alpha_1$ / ${}^\circ$  \\\\\n ")
 f.write("\\hline\n")
 for i in range(10):
-    f.write(str(custom_round(aoff[i],2)) + " & " + str(custom_round(a1[i],2)) )
-    if i != 9:
-        f.write("\\\\")
+    f.write(str(i+1) + " & " + str(custom_round(a1[i],2)) )
+    f.write("\\\\")
     f.write("\n")
+f.write("\\hline \\\n $\\overline{x}$ & " + str(custom_round(sum(a1)/len(a1),2)) + "\n")
 f.write("\\end{tabular}")
 f.close()
 
 
-f = open("rohrzucker_laenge.tex", "w", encoding='utf-8')
-f.write("\\begin{align*}\\\\\n")
-f.write("\ell = (" + str(custom_round(avg(Lges)-avg(L1)-avg(L2),2)) + " \\pm" + str(3 * delta_l) + ")~\\text{mm} \\\\\n")
-f.write("\\end{align*}\\\\\n")
-f.close()
 
-laenge = avg(Lges)-avg(L1)-avg(L2)
-delta_laenge = 3 * delta_l
-winkel = 0
-for i in range(len(a1)):
-    winkel += a1[i] - aoff[i]
-winkel /= len(a1)
+#f = open("rohrzucker_laenge.tex", "w", encoding='utf-8')
+#f.write("\\begin{align*}\\\\\n")
+#f.write("\ell = (" + str(custom_round(avg(Lges)-avg(L1)-avg(L2),2)) + " \\pm" + str(3 * delta_l) + ")~\\text{mm} \\\\\n")
+#f.write("\\end{align*}\\\\\n")
+#f.close()
+
+laenge = 200 #mm
+winkel = abs(sum(a1)/len(a1) - sum(aoff)/len(aoff))
+
+print("Winkel Rohrzucker: " + str(winkel))
 
 laenge_in_dm = laenge/100 
-delta_laenge_in_dm = delta_laenge/100
 
 print(laenge_in_dm)
 konzentration = winkel/(66.5 * laenge_in_dm)
-delta_konzentration = delta_alpha/(66.5 * laenge_in_dm) + winkel/(66.5 * laenge_in_dm**2) * delta_laenge_in_dm
+delta_konzentration = delta_alpha/(66.5 * laenge_in_dm) 
 
 f = open("rohrzucker_konzentration.tex", "w", encoding='utf-8')
 f.write("\\begin{align*}\\\\\n")
@@ -143,8 +155,11 @@ def calc_beta(alpha, offset, l):
     return ret
 
 
+colored_values = []
+
 def col(num):
     if abs(abs(num)-21) <= 1:
+        colored_values.append(abs(num))
         return "{\\color{red} " + str(custom_round(num,2)) + "}"
     else:
         return str(custom_round(num,2))
@@ -168,3 +183,9 @@ for i in range(5):
     f.write("\n")
 f.write("\\end{tabular}")
 f.close()
+
+
+f = open("kristall_auswertung_ergebnis.tex", "w", encoding='utf-8')
+f.write("\\begin{align*}\\\\\n \\beta = (" + str(custom_round(sum(colored_values)/len(colored_values),2)) + " \\pm " + str(custom_round(stdev(colored_values,2))) + ")~^\\circ\\\\\n\\end{align*}")
+f.close()        
+

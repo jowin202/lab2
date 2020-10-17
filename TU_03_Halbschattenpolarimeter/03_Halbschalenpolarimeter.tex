@@ -103,25 +103,30 @@ Quarzkristalle & &
 
 \subsection{Rohrzuckerlösung}
 
-Zuerst wurde die Gesamtlänge des Probenglases mithilfe der Schiebelehre gemessen. Dann wurde die effektive Länge des Probenglases, also der Teil, der auch tatsächlich mit der Rohrzuckerlösung gefüllt war, sowohl innen als auch außen gemessen. Die Messvorgänge wurden jeweils fünf Mal wiederholt. Alle Werte sind in Tabelle \ref{tab:rohrzucker_abmessungen} zusammengefasst.
+Die Länge des Probenglases ist gegeben mit $\ell = 200~$mm.
+
+
+Um die Größe des Winkel $\alpha$ zu bestimmen, musste der Halbschattenpolarimeter zunächst auf einen offset Winkel hin kalibriert werden. Dazu wurde der Übergang von \textit{dunkel-hell-dunkel} zu \textit{hell-dunkel-hell} gesucht und der dabei entstehende Winkel (idealerweise 0~$^\circ$) gemessen. Die Ergebnisse sind in Tabelle 
+
 
 \begin{table}[H]
-\caption{Rohrzuckerlösung in Probenglas, Abmessungen. $\ell_\text{ges}$ Gesamtlänge, $\ell_1$ innere Länge 1, $\ell_2$ innere Länge 2.}
-\label{tab:rohrzucker_abmessungen}
+\caption{Offset-Winkel für die Analyse der Rohrzuckerlösung.}
+\label{tab:rohrzucker_offset_winkel}
 \centering
-\input{rohrzucker_abmessungen_tab}
+\input{rohrzucker_winkel_offset_tab}
 \end{table}
 
 
-Um die Größe des Winkel $\alpha$ zu bestimmen, musste der Halbschattenpolarimeter zunächst auf einen offset Winkel hin kalibriert werden. Dazu wurde der Übergang von \textit{dunkel-hell-dunkel} zu \textit{hell-dunkel-hell} gesucht und der dabei entstehende Winkel (idealerweise 0°) gemessen. Danach konnte das Probenglas in den Strahlengang eingelegt werden und der Winkel beim Übergang wurde erneut gemessen. Die Messungen wurden jeweils zehn Mal durchgeführt und in Tabelle \ref{tab:rohrzucker_winkel} zusammengefasst.
+
+Danach konnte das Probenglas in den Strahlengang eingelegt werden und der Winkel beim Übergang wurde erneut gemessen. Die Messungen wurden jeweils zehn Mal durchgeführt und in Tabelle \ref{tab:rohrzucker_winkel} zusammengefasst.
 
 
 
 \begin{table}[H]
-\caption{Offset und Drehwinkel der Rohrzuckerlösung.}
+\caption{Drehwinkel der Rohrzuckerlösung.}
 \label{tab:rohrzucker_winkel}
 \centering
-\input{rohrzucker_winkel_tab}
+\input{rohrzucker_winkel_alpha_tab}
 \end{table}
 
 
@@ -154,17 +159,12 @@ Dann wurde auch hier wieder zunächst der Halbschattenpolarimeter mithilfe des \
 
 
 \subsection{Rohrzuckerlösung}
-Zuerst wird die Länge des Probenglases bestimmt werden, in dem sich die Flüssigkeit befindet.
-\begin{align*}
-\ell = \ell_\text{ges} - \ell_1 - \ell_2
-\end{align*}
-Mit Fehlerrechnung ergibt sich
-\input{rohrzucker_laenge}
 
-Bestimmung der Konzentration mit Gleichung \eqref{eq:main}
+
+Bestimmung der Konzentration mit Gleichung \eqref{eq:main}, wobei die Länge $\ell$ und $\as$ als konstant angenommen wird.
 \begin{align*}
 c &= \frac{\alpha}{\as\cdot \ell} \\
-\Delta c &= \frac{\Delta \alpha}{\as\cdot \ell} +\frac{\alpha}{\as\cdot \ell^2}\cdot \Delta \ell
+\Delta c &= \frac{\Delta \alpha}{\as\cdot \ell}
 \end{align*}
 mit $\as = 66.5~\frac{{}^\circ\cdot \text{cm}^3}{\text{dm}\cdot \text{g}}$. Es ergibt sich
 \input{rohrzucker_konzentration}
@@ -185,6 +185,10 @@ wobei die Notation mit dem obigen Querstrich für das arithmetische Mittel steht
 \centering
 \input{kristall_auswertung_tab}
 \end{table}
+
+
+Die rot markierten Werte sind näherungsweise mit dem gegebenen Literaturwert vergleichbar. Daher wird von diesen Werten der betragsmäßige Mittelwert und die Standardabweichung berechnet. Dadurch ergibt sich als Ergebnis für den Drehwinkel von Quarz 
+\input{kristall_auswertung_ergebnis}
 
 
 
