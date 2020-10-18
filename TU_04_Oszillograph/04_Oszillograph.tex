@@ -61,7 +61,7 @@ Es sind 2 Schaltungen aufzubauen und die dazugehörigen Spannungsverläufe sind 
 
 
 
-\section{Grundlagen und Versuchsaufbau}
+\section{Grundlagen}
 
 \subsection{Oszilloskop}
 
@@ -108,16 +108,18 @@ Durch Lösung dieser Differentialgleichng ergeben sich im wesentlichen 3 möglic
 
 
 
-
+\section{Versuchsaufbau}
 
 \begin{figure}[H]
 \caption{Versuchsaufbau der RC-Schaltung. $F$ Frequenzgenerator, $T$ Trenntrafo, $R$ Widerstand, $C$ Kondensator.}
+\label{fig:schaltung1}
 {\centering
 \includegraphics[scale=0.4]{basics1.png}}
 \end{figure}
 
 \begin{figure}[H]
 \caption{Versuchsaufbau der RLC-Schaltung.}
+\label{fig:schaltung2}
 {\centering
 \includegraphics[scale=0.4]{basics2.png}}
 \end{figure}
@@ -151,33 +153,103 @@ Kondensator $1~\mu$F & Philips
 
 \subsection{RC-Schaltung}
 
-Ein in Serie geschalteter Kondensator $C$ und ein Widerstand $R$ werden mit einem Frequenzgenerator verbunden. Um einen Kurzschluss über die Erdung und die dadurch resultierende Schädigung der Bauteile zu vermeiden, wird zwischen Frequenzgenerator und den Bauteilen noch ein Trenntrafo geschalten. Der Frequenzgenerator wird auf eine konstante Frequenz von $f=50~$Hz geschalten, wobei einmal eine Rechtecksspannung und einmal eine Sinusspannung angelegt wird. Die Spannungsverläufe über Kondensator und Widerstand werden mit dem Oszilloskop gemessen.
+Ein in Serie geschalteter Kondensator $C$ und ein Widerstand $R$ werden mit einem Frequenzgenerator verbunden. Um einen Kurzschluss über die Erdung und die dadurch resultierende Schädigung der Bauteile zu vermeiden, wird zwischen Frequenzgenerator und den Bauteilen noch ein Trenntrafo geschalten. Der Frequenzgenerator wird auf eine konstante Frequenz von $f=50~$Hz geschalten, wobei einmal eine Rechtecksspannung und einmal eine Sinusspannung angelegt wird. Die Spannungsverläufe über Kondensator und Widerstand werden mit dem Oszilloskop gemessen. Der Versuchsaufbau ist in Grafik \ref{fig:schaltung1} beschrieben.
 
 
 \subsection{RLC-Schwingkreis}
 
-In die gegebene Schaltung werden zwei seriell geschaltene Spulen mit jeweils $n=500$ Windungen eingefügt. Dadurch wird aus der RC-Schaltung ein Schwingkreis.
+In die gegebene Schaltung werden zwei seriell geschaltene Spulen mit jeweils $n=500$ Windungen eingefügt. Dadurch wird aus der RC-Schaltung ein Schwingkreis. Der Versuchsaufbau ist in Grafik \ref{fig:schaltung2} beschrieben.
 
 \section{Auswertung}
 
 \subsection{RC-Schaltung}
 
+Die Spannungsverläufe über Kondensator und Widerstand sind in Grafik \ref{fig:schaltung1_sinus} beschrieben. Da Spannung und Strom in einem Widerstand proportional sind, kann anhand der Grafik auch die Phasenverschiebung bestimmen.
+
+
 \begin{figure}[H]
-\caption{Spannungsverläufe einer RC Schaltung mit $R=1$k$~\Omega$ und $C=1\mu~$F bei einer Sinusfrequenz mit $f=50~$Hz.}
+\caption{Spannungsverläufe einer RC Schaltung mit $R=1~$k$\Omega$ und $C=1\mu~$F bei einer Sinusfrequenz mit $f=50~$Hz. Channel 1 ist die Spannung über den Widerstand, Channel 2 ist die Spannung über den Kondensator. Channel 2 ist um den Faktor 4 vertikal skaliert.}
+\label{fig:schaltung1_sinus}
 {\centering
 \includegraphics[scale=0.4]{winkler/Schaltung_1_Sinus.png}}
 \end{figure}
 
+\subsubsection{Periodendauer}
+Hier kann aus den Daten verschiedene Eigenschaften der Schaltung ermitteln. Aus den $f=50~$Hz folgt, dass die Periodendasuer $\tau = 20~$ms sein muss. Tabelle \ref{tab:minmax} bestätigt diese Vermutung, wenn man die Abstände der Maxima betrachtet. Eine statistische Untersuchung ist bei 3 Maximumsstellen nicht sinnvoll. Dazu bräuchte man mehr Samples.
+
+\begin{table}[H]
+\caption{Maxima der Spannungen  aus Grafik \ref{fig:schaltung1_sinus}. $t_1, U_1$ Zeiten und Spannungen der Maxima von Channel 1,  $t_2, U_2$ Zeiten und Spannungen der Maxima von Channel 2.}.
+\label{tab:minmax}
+\begin{tabular}{r|rr|rr}
+Nr. & $t_1$ / ms & $U_1$ / V & $t_2$ / ms & $U_2$ / V \\
+\hline
+1 & -16.6 & 3.6 & -12.4 & 1.06\\
+2 & 3.2 & 3.6  & 7.4 & 1.06\\
+3 & 22.8 & 3.6 & 26.8 & 1.06
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection{Phasenverschiebung}
+
+Wesentlich interessanter ist die Phasenverschiebung zwischen der Spannung am Kondensator und jener am Widerstand (letztere ist proportional zum Strom durch den Kondensator). Die Theorie besagt, dass der Strom der Spannung im Kondensator vorausgeht. Das wird aufgrund der gegebenen Daten überprüft. Die Impedanz einer RC-Schaltung ist
+\begin{align*}
+Z = R + \frac{1}{i\cdot \omega\cdot C}
+\end{align*}
+Interessant ist der Winkel von $\operatorname{arg}\{Z\}$ in Polardarstellung. Dieser gibt die Phasenverschiebung an.Numerisch ergibt sich für $\omega = 2\cdot\pi\cdot f = 100\cdot \pi$, $R=1~$k$\Omega$ und $C=1~\mu$F.
+\begin{align*}
+\operatorname{arg}\{Z\} = \operatorname{arctan}\left(\frac{1}{R\cdot C\cdot \omega}\right) = \operatorname{arctan}\left( \frac{10}{\pi}\right) \approx 1.266
+\end{align*}
+Der Winkel ist in Radianten gegeben. Durch die Kreisfrequenz umgerechnet auf die Zeitachse ergibt sich
+\begin{align*}
+\frac{\operatorname{arg}\{Z\}}{\omega} = 0.004~\text{s}
+\end{align*}
+Es handelt sich also um eine Phasenverschiebung von $4~$ms. Diese sind auch in Tabelle \ref{tab:minmax} gut sichtbar.
+
+
+
+
+
+\subsubsection{Rechtecksverteilung}
+
+Da der Kurvenverlauf der Rechtecksverteilung in dieser Schaltung mathematisch deutlich schwerer zu beschreiben ist, haben wir die wesentlichen Dinge aus der Sinusfrequenz bestimmt. Der Vollständigkeit halber ist der Kurvenverlauf in Abbildung \ref{fig:schaltung1_rechteck} zu sehen.
 
 \begin{figure}[H]
-\caption{Spannungsverläufe einer RC Schaltung mit $R=1$k$~\Omega$ und $C=1\mu~$F bei einer Rechtecksfrequenz mit $f=50~$Hz.}
+\caption{Spannungsverläufe einer RC Schaltung mit $R=1~$k$\Omega$ und $C=1\mu~$F bei einer Sinusfrequenz mit $f=50~$Hz. Channel 1 ist die Spannung über den Widerstand, Channel 2 ist die Spannung über den Kondensator.}
+\label{fig:schaltung1_rechteck}
 {\centering
-\includegraphics[scale=0.4]{winkler/Schaltung_1_Sinus.png}}
+\includegraphics[scale=0.4]{winkler/Schaltung_1_Rechteck.png}}
 \end{figure}
+
+
 
 
 \subsection{RLC-Schwingkreis}
 
+
+
+
+\begin{figure}[H]
+\caption{Spannungsverlauf im Schwingfall.}
+\label{fig:schwing}
+{\centering
+\includegraphics[scale=0.4]{winkler/schwingfall.png}}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Spannungsverlauf im Kriechfall.}
+\label{fig:kriech}
+{\centering
+\includegraphics[scale=0.4]{winkler/kriechfall.png}}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Spannungsverlauf im aperiodischen Grenzfall.}
+\label{fig:kriech}
+{\centering
+\includegraphics[scale=0.4]{winkler/aperiodischer_grenzfall.png}}
+\end{figure}
 
 
 \section{Zusammenfassung und Diskussion}
