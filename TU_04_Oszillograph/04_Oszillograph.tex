@@ -45,6 +45,21 @@
 
 \section{Aufgabenstellung}
 
+Es sind 2 Schaltungen aufzubauen und die dazugehörigen Spannungsverläufe sind zu messen.
+
+\begin{enumerate}
+\item Eine RC-Schaltung mit $R=1$~k$\Omega$ und $C=1~\mu$F bei  einer Frequenz mit $f=50~$Hz, wobei einmal eine Sinus- und einmal eine Rechtecksfrequenz angewendet wird.
+
+\item eine RLC-Schaltung mit $R=1$~k$\Omega$ bzw. $R=200~\Omega$ und $C=1~\mu$F und variabler Induktivität. Zusätzlich müssen durch variieren der Induktivität folgende Fälle dargestellt werden. Die Frequenz beträgt erneut $f=50~$Hz.
+\begin{enumerate}
+\item Schwingfal
+\item Kriechfall
+\item aperiodischer Grenzfall
+\end{enumerate}
+\end{enumerate}
+
+
+
 
 \section{Grundlagen und Versuchsaufbau}
 
@@ -94,6 +109,20 @@ Durch Lösung dieser Differentialgleichng ergeben sich im wesentlichen 3 möglic
 
 
 
+
+\begin{figure}[H]
+\caption{Versuchsaufbau der RC-Schaltung. $F$ Frequenzgenerator, $T$ Trenntrafo, $R$ Widerstand, $C$ Kondensator.}
+{\centering
+\includegraphics[scale=0.4]{basics1.png}}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Versuchsaufbau der RLC-Schaltung.}
+{\centering
+\includegraphics[scale=0.4]{basics2.png}}
+\end{figure}
+
+
 \section{Geräteliste}
 
 \begin{table}[H]
@@ -105,11 +134,11 @@ Durch Lösung dieser Differentialgleichng ergeben sich im wesentlichen 3 möglic
 Bezeichnung & Hersteller & Gerätenummer & Unsicherheit \\
 \hline
 Frequenzgenerator & Wavetek & 0161674  \\
-Trafo & \\
+Trenntransformator & \\
 Oszilloskop & RIGOL &DS1ET204711289 \\
 Widerstand $1$~k$\Omega$ & Rosenthal & & $\pm~1\%$ \\
 Widerstand $200~\Omega$ & Rosenthal & & $\pm~1\%$ \\
-Spule $n=500$ & & 843/3 \\
+2x Spule $n=500$ & & 843/3 \\
 Kondensator $1~\mu$F & Philips
 \end{tabular}
 
@@ -120,9 +149,34 @@ Kondensator $1~\mu$F & Philips
 
 \section{Durchführung und Messwerte}
 
+\subsection{RC-Schaltung}
+
+Ein in Serie geschalteter Kondensator $C$ und ein Widerstand $R$ werden mit einem Frequenzgenerator verbunden. Um einen Kurzschluss über die Erdung und die dadurch resultierende Schädigung der Bauteile zu vermeiden, wird zwischen Frequenzgenerator und den Bauteilen noch ein Trenntrafo geschalten. Der Frequenzgenerator wird auf eine konstante Frequenz von $f=50~$Hz geschalten, wobei einmal eine Rechtecksspannung und einmal eine Sinusspannung angelegt wird. Die Spannungsverläufe über Kondensator und Widerstand werden mit dem Oszilloskop gemessen.
+
+
+\subsection{RLC-Schwingkreis}
+
+In die gegebene Schaltung werden zwei seriell geschaltene Spulen mit jeweils $n=500$ Windungen eingefügt. Dadurch wird aus der RC-Schaltung ein Schwingkreis.
 
 \section{Auswertung}
 
+\subsection{RC-Schaltung}
+
+\begin{figure}[H]
+\caption{Spannungsverläufe einer RC Schaltung mit $R=1$k$~\Omega$ und $C=1\mu~$F bei einer Sinusfrequenz mit $f=50~$Hz.}
+{\centering
+\includegraphics[scale=0.4]{winkler/Schaltung_1_Sinus.png}}
+\end{figure}
+
+
+\begin{figure}[H]
+\caption{Spannungsverläufe einer RC Schaltung mit $R=1$k$~\Omega$ und $C=1\mu~$F bei einer Rechtecksfrequenz mit $f=50~$Hz.}
+{\centering
+\includegraphics[scale=0.4]{winkler/Schaltung_1_Sinus.png}}
+\end{figure}
+
+
+\subsection{RLC-Schwingkreis}
 
 
 
