@@ -101,9 +101,9 @@ I = i_C = C \cdot \frac{dU}{dt}
 \end{align}
 Durch Lösung dieser Differentialgleichng ergeben sich im wesentlichen 3 mögliche Fälle
 \begin{enumerate}
-\item $R^2\cdot C - 4\cdot L > 0$: 2 Reelle Lösungen, Kriechfall
+\item $R^2\cdot C - 4\cdot L > 0$: 2 reelle Lösungen, Kriechfall
 \item $R^2\cdot C - 4\cdot L = 0$: 1 reelle Lösung, aperiodischer Grenzfall
-\item $R^2\cdot C - 4\cdot L < 0$: 2 konjugiert-komplexe Lösung, Schwingfall
+\item $R^2\cdot C - 4\cdot L < 0$: 2 konjugiert-komplexe Lösungen, Schwingfall
 \end{enumerate}
 
 
@@ -174,11 +174,14 @@ Die Spannungsverläufe über Kondensator und Widerstand sind in Grafik \ref{fig:
 \includegraphics[scale=0.4]{winkler/Schaltung_1_Sinus.png}}
 \end{figure}
 
+
+
+
 \subsubsection{Periodendauer}
 Hier kann aus den Daten verschiedene Eigenschaften der Schaltung ermitteln. Aus den $f=50~$Hz folgt, dass die Periodendasuer $\tau = 20~$ms sein muss. Tabelle \ref{tab:minmax} bestätigt diese Vermutung, wenn man die Abstände der Maxima betrachtet. Eine statistische Untersuchung ist bei 3 Maximumsstellen nicht sinnvoll. Dazu bräuchte man mehr Samples.
 
 \begin{table}[H]
-\caption{Maxima der Spannungen  aus Grafik \ref{fig:schaltung1_sinus}. $t_1, U_1$ Zeiten und Spannungen der Maxima von Channel 1,  $t_2, U_2$ Zeiten und Spannungen der Maxima von Channel 2.}.
+\caption{Maxima der Spannungen  aus Grafik \ref{fig:schaltung1_sinus}. $t_1, U_1$ Zeiten und Spannungen der Maxima von Channel 1,  $t_2, U_2$ Zeiten und Spannungen der Maxima von Channel 2. Diese Daten wurden mit dem Python-Skript im Anhang erzeugt.}.
 \label{tab:minmax}
 \begin{tabular}{r|rr|rr}
 Nr. & $t_1$ / ms & $U_1$ / V & $t_2$ / ms & $U_2$ / V \\
@@ -228,14 +231,47 @@ Da der Kurvenverlauf der Rechtecksverteilung in dieser Schaltung mathematisch de
 \subsection{RLC-Schwingkreis}
 
 
+Hier wurde die Spannung über den Widerstand im RLC-Schwingkreis vermessen. Es gibt 3 mögliche Fälle
+\begin{align*}
+\begin{cases}
+R^2\cdot C - 4\cdot L > 0 & 2 \text{ reelle Lösungen, Kriechfall} \\
+R^2\cdot C - 4\cdot L = 0 & 1 \text{ reelle Lösung, aperiodischer Grenzfall} \\
+R^2\cdot C - 4\cdot L < 0 & 2 \text{ konjugiert-komplexe Lösungen, Schwingfall}
+\end{cases}
+\end{align*}
 
+\subsection{Schwingfall}
+
+
+Im Schwingfall gilt
+\begin{align*}
+R^2\cdot C - 4\cdot L < 0
+\end{align*}
+Daraus folgt mit $R=200~\Omega$
+\begin{align*}
+R^2\cdot C < 4\cdot L \qquad\Longrightarrow\qquad \frac{R^2\cdot C}{4} < L \qquad\Longrightarrow\qquad 0.01 < L
+\end{align*}
+Die Induktivität der Spule muss also größer als $10~$mH sein. Um das zu erreichen wurde in beide Spulen der Metallkern eingesetzt. Grafik \ref{fig:schwing} zeigt den Verlauf der Spannung über den Widerstand.
 
 \begin{figure}[H]
-\caption{Spannungsverlauf im Schwingfall.}
+\caption{Spannungsverlauf über den Widerstand im RLC-Schwingkreis im Schwingfall. $f=50~$Hz, $R=1~$k$\Omega$, $C=1~\mu$F, beide Spulen ohne Kern.}
 \label{fig:schwing}
 {\centering
 \includegraphics[scale=0.4]{winkler/schwingfall.png}}
 \end{figure}
+
+
+\subsection{Kriechfall}
+
+Für den Kriechfall gilt
+\begin{align*}
+R^2\cdot C - 4\cdot L > 0
+\end{align*}
+Daraus folgt mit $R=1~$k$\Omega$
+\begin{align*}
+R^2\cdot C > 4\cdot L  \qquad\Longrightarrow\qquad \frac{R^2\cdot C}{4} > L \qquad\Longrightarrow\qquad 0.25 > L
+\end{align*}
+In diesem Fall wurde aus beiden Spulen der Kern entfernt. 
 
 \begin{figure}[H]
 \caption{Spannungsverlauf im Kriechfall.}
@@ -243,6 +279,16 @@ Da der Kurvenverlauf der Rechtecksverteilung in dieser Schaltung mathematisch de
 {\centering
 \includegraphics[scale=0.4]{winkler/kriechfall.png}}
 \end{figure}
+
+
+
+\subsection{Aperiodischer Grenzfall}
+
+Im aperiodischen Grenzfall gilt
+\begin{align*}
+\frac{R^2\cdot C}{4} = L
+\end{align*}
+für $R=200~\Omega$. Daher gilt $L\approx 0.01$~H. Um diesen Fall zu erreichen wurde der Metallkern aus einer Spule entfernt, während der andere nur halb herausgezogen wurde.
 
 \begin{figure}[H]
 \caption{Spannungsverlauf im aperiodischen Grenzfall.}
@@ -257,8 +303,8 @@ Da der Kurvenverlauf der Rechtecksverteilung in dieser Schaltung mathematisch de
 
 
 %\newpage 
-%\appendix
-%\section{Python Skript}
+\appendix
+\section{Python Skript}
 
 
 
@@ -283,7 +329,7 @@ Da der Kurvenverlauf der Rechtecksverteilung in dieser Schaltung mathematisch de
 	showstringspaces=false,
 	frame=tb
 }
-%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Laplace Auswertung}]{generate_numbers_laplace.py}
+\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Sinus Auswertung von Schaltung 1}]{analyse/analyse_ges.py}
 
 %\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Bessel Auswertung}]{generate_numbers_bessel.py}
 
