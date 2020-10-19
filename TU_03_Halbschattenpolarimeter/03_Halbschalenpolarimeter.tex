@@ -116,7 +116,7 @@ A_1\cdot\cos(\alpha)\cdot\cos(\varphi-\alpha) = -A_1\cdot\cos(\alpha)
 Die Messung wurde fünf Mal wiederholt und in Tabelle \ref{tab:rohrzucker_offset_winkel} notiert.
 
 \begin{table}[H]
-\caption{Offset-Winkel für die Analyse der Rohrzuckerlösung.}
+\caption{Offset-Winkel für die Analyse der Rohrzuckerlösung. $\Delta\alpha_\text{off} = \pm 0.05~^\circ$}
 \label{tab:rohrzucker_offset_winkel}
 \centering
 \input{rohrzucker_winkel_offset_tab}
@@ -128,7 +128,7 @@ Danach konnte das Probenglas in den Strahlengang eingelegt werden und der Winkel
 
 
 \begin{table}[H]
-\caption{Drehwinkel der Rohrzuckerlösung.}
+\caption{Drehwinkel der Rohrzuckerlösung. $\Delta\alpha_1 = \pm 0.05~^\circ$}
 \label{tab:rohrzucker_winkel}
 \centering
 \input{rohrzucker_winkel_alpha_tab}
@@ -140,7 +140,7 @@ Danach konnte das Probenglas in den Strahlengang eingelegt werden und der Winkel
 Als erstes wurden die vier Quarzkristalle mithilfe einer Micrometerschraube jeweils zehn Mal vermessen. Die Werte sind in Tabelle \ref{tab:kristalle_dicken} zusammengefasst.
 
 \begin{table}[H]
-\caption{Dicken der Quarzkristalle.}
+\caption{Dicken der Quarzkristalle. $d_i$ Dicke des Quarzkristalls $i$, $\Delta d_i = \pm 0.01~$mm }
 \label{tab:kristalle_dicken}
 \centering
 \input{kristall_abmessungen_tab}
@@ -152,7 +152,7 @@ Dann wurde auch hier wieder zunächst der Halbschattenpolarimeter mithilfe des \
 
 
 \begin{table}[H]
-\caption{Offset und Drehwinkel der Quarzkristalle.}
+\caption{Offset und Drehwinkel der Quarzkristalle. $\Delta\alpha_i = \pm 0.05~^\circ$}
 \label{tab:kristall_winkel}
 \centering
 \input{kristall_winkel_tab}
@@ -165,7 +165,7 @@ Dann wurde auch hier wieder zunächst der Halbschattenpolarimeter mithilfe des \
 \subsection{Rohrzuckerlösung}
 
 
-Bestimmung der Konzentration mit Gleichung \eqref{eq:main}, wobei die Länge $\ell$ und $\as$ als konstant angenommen wird.
+Bestimmung der Konzentration mit Gleichung \eqref{eq:main}, wobei die Länge $\ell$ und $\as$ als konstant angenommen werden.
 \begin{align*}
 c &= \frac{\alpha}{\as\cdot \ell} \\
 \Delta c &= \frac{\Delta \alpha}{\as\cdot \ell}
@@ -198,8 +198,12 @@ Die rot markierten Werte sind näherungsweise mit dem gegebenen Literaturwert ve
 
 \section{Diskussion}
 Der Versuch wurde hier mit zwei unterschiedlichen Halbschattenpolarimetern durchgeführt, was die unterschiedlichen offset Winkel der jeweiligen Experimentteile bzw. die unterschiedlichen Unsicherheiten der beiden Geräte erklärt.
-Der Drehwinkel von Quarz stimmt gut mit dem gefundenen Literaturwert [1] überein. Aufgrund des Vorzeichens und weil $\alpha$ kann man auch sagen, dass Quarz ein rechtsdrehendes Material ist [2].
+
+Der Drehwinkel von Quarz stimmt gut mit dem gefundenen Literaturwert \cite{spektrum} überein. Aufgrund des Vorzeichens und weil $\alpha$ kann man auch sagen, dass Quarz ein rechtsdrehendes Material ist \cite{cosmos}.
 Da die Konzentration der Zuckerlösung im Verhältnis zur beigegebenen Zuckermenge variiert, konnte hier mit keinem Literaturwert verglichen werden.
+
+Auch noch zu erwähnen ist, dass die Temperatur während der ganzen Experimentdurchführung mit 20~$^\circ$ als konstant angenommen wurde. Größere Temperaturschwankungen müssten berücksichtigt werden, da das polarisierte Licht stärker abgelenkt und das Ergebnis somit verfälschen würde.
+
 
 
 
@@ -210,6 +214,11 @@ Die Konzentration der Rohrzuckerlösung beläuft sich mit Fehler auf
 Der Drehwinkel von Quarz beläuft sich mit Fehler auf
 \input{kristall_auswertung_ergebnis}
 
+
+\begin{thebibliography}{9}
+\bibitem{spektrum} \url{https://www.spektrum.de/lexikon/optik/optische-aktivitaet/2277}, 18.10.2020 17:38 Uhr
+\bibitem{cosmos} \url{https://physik.cosmos-indirekt.de/Physik-Schule/Optische_Aktivität}, 18.10.2020 17:41 Uhr
+\end{thebibliography}
 
 %\newpage 
 %\appendix
