@@ -103,11 +103,17 @@ Quarzkristalle & &
 
 \subsection{Rohrzuckerlösung}
 
-Die Länge des Probenglases ist gegeben mit $\ell = 200~$mm.
+Grundsätzlich müsste zuerst die Gesamtlänge des Probenglases mithilfe der Schiebelehre gemessen werden. Im Fall dieser Experimentdurchführung war die Länge des Probenglases jedoch schon angegeben und musste deshalb nicht mehr gemessen werden.
+
+Die Länge des Probenglases betrug $\ell = 200~$mm und wurde als konstant angenommen.
 
 
-Um die Größe des Winkel $\alpha$ zu bestimmen, musste der Halbschattenpolarimeter zunächst auf einen offset Winkel hin kalibriert werden. Dazu wurde der Übergang von \textit{dunkel-hell-dunkel} zu \textit{hell-dunkel-hell} gesucht und der dabei entstehende Winkel (idealerweise 0~$^\circ$) gemessen. Die Ergebnisse sind in Tabelle 
+Um die Größe des Winkels $\alpha$ zu bestimmen, musste der Halbschattenpolarimeter zunächst auf einen offset Winkel hin kalibriert werden. Dazu wurde der Übergang von \textit{hell-dunkel-hell} gesucht, das heißt der Punkt, an dem beide Anteile der Fläche gleich wenig Intensität aufweisen (also gleich dunkel sind) und gilt
+\begin{align*}
+A_1\cdot\cos(\alpha)\cdot\cos(\varphi-\alpha) = -A_1\cdot\cos(\alpha)
+\end{align*}
 
+Die Messung wurde fünf Mal wiederholt und in Tabelle \ref{tab:rohrzucker_offset_winkel} notiert.
 
 \begin{table}[H]
 \caption{Offset-Winkel für die Analyse der Rohrzuckerlösung.}
@@ -118,8 +124,7 @@ Um die Größe des Winkel $\alpha$ zu bestimmen, musste der Halbschattenpolarime
 
 
 
-Danach konnte das Probenglas in den Strahlengang eingelegt werden und der Winkel beim Übergang wurde erneut gemessen. Die Messungen wurden jeweils zehn Mal durchgeführt und in Tabelle \ref{tab:rohrzucker_winkel} zusammengefasst.
-
+Danach konnte das Probenglas in den Strahlengang eingelegt werden und der Winkel beim Übergang wurde erneut gemessen. Die Messung wurde zehn Mal durchgeführt und in Tabelle \ref{tab:rohrzucker_winkel} zusammengefasst.
 
 
 \begin{table}[H]
@@ -132,8 +137,7 @@ Danach konnte das Probenglas in den Strahlengang eingelegt werden und der Winkel
 
 \subsection{Quarzkristalle}
 
-Als erstes wurden die vier Quarzkristalle mithilfe einer Micrometerschraube jeweils fünf Mal vermessen. Die Werte sind in Tabelle \ref{tab:kristalle_dicken} zusammengefasst.
-
+Als erstes wurden die vier Quarzkristalle mithilfe einer Micrometerschraube jeweils zehn Mal vermessen. Die Werte sind in Tabelle \ref{tab:kristalle_dicken} zusammengefasst.
 
 \begin{table}[H]
 \caption{Dicken der Quarzkristalle.}
@@ -143,8 +147,8 @@ Als erstes wurden die vier Quarzkristalle mithilfe einer Micrometerschraube jewe
 \end{table}
 
 
+Dann wurde auch hier wieder zunächst der Halbschattenpolarimeter mithilfe des \textit{hell-dunkel-hell} Übergangs auf einen offset Winkel kalibriert und dann die Proben nacheinander eingelegt und wieder dieser Übergang gesucht. Die Messungen wurden sowohl für den offset Winkel als auch für die unterschiedlichen Quarzkristalle fünf Mal durchgeführt und in Tabelle \ref{tab:kristall_winkel} notiert.
 
-Dann wurde auch hier wieder zunächst der Halbschattenpolarimeter mithilfe des \textit{dunkel-hell-dunkel} und \textit{hell-dunkel-hell} Übergangs auf einen offset Winkel kalibriert und dann die Proben nacheinander eingelegt und wieder dieser Übergang gesucht. Die Messungen wurden sowohl für den offset Winkel als auch für die unterschiedlichen Quarzkristalle fünf Mal durchgeführt und in Tabelle \ref{tab:kristall_winkel} notiert.
 
 
 \begin{table}[H]
@@ -192,8 +196,19 @@ Die rot markierten Werte sind näherungsweise mit dem gegebenen Literaturwert ve
 
 
 
-\section{Zusammenfassung und Diskussion}
+\section{Diskussion}
+Der Versuch wurde hier mit zwei unterschiedlichen Halbschattenpolarimetern durchgeführt, was die unterschiedlichen offset Winkel der jeweiligen Experimentteile bzw. die unterschiedlichen Unsicherheiten der beiden Geräte erklärt.
+Der Drehwinkel von Quarz stimmt gut mit dem gefundenen Literaturwert [1] überein. Aufgrund des Vorzeichens und weil $\alpha$ kann man auch sagen, dass Quarz ein rechtsdrehendes Material ist [2].
+Da die Konzentration der Zuckerlösung im Verhältnis zur beigegebenen Zuckermenge variiert, konnte hier mit keinem Literaturwert verglichen werden.
 
+
+
+\section{Zusammenfassung}
+Die Konzentration der Rohrzuckerlösung beläuft sich mit Fehler auf
+\input{rohrzucker_konzentration}
+
+Der Drehwinkel von Quarz beläuft sich mit Fehler auf
+\input{kristall_auswertung_ergebnis}
 
 
 %\newpage 
