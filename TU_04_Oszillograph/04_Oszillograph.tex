@@ -48,7 +48,7 @@
 Es sind 2 Schaltungen aufzubauen und die dazugehörigen Spannungsverläufe sind zu messen.
 
 \begin{enumerate}
-\item Eine RC-Schaltung mit $R=1$~k$\Omega$ und $C=1~\mu$F bei  einer Frequenz mit $f=50~$Hz, wobei einmal eine Sinus- und einmal eine Rechtecksfrequenz angewendet wird.
+\item Eine RC-Schaltung mit $R=1$~k$\Omega$ und $C=1~\mu$F bei einer Frequenz mit $f=50~$Hz, wobei einmal eine Sinus- und einmal eine Rechtecksfrequenz angewendet wird.
 
 \item eine RLC-Schaltung mit $R=1$~k$\Omega$ bzw. $R=200~\Omega$ und $C=1~\mu$F und variabler Induktivität. Zusätzlich müssen durch variieren der Induktivität folgende Fälle dargestellt werden. Die Frequenz beträgt erneut $f=50~$Hz.
 \begin{enumerate}
@@ -153,18 +153,18 @@ Kondensator $1~\mu$F & Philips
 
 \subsection{RC-Schaltung}
 
-Ein in Serie geschalteter Kondensator $C$ und ein Widerstand $R$ werden mit einem Frequenzgenerator verbunden. Um einen Kurzschluss über die Erdung und die dadurch resultierende Schädigung der Bauteile zu vermeiden, wird zwischen Frequenzgenerator und den Bauteilen noch ein Trenntrafo geschalten. Der Frequenzgenerator wird auf eine konstante Frequenz von $f=50~$Hz geschalten, wobei einmal eine Rechtecksspannung und einmal eine Sinusspannung angelegt wird. Die Spannungsverläufe über Kondensator und Widerstand werden mit dem Oszilloskop gemessen. Der Versuchsaufbau ist in Grafik \ref{fig:schaltung1} beschrieben.
+Ein in Serie geschaltener Kondensator C und ein Widerstand R werden mit einem Frequenzgenerator sowie einem Trenntrafo verbunden. Der Frequenzgenerator wird auf eine konstante Frequenz von $f=50~$Hz geschalten, wobei einmal eine Rechtecksspannung und einmal eine Sinusspannung angelegt wird. Die Spannungsverläufe über Kondensator und Widerstand werden mit dem Oszilloskop gemessen. Der Versuchsaufbau ist in Abbildung \ref{fig:schaltung1} beschrieben.
 
 
 \subsection{RLC-Schwingkreis}
 
-In die gegebene Schaltung werden zwei seriell geschaltene Spulen mit jeweils $n=500$ Windungen eingefügt. Dadurch wird aus der RC-Schaltung ein Schwingkreis. Der Versuchsaufbau ist in Grafik \ref{fig:schaltung2} beschrieben.
+In die gegebene Schaltung werden zwei seriell geschaltene Spulen mit jeweils $n=500$ Windungen eingefügt. Dadurch wird aus der RC-Schaltung ein Schwingkreis. Der Versuchsaufbau ist in Abbildung \ref{fig:schaltung2} beschrieben.
 
 \section{Auswertung}
 
 \subsection{RC-Schaltung}
 
-Die Spannungsverläufe über Kondensator und Widerstand sind in Grafik \ref{fig:schaltung1_sinus} beschrieben. Da Spannung und Strom in einem Widerstand proportional sind, kann anhand der Grafik auch die Phasenverschiebung bestimmen.
+Die Spannungsverläufe über Kondensator und Widerstand sind in Abbildung \ref{fig:schaltung1_sinus} beschrieben. Da Spannung und Strom in einem Widerstand proportional sind, kann anhand der Abbildung auch die Phasenverschiebung bestimmen.
 
 
 \begin{figure}[H]
@@ -181,7 +181,7 @@ Die Spannungsverläufe über Kondensator und Widerstand sind in Grafik \ref{fig:
 Hier kann aus den Daten verschiedene Eigenschaften der Schaltung ermitteln. Aus den $f=50~$Hz folgt, dass die Periodendasuer $\tau = 20~$ms sein muss. Tabelle \ref{tab:minmax} bestätigt diese Vermutung, wenn man die Abstände der Maxima betrachtet. Eine statistische Untersuchung ist bei 3 Maximumsstellen nicht sinnvoll. Dazu bräuchte man mehr Samples.
 
 \begin{table}[H]
-\caption{Maxima der Spannungen  aus Grafik \ref{fig:schaltung1_sinus}. $t_1, U_1$ Zeiten und Spannungen der Maxima von Channel 1,  $t_2, U_2$ Zeiten und Spannungen der Maxima von Channel 2. Diese Daten wurden mit dem Python-Skript im Anhang erzeugt.}.
+\caption{Maxima der Spannungen aus Abbildung \ref{fig:schaltung1_sinus}. $t_1, U_1$ Zeiten und Spannungen der Maxima von Channel 1, $t_2, U_2$ Zeiten und Spannungen der Maxima von Channel 2. Diese Daten wurden mit dem Python-Skript im Anhang erzeugt.}.
 \label{tab:minmax}
 \begin{tabular}{r|rr|rr}
 Nr. & $t_1$ / ms & $U_1$ / V & $t_2$ / ms & $U_2$ / V \\
@@ -216,7 +216,8 @@ Es handelt sich also um eine Phasenverschiebung von $4~$ms. Diese sind auch in T
 
 \subsubsection{Rechtecksverteilung}
 
-Da der Kurvenverlauf der Rechtecksverteilung in dieser Schaltung mathematisch deutlich schwerer zu beschreiben ist, haben wir die wesentlichen Dinge aus der Sinusfrequenz bestimmt. Der Vollständigkeit halber ist der Kurvenverlauf in Abbildung \ref{fig:schaltung1_rechteck} zu sehen.
+Danach wurde eine Rechteckspannung an die Schaltung angelegt. Die Spannungverläufe über Kondensator und Widerstand sind in Abbildung \ref{fig:schaltung1_rechteck} aufgezeichnet.
+
 
 \begin{figure}[H]
 \caption{Spannungsverläufe einer RC Schaltung mit $R=1~$k$\Omega$ und $C=1\mu~$F bei einer Sinusfrequenz mit $f=50~$Hz. Channel 1 ist die Spannung über den Widerstand, Channel 2 ist die Spannung über den Kondensator.}
@@ -251,7 +252,7 @@ Daraus folgt mit $R=200~\Omega$
 \begin{align*}
 R^2\cdot C < 4\cdot L \qquad\Longrightarrow\qquad \frac{R^2\cdot C}{4} < L \qquad\Longrightarrow\qquad 0.01 < L
 \end{align*}
-Die Induktivität der Spule muss also größer als $10~$mH sein. Um das zu erreichen wurde in beide Spulen der Metallkern eingesetzt. Grafik \ref{fig:schwing} zeigt den Verlauf der Spannung über den Widerstand.
+Die Induktivität der Spule muss also größer als $10~$mH sein. Um das zu erreichen wurde in beide Spulen der Metallkern eingesetzt. Abbildung \ref{fig:schwing} zeigt den Verlauf der Spannung über den Widerstand.
 
 \begin{figure}[H]
 \caption{Spannungsverlauf über den Widerstand im RLC-Schwingkreis im Schwingfall. $f=50~$Hz, $R=1~$k$\Omega$, $C=1~\mu$F, beide Spulen ohne Kern.}
@@ -298,7 +299,37 @@ für $R=200~\Omega$. Daher gilt $L\approx 0.01$~H. Um diesen Fall zu erreichen w
 \end{figure}
 
 
-\section{Zusammenfassung und Diskussion}
+\section{Zusammenfassung}
+
+Die Periodendauer $\tau$ beträgt:
+\begin{align*}
+\tau = 20~\text{ms}
+\end{align*}
+
+Die Phasenverschiebung beträgt:
+$t_1 = 4~\text{ms}$
+
+%Zur besseren Übersicht wurden hier nochmal die verschiedenen Fälle aus Punkt 3 der Aufgabenstellung in einem Plot zusammengefasst.
+
+
+
+
+
+\section{Diskussion}
+
+
+Grundsätzlich gilt zu erwähnen, dass bei diesem Versuch zwischen Frequenzgenerator und den Bauteilen noch einen Trenntrafo zu schalten ist, um einen Kurzschluss über die Erdung und die dadurch resultierende Schädigung der Bauteile zu verhindern.
+
+In Abbildung 3 wird die Spannung sowohl am Widerstand als auch am Kondensator gezeigt. Hierbei wurde auf eine statistische Untersuchung der Periodendauer verzichtet, da dies bei 3 Maximumsstellen noch nicht sinnvoll wäre.
+
+Außerdem wurden alle wesentlichen Berechnungen zu Phasenverschiebung und Periodendauer für die Sinusschwingung durchgeführt, da der Kurvenverlauf für die Rechteckschwingung mathematisch deutlich schwerer zu beschreiben wäre.
+
+%In Abbildung 8 werden die drei verschiedenen Schwingfälle dargestellt, um diese hier gut miteinander vergleichen zu können, sollte drauf geachtet werden, beim Oszilloskop eine einheitliche Skalierung der Achsen zu verwenden.
+
+
+%HIER ABBILDUNG 8 einfügen
+
+
 
 
 
