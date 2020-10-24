@@ -87,8 +87,8 @@ Da es aus physiologischen Gründen schwierig ist, eine Polarisator – Analysato
 Abkürzung & Bezeichnung & Gerätenummer & Unsicherheit \\
 \hline
 MM & Micrometer & & $\pm~0.01~$mm \\
-HP1 & 1. Halbschattenpolarimeter & & $\pm~0.05~^\circ$ \\
-HP2 & 2. Halbschattenpolarimeter & & $\pm~0.1~^\circ$ \\
+HP1 & 1. Halbschattenpolarimeter & &  \\
+HP2 & 2. Halbschattenpolarimeter & & \\
 SL & Schiebelehre & I/549/1 & $\pm~0.05~$mm \\
 RZL & Rohrzuckerlösung & & \\
 QuK & 4x Quarzkristalle & & 
@@ -108,10 +108,13 @@ Grundsätzlich müsste zuerst die Gesamtlänge des Probenglases mithilfe der Sch
 Die Länge des Probenglases betrug $\ell = 200~$mm und wurde als konstant angenommen.
 
 
-Um die Größe des Winkels $\alpha$ zu bestimmen, musste der Halbschattenpolarimeter zunächst auf einen offset Winkel hin kalibriert werden. Dazu wurde der Übergang von \textit{hell-dunkel-hell} gesucht, das heißt der Punkt, an dem beide Anteile der Fläche gleich wenig Intensität aufweisen (also gleich dunkel sind) und gilt
+Um die Größe des Winkels $\alpha$ zu bestimmen, musste der Halbschattenpolarimeter zunächst auf einen offset Winkel hin kalibriert werden. Das ist quasi der Nullpunkt im Polarimeter. Dieser ist erreicht, wenn gilt
 \begin{align*}
 A_1\cdot\cos(\alpha)\cdot\cos(\varphi-\alpha) = -A_1\cdot\cos(\alpha)
 \end{align*}
+Um diesen zu erreichen, müssen alle Teilflächben im sichtbaren Feld dieselbe Intensität aufweisen. Durch Drehung des Polarisators ohne Probe im Gerät ändert sich die Intensität von Teilflächen im Polarimeter. Die Nullstellung ist erreicht, wenn alle Teilflächen dieselbe Intensität haben. 
+
+
 
 Die Messung wurde fünf Mal wiederholt und in Tabelle \ref{tab:rohrzucker_offset_winkel} notiert.
 
@@ -147,7 +150,7 @@ Als erstes wurden die vier Quarzkristalle mithilfe einer Micrometerschraube jewe
 \end{table}
 
 
-Dann wurde auch hier wieder zunächst der Halbschattenpolarimeter mithilfe des \textit{hell-dunkel-hell} Übergangs auf einen offset Winkel kalibriert und dann die Proben nacheinander eingelegt und wieder dieser Übergang gesucht. Die Messungen wurden sowohl für den offset Winkel als auch für die unterschiedlichen Quarzkristalle fünf Mal durchgeführt und in Tabelle \ref{tab:kristall_winkel} notiert.
+Dann wurde auch hier wieder zunächst der Halbschattenpolarimeter auf einen offset Winkel kalibriert (analog zu vorher). Danach wurden die Proben nacheinander eingelegt. Die Messungen wurden sowohl für den offset Winkel als auch für die unterschiedlichen Quarzkristalle fünf Mal durchgeführt und in Tabelle \ref{tab:kristall_winkel} notiert.
 
 
 
@@ -178,9 +181,9 @@ mit $\as = 66.5~\frac{{}^\circ\cdot \text{cm}^3}{\text{dm}\cdot \text{g}}$. Es e
 
 Hier wird tabellarisch ausgewertet mit der Formel
 \begin{align*}
-\beta_i = \frac{\overline{\alpha_i-\alpha_{\text{off}}} + x}{\overline{d_i}}
+\as = \frac{\overline{\alpha_i-\alpha_{\text{off}}} + x}{\overline{d_i}}
 \end{align*}
-wobei die Notation mit dem obigen Querstrich für das arithmetische Mittel steht. $x$ ist ein Winkel aus der Menge $\{0, 180^\circ, -180^\circ, 360^\circ, -360^\circ\}$.
+wobei die Notation mit dem obigen Querstrich für das arithmetische Mittel steht. $x$ ist ein Winkel gemäß Tabelle~\ref{tab:kristall_auswertung}.
 
 
 \begin{table}[H]
@@ -199,10 +202,9 @@ Die rot markierten Werte sind näherungsweise mit dem gegebenen Literaturwert ve
 \section{Diskussion}
 Der Versuch wurde hier mit zwei unterschiedlichen Halbschattenpolarimetern durchgeführt, was die unterschiedlichen offset Winkel der jeweiligen Experimentteile bzw. die unterschiedlichen Unsicherheiten der beiden Geräte erklärt.
 
-Der Drehwinkel von Quarz stimmt gut mit dem gefundenen Literaturwert \cite{spektrum} überein. Aufgrund des Vorzeichens und weil $\alpha$ kann man auch sagen, dass Quarz ein rechtsdrehendes Material ist \cite{cosmos}.
-Da die Konzentration der Zuckerlösung im Verhältnis zur beigegebenen Zuckermenge variiert, konnte hier mit keinem Literaturwert verglichen werden.
+Der Drehwinkel von Quarz stimmt unter Berücksichtigung des Fehlers mit dem gefundenen Literaturwert \cite{spektrum} überein. Da die Konzentration der Zuckerlösung im Verhältnis zur beigegebenen Zuckermenge variiert, konnte hier mit keinem Literaturwert verglichen werden.
 
-Auch noch zu erwähnen ist, dass die Temperatur während der ganzen Experimentdurchführung mit 20~$^\circ$ als konstant angenommen wurde. Größere Temperaturschwankungen müssten berücksichtigt werden, da das polarisierte Licht stärker abgelenkt und das Ergebnis somit verfälschen würde.
+Auch noch zu erwähnen ist, dass die Temperatur während der ganzen Experimentdurchführung mit 20~$^\circ$ als konstant angenommen wurde. Größere Temperaturschwankungen müssten berücksichtigt werden, da der spezifische Drehwinkel stärker von der Temperatur abhängt und das Ergebnis somit verfälschen würde.
 
 
 

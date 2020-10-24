@@ -87,7 +87,7 @@ delta_konzentration = delta_alpha/(66.5 * laenge_in_dm)
 
 f = open("rohrzucker_konzentration.tex", "w", encoding='utf-8')
 f.write("\\begin{align*}\\\\\n")
-f.write("c = (" + str(custom_round(konzentration*10**3,2)) + " \\pm" + str(custom_round(delta_konzentration*10**3,2)) + ")~\\text{mg}/\\text{cm}^3 \\\\\n")
+f.write("c = (" + str(custom_round(konzentration*10**3,1)) + " \\pm" + str(custom_round(delta_konzentration*10**3,1)) + ")~\\text{mg}/\\text{cm}^3 \\\\\n")
 f.write("\\end{align*}\\\\\n")
 f.close()
 
@@ -167,7 +167,7 @@ def col(num):
 
 f = open("kristall_auswertung_tab.tex", "w", encoding='utf-8')
 f.write("\\begin{tabular}{rrrrr}\\\\\n")
-f.write(" $x$ / ${}^\\circ$ & $\\beta_1$ / ${}^\\circ$ & $\\beta_2$ / ${}^\\circ$ & $\\beta_3$ / ${}^\\circ$ & $\\beta_4$ / ${}^\\circ$  \\\\\n ")
+f.write(" $x$ / ${}^\\circ$ & $\\as{}_{,1}$ / ${}^\\circ$ & $\\as{}_{,2}$ / ${}^\\circ$ & $\\as{}_{,3}$ / ${}^\\circ$ & $\\as{}_{,4}$ / ${}^\\circ$  \\\\\n ")
 beta1 = calc_beta(a1, aoff, avg(d1))
 beta2 = calc_beta(a2, aoff, avg(d2))
 beta3 = calc_beta(a3, aoff, avg(d3))
@@ -186,6 +186,6 @@ f.close()
 
 
 f = open("kristall_auswertung_ergebnis.tex", "w", encoding='utf-8')
-f.write("\\begin{align*}\\\\\n \\beta = (" + str(custom_round(sum(colored_values)/len(colored_values),2)) + " \\pm " + str(custom_round(stdev(colored_values,2))) + ")~^\\circ\\\\\n\\end{align*}")
+f.write("\\begin{align*}\\\\\n \\as = (" + str(custom_round(sum(colored_values)/len(colored_values),1)) + " \\pm " + str(custom_round(stdev(colored_values,1))) + ")~^\\circ\\\\\n\\end{align*}")
 f.close()        
 
