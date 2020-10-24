@@ -3,6 +3,11 @@ from math import sin
 from math import cos
 from math import pi
 
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 print("Aufgabe 1:")
 
 U_1 = 160
@@ -119,4 +124,34 @@ print("")
 print("Verlustleistung P_V: ")
 
 print(str(P_1-P_2) + " +- " + str(Delta_P_1 + Delta_P_2))
+
+
+
+
+
+
+
+
+
+x = [4.2,5.3,6.9,8.5,9.3,11.2,13.3,15.9,20.3,23.8,26.3,29.2,32.6,36.2,38.5]
+y = [1.17,1.38,1.67,1.79,1.89,2.06,2.12,2.18,2.08,2.00,1.92,1.83,1.73,1.60,1.54]
+#xerr = [5,5,5,5,5]
+#yerr = [0.001,0.001,0.001,0.001,0.001]
+
+fig, ax = plt.subplots()
+
+ax.set_xlim(4,40)
+ax.set_ylim(1.1,2.5)
+ax.plot(x,y)
+#ax.errorbar(x, y,
+#            xerr=xerr,
+#            yerr=yerr, ls='None')
+
+ax.set_xlabel('Widerstand / Ohm')
+ax.set_ylabel('Leistung / W ')
+
+plt.savefig("kurve.png")
+
+
+
 

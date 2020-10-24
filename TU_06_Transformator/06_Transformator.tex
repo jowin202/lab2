@@ -126,6 +126,44 @@ P_1 &= (19.3\pm0.1)~\W
 \end{align*}
 
 
+
+
+
+\subsection{Ohm + Induktive Last}
+
+Zum vorherigen Aufbau wurde eine Spule $(L=0.1~$H) sekundärseitig in Serie geschalten. Für die übliche Primärspannung $U_1 = (160\pm1.2)~\V$ wurden 15 Messwerte bei unterschiedlicher Einstellung des Lastenwiderstandes (bis zu 45~$\Omega$) gemessen. 
+
+Es wird der Sekundärstrom $I_2$ und die Sekundärspannung $U_2$ gemessen, der variable Widerstand $R$ ergibt sich daraus. Die Leistung kann dadurch direkt berechnet weren. Die Messwerte sind in Tabelle \ref{tab:spule} zu finden.
+
+\begin{table}[H]
+\centering
+\caption{Messwerte für Sekundärspannung $U_2$, Sekundärstrom $I_2$, Widerstand $R$}
+\label{tab:spule}
+\begin{tabular}{r|rrr}
+  &	$U_2$ / V  &	$I_2$ /A  &	$R / \Omega$\\
+  \hline
+1 &	2.2	&0.53	&	4.2	 \\
+2 &	2.7	&0.51	&	5.3	 \\
+3 &	3.4	&0.49	&	6.9   \\
+4 &	3.9	&0.46	&	8.5	  \\
+5 &	4.2	&0.45	&	9.3	  \\
+6 &	4.8	&0.43	&	11.2	  \\
+7 &	5.3	&0.4		&   13.3  \\
+8 &	5.9	&0.37	&	15.9	 \\
+9 &	6.5	&0.32	&	20.3	 \\
+10&	6.9	&0.29	&	23.8	 \\
+11&	7.1	&0.27	&	26.3	  \\
+12&	7.3	&0.25	&	29.2	  \\
+13&	7.5	&0.23	&	32.6	 \\
+14&	7.6	&0.21	&	36.2  \\
+15&	7.7	&0.2		&   38.5 
+\end{tabular}
+
+\end{table}
+
+
+
+
 \section{Auswertung}
 
 \subsection{Leerlauf}
@@ -196,6 +234,37 @@ P_V &= P_1-P_2 = 8.0~\W\\
 \Delta P_V &= \Delta P_1 + \Delta P_2 = 0.5~\W
 \end{align*}
 
+
+\subsection{Ohm + Induktive Last}
+
+An dieser Stelle wird die Leistung auf der Sekundärseite ausgewertet. Das Maximum befindet sich bei $U_2=5.9~\V$ und $I_2=0.37~\A$. Die maximale Leistung ist dann $P_2=2.18~\W$.
+
+\begin{table}[H]
+\centering
+\caption{Berechnung der Leistung $P_2$ aus Sekundärspannung $U_2$, Sekundärstrom $I_2$ und bestimmung des Maximums.}
+\label{tab:spule}
+\begin{tabular}{r|rrrr}
+  &	$U_2$ / V  &	$I_2$ /A  &	$R / \Omega$ & $P_2$ / W \\
+  \hline
+1 &	2.2	&0.53	&	4.2	 &	1.17 \\
+2 &	2.7	&0.51	&	5.3	 &	1.38 \\
+3 &	3.4	&0.49	&	6.9  &	1.67 \\
+4 &	3.9	&0.46	&	8.5	 &	1.79 \\
+5 &	4.2	&0.45	&	9.3	 &	1.89 \\
+6 &	4.8	&0.43	&	11.2	 &	2.06 \\
+7 &	5.3	&0.4		&   13.3 &	2.12 \\
+{\color{red}8} &	\color{red} 5.9	& \color{red} 0.37	& \color{red} 15.9	 &	\color{red} 2.18 \\
+9 &	6.5	&0.32	&	20.3	 &	2.08 \\
+10&	6.9	&0.29	&	23.8	 &	2.00 \\
+11&	7.1	&0.27	&	26.3	 &	1.92 \\
+12&	7.3	&0.25	&	29.2	 &	1.83 \\
+13&	7.5	&0.23	&	32.6	 & 	1.73 \\
+14&	7.6	&0.21	&	36.2 &	1.60 \\
+15&	7.7	&0.2		&   38.5 &	1.54
+\end{tabular}
+
+\end{table}
+
 \section{Zusammenfassung}
 
 Für den Leerlauf gilt
@@ -218,6 +287,8 @@ P_V &= (8.0 \pm 0.5)~\W
 \end{align*}
 
 
+Für die Ohm'sche Last mit in Serie geschalteter Spule ergibt sich ein Leistungsmaximum von $2.18~\W$ bei $R=15.9~\Omega$.
+
 \section{Diskussion}
 
 
@@ -235,7 +306,16 @@ P_V &= (8.0 \pm 0.5)~\W
 \caption{Transformator mit Leerlauf. Channel 1 ist proportional zum Primärstrom, Channel 2 ist Sekundärspannung}
 \label{fig:task1}
 {\centering
-\includegraphics[scale=0.4]{task1.jpg}
+\includegraphics[scale=0.4]{task2.jpg}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Transformator mit mit ohm'scher und induktiver Belastung. Leistung und Widerstand als Kurve dargestellt.}
+\label{fig:task1}
+{\centering
+\includegraphics[scale=0.7]{kurve.png}
 ~
 }
 \end{figure}
