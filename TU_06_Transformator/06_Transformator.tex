@@ -32,7 +32,13 @@
 %\cfoot{\twodigits{\thepage}~/ \pageref{LastPage}}
 \cfoot{{\thepage}~/ \pageref{LastPage}}
 
-\newcommand{\as}{\alpha_\text{spez}}
+\newcommand{\W}{\text{W}}
+\newcommand{\V}{\text{V}}
+\newcommand{\A}{\text{A}}
+
+
+
+
 
 \begin{document}
 
@@ -56,10 +62,10 @@
 
 
 \begin{figure}[H]
-\caption{Ionentransport im Elektrolyten im elektrischen Feld. $A$ Anode, $K$ Kathode.}
+\caption{Versuchsaufbau Transformator. Tr1 Regeltrenntrafo, Tr2 Messtrafo, $R_s$ Shunt ($0.5~\Omega$), $I_1$ Primärstrom, $I_2$ Sekundärstrom, $U_1$ Primärspannung, $U_2$ Sekundärspannung, $N_{1W}$ Leistungsmessung}
 \label{fig:pic1}
 {\centering
-%\includegraphics[scale=1.8]{pic1.png}
+\includegraphics[scale=0.9]{pic1.png}
 ~
 }
 \end{figure}
@@ -74,16 +80,19 @@
 ~
 
 \begin{tabular}{l|llll}
-Bezeichnung & Hersteller & Gerätenummer & Unsicherheit \\
+Kürzel & Bezeichnung & Hersteller & Gerätenummer & Unsicherheit \\
 \hline
-Thermometer & & & $\pm 1~^\circ$C \\
-Frequenzgenerator & Wavetek & 0161674  \\
-Trenntransformator & \\
-Oszilloskop & RIGOL &DS1ET204711289 \\
-Widerstand $1$~k$\Omega$ & Rosenthal & & $\pm~1\%$ \\
-Widerstand $200~\Omega$ & Rosenthal & & $\pm~1\%$ \\
-2x Spule $n=500$ & & 843/3 \\
-Kondensator $1~\mu$F & Philips
+DM & Digitalmultimeter & Leybold \\
+TF & Transformator & Ruhstrat \\
+A1 & Amperemeter 1 & Norma & & $\pm 1.5\%$ \\
+A2 & Amperemeter 2 & Norma & & $\pm 1.5\%$ \\
+V1 & Voltmeter 1 & Norma & & $\pm 0.5\%$ \\
+V2 & Voltmeter 2 & Norma & VII/1121/3 & $\pm 0.5\%$ \\
+SP & Spule \\
+WS & Widerstand  & & VII/695 \\
+LWS & Lastwiderstand \\
+OS & Oszilloskop & Rigol \\
+TT & Trenntrafo & Ruhstrat 
 \end{tabular}
 
 \end{table}
@@ -93,26 +102,152 @@ Kondensator $1~\mu$F & Philips
 
 \section{Durchführung und Messwerte}
 
+\subsection{Leerlauf}
+
+Zuerst wurde die Schaltung gemäß Abbildung \ref{fig:pic1} aufgebaut, jedoch ohne das Amperemeter für den Sekundärstrom. Dan wurde eine Primärspannung von $U_1= 160~$V angelegt. Die Unsicherheit bei Voltmetern sind $0.5\%$, bei Amperemetern $1.5\%$. Daher gilt insgesamt 
+\begin{align*}
+U_1 &= (160 \pm 1.2)~\V \\
+U_2 &= (17.6 \pm 0.12)~\V \\
+I_1 &= (0.2 \pm 0.009)~\A \\
+P_1 &= (6.9 \pm 0.1)~\W
+\end{align*}
+Da der Transformator im Leerlauf war, ist $I_2 = 0$ zu setzen.
+
+
+\subsection{Ohm'sche Last}
+
+Hier wird derselbe Aufbau verwendet, jedoch zusätzlich mit einem Verbraucher an der Sekundärseite. Es wird hier zusätzlich zur Sekundärspannung auch der Sekundärstrom $I_2$ gemessen. Der variable Widerstand wurde so gewählt, dass $I_2 < 1~\A$ ist. Es gilt
+\begin{align*}
+U_1 &= (160 \pm 1.2)~\V \\
+U_2 &= (16.6 \pm 0.12)~\V \\
+I_1 &= (0.24 \pm 0.009)~\A \\
+I_2 &= (0.68 \pm 0.02)~\A \\
+P_1 &= (19.3\pm0.1)~\W
+\end{align*}
 
 
 \section{Auswertung}
 
+\subsection{Leerlauf}
+Für die Scheinleistung auf der Primärseite ergibt sich
+\begin{align*}
+S_1 = U_1\cdot I_1 = 32~\text{W}
+\end{align*}
+Die Fehlerrechnung ergibt
+\begin{align*}
+\Delta S_1 &= \Delta U_1\cdot I_1 + U_1\cdot \Delta I_1 = 1.68~\W \approx 2~\W
+\end{align*}
 
+Die Blindleistung ist
+\begin{align*}
+Q_1 = \sqrt{S_1^2 - P_1^2} = 31.25~\W
+\end{align*}
+Für die Fehlerrechnung gilt
+\begin{align*}
+\Delta Q_1 = \frac{S_1\cdot \Delta S_1}{\sqrt{S_1^2-P_1^2}} + \frac{P_1\cdot \Delta P_1}{\sqrt{S_1^2-P_1^2}} \approx 1.75~\W \approx 2~\W
+\end{align*}
+
+Der Leistungsfaktor ist
+\begin{align*}
+\cos(\phi) = \frac{P_1}{S_1} = 0.22
+\end{align*}
+Für die Fehlerrechnung gilt
+\begin{align*}
+\Delta\cos(\phi) = \frac{\Delta P_1}{S_1} + \frac{P_1}{S_1^2}\cdot \Delta S_1 = 0.01
+\end{align*}
+
+\subsection{Ohm'sche Last}
+
+Analog zum Leerlauf gilt hier für die Scheinleistung
+\begin{align*}
+S_1 &= 37.6~\W \\
+\Delta S_1 &= 1.7~\W
+\end{align*}
+Die Blindleistung ergibt
+\begin{align*}
+Q_1 &= 37~\W \\
+\Delta Q_1 &= 1.8~\W
+\end{align*}
+Der Leistungsfaktor ist
+\begin{align*}
+\cos(\phi) &= 0.18 \\
+\Delta \cos(\phi) &= 0.01
+\end{align*}
+
+Zusätzlich kann man jetzt die Sekundärseitige Wirkleistung berechnen (unter Annahme der Ohm'schen Last)
+\begin{align*}
+P_2 = U_2\cdot I_2 = 11.3~\text{W}
+\end{align*}
+Die Fehlerrechnung ergibt
+\begin{align*}
+\Delta P_2 &= \Delta U_2\cdot I_2 + U_2\cdot \Delta I_2 = 0.4~\W
+\end{align*}
+
+
+Der Wirkungsgrad kann folgend berechnet werden
+\begin{align*}
+\eta &= \frac{P_2}{P_1} = 0.58 \\
+\Delta \eta &= \frac{\Delta P_2}{P_1} + \frac{P_2}{P_1^2}\cdot \Delta P_2 = 0.02
+\end{align*}
+
+Es fehlt noch die Verlustleistung und die dazugehörige Fehlerrechnung
+\begin{align*}
+P_V &= P_1-P_2 = 8.0~\W\\
+\Delta P_V &= \Delta P_1 + \Delta P_2 = 0.5~\W
+\end{align*}
 
 \section{Zusammenfassung}
 
+Für den Leerlauf gilt
+\begin{align*}
+S_1 &= (32 \pm 2)~\W \\
+Q_1 &= (31 \pm 2)~\W \\
+\cos(\phi) &= (0.22 \pm 0.01)
+\end{align*}
+Da $I_2=0$ ist, gilt natürlich auch $P_2=0$ und $\eta = 0$.
 
+
+Für die Ohm'sche Last gilt
+\begin{align*}
+S_1 &= (38 \pm 2)~\W \\
+Q_1 &= (37 \pm 2)~\W \\
+\cos(\phi) &= (0.18 \pm 0.01) \\
+P_2 &= (11.3 \pm 0.4)~\W \\
+\eta &= (0.58 \pm 0.02) \\
+P_V &= (8.0 \pm 0.5)~\W
+\end{align*}
 
 
 \section{Diskussion}
 
 
 
+\begin{figure}[H]
+\caption{Transformator im Leerlauf. Channel 1 ist proportional zum Primärstrom, Channel 2 ist Sekundärspannung}
+\label{fig:task1}
+{\centering
+\includegraphics[scale=0.4]{task1.jpg}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Transformator mit Leerlauf. Channel 1 ist proportional zum Primärstrom, Channel 2 ist Sekundärspannung}
+\label{fig:task1}
+{\centering
+\includegraphics[scale=0.4]{task1.jpg}
+~
+}
+\end{figure}
+
+
+
+
 
 
 %\newpage 
-%\appendix
-%\section{Python Skript}
+\appendix
+\section{Python Skript}
 
 
 
@@ -137,7 +272,7 @@ Kondensator $1~\mu$F & Philips
 	showstringspaces=false,
 	frame=tb
 }
-%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Sinus Auswertung von Schaltung 1}]{analyse/analyse_ges.py}
+\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Python Skript}]{generate_numbers.py}
 
 %\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Bessel Auswertung}]{generate_numbers_bessel.py}
 
