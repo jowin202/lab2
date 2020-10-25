@@ -28,7 +28,7 @@
 
 
 \lhead{Silbercoulombmeter}
-\rhead{16. Oktober 2020\\T. Maier, J. Winkler}
+\rhead{23. Oktober 2020\\T. Maier, J. Winkler}
 %\cfoot{\twodigits{\thepage}~/ \pageref{LastPage}}
 \cfoot{{\thepage}~/ \pageref{LastPage}}
 
@@ -101,13 +101,6 @@ Sowie auch das 2. Faraday'sche Gesetz: Die elektrochemischen Äquivalente zweier
 Bezeichnung & Hersteller & Gerätenummer & Unsicherheit \\
 \hline
 Thermometer & & & $\pm 1~^\circ$C \\
-Frequenzgenerator & Wavetek & 0161674  \\
-Trenntransformator & \\
-Oszilloskop & RIGOL &DS1ET204711289 \\
-Widerstand $1$~k$\Omega$ & Rosenthal & & $\pm~1\%$ \\
-Widerstand $200~\Omega$ & Rosenthal & & $\pm~1\%$ \\
-2x Spule $n=500$ & & 843/3 \\
-Kondensator $1~\mu$F & Philips
 \end{tabular}
 
 \end{table}
@@ -117,9 +110,31 @@ Kondensator $1~\mu$F & Philips
 
 \section{Durchführung und Messwerte}
 
+\subsection{Silbercoulombmeter}
+Der Versuch wird gemäß Abbildung \ref{fig:pic1} aufgebaut. Die aus Silber bestehenden Elektroden werden abgeschliffen und ausführlich gewogen. Danach werden sie in den Behälter gehängt und an den Stromkreis angeschlossen. Es gilt $I=100~$mA für $t=1800~$s. Nach einer Stunde werden die Elektroden aus dem Behälter genommen und erneut abgewogen.
+
+
+\subsection{Elektrolyse}
 
 
 \section{Auswertung}
+
+\subsection{Silbercoulombmeter}
+Beim Silbercoulombmeter wird für die Faraday-Konstante folgende Formeln benötigt.
+\begin{align*}
+F &= \frac{I\cdot t\cdot M}{m\cdot z} \\
+\Delta &= \frac{\Delta I\cdot t\cdot M}{m\cdot z} + \frac{I\cdot \Delta t\cdot M}{m\cdot z} +\frac{I\cdot t\cdot M}{m^2\cdot z}\cdot \Delta m
+\end{align*}
+Es gilt $z=1$ und $M=107.87~$g/mol laut \cite{silber}. Zusätzlich gilt $I=(100 \pm 2)~$mA und $t=(1800 \pm 1)~$s. Der Wert $m$ wird aus der Differenz der Elektroden abgelesen.
+
+Für die Auswertung ergibt sich bei Tanja Maier
+\input{silber_tm}
+Bei den Messwerten von Johannes Winkler ergibt sich
+\input{silber_jw}
+
+
+
+\subsection{Elektrolyse}
 
 
 
@@ -172,6 +187,7 @@ Kondensator $1~\mu$F & Philips
 \begin{thebibliography}{9}
 \bibitem{chemie} \url{https://www.chemie.de/lexikon/Elektrochemisches_äquivalent.html}, 22.10.2020 22:53 Uhr
 \bibitem{tu} bereitgestellte Unterlagen zum Versuch aus dem TeachCenter der TU Graz
+\bibitem{silber} \url{https://de.wikipedia.org/wiki/Silber}, 25.10.2020, 11:35
 \end{thebibliography}
 
 
