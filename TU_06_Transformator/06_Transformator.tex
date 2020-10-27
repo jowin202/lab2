@@ -61,11 +61,11 @@
 
 \section{Grundlagen und Versuchsaufbau}
 
-Ein Transformator (Abbildung \ref{fig:transformator}) wird  ein Gerät bezeichnet, dass aus einer Primärspannung $U_1$ eine Spannung $U_2$ generieren kann. Für Tranformatoren im Leerlauf gilt
+Ein Transformator (Abbildung \ref{fig:transformator}) wird  ein Gerät bezeichnet, dass aus einer Primärspannung $U_1$ eine Spannung $U_2$ generieren kann. Es gilt
 \begin{align}
-\frac{U_1}{U_2} = -\frac{n_1}{n_2}
+\frac{U_1}{U_2} = \frac{n_1}{n_2} = \frac{I_2}{I_1}
 \end{align}
-wobei die Spulen gleichsinnig gewickelt sind. $n_1$ und $n_2$ beschreiben dabei die Windungszahlen des Transformators. Bei belasteten Transformatoren ist es entsprechend komplizierter, da ein Sekundärstrom $I_2$ erzeugt wird, dessen magnetischer Fluss den ursprünglichen magnetischen Fluss hemmt. 
+wobei $n_1,n_2$ die Windungszahlen der Spulen sind, $U_1,U_2$ jeweils Primär- und Sekundärspannung und $I_1,I_2$ jeweils Primär- und Sekundärstrom. Diese Gleichung gilt in der Praxis nur näherungsweise, da Transformatoren verlustbehaftet sind.
 
 \begin{figure}[H]
 \caption{Transformator}
@@ -234,13 +234,13 @@ S_1 &= 37.6~\W \\
 \end{align*}
 Die Blindleistung ergibt
 \begin{align*}
-Q_1 &= 37~\W \\
+Q_1 &= 32~\W \\
 \Delta Q_1 &= 2~\W
 \end{align*}
 Der Leistungsfaktor ist
 \begin{align*}
-\cos(\phi) &= 0.18 \\
-\Delta \cos(\phi) &= 0.01
+\cos(\phi) &= 0.51 \\
+\Delta \cos(\phi) &= 0.02
 \end{align*}
 
 Zusätzlich kann man jetzt die Sekundärseitige Wirkleistung berechnen (unter Annahme der Ohm'schen Last)
@@ -310,8 +310,8 @@ Da $I_2=0$ ist, gilt natürlich auch $P_2=0$ und $\eta = 0$.
 Für die Ohm'sche Last gilt
 \begin{align*}
 S_1 &= (38 \pm 2)~\W \\
-Q_1 &= (37 \pm 2)~\W \\
-\cos(\phi) &= (0.18 \pm 0.01) \\
+Q_1 &= (32 \pm 2)~\W \\
+\cos(\phi) &= (0.51 \pm 0.02) \\
 P_2 &= (11.3 \pm 0.4)~\W \\
 \eta &= (0.58 \pm 0.02) \\
 P_V &= (8.0 \pm 0.5)~\W
