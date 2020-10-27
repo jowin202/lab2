@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  27 OCT 2020 06:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  27 OCT 2020 07:11
 entering extended mode
 **./06_Transformator.tex
 (06_Transformator.tex
@@ -340,9 +340,6 @@ LaTeX Warning: Label `tab:spule' multiply defined.
 
 LaTeX Warning: Label `fig:task1' multiply defined.
 
-
-LaTeX Warning: Label `fig:task1' multiply defined.
-
 )
 \openout1 = `06_Transformator.aux'.
 
@@ -531,21 +528,22 @@ Underfull \hbox (badness 1635) in paragraph at lines 247--247
 <task1.jpg, id=91, 703.62875pt x 502.87875pt>
 File: task1.jpg Graphic file (type jpg)
 <use task1.jpg>
-Package pdftex.def Info: task1.jpg  used on input line 303.
+Package pdftex.def Info: task1.jpg  used on input line 305.
 (pdftex.def)             Requested size: 281.4465pt x 201.14793pt.
 [6]
 <task2.jpg, id=95, 703.62875pt x 502.87875pt>
 File: task2.jpg Graphic file (type jpg)
 <use task2.jpg>
-Package pdftex.def Info: task2.jpg  used on input line 312.
+Package pdftex.def Info: task2.jpg  used on input line 317.
 (pdftex.def)             Requested size: 281.4465pt x 201.14793pt.
-<kurve.png, id=96, 462.528pt x 346.896pt>
+ [7 <./task1.jpg>]
+<kurve.png, id=100, 462.528pt x 346.896pt>
 File: kurve.png Graphic file (type png)
 <use kurve.png>
-Package pdftex.def Info: kurve.png  used on input line 321.
+Package pdftex.def Info: kurve.png  used on input line 326.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [7 <./task1.jpg> <./task2.jpg>] (generate_numbers.py [8 <./kurve.png>]
-[9] [10]
+ [8 <./task2.jpg> <./kurve.png>] (generate_numbers.py
+[9] [10] [11]
 Overfull \hbox (122.29913pt too wide) in paragraph at lines 136--137
 [][] 
  []
@@ -555,11 +553,11 @@ Overfull \hbox (153.79907pt too wide) in paragraph at lines 137--138
 [][] 
  []
 
-) [11]
+)
 Missing character: There is no Ã in font cmtt10!
 Missing character: There is no ¤ in font cmtt10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 []$\OT1/cmtt/m/n/10 https : / / www . chemie . de / lexikon / Elektrochemisches
  _ quivalent . html$\OT1/cmr/m/n/10 ,
  []
@@ -572,10 +570,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7462 strings out of 492946
- 108510 string characters out of 3124934
- 260076 words of memory out of 3000000
- 11246 multiletter control sequences out of 15000+200000
+ 7463 strings out of 492946
+ 108521 string characters out of 3124934
+ 253084 words of memory out of 3000000
+ 11247 multiletter control sequences out of 15000+200000
  6717 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,18n,43p,412b,1886s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -589,7 +587,7 @@ leJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ts/cm/cmr7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 06_Transformator.pdf (12 pages, 345970 bytes).
+Output written on 06_Transformator.pdf (12 pages, 346136 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
