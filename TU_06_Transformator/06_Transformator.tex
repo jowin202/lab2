@@ -61,6 +61,34 @@
 
 \section{Grundlagen und Versuchsaufbau}
 
+Ein Transformator (Abbildung \ref{fig:transformator}) wird  ein Gerät bezeichnet, dass aus einer Primärspannung $U_1$ eine Spannung $U_2$ generieren kann. Für Tranformatoren im Leerlauf gilt
+\begin{align}
+\frac{U_1}{U_2} = -\frac{n_1}{n_2}
+\end{align}
+wobei die Spulen gleichsinnig gewickelt sind. $n_1$ und $n_2$ beschreiben dabei die Windungszahlen des Transformators. Bei belasteten Transformatoren ist es entsprechend komplizierter, da ein Sekundärstrom $I_2$ erzeugt wird, dessen magnetischer Fluss den ursprünglichen magnetischen Fluss hemmt. 
+
+\begin{figure}[H]
+\caption{Transformator}
+\label{fig:transformator}
+{\centering
+\includegraphics[scale=0.4]{transformator.png}
+~
+}
+\end{figure}
+
+
+Es sind folgende Größen relevant.
+\begin{itemize}
+\item Wirkleistung primärseitig: $P_1 = U_1\cdot I_1$
+\item Wirkleistung sekundärseitig: $P_2 = U_2\cdot I_2$
+\item Phasenverschiebung primärseitig $\cos(\phi) = \frac{P_1}{S_1}$
+\item Phasenverschiebung sekundärseitig $\cos(\phi) = \frac{P_2}{S_2}$
+\item Primäre Blindleistung $Q_1 = \sqrt{S_1^2 - P_1^2}$
+\item Wirkungsgrad $\eta = \frac{P_2}{P_1}$
+\item Verlustleistung $P_V = P_1 - P_2$
+\end{itemize}
+
+
 
 
 

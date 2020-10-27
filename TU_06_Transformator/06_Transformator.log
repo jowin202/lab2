@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  27 OCT 2020 08:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  27 OCT 2020 08:14
 entering extended mode
 **./06_Transformator.tex
 (06_Transformator.tex
@@ -490,23 +490,30 @@ Overfull \hbox (35.02849pt too wide) in paragraph at lines 57--58
 Dar-stel-lung von Prim[]arstrom
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+LaTeX Font Info:    Try loading font information for U+msa on input line 64.
 
 ("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.f
 d"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 64.
 
 ("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.f
 d"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<pic1.png, id=69, 307.3884pt x 95.3964pt>
-File: pic1.png Graphic file (type png)
-<use pic1.png>
-Package pdftex.def Info: pic1.png  used on input line 71.
-(pdftex.def)             Requested size: 276.64699pt x 85.85593pt.
+<transformator.png, id=69, 715.92468pt x 261.97874pt>
+File: transformator.png Graphic file (type png)
+<use transformator.png>
+Package pdftex.def Info: transformator.png  used on input line 74.
+(pdftex.def)             Requested size: 286.36479pt x 104.78964pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
+
+("C:\Users\WinkleJo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -514,38 +521,45 @@ Make it at least 22.54448pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[2{C:/Users/WinkleJo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pic1
-.png>] [3] [4] [5]
-Underfull \hbox (badness 1635) in paragraph at lines 247--247
+[2{C:/Users/WinkleJo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./tran
+sformator.png>]
+<pic1.png, id=78, 307.3884pt x 95.3964pt>
+File: pic1.png Graphic file (type png)
+<use pic1.png>
+Package pdftex.def Info: pic1.png  used on input line 99.
+(pdftex.def)             Requested size: 276.64699pt x 85.85593pt.
+ [3 <./pic1.png>] [4] [5]
+Underfull \hbox (badness 1635) in paragraph at lines 275--275
 []\OT1/cmr/m/n/10 Tabelle 3: |Be-rech-nung der Leis-tung $\OML/cmm/m/it/10 P[]$
  \OT1/cmr/m/n/10 aus Se-kund[]arspan-nung $\OML/cmm/m/it/10 U[]$\OT1/cmr/m/n/10
  , Se-
  []
 
-<task1.jpg, id=91, 703.62875pt x 502.87875pt>
+[6]
+<task1.jpg, id=96, 703.62875pt x 502.87875pt>
 File: task1.jpg Graphic file (type jpg)
 <use task1.jpg>
-Package pdftex.def Info: task1.jpg  used on input line 305.
+Package pdftex.def Info: task1.jpg  used on input line 333.
 (pdftex.def)             Requested size: 281.4465pt x 201.14793pt.
-[6]
-<task2.jpg, id=95, 703.62875pt x 502.87875pt>
+ [7]
+<task2.jpg, id=101, 703.62875pt x 502.87875pt>
 File: task2.jpg Graphic file (type jpg)
 <use task2.jpg>
-Package pdftex.def Info: task2.jpg  used on input line 317.
+Package pdftex.def Info: task2.jpg  used on input line 345.
 (pdftex.def)             Requested size: 281.4465pt x 201.14793pt.
- [7 <./task1.jpg>]
-<task3.jpg, id=100, 527.72156pt x 377.15906pt>
+<task3.jpg, id=102, 527.72156pt x 377.15906pt>
 File: task3.jpg Graphic file (type jpg)
 <use task3.jpg>
-Package pdftex.def Info: task3.jpg  used on input line 329.
+Package pdftex.def Info: task3.jpg  used on input line 357.
 (pdftex.def)             Requested size: 211.08488pt x 150.86095pt.
-<kurve.png, id=101, 462.528pt x 346.896pt>
+ [8 <./task1.jpg> <./task2.jpg>]
+<kurve.png, id=106, 462.528pt x 346.896pt>
 File: kurve.png Graphic file (type png)
 <use kurve.png>
-Package pdftex.def Info: kurve.png  used on input line 344.
+Package pdftex.def Info: kurve.png  used on input line 372.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [8 <./task2.jpg> <./task3.jpg>] (generate_numbers.py
-[9 <./kurve.png>] [10] [11]
+ [9 <./task3.jpg>] (generate_numbers.py
+[10 <./kurve.png>] [11] [12]
 Overfull \hbox (122.29913pt too wide) in paragraph at lines 136--137
 [][] 
  []
@@ -555,27 +569,27 @@ Overfull \hbox (153.79907pt too wide) in paragraph at lines 137--138
 [][] 
  []
 
-[12])
+[13])
 Missing character: There is no Ã in font cmtt10!
 Missing character: There is no ¤ in font cmtt10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 []$\OT1/cmtt/m/n/10 https : / / www . chemie . de / lexikon / Elektrochemisches
  _ quivalent . html$\OT1/cmr/m/n/10 ,
  []
 
 
 AED: lastpage setting LastPage
-[13] (06_Transformator.aux)
+[14] (06_Transformator.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7470 strings out of 492946
- 108607 string characters out of 3124934
- 260100 words of memory out of 3000000
- 11253 multiletter control sequences out of 15000+200000
+ 7493 strings out of 492946
+ 109066 string characters out of 3124934
+ 260110 words of memory out of 3000000
+ 11272 multiletter control sequences out of 15000+200000
  6717 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,18n,43p,412b,1886s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -586,12 +600,13 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/WinkleJo/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Wink
 leJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 06_Transformator.pdf (13 pages, 443277 bytes).
+ts/cm/cmr5.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><C:/Users/WinkleJo/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/WinkleJo/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on 06_Transformator.pdf (14 pages, 481812 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
+ 157 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
