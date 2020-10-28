@@ -128,6 +128,29 @@ Anode nachher/ g & 6.237 & 9.486 \\
 
 
 \subsection{Elektrolyse}
+Zuerst wurde die Dichte der Schwefelsäure $\rho$ bestimmt. Die Raumtemperatur wurde vom Thermometer mit $T=22^\circ$ bzw $T=295.15$~K abgelesen. Die Elektrolyse wurde für $t=600~$s (bzw. 10 Minuten) bei $I=300~$mA bzw $I=400~$mA durchgeführt.
+
+
+\begin{table}[H]
+\caption{Daten für die Elektrolyse von Tanja Maier (TM) und Johannes Winkler (JW)}
+
+\begin{tabular}{l|lll}
+Bezeichnung & TM & JW & Unsicherheit \\
+\hline
+$\rho({\text{H}_2\text{SO}_4})$ / g/dm${}^3$ & 1110 & 1106 & $\pm 4$ \\
+$t$ / s & 600 & 600 & $\pm 1$ \\
+$p_{\text{Luft}}$ / hPa & 1016 & 1016 & $\pm 1$ \\
+$p_{\text{Dampf}}$ / Pa & 2500 & 2500 & $\pm 100$ \\
+$I$ / mA & 400 & 300 & $\pm 3$ \\
+Höhe Anode / cm & 14.0 & 11.5 & $\pm 2.0$ \\
+Höhe Kathode / cm & 24.0 & 18.5 & $\pm 2.0$ \\
+Volumen Anode / ml & 16.4 & 11.4 & $\pm 4.0$ \\
+Volumen Kathode / ml & 33.8 & 24.0 & $\pm 4.0$ \\
+$T$ / ${}^\circ$C & 22 & 22 & $\pm 1$
+\end{tabular}
+
+\end{table}
+
 
 
 \section{Auswertung}
@@ -150,6 +173,17 @@ Bei den Messwerten von Johannes Winkler ergibt sich
 \subsection{Elektrolyse}
 
 
+Die Berechnung der Faraday Konstante wird mit der Formel
+\begin{align}
+F = \frac{I\cdot t\cdot R \cdot T}{z \cdot V \cdot (p_L +\rho \cdot g \cdot h - p_D)}
+\end{align}
+durchgeführt, wobei $p_L$ der Luftdruck, $p_D$ der Dampfdruck und $\rho$ die Dichte der Schwefelsäure ist.
+
+Die Fehlerrechnung ist
+\begin{align*}
+\Delta F &= F\cdot \frac{\Delta T}{T} + F\cdot \frac{\Delta t}{t} + F\cdot \frac{\Delta I}{I} + F \cdot \frac{\Delta V}{V}  + F\cdot \frac{\Delta p_L + \Delta p_D + g\cdot (\Delta\rho \cdot h + \rho\cdot \Delta h)}{(p_L +\rho \cdot g \cdot h - p_D)}\\
+\Delta F &= F\cdot \left(\frac{\Delta T}{T} + \frac{\Delta t}{t} + \frac{\Delta I}{I} + \frac{\Delta V}{V}  + \frac{\Delta p_L + \Delta p_D + g\cdot (\Delta\rho \cdot h + \rho\cdot \Delta h)}{(p_L +\rho \cdot g \cdot h - p_D)}\right)
+\end{align*}
 
 \section{Zusammenfassung}
 
