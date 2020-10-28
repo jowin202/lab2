@@ -161,14 +161,15 @@ P_1 &= (19.3\pm0.1)~\W
 
 
 \subsection{Ohm + Induktive Last}
+\label{sec:ohm_ind}
 
-Zum vorherigen Aufbau wurde eine Spule $(L=0.1~$H) sekundärseitig in Serie geschalten. Für die übliche Primärspannung $U_1 = (160\pm1.2)~\V$ wurden 15 Messwerte bei unterschiedlicher Einstellung des Lastenwiderstandes (bis zu 45~$\Omega$) gemessen. 
+Zum vorherigen Aufbau wurde eine Spule $(L=0.1~$H) sekundärseitig in Serie geschalten. Für die übliche Primärspannung $U_1 = (160\pm1)~\V$ wurden 15 Messwerte bei unterschiedlicher Einstellung des Lastenwiderstandes (bis zu 45~$\Omega$) gemessen. 
 
 Es wird der Sekundärstrom $I_2$ und die Sekundärspannung $U_2$ gemessen, der variable Widerstand $R$ ergibt sich daraus. Die Leistung kann dadurch direkt berechnet weren. Die Messwerte sind in Tabelle \ref{tab:spule} zu finden.
 
 \begin{table}[H]
 \centering
-\caption{Messwerte für Sekundärspannung $U_2$, Sekundärstrom $I_2$, Widerstand $R$}
+\caption{Messwerte für Sekundärspannung $U_2$, Sekundärstrom $I_2$, Widerstand $R$. Die entsprechenden Unsicherheiten sind in Abschnitt~\ref{sec:ohm_ind} zu finden.}
 \label{tab:spule}
 \begin{tabular}{r|rrr}
   &	$U_2$ / V  &	$I_2$ /A  &	$R / \Omega$\\
@@ -209,11 +210,11 @@ Die Fehlerrechnung ergibt
 
 Die Blindleistung ist
 \begin{align*}
-Q_1 = \sqrt{S_1^2 - P_1^2} = 31.25~\W
+Q_1 = \sqrt{S_1^2 - P_1^2} \approx 31~\W
 \end{align*}
 Für die Fehlerrechnung gilt
 \begin{align*}
-\Delta Q_1 = \frac{S_1\cdot \Delta S_1}{\sqrt{S_1^2-P_1^2}} + \frac{P_1\cdot \Delta P_1}{\sqrt{S_1^2-P_1^2}} \approx 1.75~\W \approx 2~\W
+\Delta Q_1 = \frac{S_1\cdot \Delta S_1}{\sqrt{S_1^2-P_1^2}} + \frac{P_1\cdot \Delta P_1}{\sqrt{S_1^2-P_1^2}} \approx 2~\W
 \end{align*}
 
 Der Leistungsfaktor ist
@@ -267,12 +268,13 @@ P_V &= P_1-P_2 = 8.0~\W\\
 
 
 \subsection{Ohm + Induktive Last}
+\label{sec_ohm_induktiv_2}
 
-An dieser Stelle wird die Leistung auf der Sekundärseite ausgewertet. Das Maximum befindet sich bei $U_2=5.9~\V$ und $I_2=0.37~\A$. Die maximale Leistung ist dann $P_2=2.18~\W$.
+An dieser Stelle wird die Leistung auf der Sekundärseite ausgewertet. Das Maximum befindet sich bei $U_2=(5.9 \pm 0.1)~\V$ und $I_2=(0.37 \pm 0.02)~\A$. Die maximale Leistung ist dann $P_2=(2.18 \pm 0.16) ~\W$.
 
 \begin{table}[H]
 \centering
-\caption{Berechnung der Leistung $P_2$ aus Sekundärspannung $U_2$, Sekundärstrom $I_2$ und bestimmung des Maximums.}
+\caption{Berechnung der Leistung $P_2$ aus Sekundärspannung $U_2$, Sekundärstrom $I_2$ und bestimmung des Maximums. Die Unsicherheiten sind aus Abschnitt~\ref{sec_ohm_induktiv_2} zu entnehmen.}
 \label{tab:spule}
 \begin{tabular}{r|rrrr}
   &	$U_2$ / V  &	$I_2$ /A  &	$R / \Omega$ & $P_2$ / W \\
@@ -318,7 +320,7 @@ P_V &= (8.0 \pm 0.5)~\W
 \end{align*}
 
 
-Für die Ohm'sche Last mit in Serie geschalteter Spule ergibt sich ein Leistungsmaximum von $2.18~\W$ bei $R=15.9~\Omega$.
+Für die Ohm'sche Last mit in Serie geschalteter Spule ergibt sich ein Leistungsmaximum von $(2.18 \pm 0.16)~\W$ bei $R=(15.9 \pm 1.1)~\Omega$.
 
 \section{Diskussion}
 
@@ -362,6 +364,9 @@ Primärstrom und Sekundärspannung mit Ohm’scher induktiver Last wurden in Abb
 
 Betrachtet man die Darstellungen von Primärstrom und Sekundärspannung am Oszillator für alle drei Fälle, so wird ersichtlich, dass der Primärstrom immer gleichbleibt und die Sekundärspannung zunehmend verstärkt wird.
 Diese Beobachtung passt auch mit dem Diagramm von Leistung und Widerstand als Kurve zusammen. Beim Leistungsmaximum ist die Sekundärspannung am höchsten.
+
+
+Die Phasenverschiebung fällt bei jener Variante mit Ohm'schen Widerstand und Induktivität in Serie am ehesten auf. Zwischen Leerlauf und Ohm'scher Last ist keine nennenswerte Phasenverschiebung zwischen Primärstrom und Sekundärspannung zu bemerken.
 
 
 
