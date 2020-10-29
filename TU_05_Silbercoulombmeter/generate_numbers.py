@@ -20,6 +20,7 @@ delta_m = 0.1/1000 #g
 molmasse = 107.8682/1000 #molmasse silber in kg
 R = 8.31446261815324 # Wikipedia
 
+avogadro = 6.02214076*10**23
 
 
 
@@ -42,10 +43,17 @@ Delta_F_Anode = Delta_I*t*molmasse/(diff_anode_in_kg*z) + I*Delta_t*molmasse/(di
 print(str(round(F_Kathode,2)) + "   "  + str(Delta_F_Kathode))
 print(str(round(F_Anode,2)) + "   "  + str(Delta_F_Anode))
 
+e_kathode = F_Kathode/avogadro
+delta_e_kathode = Delta_F_Kathode/avogadro
+e_anode = F_Anode/avogadro
+delta_e_anode = F_Anode/avogadro
+
 f = open("silber_jw.tex", "w")
 f.write("\\begin{align*}\n")
-f.write("F_\\text{Kathode} &= (" + str(round(F_Kathode/1000)) + " \\pm " + str(round(Delta_F_Kathode/1000)) + ")\\cdot \\text{kC/mol}\\\\\n")
-f.write("F_\\text{Anode} &= (" + str(round(F_Anode/1000)) + " \\pm " + str(round(Delta_F_Anode/1000)) + ")\\cdot \\text{kC/mol} \\\\\n")
+f.write("F_\\text{Kathode} &= (" + str(round(F_Kathode/1000)) + " \\pm " + str(round(Delta_F_Kathode/1000)) + ")~\\text{kC/mol}\\\\\n")
+f.write("F_\\text{Anode} &= (" + str(round(F_Anode/1000)) + " \\pm " + str(round(Delta_F_Anode/1000)) + ")~\\text{kC/mol} \\\\\n")
+f.write("e_\\text{Kathode} &= (" + str(custom_round(e_kathode*10**19,2)) + " \\pm " + str(custom_round(delta_e_kathode*10**19,2)) + ")\\cdot 10^{-19}~C \\\\\n")
+f.write("e_\\text{Anode} &= (" + str(custom_round(e_anode*10**19,2)) + " \\pm " + str(custom_round(delta_e_anode*10**19,2)) + ")\\cdot 10^{-19}~C  \n")
 f.write("\\end{align*}\n")
 
 
@@ -68,10 +76,16 @@ Delta_F_Anode = Delta_I*t*molmasse/(diff_anode_in_kg*z) + I*Delta_t*molmasse/(di
 print(str(round(F_Kathode,2)) + "   "  + str(Delta_F_Kathode))
 print(str(round(F_Anode,2)) + "   "  + str(Delta_F_Anode))
 
+e_kathode = F_Kathode/avogadro
+delta_e_kathode = Delta_F_Kathode/avogadro
+e_anode = F_Anode/avogadro
+delta_e_anode = F_Anode/avogadro
 
 f = open("silber_tm.tex", "w")
 f.write("\\begin{align*}\n")
-f.write("F_\\text{Kathode} &= (" + str(round(F_Kathode/1000)) + " \\pm " + str(round(Delta_F_Kathode/1000)) + ")\\cdot \\text{kC/mol} \\\\\n")
-f.write("F_\\text{Anode} &= (" + str(round(F_Anode/1000)) + " \\pm " + str(round(Delta_F_Anode/1000)) + ")\\cdot \\text{kC/mol} \\\\\n")
+f.write("F_\\text{Kathode} &= (" + str(round(F_Kathode/1000)) + " \\pm " + str(round(Delta_F_Kathode/1000)) + ")~\\text{kC/mol}\\\\\n")
+f.write("F_\\text{Anode} &= (" + str(round(F_Anode/1000)) + " \\pm " + str(round(Delta_F_Anode/1000)) + ")~\\text{kC/mol} \\\\\n")
+f.write("e_\\text{Kathode} &= (" + str(custom_round(e_kathode*10**19,2)) + " \\pm " + str(custom_round(delta_e_kathode*10**19,2)) + ")\\cdot 10^{-19}~C \\\\\n")
+f.write("e_\\text{Anode} &= (" + str(custom_round(e_anode*10**19,2)) + " \\pm " + str(custom_round(delta_e_anode*10**19,2)) + ")\\cdot 10^{-19}~C  \n")
 f.write("\\end{align*}\n")
 
