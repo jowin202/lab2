@@ -1,0 +1,189 @@
+\documentclass{article}
+
+\usepackage{url} 
+
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{ngerman}
+\usepackage{listings}
+
+\usepackage{tabularx}
+\usepackage{floatrow}
+\usepackage[tableposition=top]{caption}
+\floatsetup[table]{capposition=top}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[numbib]{tocbibind}
+
+
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
+}
+
+
+
+\lhead{Interferometer}
+\rhead{13. November 2020\\T. Maier, J. Winkler}
+%\cfoot{\twodigits{\thepage}~/ \pageref{LastPage}}
+\cfoot{{\thepage}~/ \pageref{LastPage}}
+
+\newcommand{\W}{\text{W}}
+\newcommand{\V}{\text{V}}
+\newcommand{\A}{\text{A}}
+
+
+\newcommand{\mini}{\operatorname{min}}
+
+
+\begin{document}
+
+\parindent0cm
+
+\includepdf{Deckblatt.pdf}
+
+
+\pagestyle{fancy}
+
+\section{Aufgabenstellung}
+
+\begin{enumerate}
+\item Demonstration und Erklärung des Einflusses der Größe einer Lichtquelle auf das Interferenzmuster eines Doppelspaltes.
+\item Demonstration und Erklärung des Einflusses der spektralen Breite des Lichtes einer räumlich kohärenten Lichtquelle auf das Interferenzmuster eines Doppelspaltes.
+\item Bestimmung der Dicke einer Kunststoffschicht mit dem Doppelspalt Interferenzmuster.
+\item Bestimmung der Größe der Lichtquelle, bei der für Doppelspalten mit unterschiedlichem Spaltabstand das Licht noch räumlich kohärent ist.
+\end{enumerate}
+
+
+
+\section{Voraussetzungen und Grundlagen}
+
+%\begin{figure}[H]
+%\caption{Transformator}
+%\label{fig:transformator}
+%{\centering
+%\includegraphics[scale=0.4]{transformator.png}
+%~
+%}
+%\end{figure}
+
+
+
+
+
+\section{Geräteliste}
+
+\begin{table}[H]
+\caption{Liste der verwendeten Geräte}
+
+~
+
+\begin{tabular}{l|p{3cm}p{3cm}llll}
+Abk. & Bezeichnung  & Typ & Gerätenummer & Unsicherheit \\
+\hline
+S & Spaltblende \\
+\hline
+L1 & Sammellinse 1 & $f_1 = 300~$mm & & $\Delta f_1 = 0.5~$mm \\
+\hline
+L2 & Sammellinse 2 & $f_2 = 150~$mm & & $\Delta f_2 = 0.5~$mm \\
+\hline
+L3 & Sammellinse 3 & $f_3 = 40~$mm & & $\Delta f_3 = 0.5~$mm \\
+\hline
+L4 & Sammellinse 4 & $f_4 = 30~$mm & & $\Delta f_4 = 0.5~$mm \\
+\hline
+DS & Doppelspalt \\
+\hline
+
+
+
+
+
+B & Lochblenden und Irisblende & $d_1=2~$mm ~ ~ ~ ~ $d_2=3~$mm   ~~~~~~~~~~~~ $d_3=6~$mm & &  $\Delta d = 0.1~$mm \\
+\hline
+F & Filterrad für LEDs & \\
+\hline
+K & Kamera
+\end{tabular}
+
+\end{table}
+
+
+
+\section{Beschreibung der Versuchsanordnung}
+
+
+
+
+
+
+
+
+\section{Versuchsdurchführung und Messwerte}
+
+
+
+\section{Auswertung}
+
+
+
+
+
+
+
+
+\section{Zusammenfassung und Diskussion}
+
+
+
+
+%\newpage 
+%\appendix
+%\section{Python Skript}
+
+
+
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{weborange}{RGB}{255,165,0}
+\definecolor{frenchplum}{RGB}{129,20,83}
+
+\lstdefinelanguage{python}{
+    morekeywords={def, for, range, abs, return},
+    otherkeywords={<-,->, |>, \%\{, \}, \{, \, (, )},
+    sensitive=true,
+    morecomment=[l]{\#},
+    morecomment=[n]{/*}{*/},
+    morecomment=[s][\color{purple}]{:}{\ },
+    morestring=[s][\color{orange}]"",
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{eminence},
+    stringstyle=\color{red},
+	basicstyle=\ttfamily,
+	breaklines,
+	showstringspaces=false,
+	frame=tb
+}
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Python Skript}]{generate_numbers.py}
+
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Bessel Auswertung}]{generate_numbers_bessel.py}
+
+
+%\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Zerstreuungslinse Auswertung}]{generate_numbers_zerstreuungslinse.py}
+
+
+\begin{thebibliography}{9}
+\bibitem{quelle1} \url{https://www.youtube.com/watch?v=oFJCEGcwUiQ}, 07.11.2020, 00:15 Uhr
+\bibitem{quelle2} \url{https://www.spektrum.de/lexikon/physik/abbesche-theorie/13}, 07.11.2020, 00:17 Uhr
+\bibitem{quelle3} \url{https://www.univie.ac.at/mikroskopie/1_grundlagen/optik/opt_instrumente/7_abbe.htm}, 07.11.2020, 00:24 Uhr
+\bibitem{quelle4} \url{https://physik.cosmos-indirekt.de/Physik-Schule/Rayleigh-Kriterium}, 07.11.2020, 00:26 Uhr
+\bibitem{quelle5} \url{https://www.youtube.com/watch?v=PZaUY45ce8k}, 07.11.2020, 00:27 Uhr
+\bibitem{quelle6} Unterlagen aus Moodle, H. Ditlbacher, bereitgestellt von der KF Universität Graz
+\end{thebibliography}
+
+
+\end{document}
