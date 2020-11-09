@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  7 NOV 2020 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  8 NOV 2020 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,75 +465,75 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 []|\OT1/cmr/m/n/10 Diodenge-pumpter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 \OT1/cmr/m/n/10 Festk[]orper-la-ser
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 []|\OT1/cmr/m/n/10 Festk[]orper-la-ser
  []
 
 
-Underfull \hbox (badness 7064) in paragraph at lines 117--117
+Underfull \hbox (badness 7064) in paragraph at lines 128--128
 []|$\OML/cmm/m/it/10 f[] \OT1/cmr/m/n/10 = 60 []$mm,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 []|\OT1/cmr/m/n/10 Lochblenden und
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 []|$\OML/cmm/m/it/10 d[] \OT1/cmr/m/n/10 = 2 []$mm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 \OML/cmm/m/it/10 d[] \OT1/cmr/m/n/10 = 3 []$mm
  []
 
 
-Overfull \hbox (35.13066pt too wide) in paragraph at lines 104--127
+Overfull \hbox (35.13066pt too wide) in paragraph at lines 115--138
  [][] 
  []
 
-<usaf.png.png, id=42, 164.7756pt x 113.223pt>
+<usaf.png.png, id=43, 164.7756pt x 113.223pt>
 File: usaf.png.png Graphic file (type png)
 <use usaf.png.png>
-Package pdftex.def Info: usaf.png.png  used on input line 138.
+Package pdftex.def Info: usaf.png.png  used on input line 149.
 (pdftex.def)             Requested size: 247.16277pt x 169.83408pt.
 [3]
 <versuch.png, id=48, 323.7696pt x 71.7882pt>
 File: versuch.png Graphic file (type png)
 <use versuch.png>
-Package pdftex.def Info: versuch.png  used on input line 148.
+Package pdftex.def Info: versuch.png  used on input line 159.
 (pdftex.def)             Requested size: 323.76881pt x 71.788pt.
 
-Overfull \hbox (51.54076pt too wide) in paragraph at lines 158--177
+Overfull \hbox (51.54076pt too wide) in paragraph at lines 169--188
  [][] 
  []
 
 [4 <./usaf.png.png> <./versuch.png>] [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 []$\OT1/cmtt/m/n/10 https : / / www . spektrum . de / lexikon / physik / abbesc
 he-[]theorie / 13$\OT1/cmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 []$\OT1/cmtt/m/n/10 https : / / www . univie . ac . at / mikroskopie / 1 _ grun
 dlagen / optik / opt _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 []$\OT1/cmtt/m/n/10 https : / / physik . cosmos-[]indirekt . de / Physik-[]Schu
 le /
  []
@@ -546,13 +546,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7689 strings out of 481239
- 111436 string characters out of 5920377
- 365409 words of memory out of 5000000
- 22841 multiletter control sequences out of 15000+600000
+ 7690 strings out of 481239
+ 111440 string characters out of 5920377
+ 366417 words of memory out of 5000000
+ 22842 multiletter control sequences out of 15000+600000
  535723 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,45p,814b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,45p,816b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -562,7 +562,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt10.pfb>
-Output written on 01_Abbe_Theorie.pdf (8 pages, 263886 bytes).
+Output written on 01_Abbe_Theorie.pdf (8 pages, 266897 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream

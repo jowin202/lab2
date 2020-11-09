@@ -38,7 +38,7 @@
 \newcommand{\A}{\text{A}}
 
 
-
+\newcommand{\mini}{\operatorname{min}}
 
 
 \begin{document}
@@ -62,7 +62,7 @@
 
 Die Abbesche Theorie besagt, dass das Auflösungsvermögen eines Objekts maßgeblich durch die Wellenlänge des eingestrahlten Lichts begrenzt wird. Das Auflösungsvermögen ist dabei die Fähigkeit eines Instruments Objektdetails noch getrennt abbilden zu können. Eine der Grundlage für diese Theorie bildet das Huygenssche Prinzip, wonach jeder Punkt einer Wellenfront der Ausgangspunkt einer neuen kugelförmigen Elementarwelle ist.
 
-Licht trifft also auf ein Gitter, es bilden sich kugelförmige Wellen und es kann sowohl konstruktive als auch destruktive Interferenz beobachtet werden. Die Abbesche Theorie sagt hier, dass jedoch mindestens die Maxima nullter und erster Ordnung von einer Linse erfasst werden müssen, um überhaupt eine Auflösung zu erhalten. Außerdem kann die Linse (rein technisch) nicht unendlich groß gebaut (d.h. es können nie alle Maxima erfasst werden) und auch nicht beliebig nahe an das Gitter herangebracht werden. Der Zusammenhang zwischen Einfallswinkel $\alpha$ des Lichts, das höchstens von der Linse erfasst werden kann und Brechzahl n des Mediums, in dem sich die Apertur befindet, ist durch die sogenannte numerische Apertur $N_A$ (Auflösungvermögen des Mikroskops) gegeben
+Licht trifft also auf ein Gitter, es bilden sich kugelförmige Wellen und es kann sowohl konstruktive als auch destruktive Interferenz beobachtet werden. Die Abbesche Theorie sagt hier, dass jedoch mindestens die Maxima nullter und erster Ordnung von einer Linse erfasst werden müssen, um überhaupt eine Auflösung zu erhalten. Außerdem kann die Linse (rein technisch) nicht unendlich groß gebaut (d.h. es können nie alle Maxima erfasst werden) und auch nicht beliebig nahe an das Gitter herangebracht werden. Der Zusammenhang zwischen Einfallswinkel $\alpha$ des Lichts, das höchstens von der Linse erfasst werden kann und Brechzahl $n$ des Mediums, in dem sich die Apertur befindet, ist durch die sogenannte numerische Apertur $N_A$ (Auflösungvermögen des Mikroskops) gegeben
 \begin{align}
 N_A = n\cdot\sin(\alpha)
 \end{align}
@@ -72,11 +72,22 @@ Betrachtet man nun zwei Punkte eines Gitters, die im Abstand $x$ voneinander ent
 \end{align}
 bzw. durch Umformung
 \begin{align}
-\sin(\alpha) = \frac{\lambda}{n\cdot \sin(\alpha)} = \frac{\lambda}{N_A} 
+x = \frac{\lambda}{n\cdot \sin(\alpha)} = \frac{\lambda}{N_A} 
 \end{align}
-wobei $\alpha$ hier dem Winkel zwischen nullter und erster Ordnung der Maxima und $\lambda$ der Wellenlänge des eingestrahlten Lichts entspricht. \cite{quelle1} \cite{quelle2} \cite{quelle3} 
+wobei $\alpha$ hier dem Winkel zwischen nullter und erster Ordnung der Maxima und $\lambda$ der Wellenlänge des eingestrahlten Lichts entspricht.
 
-Zum ähnlichen Überlegungen kommt man aufgrund des Rayleigh-Kriteriums zur optischen Mikroskopie, welches besagt, dass zwei Punkte im Abstand $x$ gerade dann noch auflösbar sind, wenn das Beugungsscheibchen des ersten Objekts auf das erste Minimum des Beugungsscheibchens des zweiten Objekts fällt \cite{quelle4} \cite{quelle5}
+
+Der kleinstmögliche Abstand $x_{\operatorname{min}}$ ist dann gegeben durch
+\begin{align}
+x_{\text{min}} = 0.61 \cdot \frac{\lambda}{N_A}
+\end{align}
+Außerdem kann für $r<<f$ und $n=1$ (also Luft bzw Vakuum) angenommen werden, dass
+\begin{align}
+N_A \approx r/f
+\end{align}
+wobei $f$ der Abstand zwischen Linse und Blende und $r$ der Radius der Lochblende ist.  (vgl. \cite{quelle1} \cite{quelle2} \cite{quelle3})
+
+Zum ähnlichen Überlegungen kommt man aufgrund des Rayleigh-Kriteriums zur optischen Mikroskopie, welches besagt, dass zwei Punkte im Abstand $x$ gerade dann noch auflösbar sind, wenn das Beugungsscheibchen des ersten Objekts auf das erste Minimum des Beugungsscheibchens des zweiten Objekts fällt. (vgl. \cite{quelle4} \cite{quelle5})
 \begin{align}
 x = \frac{\frac{1.22}{2}\cdot \lambda}{N_A}
 \end{align}
@@ -187,8 +198,8 @@ K & Kamera
 \subsection{Beugungsordnungen und Auflösung}
 
 
-Hierher kommen ganz viele Bilder und davor ein kurzer Text was wir tun
-
+Zuerst wurde die geöffnete Irisblende am Filterrand $B$ in den Strahlengang gedreht und die Linse $L_3$ aus dem Strahlengang rausgeklappt. Dann wurde das Objekt scharfgestellt, indem es mit einer roten LED-Lampe beleuchtet wurde. Danach wurden die drei vertikalen Balken des 3/4 gesucht und zentriert. Anschließend wurde noch die LED-Beleuchtung durch eine Laserbeleuchtung ersetzt und das Bild des Objektes, sowie das zugehörige Beugungsbild aufgenommen (Abbildungen xy und yz).
+Danach wurde mithilfe der Irisblende die Anzahl der transmittierten Ordnungen so reduziert, dass maximal die 5., die 3., die 1. oder nur die 0.Ordnung transmittiert werden. Für diese 4 Stellungen der Irisblende wurden das wieder jeweils das Bild des Objektes, sowie das zugehörige Beugungsbild aufgenommen (Abbildungen xy bis yz).
 \newpage
 
 
@@ -196,7 +207,7 @@ Hierher kommen ganz viele Bilder und davor ein kurzer Text was wir tun
 
 
 
-Hierher kommen ganz viele Bilder und davor ein kurzer Text was wir tun
+Hier wurden beide LEDs als Lichtquellen verwendet und die numerische Apertur mit 3 Lochblenden variiert. Dann wurden jene Elemente gesucht, bei denen die horizontalen und vertikalen Balken nicht mehr unterscheidbar sind. Von den gefundenen Elementen wurden wieder die Bilder aufgenommen, sowie die eingestellten Lochblenden und die Farbe der LED-Lampe notiert (Abbildungen xy bis yz).
 
 \newpage
 
