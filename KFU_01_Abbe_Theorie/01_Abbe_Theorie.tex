@@ -50,6 +50,10 @@
 
 \pagestyle{fancy}
 
+\tableofcontents
+\newpage
+
+
 \section{Aufgabenstellung}
 
 \begin{enumerate}
@@ -121,7 +125,7 @@ RL & Rote LED &  $\lambda=470~$nm & & $\Delta \lambda = 0.05~$nm \\
 \hline
 BL & Blaue LED &  $\lambda=635~$nm & & $\Delta \lambda = 0.05~$nm \\
 \hline
-TO & Testobjekt & Siehe Abb. \\
+TO & Testobjekt & 1951 USAF Target  \\
 \hline
 L1 & Abbildungslinse 1 & $f_1 = 200~$mm & & $\Delta f_1 = 1~$mm \\
 \hline
@@ -142,6 +146,7 @@ K & Kamera
 
 \section{Beschreibung der Versuchsanordnung}
 
+
 \begin{figure}[H]
 \caption{Das verwendete Testobjekt, USAF 1951. aus \cite{quelle6}}
 \label{fig:usaf}
@@ -152,18 +157,12 @@ K & Kamera
 \end{figure}
 
 
-\begin{figure}[H]
-\caption{Aufbau (inkl. Abmessungen) des Versuchs; $L_1$: $f_1= 200~$mm, $F$: Filterrad mit 2 LEDs, Graufilter und freiem Durchgang, $T$: Testobjekt; $L_2$: $f_2= 60~$mm; $B$: Filterrad mit 3 Lochblenden, einer Irisblende und einer Drahtblende, $L_3$ (einklappbar): $f_3= 50~$mm. Quelle: \cite{quelle6}}
-\label{fig:usaf}
-{\centering
-\includegraphics[scale=1]{versuch.png}
-~
-}
-\end{figure}
+Als darzustellendes Objekt wird Grafik \ref{fig:usaf} verwendet. Diese dient zur Bestimmung des Auflösevermögens von optischen Geräten. Es gibt mehrere Gruppen, die jeweils 6 Elemente haben. Ein Element besteht jeweils aus 3 horizontalen und 3 vertikalen Linien. Die Auflösung kann dadurch bestimmt werden, dass man die entsprechende Gruppe und das entsprechende Element angibt, mit einem / getrennt. Das Auflösevermögen wird durch jenes Element (bzw. Gruppe) bestimmt, dass am kleinsten ist und wo man trotzdem noch die horizontalen von den vertikalen Linien unterscheiden kann. Das Auflösevermögen kann in Tabelle \ref{tab:aufl} abgelesen werden.
 
 
 
-\begin{table}
+
+\begin{table}[H]
 \caption{Auflösungsvermögen je nach nach Element und Gruppe mit der Einheit mm$^{-1}$.}
 \label{tab:aufl}
 \begin{tabular}{|l||l|l|l|l|l|l|l|l|l|l|l|}
@@ -186,6 +185,21 @@ K & Kamera
 \hline
 \end{tabular}
 \end{table}
+
+
+
+
+
+
+\begin{figure}[H]
+\caption{Aufbau (inkl. Abmessungen) des Versuchs; $L_1$: $f_1= 200~$mm, $F$: Filterrad mit 2 LEDs, Graufilter und freiem Durchgang, $T$: Testobjekt; $L_2$: $f_2= 60~$mm; $B$: Filterrad mit 3 Lochblenden, einer Irisblende und einer Drahtblende, $L_3$ (einklappbar): $f_3= 50~$mm. Quelle: \cite{quelle6}}
+\label{fig:usaf}
+{\centering
+\includegraphics[scale=1]{versuch.png}
+~
+}
+\end{figure}
+
 
 
 
