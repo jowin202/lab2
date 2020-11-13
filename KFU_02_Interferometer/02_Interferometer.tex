@@ -50,6 +50,8 @@
 
 \pagestyle{fancy}
 
+\tableofcontents
+\newpage
 \section{Aufgabenstellung}
 
 \begin{enumerate}
@@ -71,11 +73,11 @@ wobei der Gangunterschied der beiden Teilwellen $n$-ter Ordnung, $d$ der Abstand
 
 Die Interferenzmaxima werden außerdem mit einer Sammellinse erfasst und abgebildet. Für den Abstand $b_n$ zwischen $0$-tem und $n$-tem Maximum gilt folgender Zusammenhang 
 \begin{align}
-b_n = f_2 \cdot tan\left( \operatorname{arcsin}\left(\frac{n\cdot\lambda}{d}\right)\right), \qquad n\in\mathbb{N}_0
+b_n = f_2 \cdot \tan\left( \operatorname{arcsin}\left(\frac{n\cdot\lambda}{d}\right)\right), \qquad n\in\mathbb{N}_0
 \end{align}
 wobei $f_2$ die Brennweite der Sammellinse nach dem Doppelspalt ist. Außerdem kann man noch den Kontrast $K$ des Inferenzmusters bestimmen, welcher von der jeweiligen Intensität der Lichtquelle abhängt.
 \begin{align}
-K = \frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}}
+K = \frac{I_\text{max}-I_\text{min}}{I_\text{max}+I_\text{min}} \label{eq:kontrast}
 \end{align}
 wobei $I$ die Intensität, $f_1$ die Brennweite der Sammellinse vor dem Doppelspalt und $\omega$ der Radius der Lichtquelle ist. Außerdem wird bei diesem Experiment auch eine Probe mit Polyacrylat verwendet, welche eine zusätzliche Phasenverschiebung am Doppelspalt bewirkt. Diese Phasenverschiebung kann beschrieben werden durch
 \begin{align}
@@ -137,32 +139,49 @@ K & Kamera
 
 \section{Beschreibung der Versuchsanordnung}
 
+Der Versuchsaufbau ist maßstabsgetreu in Grafik \ref{fig:aufbau} dargestellt.
+\begin{figure}[H]
+\caption{Versuchsaufbau. $L_1,L_2,L_3,L_4$ Linsen, $S$ Spaltblende, $DS$ Doppelspalt, $F$ Filterrad, $O$ Substrat mit Polyacrylat-Schicht, $K$ Kamera. Maßstab 1:20}
+\label{fig:aufbau}
+\includegraphics[scale=1]{aufbau.png}
+\end{figure}
 
 
+Die von der Lampe ausgehenden Lichtstrahlen werden in $L_3$ parallelisiert, da der Abstand zur Lampe genau die Brennweite von $L_3$ ist. In $L_4$ wird der Strahl auf den Spalt fokussiert. Die einstellbare Spaltblende liegt exakt im Brennpunkt von $L_1$ und $L_4$, daher werden die ausgehenden Strahlen in $L_1$ wieder parallelisiert. Danach trifft das Licht auf den Doppelspalt, wo Beugung stattfindet. Danach dringt das Licht durch das Substrat, dass teilweise mit einer Schicht Polyacrylat versehen ist. Das Beugungsmuster wird von $L_2$ auf eine Kamera umgeleitet, die sich genau im Brennpunkt von $L_2$ befindet. Zwischen $L_2$ und der Kamera ist zusätzlich noch ein Filterrad, welches wo man wahlweise einen Bandpass (633~nm) oder einen Langpass dazwischen schalten kann. Grafik \ref{fig:strahlen} zeigt den Strahlengang im Interferometer. 
 
-
+\begin{figure}[H]
+\caption{Strahlengang im Interferometer. Die Strahlen sind in blau eingezeichnet, die 1. Beugungsordnung in orange. Maßstab 1:20}
+\label{fig:strahlen}
+\includegraphics[scale=1]{strahlen.png}
+\end{figure}
 
 
 
 \section{Versuchsdurchführung und Messwerte}
 
-\subsection{Teil 1}
-Für diesen Versuch wurde monochromatisches Licht verwendet. Dann wurde der $633~$nm Bandpassfilter in den Strahlengang gedreht und der mittlere Doppelspalt in den Strahlengang geschoben.
+Die Versuchsergebnisse werden von der Kamera aufgenommen. Diese wird mit einem Computer und der Software \textit{IC Capture} gesteuert.
+
+
+\subsection{Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
+
+Bei einer großen Lichtquelle kann räumliche Kohärenz auftreten. Daraus resultiert ein schwächerer Konstrast. Die Größe der Lichtquelle wird durch die verstellbare Spaltblende realisiert. Für diesen Versuch wurde monochromatisches Licht verwendet. Dann wurde der $633~$nm Bandpassfilter in den Strahlengang gedreht und der mittlere Doppelspalt in den Strahlengang geschoben.
 
 Dann wurden 6 geeignete Größen der Lichtquelle gewählt, um den Verlauf des Kontrastes gemäß im Bereich $0 < 2\cdot w < 1.5 \cdot \lambda\cdot f_1 / d$ darstellen zu können. Dafür wurde zunächst die Spaltbreite des Kontrast-Minimums bestimmt. Beim Wert 0 der Mikrometerschraube war der Spalt jedoch noch nicht ganz geschlossen, sodass mit einer negativen Spaltbreite begonnen wurde, um den Spalt auch ganz geschlossen zu halten.
-Für die gewählten Größen der Lichtquelle wurde jeweils ein Foto des Beugungsmusters aufgenommen (Abbildung xy).
+Für die gewählten Größen der Lichtquelle wurde jeweils ein Foto des Beugungsmusters aufgenommen und zusätzlich werden die Grauwerte grafisch dargestellt.
+
+Der Konstrast kann nun mit Formel~\ref{eq:kontrast} berechnet werden.
 
 
-\subsection{Teil 2}
+\subsection{Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}
 
-Beim zweiten Versuch wurde die Spaltblende so eingestellt, dass das Licht mit 0.43 mm Spaltabstand räumlich gut kohärent ist. Danach wurde ein Beugungsbild mit dem 633 nm Bandpassfilter, mit dem Langpassfilter und ohne Filter aufgenommen (Abbildung xy).
+Beim zweiten Versuch ist diesmal das Licht räumlich kohärent, dafür variiert die spektrale Breite (und damit die zeitliche Kohärenz). Die Theorie sagt, dass die 0. Beugungsordnung mit der höchsten Intensität dargestellt wird und die Intensität nach außen hin nachlässt. Es wurde die Spaltblende so eingestellt, dass das Licht mit 0.43 mm Spaltabstand räumlich gut kohärent ist. Danach wurde ein Beugungsbild mit dem 633 nm Bandpassfilter, mit dem Langpassfilter und ohne Filter aufgenommen. 
 
 
-\subsection{Teil 3}
+\subsection{Teil 3: Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}
 
-Hier wurde der vorderste Doppelspalt mit 0.43 mm Spaltabstand verwendet und alle Filter aus dem Strahlengang gedreht. Danach wurde die mit Polyacrylat überzogene Probe in den Strahlengang eingebracht und mit einer Justierschraube verschoben, sodass die Polyacrylat-Schicht nur einen der beiden Spalte abdeckt. Dann wurde das Bild des verschobenen und ein Bild des nicht verschobenen Beugungsmusters, sowie ein Bild ohne Polyacrylat als Referenzwert aufgenommen (Abbildung xy).
+Hier wurde der vorderste Doppelspalt mit 0.43 mm Spaltabstand verwendet und alle Filter aus dem Strahlengang gedreht. Danach wurde die mit Polyacrylat überzogene Probe in den Strahlengang eingebracht und mit einer Justierschraube verschoben, sodass die Polyacrylat-Schicht nur einen der beiden Spalte abdeckt. Dann wurde das Bild des verschobenen und ein Bild des nicht verschobenen Beugungsmusters, sowie ein Bild ohne Polyacrylat als Referenzwert aufgenommen.
 
-\subsection{Teil 4}
+\subsection{Teil 4: Maximale Größe des Lichts für räumliche Kohärenz}
 
 In diesem Versuch wurde wieder monochromatisches Licht mit einem Bandpass von 633 nm verwendet. Für jeden der drei Doppelspalte wurde dann ein Bild aufgenommen (Abbildung xy) und durch Beobachtung des Beugungsbildes die minimale Spaltbreite für das erste Minimum vom Kontrast des Beugungsmusters bestimmt.
 Die Messpunkte wurden in Tabelle xy notiert.
@@ -177,7 +196,14 @@ Die Messpunkte wurden in Tabelle xy notiert.
 
 
 
-\section{Zusammenfassung und Diskussion}
+\section{Diskussion}
+
+
+
+
+
+
+\section{Zusammenfassung}
 
 
 
