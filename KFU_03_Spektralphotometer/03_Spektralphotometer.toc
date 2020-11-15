@@ -9,9 +9,10 @@
 \contentsline {subsection}{\numberline {5.1}Bestimmung der Transmission und der Extinktion für verschiedene Farbfilter}{5}%
 \contentsline {subsection}{\numberline {5.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{6}%
 \contentsline {subsection}{\numberline {5.3}Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}{7}%
-\contentsline {section}{\numberline {6}Auswertung}{8}%
-\contentsline {subsection}{\numberline {6.1}Bestimmung von Transmission und Extinktion für verschiedene Farbfilter}{8}%
-\contentsline {subsection}{\numberline {6.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{12}%
-\contentsline {section}{\numberline {7}Diskussion}{13}%
-\contentsline {section}{\numberline {8}Zusammenfassung}{14}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{14}%
+\contentsline {section}{\numberline {6}Auswertung}{9}%
+\contentsline {subsection}{\numberline {6.1}Bestimmung von Transmission und Extinktion für verschiedene Farbfilter}{9}%
+\contentsline {subsection}{\numberline {6.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{13}%
+\contentsline {subsection}{\numberline {6.3}Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}{14}%
+\contentsline {section}{\numberline {7}Diskussion}{16}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{17}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{17}%

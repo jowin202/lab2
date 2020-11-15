@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  15 NOV 2020 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  15 NOV 2020 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -333,14 +333,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count277
 \l__pdf_internal_box=\box56
 )
-(./03_Spektralphotometer.aux
-
-LaTeX Warning: Label `fig:T' multiply defined.
-
-
-LaTeX Warning: Label `fig:T' multiply defined.
-
-(./methyl_ergebnis.aux))
+(./03_Spektralphotometer.aux)
 \openout1 = `03_Spektralphotometer.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
@@ -511,75 +504,90 @@ Overfull \hbox (13.00836pt too wide) in paragraph at lines 208--208
 []\OT1/cmr/bx/n/12 Bestimmung der Di-cke ei-ner Glas-p-lat-te durch das Trans-
  []
 
-
-Overfull \hbox (0.94589pt too wide) in paragraph at lines 215--215
+<Glas_Intensitaeten.png, id=61, 462.528pt x 346.896pt>
+File: Glas_Intensitaeten.png Graphic file (type png)
+<use Glas_Intensitaeten.png>
+Package pdftex.def Info: Glas_Intensitaeten.png  used on input line 218.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
+[7 <./Intensitaeten_Methyl.png>]
+Overfull \hbox (0.94589pt too wide) in paragraph at lines 225--225
 []\OT1/cmr/bx/n/12 Bestimmung von Trans-mis-si-on und Ex-tink-ti-on f[]ur ver-
  []
 
-<Transmissionen.png, id=61, 462.528pt x 346.896pt>
+<Transmissionen.png, id=67, 462.528pt x 346.896pt>
 File: Transmissionen.png Graphic file (type png)
 <use Transmissionen.png>
-Package pdftex.def Info: Transmissionen.png  used on input line 222.
+Package pdftex.def Info: Transmissionen.png  used on input line 232.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
-[7 <./Intensitaeten_Methyl.png>]
-<Extinktionen.png, id=67, 462.528pt x 346.896pt>
+[8 <./Glas_Intensitaeten.png>]
+<Extinktionen.png, id=72, 462.528pt x 346.896pt>
 File: Extinktionen.png Graphic file (type png)
 <use Extinktionen.png>
-Package pdftex.def Info: Extinktionen.png  used on input line 231.
+Package pdftex.def Info: Extinktionen.png  used on input line 241.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [8 <./Transmissionen.png>]
-<Extinktionen_addition.png, id=72, 462.528pt x 346.896pt>
+ [9 <./Transmissionen.png>]
+<Extinktionen_addition.png, id=77, 462.528pt x 346.896pt>
 File: Extinktionen_addition.png Graphic file (type png)
 <use Extinktionen_addition.png>
-Package pdftex.def Info: Extinktionen_addition.png  used on input line 238.
+Package pdftex.def Info: Extinktionen_addition.png  used on input line 248.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [9 <./Extinktionen.png>]
-<reihenfolge1.png, id=77, 462.528pt x 346.896pt>
+ [10 <./Extinktionen.png>]
+<reihenfolge1.png, id=82, 462.528pt x 346.896pt>
 File: reihenfolge1.png Graphic file (type png)
 <use reihenfolge1.png>
-Package pdftex.def Info: reihenfolge1.png  used on input line 247.
+Package pdftex.def Info: reihenfolge1.png  used on input line 257.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [10 <./Extinktionen_addition.png>]
-<reihenfolge2.png, id=82, 462.528pt x 346.896pt>
+ [11 <./Extinktionen_addition.png>]
+<reihenfolge2.png, id=87, 462.528pt x 346.896pt>
 File: reihenfolge2.png Graphic file (type png)
 <use reihenfolge2.png>
-Package pdftex.def Info: reihenfolge2.png  used on input line 257.
+Package pdftex.def Info: reihenfolge2.png  used on input line 267.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [11 <./reihenfolge1.png>]
-(./methyl_ergebnis.tex) [12 <./reihenfolge2.png>]
-<Transmission_Extinktion_Methyl.png, id=91, 462.528pt x 346.896pt>
+ [12 <./reihenfolge1.png>]
+(./methyl_ergebnis.tex)
+<Transmission_Extinktion_Methyl.png, id=92, 462.528pt x 346.896pt>
 File: Transmission_Extinktion_Methyl.png Graphic file (type png)
 <use Transmission_Extinktion_Methyl.png>
 Package pdftex.def Info: Transmission_Extinktion_Methyl.png  used on input line
- 286.
+ 296.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [13 <./Transmission_Extinktion_Methyl.png>] 
+ [13 <./reihenfolge2.png>]
+Overfull \hbox (13.00836pt too wide) in paragraph at lines 303--303
+[]\OT1/cmr/bx/n/12 Bestimmung der Di-cke ei-ner Glas-p-lat-te durch das Trans-
+ []
+
+(./glas_max.tex) (./glas_max_trans_tab.tex) [14 <./Transmission_Extinktion_Meth
+yl.png>] (./glas_k_ergebnis.tex) (./glas_d_ergebnis.tex)
+<Glas_Transmission_Extinktion.png, id=102, 462.528pt x 346.896pt>
+File: Glas_Transmission_Extinktion.png Graphic file (type png)
+<use Glas_Transmission_Extinktion.png>
+Package pdftex.def Info: Glas_Transmission_Extinktion.png  used on input line 3
+38.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
+ [15] [16 <./Glas_Transmission_Extinktion.png>] 
 AED: lastpage setting LastPage
-[14] (./03_Spektralphotometer.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[17] (./03_Spektralphotometer.aux) ) 
 Here is how much of TeX's memory you used:
- 7785 strings out of 481239
- 113531 string characters out of 5920377
- 368848 words of memory out of 5000000
- 22916 multiletter control sequences out of 15000+600000
+ 7811 strings out of 481239
+ 114127 string characters out of 5920377
+ 368440 words of memory out of 5000000
+ 22933 multiletter control sequences out of 15000+600000
  535555 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,18n,45p,526b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb>
-Output written on 03_Spektralphotometer.pdf (14 pages, 448395 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on 03_Spektralphotometer.pdf (17 pages, 538514 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

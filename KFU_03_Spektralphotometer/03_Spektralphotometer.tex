@@ -175,7 +175,7 @@ Danach wurden die Intensitätsspektren sowohl für zwei einzelne Farbfilter also
 
 Um mögliche Messungenauigkeiten zu minimieren werden alle Spektren 5 mal aufgezeichnet und entsprechend gemittelt.
 
-Die gemessenen Intensitäten sind in Grafik \ref{fig:I} zusammengefasst.
+Die gemessenen Intensitäten sind in Grafik \ref{fig:I_Methyl} zusammengefasst.
 
 \begin{figure}[H]
 \centering
@@ -197,7 +197,7 @@ Dafür wurde zuerst der Filterhalter gegen den Küvettenhalter ausgetauscht und 
 \begin{figure}[H]
 \centering
 \caption{Zusammenhang zwischen Intensität und Wellenlänge einmal bei einer Küvette mit Wasser (grau) und einmal bei einer Küvette mit einer Lösung mit Methylenblau.}
-\label{fig:I}
+\label{fig:I_methyl}
 \includegraphics[scale=0.7]{Intensitaeten_Methyl.png}
 \end{figure}
 
@@ -210,6 +210,16 @@ Dafür wurde zuerst der Filterhalter gegen den Küvettenhalter ausgetauscht und 
 Hierfür wurden zunächst die Farbfilter aus dem Strahlengang entfernt und wieder ein Referenzspektrum gemessen. Danach wurde die Glasplatte anstelle der Farbfilter im Strahlengang platziert und das Intensitätsspektrum mit Platte gemessen.
 
 
+
+\begin{figure}[H]
+\centering
+\caption{Zusammenhang zwischen Intensität und Wellenlänge einmal mit der Glasplatte und einmal ohne Glasplatte als Referenz.}
+\label{fig:I_glas}
+\includegraphics[scale=0.7]{Glas_Intensitaeten.png}
+\end{figure}
+
+
+
 \section{Auswertung}
 
 \subsection{Bestimmung von Transmission und Extinktion für verschiedene Farbfilter}
@@ -218,7 +228,7 @@ Hierfür wurden zunächst die Farbfilter aus dem Strahlengang entfernt und wiede
 \begin{figure}[H]
 \centering
 \caption{Zusammenhang zwischen Transmissionen und Wellenlänge bei gegebenen Filter.}
-\label{fig:T}
+\label{fig:T_Farben}
 \includegraphics[scale=0.7]{Transmissionen.png}
 \end{figure}
 
@@ -227,14 +237,14 @@ Hierfür wurden zunächst die Farbfilter aus dem Strahlengang entfernt und wiede
 \begin{figure}[H]
 \centering
 \caption{Zusammenhang zwischen Extinktion und Wellenlänge bei gegebenen Filter.}
-\label{fig:T}
+\label{fig:Ext}
 \includegraphics[scale=0.7]{Extinktionen.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{Summe der Extinktionen des roten und blauen Filters (jeweils extra gemessen) hier in orange verglichen mit der gemeinsam gemessenen Extinktion hier in magenta.}
-\label{fig:T}
+\label{fig:sum_ext}
 \includegraphics[scale=0.7]{Extinktionen_addition.png}
 \end{figure}
 
@@ -286,6 +296,50 @@ wobei die Werte für $I_0$ und $I_T$ mit Hilfe eines Python Skriptes gemittelt w
 \includegraphics[scale=0.7]{Transmission_Extinktion_Methyl.png}
 
 \end{figure}
+
+
+
+
+\subsection{Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}
+
+Das Maximum aus Grafik~\ref{fig:I_glas} ist gegeben durch
+\input{glas_max}
+Entsprechend wird in Grafik~\ref{fig:T_glas} die Skalierung gewählt. Dort werden die Maxima der Transmission abgelesen. Diese sind in Tabelle~\ref{tab:trans_max_glas} zusammengefasst.
+
+\begin{table}[H]
+\centering
+\caption{Transmissionsmaxima im Bereich $\lambda_m\in[700,720]~$nm. $m$ Begungsordnung, $\nu_m$ Wellenzahl, $T_m$ Wert der Transmission}
+\label{tab:trans_max_glas}
+\input{glas_max_trans_tab}
+\end{table}
+
+Aus \cite{moodle} geht hervor, dass die Brechzahl bei Glas $n_p = 1.519$ ist, wenn $\lambda=700~$nm. Wir nehmen zusätzlich $\Delta n_p = 0.001$ an.
+Zusätzlich besteht laut \cite{moodle} ein linearer Zusammenhang 
+\begin{align*}
+\nu_M = k\cdot m
+\end{align*}
+Durch Lineare Regression lässt sich dieses $k$ Zusammenhang berechnen. Zusätzlich gilt
+\begin{align*}
+k = \frac{1}{2\cdot n_p\cdot d}
+\end{align*}
+wobei $d$ unsere gesuchte Dicke ist. Durch Berechnung der Regression ergibt sich
+\input{glas_k_ergebnis.tex}
+und daraus folgt
+\begin{align*}
+d = \frac{1}{2\cdot n_p\cdot k} \pm \left( \frac{\Delta n_p}{2\cdot n_p^2\cdot k} + \frac{\Delta k}{2\cdot n_p\cdot k^2}\right)
+\end{align*}
+Die Dicke der Glasplatte beträgt letztendlich
+\input{glas_d_ergebnis.tex}
+
+\begin{figure}[H]
+\centering
+\caption{Transmission und Extinktion bei Untersuchung der Glasplatte. Die Maxima der Transmission sind mit einer vertikalen Linie gekennzeichnet.}
+\label{fig:T_glas}
+\includegraphics[scale=0.7]{Glas_Transmission_Extinktion.png}
+\end{figure}
+
+
+
 
 
 \section{Diskussion}
