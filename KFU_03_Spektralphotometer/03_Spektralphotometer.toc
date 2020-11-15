@@ -1,0 +1,17 @@
+\contentsline {section}{Inhaltsverzeichnis}{2}%
+\contentsline {section}{\numberline {1}Aufgabenstellung}{3}%
+\contentsline {section}{\numberline {2}Voraussetzungen und Grundlagen}{3}%
+\contentsline {subsection}{\numberline {2.1}Transmission, Extinktion, Absorptionsquerschnitt}{3}%
+\contentsline {subsection}{\numberline {2.2}Interferenzen an einer planparallelen Platte}{4}%
+\contentsline {section}{\numberline {3}Geräteliste}{5}%
+\contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{5}%
+\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{5}%
+\contentsline {subsection}{\numberline {5.1}Bestimmung der Transmission und der Extinktion für verschiedene Farbfilter}{5}%
+\contentsline {subsection}{\numberline {5.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{6}%
+\contentsline {subsection}{\numberline {5.3}Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}{7}%
+\contentsline {section}{\numberline {6}Auswertung}{8}%
+\contentsline {subsection}{\numberline {6.1}Bestimmung von Transmission und Extinktion für verschiedene Farbfilter}{8}%
+\contentsline {subsection}{\numberline {6.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{12}%
+\contentsline {section}{\numberline {7}Diskussion}{13}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{14}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{14}%
