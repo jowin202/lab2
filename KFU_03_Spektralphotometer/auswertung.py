@@ -359,12 +359,14 @@ MB_1_I_664 = filter664(MB1_Lambda_Final, MB1_I_Final)
 MB_2_Ref_664 = filter664(MB2_Ref_Lambda_Final, MB2_Ref_I_Final)
 MB_2_I_664 = filter664(MB2_Lambda_Final, MB2_I_Final)
 
+
+
 d = 1 #cm
 Delta_d = 0.001 #cm
 eps = 77790 #Liter / (mol cm)
 Delta_I = 0.002
 
-
+    
 c1 = (log(MB_1_Ref_664)/log(10) - log(MB_1_I_664)/log(10))/(d*eps)
 Delta_c1 = (log(MB_1_Ref_664)/log(10) - log(MB_1_I_664)/log(10))/(d**2*eps) *Delta_d     +     Delta_I*(1/MB_1_I_664 + 1/MB_1_Ref_664)/(eps*d)
 

@@ -108,17 +108,17 @@ Durch die Impedanz des Kabels $Z_K = \dfrac{U_e}{I_e} = \dfrac{U_r}{I_r}$ und vo
 
 \newcommand{\R}[1]{
 \begin{switch}{#1}
-\case{1}{R1 $ =(12.00\pm0.12)~\Omega$}%
-\case{2}{R2 $ =(18.00\pm0.18)~\Omega$}%
-\case{3}{R3 $ =(33.00\pm0.33)~\Omega$}%
-\case{4}{R4 $ =(48.00\pm0.48)~\Omega$}%
-\case{5}{R5 $ =(68.00\pm0.68)~\Omega$ }%
-\case{6}{R6 $ =(100 \pm1 )~\Omega$}%
-\case{7}{R7 $ =(180 \pm2)~\Omega$}%
-\case{8}{R8 $ =(330.0\pm3.3)~\Omega$ }%
-\case{9}{R9 $ =(680.0\pm0.7)~\Omega$}%
-\case{10}{R10 $ =(1100\pm11)~\Omega$}%
-\case{11}{R11 $ =(1800\pm18)~\Omega$}%
+\case{1}{R1 $ =(1794 \pm 18)~\Omega$}%
+\case{2}{R2 $ =(1195 \pm 12)~\Omega$}%
+\case{3}{R3 $ =(676.6\pm 6.8)~\Omega$}%
+\case{4}{R4 $ =(330.36\pm3.30)~\Omega$}%
+\case{5}{R5 $ =(179.80\pm0.68)~\Omega$ }%
+\case{6}{R6 $ =(100.40 \pm 1.00 )~\Omega$}%
+\case{7}{R7 $ =(68.40 \pm 0.68)~\Omega$}%
+\case{8}{R8 $ =(47.60\pm 0.47)~\Omega$ }%
+\case{9}{R9 $ =(33.30 \pm 0.33)~\Omega$}%
+\case{10}{R10 $ =(12.40\pm 0.12)~\Omega$}%
+\case{11}{R11 $ =(18.32\pm 0.18)~\Omega$}%
 \end{switch}}
 
 \section{Geräteliste}
@@ -133,9 +133,8 @@ Abk. & Typ    & Daten & Inv.Nr.  \\
 \hline
 O & Oszilloskop  DSO-X 2022A \\
 FG1 & Frequenzgenerator  BK precision 4063 &   \\
-K1 & Koaxialkabel 1  & $\ell_1=(0.10\pm 0.01)~$m \\
-K2 & Koaxialkabel 2  & $\ell_2=(0.50\pm 0.01)~$m \\
-K3 & Koaxialkabel 3  & $\ell_3=(X\pm 0.01)~$m \\
+K1 & Koaxialkabel 1  & $\ell_2=(0.50\pm 0.01)~$m \\
+K2 & Koaxialkabel 2  & $\ell_3=(X\pm 0.01)~$m \\
  R1 & Widerstand &  \R1 \\
 R2 & Widerstand & \R2 \\
 R3 & Widerstand & \R3 \\
@@ -150,7 +149,7 @@ R11 & Widerstand & \R{11}
 \end{tabular}
 \end{table}
 
-Das zu untersuchende Koaxialkabel ist K3.
+
 
 
 
@@ -162,23 +161,42 @@ Im ersten Teil der wird der zeitliche Spannungsverlauf am Anfang und Ende des Ka
 
 \begin{figure}[H]
 \centering
-\caption{Versuch 1 (a): Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel K3 verbunden. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels und CH2 am Ende.}
+\caption{Versuch 1 (a): Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel verbunden. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels und CH2 am Ende.}
 \label{fig:anordnung_task1a}
-\includegraphics[scale=2]{task1a.png}
+\includegraphics[scale=1.6]{task1a.png}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Versuch 1 (a) als Foto. Die Kurven am Oszilloskop zeigen die Daten aus Grafik~\ref{fig:task1a_100ns}.}
+\label{fig:foto_task1a}
+\includegraphics[scale=0.6]{foto_task1a.jpg}
 \end{figure}
 
 
 
 \begin{figure}[H]
 \centering
-\caption{Versuch 1 (b): Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel K3 verbunden. Erhöhung des Innenwiderstandes von FG1 durch in Serie geschalteten Widerstand. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels und CH2 am Ende.}
+\caption{Versuch 1 (b): Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel verbunden. Erhöhung des Innenwiderstandes von FG1 durch in Serie geschalteten Widerstand. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels und CH2 am Ende.}
 \label{fig:anordnung_task1b}
 \includegraphics[scale=2]{task1b.png}
 \end{figure}
 
+
+
 \begin{figure}[H]
 \centering
-\caption{Versuch 1 (c): Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel K3 verbunden. Senkung des Innenwiderstandes von FG1 durch parallel geschalteten Widerstand. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels und CH2 am Ende.}
+\caption{Versuch 1 (b) als Foto. Die Kurven am Oszilloskop zeigen die Daten aus Grafik \ref{fig:task1b_2300ns}.}
+\label{fig:foto_task1b}
+\includegraphics[scale=0.6]{foto_task1b.jpg}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Versuch 1 (c): Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel verbunden. Senkung des Innenwiderstandes von FG1 durch parallel geschalteten Widerstand. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels und CH2 am Ende.}
 \label{fig:anordnung_task1c}
 \includegraphics[scale=2]{task1c.png}
 \end{figure}
@@ -187,7 +205,15 @@ Im ersten Teil der wird der zeitliche Spannungsverlauf am Anfang und Ende des Ka
 
 \begin{figure}[H]
 \centering
-\caption{Versuch 2: Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel K3 verbunden. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels. Am Ende des Kabels befindet sich ein Widerstand. Durch diesen Aufbau kann der Reflexionskoeffizient gemessen werden.}
+\caption{Versuch 1 (c) als Foto. Die Kurven am Oszilloskop zeigen die Daten aus Grafik \ref{fig:task1c_150ns}.}
+\label{fig:foto_task1b}
+\includegraphics[scale=0.6]{foto_task1c.jpg}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Versuch 2: Signalquelle (FG1) ist mit dem zu testenden Koaxialkabel verbunden. CH1 des Oszilloskops misst den Spannungsverlauf am Anfang des Kabels. Am Ende des Kabels befindet sich ein Widerstand. Durch diesen Aufbau kann der Reflexionskoeffizient gemessen werden.}
 \label{fig:anordnung_task2}
 \includegraphics[scale=2]{task2.png}
 \end{figure}
@@ -203,170 +229,93 @@ Im ersten Teil der wird der zeitliche Spannungsverlauf am Anfang und Ende des Ka
 
 \section{Versuchsdurchführung und Messwerte}
 
-\subsection{Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels K3}
+\subsection{Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}
 
 \subsubsection{Angepasster Innenwiderstand}
 
-Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1a} beschrieben. Der Frequenzgenerator wird auf \textit{Pulse} mit einer Frequenz von 300~kHz eingestellt, d.h. alle $3.3~\mu$s wird ein Puls gesendet. Nun soll die Pulsdauer variieren. Zu Beginn sind es $t_p=100~$ns (3\% Duty), dies soll bis zu $t_p=1000~$ns $ = 1~\mu$s erhöht werden (30\% Duty). Die Spannungsverläufe werden für verschiedene Werte $t_p = 50, 100, 250, 500, 750, 1000$ berechnet. Die Aufzeichnung der Spannungsverläufe ist in Grafiken~\ref{fig:task1a_50ns} bis \ref{fig:task1a_1000ns} zu erkennen.
+Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1a} beschrieben bzw. in Abbildung~\ref{fig:foto_task1a} als Foto dargestellt. Der Frequenzgenerator wird auf \texttt{Pulse} mit einer Frequenz von 30~kHz eingestellt. Zusätzlich wird \texttt{PulseWidth} auf $100~$ns, $240~$ns, $500~$ns und $750~$ns gesetzt.
 
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels K3 mit $t_p=50$~ns.}
-\label{fig:task1a_50ns}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
-\end{figure}
 
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels K3 mit $t_p=100$~ns.}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels mit $t_p=100$~ns.}
 \label{fig:task1a_100ns}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
+\includegraphics[scale=0.6]{bilder/task1a/task1a_100ns.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels K3 mit $t_p=250$~ns.}
-\label{fig:task1a_250ns}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels mit $t_p=240$~ns.}
+\label{fig:task1a_240ns}
+\includegraphics[scale=0.6]{bilder/task1a/task1a_240ns.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels K3 mit $t_p=500$~ns.}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels mit $t_p=500$~ns.}
 \label{fig:task1a_500ns}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
+\includegraphics[scale=0.6]{bilder/task1a/task1a_500ns.png}
 \end{figure}
-
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels K3 mit $t_p=750$~ns.}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels mit $t_p=750$~ns.}
 \label{fig:task1a_750ns}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
+\includegraphics[scale=0.6]{bilder/task1a/task1a_750ns.png}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels K3 mit $t_p=1000$~ns $ = 1~\mu$s.}
-\label{fig:task1a_1000ns}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
-\end{figure}
 
 
 
 
 \subsubsection{Hoher Innenwiderstand}
-Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1b} beschrieben. Hier soll $t_p = 1~\mu$s Pulse als Signal verwendet werden.
+Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1b} beschrieben. Hier soll ein Puls $t_p = 150~$ns und einmal $t_p = 2.3~\mu$s  als Signal verwendet werden.
 
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels K3 mit $t_p= 1~\mu$s. Hoher Innenwiderstand der Signalquelle.}
-\label{fig:task1b}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Hoher Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 150~$ns.}
+\label{fig:task1b_150ns}
+\includegraphics[scale=0.6]{bilder/task1b/task1b_150ns.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Hoher Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 2.3~\mu$s.}
+\label{fig:task1b_2300ns}
+\includegraphics[scale=0.6]{bilder/task1b/task1b_2300ns.png}
 \end{figure}
 
 
 
 \subsubsection{Niedriger Innenwiderstand}
-Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1c} beschrieben. Hier soll $t_p = 1~\mu$s Pulse als Signal verwendet werden.
-
+Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1c} beschrieben. Hier soll ein Puls $t_p = 150~$ns und einmal $t_p = 2.65~\mu$s  als Signal verwendet werden.
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des  Koaxialkabels K3 mit $t_p= 1~\mu$s. Niedriger Innenwiderstand der Signalquelle.}
-\label{fig:task1c}
-\includegraphics[scale=0.1]{bilder/task1a/leer.jpg}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Niedriger Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 150$ns.}
+\label{fig:task1c_150ns}
+\includegraphics[scale=0.6]{bilder/task1c/task1c_150ns.png}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Niedriger Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 2.65~\mu$s.}
+\label{fig:task1b_2650ns}
+\includegraphics[scale=0.6]{bilder/task1c/task1c_2650ns.png}
+\end{figure}
+
 
 
 \subsection{Bestimmung des Reflexionskoeffizienten}
 
 Der Versuchsaufbau ist in Grafik~\ref{fig:anordnung_task2} beschrieben.
 
-Analog zur vorherigen Aufgabe, wurde die Frequenz wurde auf 300~kHz gestellt und die Pulszeit $t_p = 1~\mu$s. Jetzt stehen 11 verschiedene Widerstände zur Verfügung (siehe Geräteliste), welche jeweils als Abschlusswiderstand des Kabels genutzt werden.
+Analog zur vorherigen Aufgabe, wurde die Frequenz wurde auf 30~kHz gestellt und die Pulszeit $t_p = 1~\mu$s. Jetzt stehen 11 verschiedene Widerstände zur Verfügung (siehe Geräteliste), welche jeweils als Abschlusswiderstand des Kabels genutzt werden.
 
 Im Gegensatz zu Aufgabe 1 wird hier nur die Eingangsspannung gemessen. Der Eingangswiderstand der Signalquelle ist angepasst, so wie in 1 (a). Am Ende des Kabels werden verschiedene Widerstände angeschlossen. Der Spannungsverlauf dieser Widerstände wird in den Grafiken~\ref{fig:task2_R1} bis \ref{fig:task2_R11} dargestellt.
 
-
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R1 am Ende.}
-\label{fig:task2_R1}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R2 am Ende.}
-\label{fig:task2_R2}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R3 am Ende.}
-\label{fig:task2_R3}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R4 am Ende.}
-\label{fig:task2_R4}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R5 am Ende.}
-\label{fig:task2_R5}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R6 am Ende.}
-\label{fig:task2_R6}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R7 am Ende.}
-\label{fig:task2_R7}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R8 am Ende.}
-\label{fig:task2_R8}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R9 am Ende.}
-\label{fig:task2_R9}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R{10} am Ende.}
-\label{fig:task2_R10}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Spannungsverlauf am Anfang des Koaxialkabels K3 mit dem Widerstand \R{11} am Ende.}
-\label{fig:task2_R11}
-\includegraphics[scale=0.1]{bilder/task2/leer.jpg}
-\end{figure}
 
 
 
@@ -381,16 +330,16 @@ Hierbei wird ein Puls augesendet und jene Zeit gemessen, bis der reflektierte Im
 
 \section{Auswertung}
 
-\subsection{Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels K3}
+\subsection{Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}
 
 \subsubsection{Angepasster Innenwiderstand}
-Die Grafiken \ref{fig:task1a_50ns} bis \ref{fig:task1a_1000ns} beschreiben das Ergebnis. Nachdem das Signal durch das Kabel K3 läuft, wird es am Ende reflektiert. Das Signal überlagert sich mit dem reflektiertem Signal und es entsteht Interferenz. Durch den angepassten Innenwiderstand in der Signalquelle wird das Signal nicht mehrfach reflektiert. 
+Die Grafiken \ref{fig:task1a_50ns} bis \ref{fig:task1a_1000ns} beschreiben das Ergebnis. Nachdem das Signal durch das Kabel läuft, wird es am Ende reflektiert. Das Signal überlagert sich mit dem reflektiertem Signal und es entsteht Interferenz. Durch den angepassten Innenwiderstand in der Signalquelle wird das Signal nicht mehrfach reflektiert. 
 
 
 
 \subsubsection{Hoher Innenwiderstand}
 
-Durch den hohen Innenwiderstand ist am Anfang von K3 eine stärkere Reflexion zu beobachten. Durch die stärkere Reflexion sieht man, dass eine \textit{Treppenfunktion} entsteht, da sich die Signale mehrfach im Kabel hin und her bewegen und sich ständig überlagern. Da die höhe der Treppen immer kleiner wird, lässt sich darauf schließen, dass das Signal beim mit mehrmaligem Vor- und Zurücklauf kontinuierlich abgeschwächt wird.
+Durch den hohen Innenwiderstand ist am Anfang des Kabels eine stärkere Reflexion zu beobachten. Durch die stärkere Reflexion sieht man, dass eine \textit{Treppenfunktion} entsteht, da sich die Signale mehrfach im Kabel hin und her bewegen und sich ständig überlagern. Da die höhe der Treppen immer kleiner wird, lässt sich darauf schließen, dass das Signal beim mit mehrmaligem Vor- und Zurücklauf kontinuierlich abgeschwächt wird.
 
 \subsubsection{Niedriger Innenwiderstand}
 

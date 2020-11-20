@@ -5,14 +5,14 @@
 \contentsline {subsection}{\numberline {2.2}Interferenzen an einer planparallelen Platte}{4}%
 \contentsline {section}{\numberline {3}Geräteliste}{5}%
 \contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{5}%
-\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{6}%
+\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{7}%
 \contentsline {subsection}{\numberline {5.1}Bestimmung der Transmission und der Extinktion für verschiedene Farbfilter}{7}%
-\contentsline {subsection}{\numberline {5.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{7}%
-\contentsline {subsection}{\numberline {5.3}Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}{8}%
-\contentsline {section}{\numberline {6}Auswertung}{9}%
-\contentsline {subsection}{\numberline {6.1}Bestimmung von Transmission und Extinktion für verschiedene Farbfilter}{9}%
-\contentsline {subsection}{\numberline {6.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{12}%
-\contentsline {subsection}{\numberline {6.3}Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}{13}%
-\contentsline {section}{\numberline {7}Diskussion}{15}%
-\contentsline {section}{\numberline {8}Zusammenfassung}{16}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{16}%
+\contentsline {subsection}{\numberline {5.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{8}%
+\contentsline {subsection}{\numberline {5.3}Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}{9}%
+\contentsline {section}{\numberline {6}Auswertung}{10}%
+\contentsline {subsection}{\numberline {6.1}Bestimmung von Transmission und Extinktion für verschiedene Farbfilter}{10}%
+\contentsline {subsection}{\numberline {6.2}Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}{13}%
+\contentsline {subsection}{\numberline {6.3}Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}{14}%
+\contentsline {section}{\numberline {7}Diskussion}{16}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{17}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{17}%
