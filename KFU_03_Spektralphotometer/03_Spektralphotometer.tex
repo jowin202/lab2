@@ -70,6 +70,7 @@
 
 Wenn Licht auf verschiedene Stoffe und Materialien scheint, kann es in unterschiedlichen Frequenzen oder Wellenlängen reflektiert, absorbiert und gestreut werden. Trifft Licht auf eine glatte Oberfläche oder einen homogenen Körper, so wird die Streuung Reflexion genannt. Beim Einfall auf eine teiltransparente Schicht ist das Verhältnis der transmittierten (als durch das Medium durchgelassenen) Intensität $I_T$ und der auf das Medium scheinende Lichtintensität $I_0$ gegeben durch
 \begin{align}
+\label{eq:trans}
 T = \frac{I_T}{I_0}
 \end{align}
 wobei $T$ als Transmission bzw. Transmissionsgrad bezeichnet wird. Wichtig ist, dass $T < 1$ ist, da immer ein gewisser Teil des Lichts beim Kontakt mit dem Medium in eine andere Energieform (z.B. Wärme) umgewandelt (also absorbiert) oder einfach in andere Richtungen reflektiert (bzw. gestreut) wird.
@@ -77,6 +78,7 @@ wobei $T$ als Transmission bzw. Transmissionsgrad bezeichnet wird. Wichtig ist, 
 Allerdings kann aus der Messung der transmittierten Intensität meist nicht auf jene Intensitätsanteile, die gestreut bzw. die absorbiert werden rückgeschlossen werden. Daher wird in der Spektroskopie oft das dekadisch logarithmische Maß der Lichtabschwächung (Extinktion) verwendet:
 
 \begin{align}
+\label{eq:ex}
 E = -\log(T) = -\log\left(\frac{I_T}{I_0}\right) = \log\left(\frac{I_0}{I_T}\right)
 \end{align}
 
@@ -151,7 +153,8 @@ FR & Filter Rot & \\
 FB & Filter Blau & \\
 KW & Küvette mit Wasser &\\
 KM & Küvette mit Methylenblau \\
-GP & Glasplatte
+GP & Glasplatten \\
+PC & Computer mit Software SPLICCO
 \end{tabular}
 \end{table}
 
@@ -161,19 +164,42 @@ GP & Glasplatte
 
 \section{Beschreibung der Versuchsanordnung}
 
+Der Versuchsaufbau ist in Grafik~\ref{fig:aufbau} dargestellt.
+
+\begin{figure}[H]
+\caption{Versuchsaufbau, Arbeitsplatz 3.}
+\label{fig:aufbau}
+\includegraphics[scale=1.4]{aufbau.png}
+\end{figure}
+
+
+\begin{figure}[H]
+\caption{Schematischer Aufbau des Versuchs. Gezeichnet mit Wacom Tablet im Programm Xournal.}
+\label{fig:aufbau2}
+\includegraphics[scale=1.]{aufbau2.png}
+\end{figure}
+
+
+\begin{figure}[H]
+\caption{Strahlengang bei Glasplatten. Gezeichnet mit Wacom Tablet im Programm Xournal.}
+\label{fig:aufbau2}
+\includegraphics[scale=1.]{aufbau3.png}
+\end{figure}
+
+
+
 \section{Versuchsdurchführung und Messwerte}
 
-Als erstes wurde die Halogen-Lampe eingeschalten und die Spektralphotometer-Software SPLICCO gestartet. In der Software wurde dann der Wellenlängenbereich auf $400-800$~nm eingestellt, die Integrationszeit (integration time) auf $0.5-2.0$~ms (genauen Wert hier nach Durchführung einfügen) eingestellt, sodass das Spektrum der Lichtquelle über den gesamten angezeigten y-Achsenabschnitt gut skaliert wird. Die durchschnittlichen Aufnahmen (average scans) auf 50 eingestellt.
+Als erstes wurde die Halogen-Lampe eingeschalten und die Spektralphotometer-Software SPLICCO gestartet. In der Software wurde dann der Wellenlängenbereich auf $400-800$~nm eingestellt, die Integrationszeit (integration time) auf $0.9$~ms eingestellt, sodass das Spektrum der Lichtquelle über den gesamten angezeigten y-Achsenabschnitt gut skaliert wird. Die durchschnittlichen Aufnahmen (average scans) wurden auf 50 eingestellt.
 Zur Korrektur der Hintergrundbeleuchtung musste die Halogen-Lampe wieder ausgeschalten werden und mit Save Background Correction gespeichert werden. So wird die Hintergrundbeleuchtung bei den folgenden Messungen automatisch abgezogen. Falls sich die Hintergrundbeleuchtung im Laufe des Experiments ändern sollte, so muss diese Korrektur wiederholt werden.
 
+Bei allen Messungen der Intensität ist es vor der Messung nötig, dass ein Spektrum ohne Filter aufgenommen wird. Dieses wird als Referenzspektrum bezeichnet. Das Referenzspektrum ist nötig, um die Extinktion zu berechnen.
 
 \subsection{Bestimmung der Transmission und der Extinktion für verschiedene Farbfilter}
 
-Hierfür wurde zunächst das Intensitätsspektrum der Halogenlampe ohne Filter im Strahlengang (Referenzspektrum) aufgezeichnet und als csv.Datei exportiert.
+Danach wurden die Intesitätsspektren für den roten und den blauen Farbfilter gemessen, insbesondere auch die Kombination dieser beiden. Die Intensitätsspektren sowie das Referenzspektrum liegen im csv Format vor.
 
-Danach wurden die Intensitätsspektren sowohl für zwei einzelne Farbfilter also auch für beide Farbfilter gemeinsam gemessen. Auch diese Daten wurden aufgezeichnet und als csv.Dateien exportiert.
 
-Um mögliche Messungenauigkeiten zu minimieren werden alle Spektren 5 mal aufgezeichnet und entsprechend gemittelt.
 
 Die gemessenen Intensitäten sind in Grafik \ref{fig:I_Methyl} zusammengefasst.
 
@@ -181,7 +207,7 @@ Die gemessenen Intensitäten sind in Grafik \ref{fig:I_Methyl} zusammengefasst.
 \centering
 \caption{Zusammenhang zwischen Intensität und Wellenlänge bei gegebenen Filter.}
 \label{fig:I_Methyl}
-\includegraphics[scale=0.7]{Intensitaeten.png}
+\includegraphics[scale=0.7]{FF_Intensitaeten.png}
 \end{figure}
 
 
@@ -196,10 +222,17 @@ Dafür wurde zuerst der Filterhalter gegen den Küvettenhalter ausgetauscht und 
 
 \begin{figure}[H]
 \centering
-\caption{Zusammenhang zwischen Intensität und Wellenlänge einmal bei einer Küvette mit Wasser (grau) und einmal bei einer Küvette mit einer Lösung mit Methylenblau.}
-\label{fig:I_methyl}
-\includegraphics[scale=0.7]{Intensitaeten_Methyl.png}
+\caption{Zusammenhang zwischen Intensität und Wellenlänge einmal bei einer Küvette mit Wasser (grau) als Referenzspektrum und einmal bei einer Küvette mit einer Lösung mit Methylenblau (Probe 1 aus der Angabe).}
+\label{fig:I_methylenblau1}
+\includegraphics[scale=0.6]{MB_Intensitaeten_1.png}
 \end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\caption{Zusammenhang zwischen Intensität und Wellenlänge einmal bei einer Küvette mit Wasser (grau) und einmal bei einer Küvette mit einer Lösung mit Methylenblau.}
+%\label{fig:I_methylenblau2}
+%\includegraphics[scale=0.6]{MB_Intensitaeten_2.png}
+%\end{figure}
 
 
 
@@ -207,16 +240,24 @@ Dafür wurde zuerst der Filterhalter gegen den Küvettenhalter ausgetauscht und 
 
 \subsection{Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}
 
-Hierfür wurden zunächst die Farbfilter aus dem Strahlengang entfernt und wieder ein Referenzspektrum gemessen. Danach wurde die Glasplatte anstelle der Farbfilter im Strahlengang platziert und das Intensitätsspektrum mit Platte gemessen.
-
+Zur Bestimmung der Dicke einer Glasplatte wird zuerst ein Referenzspektrum gemessen und danach die Glasplatte in den Strahlengang eingesetzt. Die Intensität von Glasplatte und das dazugehörige Referenzspektrum ist in Grafik~\ref{fig:I_glas_1} dargestellt.
 
 
 \begin{figure}[H]
 \centering
-\caption{Zusammenhang zwischen Intensität und Wellenlänge einmal mit der Glasplatte und einmal ohne Glasplatte als Referenz.}
-\label{fig:I_glas}
-\includegraphics[scale=0.7]{Glas_Intensitaeten.png}
+\caption{Zusammenhang zwischen Intensität und Wellenlänge von Glasplatte 1 und ein gemessenes Referenzspektrum. Es wird Probe 1 aus der Angabe verwendet.}
+\label{fig:I_glas_1}
+\includegraphics[scale=0.7]{GP_Intensitaet_1.png}
 \end{figure}
+
+
+
+%\begin{figure}[H]
+%\centering
+%\caption{Zusammenhang zwischen Intensität und Wellenlänge von Glasplatte 2 und ein gemessenes Referenzspektrum.}
+%\label{fig:I_glas_2}
+%\includegraphics[scale=0.7]{GP_Intensitaet_2.png}
+%\end{figure}
 
 
 
@@ -224,12 +265,18 @@ Hierfür wurden zunächst die Farbfilter aus dem Strahlengang entfernt und wiede
 
 \subsection{Bestimmung von Transmission und Extinktion für verschiedene Farbfilter}
 
+Die Transmissionen und die Extinktionen der Filter bzw. Filterkombinationen werden durch die Formeln \eqref{eq:trans} und \eqref{eq:ex} bestimmt. Die Transmissionen sind in Grafik~\ref{fig:T_Farben} und die Extinktionen in Grafik~\ref{fig:Ext} zusammengefasst.
+
+In Grafik~\ref{fig:sum_ext_1} wurde zusätzlich grafisch gezeigt, dass die Extinktion vom blauen und roten Filter in Summe jene Extinktion ergibt, welche bei der Kombination aus den beiden Filtern gemessen wurde. Damit wurde die Additivität experimentell gezeigt. Nach den Regeln für Logarithmen muss auch die Multiplikation der Transmissionen erfüllt sein. Das wurde in Grafik~\ref{fig:mult_trans_1}
+
+
+
 
 \begin{figure}[H]
 \centering
 \caption{Zusammenhang zwischen Transmissionen und Wellenlänge bei gegebenen Filter.}
 \label{fig:T_Farben}
-\includegraphics[scale=0.7]{Transmissionen.png}
+\includegraphics[scale=0.6]{FF_Transmissionen.png}
 \end{figure}
 
 
@@ -238,34 +285,56 @@ Hierfür wurden zunächst die Farbfilter aus dem Strahlengang entfernt und wiede
 \centering
 \caption{Zusammenhang zwischen Extinktion und Wellenlänge bei gegebenen Filter.}
 \label{fig:Ext}
-\includegraphics[scale=0.7]{Extinktionen.png}
+\includegraphics[scale=0.6]{FF_Extinktionen.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{Summe der Extinktionen des roten und blauen Filters (jeweils extra gemessen) hier in orange verglichen mit der gemeinsam gemessenen Extinktion hier in magenta.}
-\label{fig:sum_ext}
-\includegraphics[scale=0.7]{Extinktionen_addition.png}
+\caption{Summe der Extinktionen des roten und blauen Filters (jeweils extra gemessen) hier in grau verglichen mit der gemeinsam gemessenen Extinktion hier in magenta.}
+\label{fig:sum_ext_1}
+\includegraphics[scale=0.6]{FF_Extinktionen_addition_1.png}
 \end{figure}
 
-
-\begin{figure}[H]
-\centering
-\caption{Intensitäten bei Vertauschung der Reihenfolge der Filter. Es ist kaum ein Unterschied zu erkennen. Daher ist in Grafik \ref{fig:reihenfolge2} die Differenz dargestellt.}
-\label{fig:reihenfolge1}
-
-\includegraphics[scale=0.7]{reihenfolge1.png}
-\end{figure}
 
 
 
 \begin{figure}[H]
 \centering
-\caption{Differenz der Intensitäten bei Vertauschung der Reihenfolge der Filter. Man kann hier eine Unsicherheit für die Auswertung ablesen.}
-\label{fig:reihenfolge2}
-
-\includegraphics[scale=0.7]{reihenfolge2.png}
+\caption{Produkt der Transmissionen des roten und blauen Filters (jeweils extra gemessen) hier in grau verglichen mit der gemeinsam gemessenen Transmission hier in magenta.}
+\label{fig:mult_trans_1}
+\includegraphics[scale=0.6]{FF_Extinktionen_multiplikation_1.png}
 \end{figure}
+
+
+
+
+
+%\begin{figure}[H]
+%\centering
+%\caption{Summe der Extinktionen des gelben und blauen Filters (jeweils extra gemessen) hier in grau verglichen mit der gemeinsam gemessenen Extinktion hier in grün.}
+%\label{fig:sum_ext_2}
+%\includegraphics[scale=0.7]{FF_Extinktionen_addition_2.png}
+%\end{figure}
+
+%
+%
+%\begin{figure}[H]
+%\centering
+%\caption{Intensitäten bei Vertauschung der Reihenfolge der Filter. Es ist kaum ein Unterschied zu erkennen. Daher ist in Grafik \ref{fig:reihenfolge2} die Differenz dargestellt.}
+%\label{fig:reihenfolge1}
+%
+%\includegraphics[scale=0.7]{reihenfolge1.png}
+%\end{figure}
+%
+%
+%
+%\begin{figure}[H]
+%\centering
+%\caption{Differenz der Intensitäten bei Vertauschung der Reihenfolge der Filter. Man kann hier eine Unsicherheit für die Auswertung ablesen.}
+%\label{fig:reihenfolge2}
+%
+%\includegraphics[scale=0.7]{reihenfolge2.png}
+%\end{figure}
 
 
 
@@ -274,69 +343,101 @@ Hierfür wurden zunächst die Farbfilter aus dem Strahlengang entfernt und wiede
 
 \subsection{Bestimmung der Stoffmengenkonzentration einer Methylenblaulösung}
 
-Grafik~\ref{fig:Trans_Ex_Methyl} zeigt die Transmission und Extinktion der Lösung mit Methylenblau.
+Grafik~\ref{fig:MB_ET_1} zeigt die Transmission und Extinktion der Lösung. Für die Messung wurde Probe 1 der Aufgabenstellung verwendet.
 
 Zur Berechnung der Konzentration benötigt man Formel~\eqref{eq:konzentration}. Durch Umformungen, Regeln für Logarithmen und Fehlerrechnung erhält man
 \begin{align*}
 c = \frac{\log(I_0) - \log(I_T)}{\varepsilon\cdot d} \pm \left(\frac{\dfrac{\Delta I_0}{I_0} + \dfrac{\Delta I_T}{I_T}}{\varepsilon\cdot d} + \frac{\log(I_0) - \log(I_T)}{\varepsilon\cdot d^2} \cdot \Delta d\right)
 \end{align*}
-
+Der Term $E = \log(I_0) - \log(I_T)$ kann aus den Grafiken abgelesen werden oder auch direkt durch die gemessenen Intensitäten berechnet werden.
 Gemäß \cite{moodle} können wir den  dekadischer Extinktionskoeffizienten von Methylenblau bei einer Wellenlänge von 664~nm bei
 \begin{align*}
 \varepsilon =  77790~\frac{\text{Liter}}{\text{mol~cm}}
 \end{align*}
 annehmen. Die Schichtdicke der Lösung in der Küvette beträgt außerdem 1~cm mit der angenommenen Unsicherheit von $10~\mu$m. Insgesamt ergibt sich 
-\input{methyl_ergebnis}
+\input{MB_ergebnis}
 wobei die Werte für $I_0$ und $I_T$ mit Hilfe eines Python Skriptes gemittelt wurden.
 
 \begin{figure}[H]
 \centering
-\caption{Transmission und Extinktion der Lösung mit Ethylenblau.}
-\label{fig:Trans_Ex_Methyl}
-\includegraphics[scale=0.7]{Transmission_Extinktion_Methyl.png}
-
+\caption{Transmission und Extinktion der Lösung mit Methylenblau 1.}
+\label{fig:MB_ET_1}
+\includegraphics[scale=0.7]{MB_ET_1.png}
 \end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\caption{Transmission und Extinktion der Lösung mit Methylenblau 2.}
+%\label{fig:MB_ET_2}
+%\includegraphics[scale=0.7]{MB_ET_2.png}
+%\end{figure}
 
 
 
 
 \subsection{Bestimmung der Dicke einer Glasplatte durch das Transmissionsspektrum}
 
-Das Maximum aus Grafik~\ref{fig:I_glas} ist gegeben durch
-\input{glas_max}
-Entsprechend wird in Grafik~\ref{fig:T_glas} die Skalierung gewählt. Dort werden die Maxima der Transmission abgelesen. Diese sind in Tabelle~\ref{tab:trans_max_glas} zusammengefasst.
+Die Maxima der Intensität aus Grafik~\ref{fig:I_glas_1} ist gegeben durch
+\input{GP_max}
+In Grafik~\ref{fig:GP1_ET} wird die Skalierungen so gewählt, dass der Bereich zwischen 700 und 720~nm genauer betrachtet werden kann. Dort werden die Maxima der Transmission abgelesen. Diese sind in Tabelle~\ref{tab:GP_max_glas1} zusammengefasst.
 
 \begin{table}[H]
 \centering
-\caption{Transmissionsmaxima im Bereich $\lambda_m\in[700,720]~$nm. $m$ Begungsordnung, $\nu_m$ Wellenzahl, $T_m$ Wert der Transmission}
-\label{tab:trans_max_glas}
-\input{glas_max_trans_tab}
+\caption{Transmissionsmaxima im Bereich $\lambda_m\in[700,720]~$nm. $m$ Begungsordnung, $\nu_m$ Wellenzahl, $T_{1,m}$ Wert der Transmission von Platte 1 gemäß Angabe.}
+\label{tab:GP_max_glas1}
+\input{GP_max_glas_1}
 \end{table}
+
+
+%\begin{table}[H]
+%\centering
+%\caption{Transmissionsmaxima im Bereich $\lambda_m\in[700,720]~$nm. $m$ Begungsordnung, $\nu_m$ Wellenzahl, $T_{2,m}$ Wert der Transmission von Platte 2}
+%\label{tab:GP_max_glas2}
+%\input{GP_max_glas_2}
+%\end{table}
 
 Aus \cite{moodle} geht hervor, dass die Brechzahl bei Glas $n_p = 1.519$ ist, wenn $\lambda=700~$nm. Wir nehmen zusätzlich $\Delta n_p = 0.001$ an.
 Zusätzlich besteht laut \cite{moodle} ein linearer Zusammenhang 
 \begin{align*}
 \nu_M = k\cdot m
 \end{align*}
-Durch Lineare Regression lässt sich dieses $k$ Zusammenhang berechnen. Zusätzlich gilt
+Durch Lineare Regression lässt sich dieses $k$ berechnen. Zusätzlich gilt
 \begin{align*}
 k = \frac{1}{2\cdot n_p\cdot d}
 \end{align*}
 wobei $d$ unsere gesuchte Dicke ist. Durch Berechnung der Regression ergibt sich
-\input{glas_k_ergebnis.tex}
+\input{GP_k.tex}
 und daraus folgt
 \begin{align*}
 d = \frac{1}{2\cdot n_p\cdot k} \pm \left( \frac{\Delta n_p}{2\cdot n_p^2\cdot k} + \frac{\Delta k}{2\cdot n_p\cdot k^2}\right)
 \end{align*}
+
+
+Die Regression kann grafisch verdeutlicht werden
+\begin{figure}[H]
+\centering
+\caption{Regression: Zusammenhang zwischen Maxima und Wellenzahl. Auf der x-Achse ist jeweils die Ordnung des Maximums aufgetragen, während auf der y-Achse die Wellenzahl in der Einheit $\mu$m$^-1$ aufgetragen ist.}
+\includegraphics[scale=.5]{GP1_scatterplot_2.png}
+\end{figure}
+
+
 Die Dicke der Glasplatte beträgt letztendlich
-\input{glas_d_ergebnis.tex}
+\input{GP_d.tex}
 
 \begin{figure}[H]
 \centering
-\caption{Transmission und Extinktion bei Untersuchung der Glasplatte. Die Maxima der Transmission sind mit einer vertikalen Linie gekennzeichnet.}
-\label{fig:T_glas}
-\includegraphics[scale=0.7]{Glas_Transmission_Extinktion.png}
+\caption{Transmission und Extinktion bei Untersuchung von Glasplatte 1. Die Maxima der Transmission sind mit einer vertikalen Linie gekennzeichnet.}
+\label{fig:GP1_ET}
+\includegraphics[scale=0.7]{GP1_ET.png}
 \end{figure}
+
+
+%\begin{figure}[H]
+%\centering
+%\caption{Transmission und Extinktion bei Untersuchung von Glasplatte 2. Die Maxima der Transmission sind mit einer vertikalen Linie gekennzeichnet.}
+%\label{fig:GP2_ET}
+%\includegraphics[scale=0.7]{GP2_ET.png}
+%\end{figure}
 
 
 
@@ -346,16 +447,18 @@ Die Dicke der Glasplatte beträgt letztendlich
 
 Man kann in den aufgenommenen Spektren ein starkes Rauschen erkennen. Dies kann sich einerseits durch die Änderung von Lichtverhältnissen im Raum ergeben, andererseits durch leichte Unreiheiten auf den Linsen und Oberflächen der optischen Geräte.
 
-Die Reihenfolge der Farbfilter spielt eine untergeordnete Rolle. In Grafiken \ref{fig:reihenfolge1} und \ref{fig:reihenfolge2} kann man sehen, dass die Intensitäten sehr wenige Abweichungen haben.
+%Die Reihenfolge der Farbfilter spielt eine untergeordnete Rolle. In Grafiken \ref{fig:reihenfolge1} und \ref{fig:reihenfolge2} kann man sehen, dass die Intensitäten sehr wenige Abweichungen haben.
 
 Die Additivität von Extinktionen lässt sich auch mathematisch begründen. Sei $I_0$ die Intensität zu Beginn, $I_1$ nach Durchgang durch Filter 1 und $I_2$ die Intensität nach Durchgang durch Filter 2, dann gilt
 \begin{align*}
 E_1 + E_2 = \log\left(\frac{I_0}{I_1}\right) + \log\left(\frac{I_1}{I_2}\right) = \log\left(\frac{I_0}{I_1}\cdot \frac{I_1}{I_2}\right) = \log\left(\frac{I_0}{I_2}\right) = E_{1,2}
 \end{align*}
+Natürlich weicht die Summe in der Praxis durch das Rauschen etwas ab, aber insbesondere für Wellenlängen ab 600~nm ist eine sehr starke Übereinstimmung zu beobachten. Das Rauschen wird durch die Anwendung des Logarithmus verstärkt. Es ist mathematisch äquivalent die Multiplikativität der Transmissionen zu zeigen. Dies wurde in Grafik~\ref{fig:mult_trans_1} gemacht. Hier sieht man deutlich eine stärkere Übereinstimmung.
+
+Natürlich gibt es weder für die Glasplatte, noch für die Methylenblau Lösung einen Literaturwert, da diese individuell sind.
 
 
 
-Für die Glasplatte wurde leider kein allgemeiner Wert gefunden, den man zur Verwendung heranziehen könnte.
 
 
 
