@@ -56,6 +56,8 @@
 \newpage
 \section{Aufgabenstellung}
 
+
+
 \begin{enumerate}
 \item Messen Sie mit dem Spektralphotometer die optische Transmission von Farbfiltern. Stellen Sie die Transmission und die (als logarithmisches Maß definierte) optische Extinktion als Funktion der Lichtwellenlänge dar. \item Zeigen Sie an zwei Farbfiltern die Additivität der Extinktion.
 \item Bestimmen Sie die Stoffmengenkonzentration einer Methylenblaulösung. \item Diskutieren und erklären Sie anhand der gemessenen Spektren den Farbeindruck der jeweiligen Proben.
@@ -113,8 +115,9 @@ wobei $N_A$ die Avogadro-Konstante ist. Der Absorptionsquerschnitt kann jedoch (
 
 Wenn Weißlicht auf eine planparallele Platte trifft, so kommt es zur Interferenz. Das Interferenzmuster entsteht durch Auslöschen der Wellenlänge (destruktive Interferenz) oder Verstärkung der Wellenlängen (konstruktive Interferenz) und kann dabei sowohl einer Reflexion als auch einer Transmission entsprechen.
 
-Der Gangunterschied $\Delta s$ ist grundsätzlich gegeben durch
+Der Gangunterschied $\Delta s$ ist  gegeben durch
 \begin{align}
+\label{eq:gangunterschied}
 \Delta s  = 2\cdot n_p\cdot d = m\cdot\lambda_m
 \end{align}
 wobei $n_P$ die Brechzahl des Mediums und $d$ die Schichtdicke ist. Wenn der Gangunterschied einem ganzzahligen Vielfachen $m$ der Wellenlänge entspricht, so bildet sich ein Interferenzmaximum (konstruktive Interferenz). $\lambda_m$ sind die Wellenlängen, bei denen ein solches Maximum auftritt.
@@ -180,6 +183,7 @@ Der Versuchsaufbau ist in als Foto in Abbildung~\ref{fig:aufbau} dargestellt, in
 \includegraphics[scale=1.]{aufbau2.png}
 \end{figure}
 
+Formel~\eqref{eq:gangunterschied} wird durch Grafik~\ref{fig:aufbau3} veranschaulicht. Damit lässt sich aus den Interferenzmaxima der Rückschluss auf die Dicke einer Glasplatte ziehen. 
 
 \begin{figure}[H]
 \caption{Strahlengang bei Glasplatten. Gezeichnet mit Wacom Tablet im Programm Xournal.Gezeichnet mit Wacom Tablet im Programm Xournal.}
@@ -191,7 +195,7 @@ Der Versuchsaufbau ist in als Foto in Abbildung~\ref{fig:aufbau} dargestellt, in
 Das Spektralphotometer benutzt für die Zerlegung des Lichtes einen Czerny-Turner Monochromator, wie er in Abbildung~\ref{fig:monochromator} dargestellt ist. Das einfallende Licht A wird durch eine Blende gebündelt und gelangt dann auf einen Hohlspigel C. Von dort wird es zu einem Gitter D reflektiert, wo es in die Bestandteile gebrochen wird. Diese Bestandteile werden auf einen zweiten Hohlspiegel E reflektiert, danach werden diese durch eine verschiebbare Blende F selektiert und je nach Wellenlänge gemessen.
 
 \begin{figure}[H]
-\caption{Czerny-Turner Monochromator, (Quelle: Wikipedia, Creative Commons by-sa 3.0 de)}
+\caption{Czerny-Turner Monochromator, (Quelle: \cite{monochromator}, Creative Commons by-sa 3.0 de)}
 \label{fig:monochromator}
 \includegraphics[scale=0.1]{monochromator.png}
 \end{figure}
@@ -474,13 +478,26 @@ Natürlich gibt es weder für die Glasplatte, noch für die Methylenblau Lösung
 
 \section{Zusammenfassung}
 
+Es wurde die Transmission und die Extinktion eines blauen und roten Farbfilters (und deren Kombination) berechnet und veranschaulicht. Man erkennt leicht, dass die Transmission beim blauen Farbfilter zwischen 400~nm und 550~nm größer ist, da sich in diesem Bereich das blaue Farbspektrum befindet. Im Gegensatz dazu ist beim roten Filter die Transmission bei höheren Wellenlängen größer. Die Extinktionen sind bei Wellenlängen unter 600~nm stark rauschend, was wir auf die numerischen Eigenschaften der Logarithmusfunktion zurückführen. 
 
+~
+
+Zusätzlich war die Konzentration einer Methylenblaulösung zu bestimmen. Diese ist
+\input{MB_ergebnis}
+
+Eine weitere Aufgabe war die Dicke einer gegebenen Glasplatte zu bestimmen.
+\input{GP_d}
+
+
+Die Ergebnisse bei den Farbfiltern stimmten mit unserem physikalischem Verständnis überein. Für die Dicke der Glasplatte und die Konzentration der Lösung gibt es klarerweise keine Vergleichswerte, da es sich um individuelle Eigenschaften der jeweiligen Probe handelt.
 
 
 
 
 \begin{thebibliography}{9}
 \bibitem{moodle} Unterlagen aus Moodle, J. Krenn, G. Paltauf, bereitgestellt von der KF Universität Graz.
+\bibitem{demtroeder} W. Demtröder: \emph{Experimentalphysik 2 - Elektrizität  und Optik}, 7. Auflage, 2017.
+\bibitem{monochromator} \url{https://de.wikipedia.org/wiki/Monochromator}, zugegriffen am 21.11.2020.
 \end{thebibliography}
 
 
