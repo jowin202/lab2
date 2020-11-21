@@ -62,7 +62,7 @@
 \item Signalquelle mit niedrigem Innenwiderstand.
 \end{enumerate}
 \item Bestimmung des Reflexionskoeffizienten des Kabelendes als Funktion des Abschlusswiderstandes und Bestimmung der Kabelimpedanz.
-\item Bestimmung der Signalgeschwindigkeit im Koaxialkabel. Aus dem Ergebnis ist die relativePermittivität des Isolatormaterials des Koaxialkabels zu ermitteln.
+\item Bestimmung der Signalgeschwindigkeit im Koaxialkabel. Aus dem Ergebnis ist die relative Permittivität des Isolatormaterials des Koaxialkabels zu ermitteln.
 \item Ein Verzweiger dient dazu, das Signal einer Quelle auf mehrere Empfänger aufzuteilen, ohne dass das Signal durch die Aufteilung gestört wird. Aufgabe: Dimensionierung der Wi-derstände für einen passiven, symmetrischen Verzweiger und experimentelle Demonstrationder Funktion der Schaltung.
  
 \end{enumerate}
@@ -84,6 +84,7 @@ Es wird zusätzlich noch der Reflexionskoeffizient benötigt, welcher definiert 
 \end{align}
 Durch die Impedanz des Kabels $Z_K = \dfrac{U_e}{I_e} = \dfrac{U_r}{I_r}$ und vom Anschluss $Z_A = \dfrac{U_t}{I_t}$ folgt für den Reflexionskoeffizienten
 \begin{align}
+\label{eq:reflexionskoeff}
 \rho = \frac{Z_A-Z_K}{Z_A+Z_K}
 \end{align}
 
@@ -112,12 +113,12 @@ Durch die Impedanz des Kabels $Z_K = \dfrac{U_e}{I_e} = \dfrac{U_r}{I_r}$ und vo
 \case{2}{R2 $ =(1195 \pm 12)~\Omega$}%
 \case{3}{R3 $ =(676.6\pm 6.8)~\Omega$}%
 \case{4}{R4 $ =(330.36\pm3.30)~\Omega$}%
-\case{5}{R5 $ =(179.80\pm0.68)~\Omega$ }%
+\case{5}{R5 $ =(179.8\pm1.8)~\Omega$ }%
 \case{6}{R6 $ =(100.40 \pm 1.00 )~\Omega$}%
 \case{7}{R7 $ =(68.40 \pm 0.68)~\Omega$}%
 \case{8}{R8 $ =(47.60\pm 0.47)~\Omega$ }%
 \case{9}{R9 $ =(33.30 \pm 0.33)~\Omega$}%
-\case{10}{R10 $ =(12.40\pm 0.12)~\Omega$}%
+\case{10}{R10 $ =(12.38\pm 0.12)~\Omega$}%
 \case{11}{R11 $ =(18.32\pm 0.18)~\Omega$}%
 \end{switch}}
 
@@ -134,7 +135,7 @@ Abk. & Typ    & Daten & Inv.Nr.  \\
 O & Oszilloskop  DSO-X 2022A \\
 FG1 & Frequenzgenerator  BK precision 4063 &   \\
 K1 & Koaxialkabel 1  & $\ell_2=(0.50\pm 0.01)~$m \\
-K2 & Koaxialkabel 2  & $\ell_3=(X\pm 0.01)~$m \\
+K2 & Koaxialkabel 2  & $\ell_3=(31.2\pm 0.01)~$m \\
  R1 & Widerstand &  \R1 \\
 R2 & Widerstand & \R2 \\
 R3 & Widerstand & \R3 \\
@@ -312,10 +313,136 @@ Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1c} beschrieben. Hier
 
 Der Versuchsaufbau ist in Grafik~\ref{fig:anordnung_task2} beschrieben.
 
-Analog zur vorherigen Aufgabe, wurde die Frequenz wurde auf 30~kHz gestellt und die Pulszeit $t_p = 1~\mu$s. Jetzt stehen 11 verschiedene Widerstände zur Verfügung (siehe Geräteliste), welche jeweils als Abschlusswiderstand des Kabels genutzt werden.
+Die Frequenz wurde auf 30~kHz gestellt und die Pulszeit $t_p = 200~$ns. Jetzt stehen 11 verschiedene Widerstände zur Verfügung (siehe Geräteliste), welche jeweils als Abschlusswiderstand des Kabels genutzt werden. Diese Widerstände werden hier nochmal in einer Tabelle zusammengefasst.
+
+Einige dieser Widerstände wurden mehrmals gemessen. In diesem Fall wird der Mittelwert herangezogen bzw. die Standardabweichung auf die 10\%-ige Unsicherheit addiert (sofern signifikant). Diese Widerstände sind der Vollständigkeit halber auch in der Geräteliste zusammengefasst.
+
+\begin{table}[H]
+\centering
+\caption{Widerstände für diesen Versuch.}
+\begin{tabular}{l|l}
+Bezeichnung & Wert \\
+\hline
+R1 & \R1 \\
+R2 & \R2 \\
+R3 & \R3 \\
+R4 & \R4 \\
+R5 & \R5 \\
+R6 & \R6 \\
+R7 & \R7 \\
+R8 & \R8 \\
+R9 & \R9 \\
+R10 & \R10 \\
+R11 & \R11 
+\end{tabular}
+
+\end{table}
 
 Im Gegensatz zu Aufgabe 1 wird hier nur die Eingangsspannung gemessen. Der Eingangswiderstand der Signalquelle ist angepasst, so wie in 1 (a). Am Ende des Kabels werden verschiedene Widerstände angeschlossen. Der Spannungsverlauf dieser Widerstände wird in den Grafiken~\ref{fig:task2_R1} bis \ref{fig:task2_R11} dargestellt.
 
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R1}
+\label{fig:task2_R1}
+\includegraphics[scale=0.6]{bilder/task2/task2_R1.png}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R2}
+\label{fig:task2_R2}
+\includegraphics[scale=0.6]{bilder/task2/task2_R2.png}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R3}
+\label{fig:task2_R3}
+\includegraphics[scale=0.6]{bilder/task2/task2_R3.png}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R4}
+\label{fig:task2_R4}
+\includegraphics[scale=0.6]{bilder/task2/task2_R4.png}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R5}
+\label{fig:task2_R5}
+\includegraphics[scale=0.6]{bilder/task2/task2_R5.png}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R6}
+\label{fig:task2_R6}
+\includegraphics[scale=0.6]{bilder/task2/task2_R6.png}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R7}
+\label{fig:task2_R7}
+\includegraphics[scale=0.6]{bilder/task2/task2_R7.png}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R8}
+\label{fig:task2_R8}
+\includegraphics[scale=0.6]{bilder/task2/task2_R8.png}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R9}
+\label{fig:task2_R9}
+\includegraphics[scale=0.6]{bilder/task2/task2_R9.png}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R10}
+\label{fig:task2_R10}
+\includegraphics[scale=0.6]{bilder/task2/task2_R10.png}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R11}
+\label{fig:task2_R11}
+\includegraphics[scale=0.6]{bilder/task2/task2_R11.png}
+\end{figure}
 
 
 
@@ -333,17 +460,34 @@ Hierbei wird ein Puls augesendet und jene Zeit gemessen, bis der reflektierte Im
 \subsection{Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}
 
 \subsubsection{Angepasster Innenwiderstand}
-Die Grafiken \ref{fig:task1a_50ns} bis \ref{fig:task1a_1000ns} beschreiben das Ergebnis. Nachdem das Signal durch das Kabel läuft, wird es am Ende reflektiert. Das Signal überlagert sich mit dem reflektiertem Signal und es entsteht Interferenz. Durch den angepassten Innenwiderstand in der Signalquelle wird das Signal nicht mehrfach reflektiert. 
+Die Grafiken \ref{fig:task1a_100ns} bis \ref{fig:task1a_750ns} beschreiben den Spannungsverlauf am Anfang und am Ende des Kabels mit angepassten Widerstand. Nachdem das Signal durch das Kabel läuft, wird es am Ende reflektiert, da es sich um ein offenes Ende handelt. Das Signal in die eine Richtung überlagert sich mit dem Signal aus der entgegen gesetzten Richtung und es entsteht Interferenz. Durch den angepassten Innenwiderstand in der Signalquelle wird das Signal dort nicht reflektiert. Daher legt das Signal den Weg durch das Kabel zwei mal zurück (vom Anfang zum Ende, und retour).
 
+Am Kabelausgang wird das Signal bei der Reflexion mit sich selbst überlagert, daher ist am Kabelausgang eine Verdoppelung der Spannung zu erkennen.
+
+Dies lässt sich am Beispiel von~\ref{fig:task1a_100ns} zeigen. Von 0~ns bis 100~ns wird der erste Puls gesendet. Dieser wird bei 170~ns bis 270~ns am Kabelausgang gemessen. Danach wird er zwischen 310~ns und 410~ns wieder am Kabeleingang gemessen. Man erkennt deutlich, dass der Puls bei der Reflexion am Kabelausgang seine Rechtecksform verliert. Das reflektierte Signal am Kabeleingang hat eine ähnliche Form wie bei der Interferenz am Kabelende.
+
+
+Grafik~\ref{fig:task1a_240ns} ist ähnlich wie Grafik~\ref{fig:task1a_100ns}. Durch den längeren Puls ist der zeitliche Abstand des Eingangssignals mit dem reflektierten Signal deutlich geringer. Bei einer weiteren Erhöhung der Pulsdauer ist eine Überlagerung am Signaleingang zu erwarten.
+
+In Grafik~\ref{fig:task1a_500ns} tritt genau diese Überlagerung auf. Die beiden Rechteckspulse werden teilweise überlagert und es kommt zur Verdoppelung der Spannung an der Überlappung der beiden Signale.
+
+Mit Steigerung der Pulsdauer steigt die Überlappung der Signale. Grafik~\ref{fig:task1a_750ns} zeigt das deutlich. Für sehr lange Pulsdauern wäre die Verzögerung durch das Kabel vernachlässigbar und man würde am Kabeleingang die doppelte Spannung sehen.
 
 
 \subsubsection{Hoher Innenwiderstand}
 
-Durch den hohen Innenwiderstand ist am Anfang des Kabels eine stärkere Reflexion zu beobachten. Durch die stärkere Reflexion sieht man, dass eine \textit{Treppenfunktion} entsteht, da sich die Signale mehrfach im Kabel hin und her bewegen und sich ständig überlagern. Da die höhe der Treppen immer kleiner wird, lässt sich darauf schließen, dass das Signal beim mit mehrmaligem Vor- und Zurücklauf kontinuierlich abgeschwächt wird.
+Durch den hohen Innenwiderstand ist am Anfang des Kabels eine Reflexion zu beobachten. Durch die stärkere Reflexion sieht man, dass eine \textit{Treppenfunktion} entsteht, da sich die Signale mehrfach im Kabel hin und her bewegen und sich ständig überlagern. Da die höhe der Treppen immer kleiner wird, lässt sich darauf schließen, dass das Signal beim mit mehrmaligem Vor- und Zurücklauf kontinuierlich abgeschwächt wird.
+
+Grafik~\ref{fig:task1b_150ns} ist ein Sonderfall. Wie schon in Grafik~\ref{fig:task1a_100ns} zu sehen ist, benötigt das Signal durch das Kabel circa 150~ns. Da die Pulsdauer auf genau diese Zeit eingestellt ist, lässt sich eine gewisse Periodizität erkennen. Zu Beginn wird ein Puls der Länge 150~ns gesendet. Dieser wird eben nach 150~ns am Kabelausgang mit doppelter Spannung (wegen Interferenz) gemessen und wieder zum Kabelanfang reflektiert. 150~ns später wird er am Kabeleingang gemessen und erneut reflektiert. Damit wird der Puls abwechselnd am Kabeleingang und Kabelausgang gemessen, während die Amplitude durch den Widerstand in jeder Periode abnimmt.
+
+Grafik~\ref{fig:task1b_2300ns} hingegen zeigt einen Puls, der deutlich länger ist als 150~ns. Es wird ein Puls durch das Kabel gesendet, ca. 150~ns später wird er in doppelter Höhe am Kabelausgang reflektiert. Weitere 150~ns später gelangt das Signal wieder an den Kabeleingang, wo allerdings noch die Spannung des Pulses anliegt. Daher wird am Kabeleingang das reflektierte Signal mit dem immer noch andauernden Puls überlagert und erhöht sich entsprechend. Dieser Vorgang wird mehrmals wiederholt, wobei das reflektierte Signal sich durch den Widerstand abschwächt, sodass die Sprünge in der Treppenfunktion immer geringer werden. 
+
 
 \subsubsection{Niedriger Innenwiderstand}
 
+Durch die Senkung des Widerstandes im Kabelanschluss, sinkt die Anschlussimpedanz $Z_A$ unter jene der Kabelimpedanz $Z_K$. Wegen $Z_A < Z_K$ ist der Reflexionskoeffizient negativ und es folgt $\rho < 0$ wegen Gleichung~\eqref{eq:reflexionskoeff}. Damit wird die Spannung bei der Reflexion umgekehrt.
 
+Grafik~\ref{fig:task1c_150ns} zeigt diesen Fall für 150~ns Pulsdauer. Während der erste Eingangspuls und dessen Reflexion am Ausgang noch deutlich zu erkennen ist, wird der Ausgangspuls am Kabelanfang ins negative umgekehrt, was sich aber durch den reflektierten Impuls aufhebt. Durch die Pulsdauer von 150~ns sieht man alle 150~ns einen Sprung.
 
 \subsection{Bestimmung des Reflexionskoeffizienten}
 
