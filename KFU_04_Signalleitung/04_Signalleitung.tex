@@ -207,7 +207,7 @@ Im ersten Teil der wird der zeitliche Spannungsverlauf am Anfang und Ende des Ka
 \begin{figure}[H]
 \centering
 \caption{Versuch 1 (c) als Foto. Die Kurven am Oszilloskop zeigen die Daten aus Grafik \ref{fig:task1c_150ns}.}
-\label{fig:foto_task1b}
+\label{fig:foto_task1c}
 \includegraphics[scale=0.6]{foto_task1c.jpg}
 \end{figure}
 
@@ -276,14 +276,14 @@ Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1b} beschrieben. Hier
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Hoher Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 150~$ns.}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Hoher Innenwiderstand der Signalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 150~$ns.}
 \label{fig:task1b_150ns}
 \includegraphics[scale=0.6]{bilder/task1b/task1b_150ns.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Hoher Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 2.3~\mu$s.}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Hoher Innenwiderstand der Signalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 2.3~\mu$s.}
 \label{fig:task1b_2300ns}
 \includegraphics[scale=0.6]{bilder/task1b/task1b_2300ns.png}
 \end{figure}
@@ -295,14 +295,14 @@ Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1c} beschrieben. Hier
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Niedriger Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 150$ns.}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Niedriger Innenwiderstand der Signalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 150$ns.}
 \label{fig:task1c_150ns}
 \includegraphics[scale=0.6]{bilder/task1c/task1c_150ns.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Niedriger Innenwiderstand der Singalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 2.65~\mu$s.}
+\caption{Spannungsverlauf an beiden Enden des Koaxialkabels. Niedriger Innenwiderstand der Signalquelle. Channel 1 ist Spannung am Beginn des Kabels, Channel 2 am Ende. $t_p = 2.65~\mu$s.}
 \label{fig:task1b_2650ns}
 \includegraphics[scale=0.6]{bilder/task1c/task1c_2650ns.png}
 \end{figure}
@@ -338,7 +338,7 @@ R11 & \R11
 
 \end{table}
 
-Im Gegensatz zu Aufgabe 1 wird hier nur die Eingangsspannung gemessen. Der Eingangswiderstand der Signalquelle ist angepasst, so wie in 1 (a). Am Ende des Kabels werden verschiedene Widerstände angeschlossen. Der Spannungsverlauf dieser Widerstände wird in den Grafiken~\ref{fig:task2_R1} bis \ref{fig:task2_R11} dargestellt.
+Im Gegensatz zu Aufgabe 1 wird hier nur die Eingangsspannung gemessen. Der Eingangswiderstand der Signalquelle ist angepasst, so wie in 1 (a). Am Ende des Kabels werden verschiedene Widerstände angeschlossen. Der Spannungsverlauf dieser Widerstände wird in den Grafiken~\ref{fig:task2_R1} bis \ref{fig:task2_kurz} dargestellt.
 
 
 \begin{figure}[H]
@@ -430,7 +430,7 @@ Im Gegensatz zu Aufgabe 1 wird hier nur die Eingangsspannung gemessen. Der Einga
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R10}
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R{10}}
 \label{fig:task2_R10}
 \includegraphics[scale=0.6]{bilder/task2/task2_R10.png}
 \end{figure}
@@ -439,9 +439,17 @@ Im Gegensatz zu Aufgabe 1 wird hier nur die Eingangsspannung gemessen. Der Einga
 
 \begin{figure}[H]
 \centering
-\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R11}
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich der Widerstand \R{11}}
 \label{fig:task2_R11}
 \includegraphics[scale=0.6]{bilder/task2/task2_R11.png}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang. Am Kabelausgang befindet sich ein Kurzschluss}
+\label{fig:task2_kurz}
+\includegraphics[scale=0.6]{bilder/task2/task2_kurz.png}
 \end{figure}
 
 
@@ -516,6 +524,33 @@ Durch die Senkung des Widerstandes im Kabelanschluss, sinkt die Anschlussimpedan
 Grafik~\ref{fig:task1c_150ns} zeigt diesen Fall für 150~ns Pulsdauer. Während der erste Eingangspuls und dessen Reflexion am Ausgang noch deutlich zu erkennen ist, wird der Ausgangspuls am Kabelanfang ins negative umgekehrt, was sich aber durch den reflektierten Impuls aufhebt. Durch die Pulsdauer von 150~ns sieht man alle 150~ns einen Sprung.
 
 \subsection{Bestimmung des Reflexionskoeffizienten}
+
+Zu Beginn muss die Eingangsspannung $U_e$ und die reflektierte Spannung $U_r$ gemessen werden. in Tabelle~\ref{tab:reflexionskoeff} sind die jeweiligen Werte dargestellt. Zusätzlich wurde der Reflexionskoeffizient berechnet
+
+\begin{table}[H]
+\centering
+\caption{Bestimmung der Eingangs- und Ausgangsspannung für alle Widerstände R1 bis R11 und für einen Kurzschluss. Zusätzlich wurde der Reflexionskoeffizient $\rho$ und dessen Unsicherheit berechnet.}
+\label{tab:reflexionskoeff}
+\begin{tabular}{c|llll}
+Widerstand Nr. & $U_e$ / mV & $U_r$ / mV & $\rho$ / 1 & $\Delta \rho$ / 1 \\
+\hline
+R1 & 1020 & 874 & 0.86 & \\
+R2 & 1026 & 848 & 0.82 & \\
+R3 & 1026 & 781 & 0.76 & \\
+R4 & 1026 & 668 & 0.65 & \\
+R5 & 1023 & 505 & 0.49 & \\
+R6 & 1024 & 287 & 0.28 & \\
+R7 & 1026 & 127 & 0.12 & \\
+R8 & 1025 & -30 & -0.03 & \\
+R9 & 1022 & -181 & -0.17 & \\
+R10 & 1038 & -533 & -0.51 & \\
+R11 & 1034 & -415 & -0.40 & \\
+Kurzschluss & 1037 & -445 & -0.43 & 
+\end{tabular}
+\end{table}
+
+
+
 
 \subsection{Bestimmung der Signalgeschwindigkeit}
 
