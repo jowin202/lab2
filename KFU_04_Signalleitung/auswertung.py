@@ -59,9 +59,8 @@ ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 a,  t=100 ns')
 plt.savefig("bilder/task1a/task1a_100ns.png")
 
-
-
-
+#ax.set_title('Aufgabe 3,  t=100 ns')
+#plt.savefig("bilder/task3/task3_100ns.png")
 
 
 
@@ -78,6 +77,8 @@ ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 a,  t=240 ns')
 plt.savefig("bilder/task1a/task1a_240ns.png")
 
+#ax.set_title('Aufgabe 3,  t=240 ns')
+#plt.savefig("bilder/task3/task3_240ns.png")
 
 
 

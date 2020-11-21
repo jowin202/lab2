@@ -134,8 +134,8 @@ Abk. & Typ    & Daten & Inv.Nr.  \\
 \hline
 O & Oszilloskop  DSO-X 2022A \\
 FG1 & Frequenzgenerator  BK precision 4063 &   \\
-K1 & Koaxialkabel 1  & $\ell_2=(0.50\pm 0.01)~$m \\
-K2 & Koaxialkabel 2  & $\ell_3=(31.2\pm 0.01)~$m \\
+K1 & Koaxialkabel 1  & $\ell_1=(0.50\pm 0.01)~$m \\
+K2 & Koaxialkabel 2  & $\ell_2=(31.20\pm 0.01)~$m \\
  R1 & Widerstand &  \R1 \\
 R2 & Widerstand & \R2 \\
 R3 & Widerstand & \R3 \\
@@ -449,7 +449,33 @@ Im Gegensatz zu Aufgabe 1 wird hier nur die Eingangsspannung gemessen. Der Einga
 
 \subsection{Bestimmung der Signalgeschwindigkeit}
 
-Hierbei wird ein Puls augesendet und jene Zeit gemessen, bis der reflektierte Impuls ankommt.
+Hierbei wird ein Puls augesendet und jene Zeit gemessen, bis der reflektierte Impuls gemessen wird. Es eignen sich dafür die Signale mit $t_p=100~$ns und $t_p=240~$ns aus Aufgabe 1 (a). Die Zeitmessung ist in den Grafiken~\ref{fig:task3_100ns} und \ref{fig:task3_240ns} veranschaulicht.
+
+Die abgelesenen Zeiten werden in Tabelle~\ref{tab:task3_zeiten} dargestellt.
+\begin{table}[H]
+\caption{Zeitpunkt von einem Puls $t_1$ bis zu dessen Reflexion $t_2$. Das Ablesen erfolgt händisch aus den Daten an jenem Punkt, wo die Spannung die Schwelle von -0.8~V übersteigt. Wegen des Rauschens ist die Unsicherheit von $t_1,t_2$ jeweils 5~ns und $\Delta \tau = 10~$ns.}
+\label{tab:task3_zeiten}
+\begin{tabular}{l|lll}
+$t_p$ / ns & $t_1$ / ns & $t_2$ / ns & $\tau$ / ns  \\
+\hline
+100 &  -3.13 & 310.16 & 313.29 \\
+240 &  -3.38 & 308.63 & 312.01
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\caption{Zeitmessung (grün) bei einem Signal mit einer Pulsdauer von 100~ns.}
+\label{fig:task3_100ns}
+\includegraphics[scale=0.6]{bilder/task3/task3_100ns.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Zeitmessung (grün) bei einem Signal mit einer Pulsdauer von 240~ns.}
+\label{fig:task3_240ns}
+\includegraphics[scale=0.6]{bilder/task3/task3_240ns.png}
+\end{figure}
 
 
 \subsection{Symmetrischer Verzweiger}
@@ -493,16 +519,24 @@ Grafik~\ref{fig:task1c_150ns} zeigt diesen Fall für 150~ns Pulsdauer. Während 
 
 \subsection{Bestimmung der Signalgeschwindigkeit}
 
-Der elektrische Impuls legt den Weg $s = 2\cdot \ell_3$ zurück. Wenn dafür die Zeit $t$ benötigt wird, dann gilt insgesamt mit Größtfehlermethode
+Der elektrische Impuls legt den Weg $s = 2\cdot \ell_2$ zurück. Wenn dafür die Zeit $\tau$ benötigt wird, dann gilt insgesamt mit Größtfehlermethode
 \begin{align*}
-c = \left(\frac{2\cdot \ell_3}{t} \pm \left|\frac{2\cdot \Delta \ell_3}{t} + \frac{2\cdot \ell_3}{t^2}\cdot \Delta t\right|\right)
+c = \left(\frac{2\cdot \ell_2}{\tau} \pm \left|\frac{2\cdot \Delta \ell_2}{\tau} + \frac{2\cdot \ell_2}{\tau^2}\cdot \Delta \tau\right|\right)
+\end{align*}
+Man setzt $\tau = 312.65~$ns (Mittelwert aus Tabelle~\ref{tab:task3_zeiten}) und $\Delta \tau = 10~$ns. Aus der Geräteliste kann man $\ell_2 = (31.20 \pm 0.01)~$m ablesen. Daraus folgt
+\begin{align*}
+c = \left(199584 \pm  6448\right)~\text{km/s}
 \end{align*}
 
-Die relative Permittivität des des Isoliermaterials ist hier außerdem zu breechnen. Aus $\varepsilon \cdot \mu = \frac{1}{c^2}$ folgt inklusive Fehleranalyse
+Die relative Permittivität des Isoliermaterials ist hier außerdem zu berechnen. Aus $\varepsilon \cdot \mu = \frac{1}{c^2}$ folgt inklusive Fehleranalyse
 \begin{align*}
 \varepsilon_r = \frac{1}{c^2\cdot \mu\cdot \varepsilon_0} \pm \left| \frac{\Delta c}{c^3\cdot \mu\cdot \varepsilon_0} \right|
 \end{align*}
-mit der elektrischen Feldkonstanten $\varepsilon_0$, $\mu = \mu_r\cdot\mu_0$ und $\mu_r=1$.
+mit der elektrischen Feldkonstanten $\varepsilon_0$, der magnetischen Feldkonstanten $\mu_0$, sowie $\mu = \mu_r\cdot\mu_0$ und $\mu_r=1$. Daraus folgt
+\begin{align*}
+\varepsilon_r = 2.26 \pm 0.07
+\end{align*}
+
 
 \subsection{Symmetrischer Verzweiger}
 

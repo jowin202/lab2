@@ -10,15 +10,15 @@
 \contentsline {subsubsection}{\numberline {5.1.3}Niedriger Innenwiderstand}{12}%
 \contentsline {subsection}{\numberline {5.2}Bestimmung des Reflexionskoeffizienten}{13}%
 \contentsline {subsection}{\numberline {5.3}Bestimmung der Signalgeschwindigkeit}{20}%
-\contentsline {subsection}{\numberline {5.4}Symmetrischer Verzweiger}{20}%
-\contentsline {section}{\numberline {6}Auswertung}{20}%
-\contentsline {subsection}{\numberline {6.1}Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}{20}%
-\contentsline {subsubsection}{\numberline {6.1.1}Angepasster Innenwiderstand}{20}%
-\contentsline {subsubsection}{\numberline {6.1.2}Hoher Innenwiderstand}{20}%
-\contentsline {subsubsection}{\numberline {6.1.3}Niedriger Innenwiderstand}{21}%
-\contentsline {subsection}{\numberline {6.2}Bestimmung des Reflexionskoeffizienten}{21}%
-\contentsline {subsection}{\numberline {6.3}Bestimmung der Signalgeschwindigkeit}{21}%
-\contentsline {subsection}{\numberline {6.4}Symmetrischer Verzweiger}{22}%
-\contentsline {section}{\numberline {7}Diskussion}{22}%
-\contentsline {section}{\numberline {8}Zusammenfassung}{22}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{22}%
+\contentsline {subsection}{\numberline {5.4}Symmetrischer Verzweiger}{21}%
+\contentsline {section}{\numberline {6}Auswertung}{21}%
+\contentsline {subsection}{\numberline {6.1}Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}{21}%
+\contentsline {subsubsection}{\numberline {6.1.1}Angepasster Innenwiderstand}{21}%
+\contentsline {subsubsection}{\numberline {6.1.2}Hoher Innenwiderstand}{22}%
+\contentsline {subsubsection}{\numberline {6.1.3}Niedriger Innenwiderstand}{22}%
+\contentsline {subsection}{\numberline {6.2}Bestimmung des Reflexionskoeffizienten}{23}%
+\contentsline {subsection}{\numberline {6.3}Bestimmung der Signalgeschwindigkeit}{23}%
+\contentsline {subsection}{\numberline {6.4}Symmetrischer Verzweiger}{23}%
+\contentsline {section}{\numberline {7}Diskussion}{23}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{23}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{23}%
