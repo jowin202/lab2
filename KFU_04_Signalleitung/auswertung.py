@@ -61,6 +61,7 @@ plt.savefig("bilder/task1a/task1a_100ns.png")
 
 #ax.set_title('Aufgabe 3,  t=100 ns')
 #plt.savefig("bilder/task3/task3_100ns.png")
+plt.close()
 
 
 
@@ -79,6 +80,7 @@ plt.savefig("bilder/task1a/task1a_240ns.png")
 
 #ax.set_title('Aufgabe 3,  t=240 ns')
 #plt.savefig("bilder/task3/task3_240ns.png")
+plt.close()
 
 
 
@@ -96,6 +98,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 a,  t=500 ns')
 plt.savefig("bilder/task1a/task1a_500ns.png")
+plt.close()
 
 
 
@@ -114,6 +117,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 a,  t=750 ns')
 plt.savefig("bilder/task1a/task1a_750ns.png")
+plt.close()
 
 
 
@@ -137,6 +141,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 b,  t=150 ns')
 plt.savefig("bilder/task1b/task1b_150ns.png")
+plt.close()
 
 
 
@@ -153,6 +158,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 b,  t=2300 ns')
 plt.savefig("bilder/task1b/task1b_2300ns.png")
+plt.close()
 
 
 
@@ -174,6 +180,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 c,  t=150 ns')
 plt.savefig("bilder/task1c/task1c_150ns.png")
+plt.close()
 
 
 t1c_ch1_2650, V1c_ch1_2650 = read_csv("daten/scope_9_1.csv")
@@ -188,6 +195,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 1 c,  t=2650 ns')
 plt.savefig("bilder/task1c/task1c_2650ns.png")
+plt.close()
 
 
 
@@ -207,6 +215,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R1)')
 plt.savefig("bilder/task2/task2_R1.png")
+plt.close()
 
 
 
@@ -222,6 +231,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R2)')
 plt.savefig("bilder/task2/task2_R2.png")
+plt.close()
 
 
 
@@ -237,6 +247,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R3)')
 plt.savefig("bilder/task2/task2_R3.png")
+plt.close()
 
 
 
@@ -253,6 +264,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R4)')
 plt.savefig("bilder/task2/task2_R4.png")
+plt.close()
 
 
 
@@ -270,6 +282,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R5)')
 plt.savefig("bilder/task2/task2_R5.png")
+plt.close()
 
 
 
@@ -286,6 +299,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R6)')
 plt.savefig("bilder/task2/task2_R6.png")
+plt.close()
 
 
 
@@ -302,6 +316,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R7)')
 plt.savefig("bilder/task2/task2_R7.png")
+plt.close()
 
 
 
@@ -318,6 +333,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R8)')
 plt.savefig("bilder/task2/task2_R8.png")
+plt.close()
 
 
 
@@ -334,6 +350,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R9)')
 plt.savefig("bilder/task2/task2_R9.png")
+plt.close()
 
 
 
@@ -349,6 +366,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R10)')
 plt.savefig("bilder/task2/task2_R10.png")
+plt.close()
 
 
 
@@ -365,6 +383,7 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (R11)')
 plt.savefig("bilder/task2/task2_R11.png")
+plt.close()
 
 
 
@@ -381,3 +400,71 @@ ax.set_xlabel('time / ns')
 ax.set_ylabel('Voltage / V')
 ax.set_title('Aufgabe 2 (Kurzschluss)')
 plt.savefig("bilder/task2/task2_kurz.png")
+plt.close()
+
+
+
+
+
+for i in range(len(V2_R1)):
+    V2_R1[i] += 1
+    V2_R2[i] += 0.967
+    V2_R3[i] += 0.939
+    V2_R4[i] += 0.887
+    V2_R5[i] += 0.791
+    V2_R6[i] += 0.676
+    V2_R7[i] += 0.588
+    V2_R8[i] += 0.499
+    V2_R9[i] += 0.414
+    V2_R10[i] += 0.228
+    V2_R11[i] += 0.295
+    
+
+
+
+#summary
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(t2_R10, V2_R10, 'orange')
+ax.plot(t2_R11, V2_R11, 'orange')
+ax.plot(t2_R1, V2_R1, 'blue')
+ax.plot(t2_R2, V2_R2, 'blue')
+ax.plot(t2_R3, V2_R3, 'blue')
+ax.plot(t2_R4, V2_R4, 'blue')
+ax.plot(t2_R5, V2_R5, 'blue')
+ax.plot(t2_R6, V2_R6, 'blue')
+ax.plot(t2_R7, V2_R7, 'gray')
+ax.plot(t2_R8, V2_R8, 'gray')
+ax.plot(t2_R9, V2_R9, 'orange')
+#ax.legend(['Kabeleingang', 'Kabelausgang'])
+ax.set_xlabel('time / ns')
+ax.set_ylabel('Voltage / V')
+ax.set_title('Aufgabe 2 (Zusammenfassung)')
+plt.savefig("bilder/task2/task2_summary.png")
+plt.close()
+
+
+
+
+
+
+
+
+
+
+
+#task 5
+t5_s22, V5_s22 = read_csv("daten/scope_22_1.csv")
+t5_s23, V5_s23 = read_csv("daten/scope_23_1.csv")
+
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(t5_s22, V5_s22, 'blue')
+ax.plot(t5_s23, V5_s23, 'red')
+ax.legend(['scope 22', 'scope 23'])
+ax.set_xlabel('time / ns')
+ax.set_ylabel('Voltage / V')
+ax.set_title('Aufgabe 5')
+plt.savefig("bilder/task5/task5.png")
+

@@ -63,7 +63,7 @@
 \end{enumerate}
 \item Bestimmung des Reflexionskoeffizienten des Kabelendes als Funktion des Abschlusswiderstandes und Bestimmung der Kabelimpedanz.
 \item Bestimmung der Signalgeschwindigkeit im Koaxialkabel. Aus dem Ergebnis ist die relative Permittivität des Isolatormaterials des Koaxialkabels zu ermitteln.
-\item Ein Verzweiger dient dazu, das Signal einer Quelle auf mehrere Empfänger aufzuteilen, ohne dass das Signal durch die Aufteilung gestört wird. Aufgabe: Dimensionierung der Wi-derstände für einen passiven, symmetrischen Verzweiger und experimentelle Demonstrationder Funktion der Schaltung.
+\item Dimensionierung der Widerstände für einen passiven, symmetrischen Verzweiger und experimentelle Demonstration der Funktion der Schaltung.
  
 \end{enumerate}
 
@@ -221,11 +221,34 @@ Im ersten Teil der wird der zeitliche Spannungsverlauf am Anfang und Ende des Ka
 \end{figure}
 
 
+Weiters sind in diesem Versuch die Widerstände an einem symmetrischen Verzweiger zu bestimmen. Aus der Theorie ist bekannt, wenn der Gesamtwiderstand der Kabelimpedanz $Z_K$ entspricht. Es gilt also nach Grafik~\ref{fig:anordnung_task4}
+\begin{align}
+\label{eq:verzweiger}
+Z_K &= R + (R+50~\Omega)||(R+50~\Omega) = R + \frac{R+50}{2} = \frac{3\cdot R + 50}{2}
+\end{align}
+Also ist ein symmetrischer Verzweiger gemäß der Aufgabenstellung genau dann störungsfrei, wenn Gleichung~\eqref{eq:verzweiger} gilt.
+
 \begin{figure}[H]
 \centering
 \caption{Versuch 4: Aufbau eines symmetrischen Verzweigers. $R$ ist so zu wählen, dass keine Reflexionen auftreten.}
 \label{fig:anordnung_task4}
 \includegraphics[scale=2]{task4.png}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Versuch 4 als Foto. Die Schaltung am Steckbrett entspricht der schematischen Darstellung in Grafik~\ref{fig:anordnung_task4}.}
+\label{fig:foto_task4_richtig}
+\includegraphics[scale=0.6]{task4_richtig.jpg}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Versuch 4 als Foto. Die Schaltung entspricht nicht Grafik~\ref{fig:anordnung_task4}, da die Widerstände in Serie zum Innenleiter (gelbe Drähte) geschaltet werden. Die Außenleiter (grüne Drähte) sind ohne Widerstände verbunden.}
+\label{fig:foto_task4_falsch}
+\includegraphics[scale=0.6]{task4_falsch.jpg}
 \end{figure}
 
 
@@ -310,7 +333,7 @@ Der Versuchsaufbau ist in Abbildung~\ref{fig:anordnung_task1c} beschrieben. Hier
 
 
 
-\subsection{Bestimmung des Reflexionskoeffizienten}
+\subsection{Bestimmung des Reflexionskoeffizienten und der Kabelimpedanz}
 
 Der Versuchsaufbau ist in Grafik~\ref{fig:anordnung_task2} beschrieben.
 
@@ -487,7 +510,7 @@ $t_p$ / ns & $t_1$ / ns & $t_2$ / ns & $\tau$ / ns  \\
 \end{figure}
 
 
-\subsection{Symmetrischer Verzweiger}
+\subsection{Wiederstände an einem symmetrischen Verzweiger}
 
 
 \section{Auswertung}
@@ -524,29 +547,29 @@ Durch die Senkung des Widerstandes im Kabelanschluss, sinkt die Anschlussimpedan
 
 Grafik~\ref{fig:task1c_150ns} zeigt diesen Fall für 150~ns Pulsdauer. Während der erste Eingangspuls und dessen Reflexion am Ausgang noch deutlich zu erkennen ist, wird der Ausgangspuls am Kabelanfang ins negative umgekehrt, was sich aber durch den reflektierten Impuls aufhebt. Durch die Pulsdauer von 150~ns sieht man alle 150~ns einen Sprung.
 
-\subsection{Bestimmung des Reflexionskoeffizienten}
+\subsection{Bestimmung des Reflexionskoeffizienten und der Kabelimpedanz}
 
 Zu Beginn muss die Eingangsspannung $U_e$ und die reflektierte Spannung $U_r$ gemessen werden. in Tabelle~\ref{tab:reflexionskoeff} sind die jeweiligen Werte dargestellt. Zusätzlich wurde der Reflexionskoeffizient berechnet. Der Reflexionskoeffizient kann auf zwei verschiedene Arten bestimmt werden, nämlich mit den Formeln~\eqref{eq:reflexionskoeff1} und \eqref{eq:reflexionskoeff}. Für die nachfolgende Tabelle wird Formel \eqref{eq:reflexionskoeff1} verwendet.
 
 \begin{table}[H]
 \centering
-\caption{Bestimmung der Eingangs- und Ausgangsspannung für alle Widerstände R1 bis R11 und für einen Kurzschluss. Zusätzlich wurde der Reflexionskoeffizient $\rho$ und dessen Unsicherheit berechnet.}
+\caption{Bestimmung der Eingangs- und Ausgangsspannung für alle Widerstände R1 bis R11 und für einen Kurzschluss. Zusätzlich wurde der Reflexionskoeffizient $\rho$ und dessen Unsicherheit berechnet. Wegen dem Rauschen wird eine Unsicherheit $\Delta U_e = \Delta U_r = 30~$mV angenommen.}
 \label{tab:reflexionskoeff}
 \begin{tabular}{c|llll}
 Widerstand Nr. & $U_e$ / mV & $U_r$ / mV & $\rho$ / 1 & $\Delta \rho$ / 1 \\
 \hline
-R1 & 1020 & 874 & 0.86 & \\
-R2 & 1026 & 848 & 0.82 & \\
-R3 & 1026 & 781 & 0.76 & \\
-R4 & 1026 & 668 & 0.65 & \\
-R5 & 1023 & 505 & 0.49 & \\
-R6 & 1024 & 287 & 0.28 & \\
-R7 & 1026 & 127 & 0.12 & \\
-R8 & 1025 & -30 & -0.03 & \\
-R9 & 1022 & -181 & -0.17 & \\
-R10 & 1038 & -533 & -0.51 & \\
-R11 & 1034 & -415 & -0.40 & \\
-Kurzschluss & 1037 & -445 & -0.43 & 
+R1 & 1020 & 874 & 0.86 & 0.05 \\
+R2 & 1026 & 848 & 0.82 & 0.05 \\
+R3 & 1026 & 781 & 0.76 & 0.05 \\
+R4 & 1026 & 668 & 0.65 & 0.05 \\
+R5 & 1023 & 505 & 0.49 & 0.04 \\
+R6 & 1024 & 287 & 0.28 & 0.04 \\
+R7 & 1026 & 127 & 0.12 & 0.03 \\
+R8 & 1025 & -30 & -0.03 & 0.03 \\
+R9 & 1022 & -181 & -0.17 & 0.02 \\
+R10 & 1038 & -533 & -0.51 & 0.01\\
+R11 & 1034 & -415 & -0.40 & 0.02 \\
+Kurzschluss & 1037 & -445 & -0.43 & 0.02
 \end{tabular}
 \end{table}
 
@@ -555,11 +578,27 @@ Nach Formel~\eqref{eq:reflexionskoeff} gibt es einen Zusammenhang zwischen dem A
 \begin{align*}
 \rho = \frac{Z_A-Z_K}{Z_A+Z_K}
 \end{align*}
-wobei für $Z_A$ die Widerstände aus Tabelle~\ref{tab:reflexionskoeff} eingesetzt werden können. Insbesondere jene Werte von R7 und R8 sind von Interesse, da sich genau an dieser Stelle das Vorzeichen ändert. Durch lineare Interpolation ergibt sich
-\begin{align*}
-0 \approx \rho\left(\text{R8} + \frac{\rho(\text{R7}) - \rho(\text{R8})}{\text{R7}-\text{R8}} \cdot \big(0 -\rho(\text{R8}) \big)  \right) = \rho\left(\left(~~~ \pm ~~~\right)~\Omega\right)
-\end{align*}
+wobei für $Z_A$ die Widerstände aus Tabelle~\ref{tab:reflexionskoeff} eingesetzt werden können. Insbesondere jene Werte von R7 und R8 sind von Interesse, da sich genau an dieser Stelle das Vorzeichen ändert. Es folgt, dass die Kabelimpedanz nahe bei 50~$\Omega$ liegen muss, da bei $R_8 = 47.60~\Omega$ der Reflexionskoeffizient am nähesten bei $0$ liegt.
 
+Durch lineare Interpolation ergibt sich
+\begin{align}
+\label{eq:interpolation}
+0 \approx \rho\left(\text{R8} + \frac{\text{R7}-\text{R8}}{\rho(\text{R7}) - \rho(\text{R8})} \cdot \big(0 -\rho(\text{R8}) \big)  \right) = \rho\left(\left(51.76 \pm 56.85\right)~\Omega\right)
+\end{align}
+
+Diese Unsicherheit ist sehr groß im Vergleich zum Messwert. Das liegt daran, dass der Nenner in Gleichung~\eqref{eq:interpolation} den Term $\rho(\text{R7}) - \rho(\text{R8})$ enthält und dieser sehr klein wird (0.15). Der Zähler ist die Differenz aus R7 und R8 und entsprechend größer (20.8~$\Omega$). Gemäß den Unsicherheiten ergibt sich eine hohe numerische Instabilität. Es kann in diesem Fall dennoch davon ausgegangen werden, dass $Z_K \approx 50~\Omega$ ist, da dieser ein für BNC Kabel üblicher Wert ist. (vgl. \cite{bnc})
+
+
+Der Vollständigkiet halber wurden die Spannungskurven der verschiedenen Widerstände nochmal alle in Grafik~\ref{fig:task2_summary} zusammengefasst, wobei die Eingangsspannung normiert wurde. Die Unterscheidung der Kurven erfolgt nach dem Kriterium, ob der jeweilige Abschlusswiderstand größer oder kleiner als die Kabelimpedanz ist. Es ist hier sehr leicht zu erkennen, dass die Kabelimpedanz zwischen den Werten der Widerstände R7 und R8 liegen muss. Diese sind in der gegebenen Grafik grau markiert. Man erkennt hier, dass dort am wenigsten Reflexion auftritt.
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungsverlauf am Kabeleingang von allen Widerständen gegenübergestellt. Dazu wurde zu den Spannungen ein jeweiliges Offset addiert. Die blauen Kurven gehören zu jenen Widerständen, die größer sind als die Kabelimpedanz. Die orangen Kurven sind zu den Widerständen die kleiner sind als die Kabelimpedanz. Die beiden grauen Kurven gehören zu den Widerständen R7 und R8.}
+\label{fig:task2_summary}
+\includegraphics[scale=0.6]{bilder/task2/task2_summary.png}
+\end{figure}
 
 
 
@@ -571,7 +610,7 @@ c = \left(\frac{2\cdot \ell_2}{\tau} \pm \left|\frac{2\cdot \Delta \ell_2}{\tau}
 \end{align*}
 Man setzt $\tau = 312.65~$ns (Mittelwert aus Tabelle~\ref{tab:task3_zeiten}) und $\Delta \tau = 10~$ns. Aus der Geräteliste kann man $\ell_2 = (31.20 \pm 0.01)~$m ablesen. Daraus folgt
 \begin{align*}
-c = \left(199584 \pm  6448\right)~\text{km/s}
+c = \left(200 \pm  6\right)\cdot 10^6~\text{m/s}
 \end{align*}
 
 Die relative Permittivität des Isoliermaterials ist hier außerdem zu berechnen. Aus $\varepsilon \cdot \mu = \frac{1}{c^2}$ folgt inklusive Fehleranalyse
@@ -584,7 +623,18 @@ mit der elektrischen Feldkonstanten $\varepsilon_0$, der magnetischen Feldkonsta
 \end{align*}
 
 
-\subsection{Symmetrischer Verzweiger}
+\subsection{Wiederstände an einem symmetrischen Verzweiger}
+
+Aus Gleichung~\eqref{eq:verzweiger} geht folgende Gleichung hervor, dass folgendes gilt
+\begin{align*}
+Z_K = \frac{3\cdot R + 50~\Omega}{2}
+\end{align*}
+Für $Z_K = (51.76+56.85)~\Omega$ ergibt sich
+\begin{align*}
+R = (17.84 \pm 37.9)~\Omega
+\end{align*}
+Auch hier ist die Unsicherheit relativ hoch.
+
 
 
 
@@ -592,8 +642,27 @@ mit der elektrischen Feldkonstanten $\varepsilon_0$, der magnetischen Feldkonsta
 \section{Diskussion}
 
 
+\subsection{Zeitlicher Spannungsverlauf an den Enden eines Koaxialkabels}
+
+Die Spannungsverläufe an den Enden des Koaxialkabels verhalten sich wie es in der Theorie vorhergesagt wird. 
 
 
+\subsection{Bestimmung des Reflexionskoeffizienten und der Kabelimpedanz}
+
+Die Kabelimpedanz wird 
+
+
+
+\subsection{Bestimmung der Signalgeschwindigkeit}
+
+
+\subsection{Wiederstände an einem symmetrischen Verzweiger}
+
+Gleichung~\eqref{eq:verzweiger} kann für $Z_K = 50~\Omega$ umgeschrieben werden
+\begin{align*}
+50 = \frac{3\cdot R + 50}{2}
+\end{align*}
+Daraus ergibt sich $R = \dfrac{50}{3} = 16.67~\Omega$, was vom berechneten Wert von $17.84~\Omega$ etwas abweicht.
 
 
 \section{Zusammenfassung}
@@ -638,6 +707,7 @@ mit der elektrischen Feldkonstanten $\varepsilon_0$, der magnetischen Feldkonsta
 
 \begin{thebibliography}{9}
 \bibitem{moodle} Unterlagen aus Moodle, A. Hohenau, bereitgestellt von der KF Universität Graz.
+\bibitem{bnc} \url{https://de.wikipedia.org/wiki/BNC-Steckverbinder}, aberufen am 24.11.2020, 15:00.
 \end{thebibliography}
 
 

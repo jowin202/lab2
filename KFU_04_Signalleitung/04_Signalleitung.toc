@@ -3,22 +3,26 @@
 \contentsline {section}{\numberline {2}Voraussetzungen und Grundlagen}{3}%
 \contentsline {section}{\numberline {3}Geräteliste}{4}%
 \contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{4}%
-\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{8}%
-\contentsline {subsection}{\numberline {5.1}Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}{8}%
-\contentsline {subsubsection}{\numberline {5.1.1}Angepasster Innenwiderstand}{8}%
-\contentsline {subsubsection}{\numberline {5.1.2}Hoher Innenwiderstand}{10}%
-\contentsline {subsubsection}{\numberline {5.1.3}Niedriger Innenwiderstand}{12}%
-\contentsline {subsection}{\numberline {5.2}Bestimmung des Reflexionskoeffizienten}{13}%
-\contentsline {subsection}{\numberline {5.3}Bestimmung der Signalgeschwindigkeit}{20}%
-\contentsline {subsection}{\numberline {5.4}Symmetrischer Verzweiger}{22}%
-\contentsline {section}{\numberline {6}Auswertung}{22}%
-\contentsline {subsection}{\numberline {6.1}Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}{22}%
-\contentsline {subsubsection}{\numberline {6.1.1}Angepasster Innenwiderstand}{22}%
-\contentsline {subsubsection}{\numberline {6.1.2}Hoher Innenwiderstand}{22}%
-\contentsline {subsubsection}{\numberline {6.1.3}Niedriger Innenwiderstand}{23}%
-\contentsline {subsection}{\numberline {6.2}Bestimmung des Reflexionskoeffizienten}{23}%
-\contentsline {subsection}{\numberline {6.3}Bestimmung der Signalgeschwindigkeit}{24}%
-\contentsline {subsection}{\numberline {6.4}Symmetrischer Verzweiger}{25}%
-\contentsline {section}{\numberline {7}Diskussion}{25}%
-\contentsline {section}{\numberline {8}Zusammenfassung}{25}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{25}%
+\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{9}%
+\contentsline {subsection}{\numberline {5.1}Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}{9}%
+\contentsline {subsubsection}{\numberline {5.1.1}Angepasster Innenwiderstand}{9}%
+\contentsline {subsubsection}{\numberline {5.1.2}Hoher Innenwiderstand}{12}%
+\contentsline {subsubsection}{\numberline {5.1.3}Niedriger Innenwiderstand}{13}%
+\contentsline {subsection}{\numberline {5.2}Bestimmung des Reflexionskoeffizienten und der Kabelimpedanz}{15}%
+\contentsline {subsection}{\numberline {5.3}Bestimmung der Signalgeschwindigkeit}{22}%
+\contentsline {subsection}{\numberline {5.4}Wiederstände an einem symmetrischen Verzweiger}{23}%
+\contentsline {section}{\numberline {6}Auswertung}{23}%
+\contentsline {subsection}{\numberline {6.1}Zeitlicher Spannungsverlauf an den Enden des Koaxialkabels}{23}%
+\contentsline {subsubsection}{\numberline {6.1.1}Angepasster Innenwiderstand}{23}%
+\contentsline {subsubsection}{\numberline {6.1.2}Hoher Innenwiderstand}{24}%
+\contentsline {subsubsection}{\numberline {6.1.3}Niedriger Innenwiderstand}{24}%
+\contentsline {subsection}{\numberline {6.2}Bestimmung des Reflexionskoeffizienten und der Kabelimpedanz}{25}%
+\contentsline {subsection}{\numberline {6.3}Bestimmung der Signalgeschwindigkeit}{27}%
+\contentsline {subsection}{\numberline {6.4}Wiederstände an einem symmetrischen Verzweiger}{27}%
+\contentsline {section}{\numberline {7}Diskussion}{27}%
+\contentsline {subsection}{\numberline {7.1}Zeitlicher Spannungsverlauf an den Enden eines Koaxialkabels}{27}%
+\contentsline {subsection}{\numberline {7.2}Bestimmung des Reflexionskoeffizienten und der Kabelimpedanz}{27}%
+\contentsline {subsection}{\numberline {7.3}Bestimmung der Signalgeschwindigkeit}{28}%
+\contentsline {subsection}{\numberline {7.4}Wiederstände an einem symmetrischen Verzweiger}{28}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{28}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{28}%
