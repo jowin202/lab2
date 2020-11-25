@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  24 NOV 2020 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  25 NOV 2020 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,27 +676,33 @@ Package pdftex.def Info: bilder/task3/task3_240ns.png  used on input line 509.
 (pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
  [22 <./bilder/task3/task3_100ns.png>] [23 <./bilder/task3/task3_240ns.png>] [2
 4] [25]
-<bilder/task2/task2_summary.png, id=180, 462.528pt x 346.896pt>
+<bilder/task2/task2_summary.png, id=179, 462.528pt x 346.896pt>
 File: bilder/task2/task2_summary.png Graphic file (type png)
 <use bilder/task2/task2_summary.png>
 Package pdftex.def Info: bilder/task2/task2_summary.png  used on input line 600
 .
 (pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [26 <./bilder/task2/task2_summary.png>]
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 710--711
+ [26] [27 <./bilder/task2/task2_summary.png>]
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 723--724
 []$\OT1/cmtt/m/n/10 https : / / de . wikipedia . org / wiki / BNC-[]Steckverbin
 der$\OT1/cmr/m/n/10 , abe-ru-fen am
  []
 
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
+[]$\OT1/cmtt/m/n/10 https : / / www . conrad . de / de / ratgeber / technik-[]e
+infach-[]erklaert /
+ []
+
 
 AED: lastpage setting LastPage
-[28] (./04_Signalleitung.aux) ) 
+[30] (./04_Signalleitung.aux) ) 
 Here is how much of TeX's memory you used:
- 7973 strings out of 481239
- 117768 string characters out of 5920377
- 370686 words of memory out of 5000000
- 23076 multiletter control sequences out of 15000+600000
+ 7974 strings out of 481239
+ 117778 string characters out of 5920377
+ 370689 words of memory out of 5000000
+ 23077 multiletter control sequences out of 15000+600000
  536069 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,18n,45p,803b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -711,10 +717,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 04_Signalleitung.pdf (28 pages, 1340592 bytes).
+Output written on 04_Signalleitung.pdf (30 pages, 1347741 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 235 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

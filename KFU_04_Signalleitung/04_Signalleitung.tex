@@ -158,7 +158,7 @@ R11 & Widerstand & \R{11}
 
 \section{Beschreibung der Versuchsanordnung}
 
-Im ersten Teil der wird der zeitliche Spannungsverlauf am Anfang und Ende des Kabels gemessen. Dabei variiert der Innenwiderstand der Signalquelle. Die Abbildungen \ref{fig:anordnung_task1a}, \ref{fig:anordnung_task1b} und \ref{fig:anordnung_task1c} beschreiben den Aufbau.
+Im ersten Teil wird der zeitliche Spannungsverlauf am Anfang und Ende des Kabels gemessen. Dabei variiert der Innenwiderstand der Signalquelle. Die Abbildungen \ref{fig:anordnung_task1a}, \ref{fig:anordnung_task1b} und \ref{fig:anordnung_task1c} beschreiben den Aufbau.
 
 
 \begin{figure}[H]
@@ -221,7 +221,7 @@ Im ersten Teil der wird der zeitliche Spannungsverlauf am Anfang und Ende des Ka
 \end{figure}
 
 
-Weiters sind in diesem Versuch die Widerstände an einem symmetrischen Verzweiger zu bestimmen. Aus der Theorie ist bekannt, wenn der Gesamtwiderstand der Kabelimpedanz $Z_K$ entspricht. Es gilt also nach Grafik~\ref{fig:anordnung_task4}
+Weiters sind in diesem Versuch die Widerstände an einem symmetrischen Verzweiger zu bestimmen. Aus der Theorie ist bekannt, wann der Gesamtwiderstand der Kabelimpedanz $Z_K$ entspricht. Es gilt also nach Grafik~\ref{fig:anordnung_task4}
 \begin{align}
 \label{eq:verzweiger}
 Z_K &= R + (R+50~\Omega)||(R+50~\Omega) = R + \frac{R+50}{2} = \frac{3\cdot R + 50}{2}
@@ -512,6 +512,8 @@ $t_p$ / ns & $t_1$ / ns & $t_2$ / ns & $\tau$ / ns  \\
 
 \subsection{Wiederstände an einem symmetrischen Verzweiger}
 
+In Grafiken~\ref{fig:foto_task4_richtig} und \ref{fig:foto_task4_falsch} ist die Schaltung eines symmetrischen Verzweigers dargestellt. Grafik~\ref{fig:foto_task4_richtig} zeigt den korrekten Aufbau des Verzweigers. Der im Foto verwendete Widerstand hat die Farbkombination \textit{braun-blau-schwarz-gold-braun}. Wegen COVID-19 ist die Messung der Reflexion an einem symmetrischen Verzweiger momentan nicht möglich.
+
 
 \section{Auswertung}
 
@@ -534,7 +536,7 @@ Mit Steigerung der Pulsdauer steigt die Überlappung der Signale. Grafik~\ref{fi
 
 \subsubsection{Hoher Innenwiderstand}
 
-Durch den hohen Innenwiderstand ist am Anfang des Kabels eine Reflexion zu beobachten. Durch die stärkere Reflexion sieht man, dass eine \textit{Treppenfunktion} entsteht, da sich die Signale mehrfach im Kabel hin und her bewegen und sich ständig überlagern. Da die höhe der Treppen immer kleiner wird, lässt sich darauf schließen, dass das Signal beim mit mehrmaligem Vor- und Zurücklauf kontinuierlich abgeschwächt wird.
+Durch den hohen Innenwiderstand ist am Anfang des Kabels eine Reflexion zu beobachten. Durch die stärkere Reflexion sieht man, dass eine \textit{Treppenfunktion} entsteht, da sich die Signale mehrfach im Kabel hin und her bewegen und sich ständig überlagern. Da die Höhe der Treppen immer kleiner wird, lässt sich darauf schließen, dass das Signal bei mehrmaligem Vor- und Zurücklauf kontinuierlich abgeschwächt wird.
 
 Grafik~\ref{fig:task1b_150ns} ist ein Sonderfall. Wie schon in Grafik~\ref{fig:task1a_100ns} zu sehen ist, benötigt das Signal durch das Kabel circa 150~ns. Da die Pulsdauer auf genau diese Zeit eingestellt ist, lässt sich eine gewisse Periodizität erkennen. Zu Beginn wird ein Puls der Länge 150~ns gesendet. Dieser wird eben nach 150~ns am Kabelausgang mit doppelter Spannung (wegen Interferenz) gemessen und wieder zum Kabelanfang reflektiert. 150~ns später wird er am Kabeleingang gemessen und erneut reflektiert. Damit wird der Puls abwechselnd am Kabeleingang und Kabelausgang gemessen, während die Amplitude durch den Widerstand in jeder Periode abnimmt.
 
@@ -586,12 +588,10 @@ Durch lineare Interpolation ergibt sich
 0 \approx \rho\left(\text{R8} + \frac{\text{R7}-\text{R8}}{\rho(\text{R7}) - \rho(\text{R8})} \cdot \big(0 -\rho(\text{R8}) \big)  \right) = \rho\left(\left(51.76 \pm 56.85\right)~\Omega\right)
 \end{align}
 
-Diese Unsicherheit ist sehr groß im Vergleich zum Messwert. Das liegt daran, dass der Nenner in Gleichung~\eqref{eq:interpolation} den Term $\rho(\text{R7}) - \rho(\text{R8})$ enthält und dieser sehr klein wird (0.15). Der Zähler ist die Differenz aus R7 und R8 und entsprechend größer (20.8~$\Omega$). Gemäß den Unsicherheiten ergibt sich eine hohe numerische Instabilität. Es kann in diesem Fall dennoch davon ausgegangen werden, dass $Z_K \approx 50~\Omega$ ist, da dieser ein für BNC Kabel üblicher Wert ist. (vgl. \cite{bnc})
+Diese Unsicherheit ist sehr groß im Vergleich zum Messwert. Das liegt daran, dass der Nenner in Gleichung~\eqref{eq:interpolation} den Term $\rho(\text{R7}) - \rho(\text{R8})$ enthält und dieser sehr klein wird (0.15). Der Zähler ist die Differenz aus R7 und R8 und entsprechend größer (20.8~$\Omega$). Gemäß den Unsicherheiten ergibt sich eine hohe numerische Instabilität. Es kann in diesem Fall dennoch davon ausgegangen werden, dass $Z_K \approx 50~\Omega$ ist, da dieser ein für BNC Kabel üblicher Wert ist (vgl. \cite{bnc}). Für genauere Analysen wären mehrere Messwerte wichtig. 
 
 
-Der Vollständigkiet halber wurden die Spannungskurven der verschiedenen Widerstände nochmal alle in Grafik~\ref{fig:task2_summary} zusammengefasst, wobei die Eingangsspannung normiert wurde. Die Unterscheidung der Kurven erfolgt nach dem Kriterium, ob der jeweilige Abschlusswiderstand größer oder kleiner als die Kabelimpedanz ist. Es ist hier sehr leicht zu erkennen, dass die Kabelimpedanz zwischen den Werten der Widerstände R7 und R8 liegen muss. Diese sind in der gegebenen Grafik grau markiert. Man erkennt hier, dass dort am wenigsten Reflexion auftritt.
-
-
+Der Vollständigkiet halber wurden die Spannungskurven der verschiedenen Widerstände nochmal alle in Grafik~\ref{fig:task2_summary} zusammengefasst, wobei die Eingangsspannung normiert wurde. Die Unterscheidung der Kurven erfolgt nach dem Kriterium, ob der jeweilige Abschlusswiderstand größer oder kleiner als die Kabelimpedanz ist. Es ist hier sehr leicht zu erkennen, dass die Kabelimpedanz zwischen den Werten der Widerstände R7 und R8 liegen muss. Diese sind in der gegebenen Grafik grau markiert. Man erkennt hier, dass dort am wenigsten Reflexion auftritt. Außerdem erkennt man, dass die Eingangsspannung in allen Fällen circa gleich groß ist. 
 
 \begin{figure}[H]
 \centering
@@ -629,12 +629,13 @@ Aus Gleichung~\eqref{eq:verzweiger} geht folgende Gleichung hervor, dass folgend
 \begin{align*}
 Z_K = \frac{3\cdot R + 50~\Omega}{2}
 \end{align*}
-Für $Z_K = (51.76+56.85)~\Omega$ ergibt sich
+Für $Z_K = (51.76\pm56.85)~\Omega$ ergibt sich
 \begin{align*}
 R = (17.84 \pm 37.9)~\Omega
 \end{align*}
-Auch hier ist die Unsicherheit relativ hoch.
+Auch hier ist die Unsicherheit relativ hoch. Dies resultiert aus der Unsicherheit der Kabelimpedanz.
 
+Am dazugehörigen Foto ist der Widerstand gezeigt. Die darauf zu sehenden Farben sind \textit{braun-blau-schwarz-gold-braun}. Das lässt sich gemäß \cite{resistor} auf 16~$\Omega$ mit einer Toleranz von 1\% zurückführen. Aufgrund der großen Unsicherheit kann man hier leider keine seriösen Schlüsse ziehen.
 
 
 
@@ -649,12 +650,13 @@ Die Spannungsverläufe an den Enden des Koaxialkabels verhalten sich wie es in d
 
 \subsection{Bestimmung des Reflexionskoeffizienten und der Kabelimpedanz}
 
-Die Kabelimpedanz wird 
+Die Kabelimpedanz wird mit Hilfe von linearer Interpolation bestimmt, was aber problematisch ist. Erstens ist der Zusammenhang in seiner Gesamtheit nicht linear und wird nur an einer Stelle linear approximiert, andererseits erhält man durch die Skalierung der Achsen eine gewisse numerische Instabilität. Zusätzlich werden die nötigen Größen aus einem rauschenden Signal gemessen. Trotz Mittelung zur Reduktion des Rauschens muss eine gewisse Unsicherheit angenommen werden.
 
 
 
 \subsection{Bestimmung der Signalgeschwindigkeit}
 
+Die Relativitätstheorie besagt, dass die Geschwindigkeits stets kleiner als die Vakuumlichtgeschwindigkeit sein muss. Tatsächlich beträgt die Signalgeschwindigkeit 2/3 der Vakuumlichtgeschwindigkeit. Dieses Ergebnis ist als sehr verlässlich einzustufen, da erstens die Unsicherheit entsprechend niedrig ist, und zweitens die Zeitmessung in einem Oszilloskop im Vergleich zur Messung der Spannung genau ist. Auch das Rauschen stellt hier kein Problem dar.
 
 \subsection{Wiederstände an einem symmetrischen Verzweiger}
 
@@ -662,13 +664,24 @@ Gleichung~\eqref{eq:verzweiger} kann für $Z_K = 50~\Omega$ umgeschrieben werden
 \begin{align*}
 50 = \frac{3\cdot R + 50}{2}
 \end{align*}
-Daraus ergibt sich $R = \dfrac{50}{3} = 16.67~\Omega$, was vom berechneten Wert von $17.84~\Omega$ etwas abweicht.
+Daraus ergibt sich $R = \dfrac{50}{3} = 16.67~\Omega$, was vom berechneten Wert von $17.84~\Omega$ etwas abweicht. Im Versuchsaufbau wurde ein 16~$\Omega$ Widerstand verwendet. Im Experiment wird der ideale Wert vermutlich unter dem berechneten Wert liegen, da die Kabel selbst auch einen Innenwiderstand besitzen. Dieser müsste entsprechend zu dem seriell geschalteten Widerstand addiert werden.
 
 
 \section{Zusammenfassung}
 
+Zuerst wurden Pulse verschiedener Länge durchs Kabel gesendet. Die Spannung wurde an beiden Enden des Kabels gemessen. Am Kabelende war die Spannung verdoppelt, das das Signal und das reflektierte Signal sich überlagern. Da die Impedanz am Signalgenerator dem Kabel angepasst ist, gab es keine mehrfache Reflexion. Bei Erhöhung des Innenwiderstandes des Signalgenerators konnte eine Reflexion beobachtet werden. Dadurch wurde das Signal mehrfach überlagert. Bei Verringerung des Widerstandes im Funktionsgenerator wurde der Reflexions\-koeffizient negativ und kann daher eine Umkehr der Spannung messen.
 
+~
 
+Die Kabelimpedanz $Z_K$ wird versuchsweise durch Variation des Endwiderstandes bestimmt. Es zeigt sich, dass die geringste Reflexion bei \R8 auftritt. Durch lineare Interpolation ergibt sich $Z_K \approx 51~\Omega$, allerdings mit einer zu hohen Abweichung.
+
+~
+
+Die Signalgeschwindigkeit im Kabel liegt bei $c = (200 \pm 6)\cdot 10^6~$m/s, was ca 2/3 der Vakuumlichtgeschwindigkeit entspricht.
+
+~
+
+Für die Widerstände im symmetrischen Verzweiger ergibt sich laut Theorie $R=16.67~\Omega$, nach der Rechnung ergeben sich $17.84~\Omega$, welche aber eine starke Unsicherheit aufgrund der Kabelimpedanz haben. In der Praxis wird man aber einen deutlich niedrigeren Wert einsetzen, da das Kabel selbst auch einen Widerstand hat. Am Foto des Versuchsaufbaus ist ein Widerstand $R=16~\Omega \pm 1\%$ zu erkennen.
 
 %\newpage 
 %\appendix
@@ -708,6 +721,7 @@ Daraus ergibt sich $R = \dfrac{50}{3} = 16.67~\Omega$, was vom berechneten Wert 
 \begin{thebibliography}{9}
 \bibitem{moodle} Unterlagen aus Moodle, A. Hohenau, bereitgestellt von der KF Universität Graz.
 \bibitem{bnc} \url{https://de.wikipedia.org/wiki/BNC-Steckverbinder}, aberufen am 24.11.2020, 15:00.
+\bibitem{resistor} \url{https://www.conrad.de/de/ratgeber/technik-einfach-erklaert/widerstands-farbcode.html}, abgerufen am 24.11.2020, 15:00.
 \end{thebibliography}
 
 
