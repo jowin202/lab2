@@ -1,0 +1,20 @@
+\contentsline {section}{Inhaltsverzeichnis}{2}%
+\contentsline {section}{\numberline {1}Aufgabenstellung}{3}%
+\contentsline {section}{\numberline {2}Voraussetzungen und Grundlagen}{3}%
+\contentsline {subsection}{\numberline {2.1}Halbleiter und Leitfähigkeit}{3}%
+\contentsline {subsection}{\numberline {2.2}Bänder und Halbleiter}{3}%
+\contentsline {subsection}{\numberline {2.3}Dotierung von Halbleitern}{4}%
+\contentsline {subsection}{\numberline {2.4}pn-Übergang}{5}%
+\contentsline {section}{\numberline {3}Geräteliste}{5}%
+\contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{6}%
+\contentsline {subsection}{\numberline {4.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{6}%
+\contentsline {subsection}{\numberline {4.2}Strom-Spannungscharakteristik einer Zenerdiode}{7}%
+\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{7}%
+\contentsline {subsection}{\numberline {5.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{7}%
+\contentsline {subsection}{\numberline {5.2}Strom-Spannungscharakteristik einer Zenerdiode}{8}%
+\contentsline {section}{\numberline {6}Auswertung}{9}%
+\contentsline {subsection}{\numberline {6.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{9}%
+\contentsline {subsection}{\numberline {6.2}Strom-Spannungscharakteristik einer Zenerdiode}{10}%
+\contentsline {section}{\numberline {7}Diskussion}{12}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{12}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{12}%
