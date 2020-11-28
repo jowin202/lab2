@@ -1,6 +1,7 @@
 \documentclass{article}
 
-\usepackage{url} 
+\usepackage[hyphens]{url} 
+
 
 \usepackage[utf8]{inputenc}
 
@@ -9,7 +10,7 @@
 \usepackage{fancyhdr}
 \usepackage{ngerman}
 \usepackage{listings}
-
+\usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{floatrow}
 \usepackage[tableposition=top]{caption}
@@ -21,8 +22,6 @@
 
 \usepackage{xifthen}
 \usepackage[numbib]{tocbibind}
-
-
 
 \newcommand\twodigits[1]{%
    \ifnum#1<10 0#1\else #1\fi
@@ -61,9 +60,9 @@
 
 
 \begin{enumerate}
-\item Messtechnische Ermittlung der Strom-Spannungscharakteristik einer Gleichrichterdiode in Durchlassrichtung und in Sperrrichtung
-\item Automatisierte Aufnahme der Strom-Spannungscharakteristik einer Zenerdiode in Durchlassrichtung und Sperrrichtung
-\item Messtechnische Untersuchung von Spannungs- und Stromverläufen in einer Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen
+\item Messtechnische Ermittlung der Strom-Spannungscharakteristik einer Gleichrichterdiode in Durchlassrichtung und in Sperrrichtung.
+\item Automatisierte Aufnahme der Strom-Spannungscharakteristik einer Zenerdiode in Durchlassrichtung und Sperrrichtung.
+\item Messtechnische Untersuchung von Spannungs- und Stromverläufen in einer Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen.
 \end{enumerate}
 
 
@@ -121,12 +120,21 @@ Ein pn-Übergang ist der Grenzbereich, der entsteht, wenn man ein p-dotiertes un
 
 ~
 
-\begin{tabular}{l|p{3cm}p{4cm}lll}
-Abk. & Gerätename    &  Modell  \\
+\begin{tabular}{l|p{2cm}p{3cm}lll}
+Abk. & Gerätename    &  Modell  & Unsicherheit\\
 \hline
 N & Netzgerät & Hameg HM8040-2 \\
 MM & Multimeter & Fluke 175 \\
-OS & Osizolloskop & InfiniiVision DSOX2022A 
+OS & Osizolloskop & InfiniiVision ~~~~~~~~~~~ DSOX2022A \\
+GL1 & Gleichrichter\-diode  &  1N4007 \\
+Z1 & Zenerdiode  &  1N5337 \\
+TR1 & Transformator & \\
+C1 & Kondensator & $C_1 = 10~\mu$F \\
+C2 & Kondensator & $C_2 = 100~\mu$F \\
+R & Widerstand & $R = 1~$M$\Omega$ \\
+R1 & Widerstand & $R_1 = 1500~$k$\Omega$ \\
+R2 & Widerstand & $R_2 = 100~\Omega$ \\
+R3 & Widerstand & $R_3 = \infty$
 \end{tabular}
 \end{table}
 
@@ -139,9 +147,10 @@ Sämtliche Daten wurden nach den Versuch mit Python3.8 ausgewertet, wobei für G
 
 \subsection{Strom-Spannungscharakteristik einer Gleichrichterdiode}
 
+Im ersten Fall (Grafik~\ref{fig:aufbau_task1a}) wird eine vorgegebene Spannung eingestellt und es wird Spannung und Strom an Kondensator gemessen. Die Messung selbst erfolgt spannungsrichtig.
 
 \begin{figure}[H]
-\caption{Versuchsaufbau von Aufgabe 1 (a)}
+\caption{Versuchsaufbau von Aufgabe 1 (a): Gleichrichterdiode in Durchlassrichtung}
 \label{fig:aufbau_task1a}
 {\centering
 \includegraphics[scale=1.7]{bilder/aufbau_task1a.png}
@@ -150,8 +159,14 @@ Sämtliche Daten wurden nach den Versuch mit Python3.8 ausgewertet, wobei für G
 \end{figure}
 
 
+In diesem Fall (Grafik~\ref{fig:aufbau_task1b}) wird stromrichtig gemessen. Der Strom wird allerdings nicht direkt mit Hilfe eines Amperemeters gemessen, sondern durch den Spannungsabfall eines vorgegebenen Widerstandes. Es gilt in diesem Fall für den Strom $I_D$ durch die Diode
+\begin{align*}
+I_D = \frac{U_\text{IR}}{\text{R2}}
+\end{align*}
+Da R2 sehr groß ist (1~M$\Omega$), wird ein sehr kleiner Strom (im Bereich von nA) durch die Diode erwartet.
+
 \begin{figure}[H]
-\caption{Versuchsaufbau von Aufgabe 1 (b)}
+\caption{Versuchsaufbau von Aufgabe 1 (b): Gleichrichterdiode in Sperrrichtung}
 \label{fig:aufbau_task1b}
 {\centering
 \includegraphics[scale=1.7]{bilder/aufbau_task1b.png}
@@ -161,11 +176,56 @@ Sämtliche Daten wurden nach den Versuch mit Python3.8 ausgewertet, wobei für G
 
 \subsection{Strom-Spannungscharakteristik einer Zenerdiode}
 
+Bei der Zenerdiode wird die Spannung einmal vor und einmal nach dem Widerstand gemessen. Durch die Spannungsdifferenz zwischen vorher und nachher kann aufgrund des Wertes für den Widerstand der Strom bestimmt werden. Damit bekommt man den Strom und die Spannung der Zenerdiode und kann die Kennlinie aufstellen.
+
 \begin{figure}[H]
 \caption{Versuchsaufbau von Aufgabe 2}
 \label{fig:aufbau_task2}
 {\centering
 \includegraphics[scale=1.7]{bilder/aufbau_task2.png}
+~
+}
+\end{figure}
+
+
+
+\subsection{Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
+
+Eine Gleichrichterschaltung dient dazu, dass der Verbraucher (R3) nur mit positiver Spannung (Gleichstrom) versorgt wird. Der Transformator TR1 dient als Wechselspannungsquelle. An der Diode D1 wird nur eine positive Spannung durchgelassen. Bei positiver Spannung durch TR1 schaltet die Diode auf Durchlass. Dann wird der Kondensator geladen und R3 mit positiver Spannung versorgt. Bei negativer Spannung durch TR1 sperrt die Diode und der Verbraucher R3 wird wieder mit positiver Spannung des Kondensators versorgt. Der Versuchsaufbau ist in Grafik~\ref{fig:aufbau_task3} zu sehen. Eine zweite Version ohne Messgeräte (Oszilloskop) sieht man zum besseren Verständnis in Grafik~\ref{fig:aufbau_task3_simple}.
+
+
+
+Die Spannung an der Diode kann durch Subtraktion der Spannungen aus CH2 und CH4 bestimmt werden.
+\begin{align}
+U_{\text{D1}} = U_{\text{CH2}} - U_{\text{CH4}}
+\end{align}
+Der Strom an C1 ist gleich dem Strom an R2, also gilt
+\begin{align}
+I_{\text{C1}} = \frac{U_{\text{R2}}}{\text{R2}}
+\end{align}
+Der Strom durch den Verbraucher R3 ist über CH4 zu berechnen
+\begin{align}
+I_{\text{R3}} = \frac{U_{\text{CH4}}}{\text{R3}}
+\end{align}
+Der Strom durch die Diode muss auch durch R1 gehen (sieht man in Grafik~\ref{fig:aufbau_task3_simple} besser). Die Spannung über R1 wird bei CH1 gemessen, insgesamt gilt daher
+\begin{align}
+I_{\text{D1}} = \frac{U_{\text{CH1}}}{\text{R1}}
+\end{align}
+
+\begin{figure}[H]
+\caption{Versuchsaufbau von Aufgabe 3}
+\label{fig:aufbau_task3}
+{\centering
+\includegraphics[scale=1.7]{bilder/aufbau_task3.png}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Versuchsaufbau von Aufgabe 3, vereinfachte Darstellung ohne Oszilloskop.}
+\label{fig:aufbau_task3_simple}
+{\centering
+\includegraphics[scale=1.7]{bilder/aufbau_task3_vereinfacht.png}
 ~
 }
 \end{figure}
@@ -240,6 +300,72 @@ Gemäß des Aufbaus in Grafik~\ref{fig:aufbau_task2} folgt durch Messung
 }
 \end{figure}
 
+\subsection{Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
+
+In diesem Fall wird der Versuchsaufbau in Grafik~\ref{fig:aufbau_task3} betrachtet. Bei diesem wird wechselweise der Widerstand R3 (Verbraucher) ausgewechselt. Insgesamt stehen für R3 die Werte $1500~\text{k}\Omega$, $100~\Omega$ und $\infty$ (also keine Verbindung an dieser Stelle) zur Verfügung. Zusätzlich kann der Kondensator C1 des Versuchsaufbaus variieren. Im Versuch stehen die Werte $10~\mu$F und $100~\mu$F zur Verfügung.
+
+Die 3 Werte für den Widerstand R3 und jene 2 Werte für den Kondensator werden kombiniert, sodass insgesamt 6 Messungen durchgeführt werden.
+
+
+\begin{figure}[H]
+\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=100~\Omega$}
+\label{fig:grafik_task3_10_100}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_10mu_R100.png}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=1500~\Omega$}
+\label{fig:grafik_task3_10_1500}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_10mu_R1500.png}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=\infty$}
+\label{fig:grafik_task3_10_inf}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_10mu_Rinf.png}
+~
+}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=100~\Omega$}
+\label{fig:grafik_task3_100_100}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_100mu_R100.png}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=1500~\Omega$}
+\label{fig:grafik_task3_100_1500}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_100mu_R1500.png}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=\infty$}
+\label{fig:grafik_task3_100_inf}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_100mu_Rinf.png}
+~
+}
+\end{figure}
+
+
 
 
 \section{Auswertung}
@@ -260,7 +386,7 @@ Aus den gegebenen Werten kann man eine Kennlinie für diese Diode berechnen. Die
 
 \begin{table}[H]
 \caption{Berechnung des Sperrstromes aus der Sperrstromspannung. Es gilt \UIR $= R\cdot I_R$ mit $R=(1000\pm10)~$k$\Omega$.}
-\label{tab:task1b_daten}
+\label{tab:task1b_auswertung}
 \begin{tabular}{rr|rr}
 $U_R$ / V & $U_\text{IR}$ / mV& $I_R$ / nA & $\Delta I_R$ / nA \\ \hline
 0   &  0.00 & 0.00 \\
@@ -276,6 +402,14 @@ $U_R$ / V & $U_\text{IR}$ / mV& $I_R$ / nA & $\Delta I_R$ / nA \\ \hline
 \end{table}
 
 
+\begin{figure}[H]
+\caption{Sperrspannung $U_R$ und Sperrstrom $I_R$ grafisch dargestellt.}
+\label{fig:grafik_task1b}
+{\centering
+\includegraphics[scale=0.7]{bilder/task1b.png}
+~
+}
+\end{figure}
 
 \subsection{Strom-Spannungscharakteristik einer Zenerdiode}
 
@@ -289,7 +423,7 @@ Der zeitliche Verlauf des Stromes ist in Grafik~\ref{fig:task2_auswertung1} vera
 \caption{Stromverlauf durch die Zenerdiode.}
 \label{fig:task2_auswertung1}
 {\centering
-\includegraphics[scale=0.7]{bilder/task2_I.png}
+\includegraphics[scale=0.6]{bilder/task2_I.png}
 ~
 }
 \end{figure}
@@ -301,19 +435,26 @@ Der zeitliche Verlauf des Stromes ist in Grafik~\ref{fig:task2_auswertung1} vera
 \caption{Kennlinie der Zenerdiode.}
 \label{fig:task2_auswertung2}
 {\centering
-\includegraphics[scale=0.7]{bilder/task2_IU.png}
+\includegraphics[scale=0.6]{bilder/task2_IU.png}
 ~
 }
 \end{figure}
 
 
 
+\subsection{Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
 
 
 
 \section{Diskussion}
 
+\subsection{Strom-Spannungscharakteristik einer Gleichrichterdiode}
 
+Die Strom-Spannungscharakteristik wurde in den Grafiken~\ref{fig:grafik_task1a} und \ref{fig:grafik_task1b} dargestellt. Bei der Durchlassrichtung ist eine Erhöhung des Stromes zwischen 0.7~V und 0.8~V zu erkennen. Gemäß des Datenblattes von IN4007 Dioden (\cite{conrad_diode1}), sieht man hier eine Übereinstimmung. Das Verhalten ist damit konform mit den Erwartungen. Über die Sperrrichtung lässt das Datenblatt nichts aussagen, da im Datenblatt der Sperrstrom als $<5~\mu$A (bzw. $<50~\mu$A bei 100$^\circ$C) charakteristiert ist. Spannungen im Bereich von Nanoampere sind daher zu vernachlässigen. Um den Strom zu erhöhen, müsste eine Durchbruchspannung angelegt werden, die deutlich größer ist. Dadurch würde die Diode zerstört werden.
+
+
+
+\subsection{Strom-Spannungscharakteristik einer Zenerdiode}
 
 
 
@@ -323,14 +464,16 @@ Der zeitliche Verlauf des Stromes ist in Grafik~\ref{fig:task2_auswertung1} vera
 
 
 \begin{thebibliography}{9}
-\bibitem{moodle} Moodle-Unterlagen zum Versuch, bereitgestellt von der Karl-Franzens-Universität Graz
-\bibitem{halbleiter} \url{https://www.chemie.de/lexikon/Halbleiter.html}, 22.11.2020 23:25 Uhr
-\bibitem{cosmos} \url{https://physik.cosmos-indirekt.de/Physik-Schule/B%C3%A4ndermodell}, 22.11.2020 23:28 Uhr
-\bibitem{greenlane} \url{https://www.greelane.com/wissenschaft-technologie-mathematik/wissenschaft/examples-of-electrical-conductors-and-insulators-608315/}, 22.11.2020 23:29 Uhr
-\bibitem{lernhelfer} \url{https://www.lernhelfer.de/schuelerlexikon/physik/artikel/halbleiter}, 22.11.2020 23:32 Uhr
-\bibitem{leifiphysik} \url{https://www.leifiphysik.de/elektronik/einfuehrung-die-elektronik/grundwissen/dotierte-halbleiter}, 22.11.2020 23:40 Uhr
-\bibitem{leifiphysik2} \url{https://www.leifiphysik.de/elektronik/halbleiterdiode/grundwissen/p-n-uebergang-halbleiterdiode}, 24.11.2020 00:08 Uhr
-\bibitem{kompendium} \url{https://www.elektronik-kompendium.de/sites/grd/0112072.htm}, 24.11.2020 00:09 Uhr
+\bibitem{moodle} Moodle-Unterlagen zum Versuch, bereitgestellt von der Karl-Franzens-Universität Graz.
+\bibitem{halbleiter} \url{https://www.chemie.de/lexikon/Halbleiter.html}, 22.11.2020 23:25.
+\bibitem{cosmos} \url{https://physik.cosmos-indirekt.de/Physik-Schule/Bändermodell}, 22.11.2020 23:28.
+\bibitem{greenlane} \url{https://www.greelane.com/wissenschaft-technologie-mathematik/wissenschaft/examples-of-electrical-conductors-and-insulators-608315/}, 22.11.2020 23:29.
+\bibitem{lernhelfer} \url{https://www.lernhelfer.de/schuelerlexikon/physik/artikel/halbleiter}, 22.11.2020 23:32.
+\bibitem{leifiphysik} \url{https://www.leifiphysik.de/elektronik/einfuehrung-die-elektronik/grundwissen/dotierte-halbleiter}, 22.11.2020 23:40.
+\bibitem{leifiphysik2} \url{https://www.leifiphysik.de/elektronik/halbleiterdiode/grundwissen/p-n-uebergang-halbleiterdiode}, 24.11.2020 00:08.
+\bibitem{kompendium} \url{https://www.elektronik-kompendium.de/sites/grd/0112072.htm}, 24.11.2020 00:09.
+\bibitem{conrad_diode1} \url{https://asset.conrad.com/media10/add/160267/c1/-/gl/000162272DS01/datenblatt-162272-diotec-si-gleichrichterdiode-1n4007-do-204al-1000-v-1-a.pdf},28.11.2020, 09:22.
+\bibitem{conrad_diode2} \url{https://asset.conrad.com/media10/add/160267/c1/-/en/000168265DS01/datenblatt-168265-on-semiconductor-z-diode-1n5337brlg-gehaeuseart-halbleiter-axial-zener-spannung-47-v-leistung-max-ptot-5-w.pdf}, 28.11.2020, 09:35.
 \end{thebibliography}
 
 

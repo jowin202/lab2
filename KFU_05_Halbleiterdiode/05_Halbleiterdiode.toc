@@ -1,20 +1,25 @@
-\contentsline {section}{Inhaltsverzeichnis}{2}%
-\contentsline {section}{\numberline {1}Aufgabenstellung}{3}%
-\contentsline {section}{\numberline {2}Voraussetzungen und Grundlagen}{3}%
-\contentsline {subsection}{\numberline {2.1}Halbleiter und Leitfähigkeit}{3}%
-\contentsline {subsection}{\numberline {2.2}Bänder und Halbleiter}{3}%
-\contentsline {subsection}{\numberline {2.3}Dotierung von Halbleitern}{4}%
-\contentsline {subsection}{\numberline {2.4}pn-Übergang}{5}%
-\contentsline {section}{\numberline {3}Geräteliste}{5}%
-\contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{6}%
-\contentsline {subsection}{\numberline {4.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{6}%
-\contentsline {subsection}{\numberline {4.2}Strom-Spannungscharakteristik einer Zenerdiode}{7}%
-\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{7}%
-\contentsline {subsection}{\numberline {5.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{7}%
-\contentsline {subsection}{\numberline {5.2}Strom-Spannungscharakteristik einer Zenerdiode}{8}%
-\contentsline {section}{\numberline {6}Auswertung}{9}%
-\contentsline {subsection}{\numberline {6.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{9}%
-\contentsline {subsection}{\numberline {6.2}Strom-Spannungscharakteristik einer Zenerdiode}{10}%
-\contentsline {section}{\numberline {7}Diskussion}{12}%
-\contentsline {section}{\numberline {8}Zusammenfassung}{12}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{12}%
+\contentsline {section}{Inhaltsverzeichnis}{2}{section*.1}%
+\contentsline {section}{\numberline {1}Aufgabenstellung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Voraussetzungen und Grundlagen}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Halbleiter und Leitfähigkeit}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bänder und Halbleiter}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Dotierung von Halbleitern}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}pn-Übergang}{5}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Geräteliste}{5}{section.3}%
+\contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Strom-Spannungscharakteristik einer Zenerdiode}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}{8}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Strom-Spannungscharakteristik einer Zenerdiode}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}{12}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Auswertung}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Strom-Spannungscharakteristik einer Zenerdiode}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}{19}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Diskussion}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Strom-Spannungscharakteristik einer Zenerdiode}{19}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Zusammenfassung}{19}{section.8}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{19}{section.9}%
