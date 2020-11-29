@@ -113,6 +113,10 @@ Bei der p-Dotierung werden Fremdatome mit nur drei Valenzelektronen, wie zum Bei
 
 Ein pn-Übergang ist der Grenzbereich, der entsteht, wenn man ein p-dotiertes und ein n-dotiertes Material zusammenbringt. Das darauf resultierende Bauelement ist die Halbleiterdiode. Die Stärke der elektrischen Leitfähigkeit einer Diode hängt dabei von der Richtung des Stromflusses ab. Man unterscheidet hier zwischen der Polung in Durchlassrichtung (Pluspol der Spannungsquelle liegt an p-Schicht), bei der der Strom fließt und der Polung in Sperrrichtung (Pluspol der Spannungsquelle liegt an n-Schicht), bei der kein Strom fließen kann. (vgl. \cite{leifiphysik2}, \cite{kompendium}) 
 
+\subsection{Entladung von Kondensatoren}
+
+Wird ein Kondensator mit Kapazität $C$ am Widerstand $R$ entladen, dann 
+
 \section{Geräteliste}
 
 \begin{table}[H]
@@ -129,16 +133,26 @@ OS & Osizolloskop & InfiniiVision ~~~~~~~~~~~ DSOX2022A \\
 GL1 & Gleichrichter\-diode  &  1N4007 \\
 Z1 & Zenerdiode  &  1N5337 \\
 TR1 & Transformator & \\
-C1 & Kondensator & $C_1 = 10~\mu$F \\
-C2 & Kondensator & $C_2 = 100~\mu$F \\
-R & Widerstand & $R = 1~$M$\Omega$ \\
-R1 & Widerstand & $R_1 = 1500~$k$\Omega$ \\
-R2 & Widerstand & $R_2 = 100~\Omega$ \\
-R3 & Widerstand & $R_3 = \infty$
+C1 & Kondensator & $C_1 = 10~\mu$F & $\Delta C_1 = 2~\mu$F \\
+C2 & Kondensator & $C_2 = 100~\mu$F & $\Delta C_2 = 20~\mu$F \\
+R1 & Widerstand & $R_1 = 10~\Omega$ & $\Delta R_1 = 0.2~\Omega$ \\
+R2 & Widerstand & $R_2 = 10~\Omega$ & $\Delta R_2 = 0.2~\Omega$ \\
+R31 & Widerstand & $R_1 = 1500~\Omega$ & $\Delta R_1 = 15~\Omega$ \\
+R31 & Widerstand & $R_2 = 100~\Omega$ & $\Delta R_2 = 1~\Omega$ \\
+RA & Widerstand & $R_A = 1~$M$\Omega$  & $\Delta R_A = 10~\text{k}\Omega$ \\
+RB & Widerstand & $R_B = 100~\Omega$  & $\Delta R_B = 1~\Omega$
 \end{tabular}
 \end{table}
 
+RA ist der Widerstand aus Aufgabe 1 (b), der benötigt wird um den Sperrstrom der Gleichrichterdiode  zu bestimmen.
+RB ist der Widerstand aus Aufgabe 2, der benötigt um den Strom durch die Zenerdiode zu bestimmen.
+
+
+Die Widerstände R1 und R2 wurden für Aufgabe 3 benötigt. Die Widerstände R31 und R32 sind ebenfalls aus Aufgabe 3 und werden dort wahlweise für R3 eingesetzt und im weiteren auch so genannt.
+
+
 Sämtliche Daten wurden nach den Versuch mit Python3.8 ausgewertet, wobei für Grafiken die Library \texttt{Matplotlib} verwendet wird. 
+
 
 
 
@@ -147,7 +161,7 @@ Sämtliche Daten wurden nach den Versuch mit Python3.8 ausgewertet, wobei für G
 
 \subsection{Strom-Spannungscharakteristik einer Gleichrichterdiode}
 
-Im ersten Fall (Grafik~\ref{fig:aufbau_task1a}) wird eine vorgegebene Spannung eingestellt und es wird Spannung und Strom an Kondensator gemessen. Die Messung selbst erfolgt spannungsrichtig.
+Im ersten Fall (Grafik~\ref{fig:aufbau_task1a}) wird eine vorgegebene Spannung eingestellt und es wird Spannung und Strom am Kondensator gemessen. Die Messung selbst erfolgt spannungsrichtig.
 
 \begin{figure}[H]
 \caption{Versuchsaufbau von Aufgabe 1 (a): Gleichrichterdiode in Durchlassrichtung}
@@ -189,7 +203,7 @@ Bei der Zenerdiode wird die Spannung einmal vor und einmal nach dem Widerstand g
 
 
 
-\subsection{Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
+\subsection{Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
 
 Eine Gleichrichterschaltung dient dazu, dass der Verbraucher (R3) nur mit positiver Spannung (Gleichstrom) versorgt wird. Der Transformator TR1 dient als Wechselspannungsquelle. An der Diode D1 wird nur eine positive Spannung durchgelassen. Bei positiver Spannung durch TR1 schaltet die Diode auf Durchlass. Dann wird der Kondensator geladen und R3 mit positiver Spannung versorgt. Bei negativer Spannung durch TR1 sperrt die Diode und der Verbraucher R3 wird wieder mit positiver Spannung des Kondensators versorgt. Der Versuchsaufbau ist in Grafik~\ref{fig:aufbau_task3} zu sehen. Eine zweite Version ohne Messgeräte (Oszilloskop) sieht man zum besseren Verständnis in Grafik~\ref{fig:aufbau_task3_simple}.
 
@@ -197,18 +211,22 @@ Eine Gleichrichterschaltung dient dazu, dass der Verbraucher (R3) nur mit positi
 
 Die Spannung an der Diode kann durch Subtraktion der Spannungen aus CH2 und CH4 bestimmt werden.
 \begin{align}
+\label{eq:UD1}
 U_{\text{D1}} = U_{\text{CH2}} - U_{\text{CH4}}
 \end{align}
 Der Strom an C1 ist gleich dem Strom an R2, also gilt
 \begin{align}
+\label{eq:IC1}
 I_{\text{C1}} = \frac{U_{\text{R2}}}{\text{R2}}
 \end{align}
 Der Strom durch den Verbraucher R3 ist über CH4 zu berechnen
 \begin{align}
+\label{eq:IR3}
 I_{\text{R3}} = \frac{U_{\text{CH4}}}{\text{R3}}
 \end{align}
 Der Strom durch die Diode muss auch durch R1 gehen (sieht man in Grafik~\ref{fig:aufbau_task3_simple} besser). Die Spannung über R1 wird bei CH1 gemessen, insgesamt gilt daher
 \begin{align}
+\label{eq:ID1}
 I_{\text{D1}} = \frac{U_{\text{CH1}}}{\text{R1}}
 \end{align}
 
@@ -300,15 +318,18 @@ Gemäß des Aufbaus in Grafik~\ref{fig:aufbau_task2} folgt durch Messung
 }
 \end{figure}
 
-\subsection{Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
+\subsection{Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
 
 In diesem Fall wird der Versuchsaufbau in Grafik~\ref{fig:aufbau_task3} betrachtet. Bei diesem wird wechselweise der Widerstand R3 (Verbraucher) ausgewechselt. Insgesamt stehen für R3 die Werte $1500~\text{k}\Omega$, $100~\Omega$ und $\infty$ (also keine Verbindung an dieser Stelle) zur Verfügung. Zusätzlich kann der Kondensator C1 des Versuchsaufbaus variieren. Im Versuch stehen die Werte $10~\mu$F und $100~\mu$F zur Verfügung.
 
-Die 3 Werte für den Widerstand R3 und jene 2 Werte für den Kondensator werden kombiniert, sodass insgesamt 6 Messungen durchgeführt werden.
+Die 3 Werte für den Verbraucherwiderstand (im folgenden vereinfacht als R bezeichnet) und jene 2 Werte für den Kondensator werden kombiniert, sodass insgesamt 6 Messungen durchgeführt werden.
 
+~
+
+Zur ersten Interpretation ist vorwiegend CH2 (blau) und CH4 (rot) interessant. Bei CH2 handelt es sich um die Eingangsspannung, während CH4 die Ausgangsspannung ist. CH1 und CH3 dient zur Berechnung der fließenden Ströme und wird erst an späterer Stelle relevant.
 
 \begin{figure}[H]
-\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=100~\Omega$}
+\caption{Messung der Gleichrichterschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=100~\Omega$.}
 \label{fig:grafik_task3_10_100}
 {\centering
 \includegraphics[scale=0.6]{bilder/task3_10mu_R100.png}
@@ -317,7 +338,7 @@ Die 3 Werte für den Widerstand R3 und jene 2 Werte für den Kondensator werden 
 \end{figure}
 
 \begin{figure}[H]
-\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=1500~\Omega$}
+\caption{Messung der Gleichrichterschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=1500~\Omega$.}
 \label{fig:grafik_task3_10_1500}
 {\centering
 \includegraphics[scale=0.6]{bilder/task3_10mu_R1500.png}
@@ -326,7 +347,7 @@ Die 3 Werte für den Widerstand R3 und jene 2 Werte für den Kondensator werden 
 \end{figure}
 
 \begin{figure}[H]
-\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=\infty$}
+\caption{Messung der Gleichrichterschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=10~\mu$F, $R=\infty$.}
 \label{fig:grafik_task3_10_inf}
 {\centering
 \includegraphics[scale=0.6]{bilder/task3_10mu_Rinf.png}
@@ -339,7 +360,7 @@ Die 3 Werte für den Widerstand R3 und jene 2 Werte für den Kondensator werden 
 
 
 \begin{figure}[H]
-\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=100~\Omega$}
+\caption{Messung der Gleichrichterschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=100~\Omega$.}
 \label{fig:grafik_task3_100_100}
 {\centering
 \includegraphics[scale=0.6]{bilder/task3_100mu_R100.png}
@@ -348,7 +369,7 @@ Die 3 Werte für den Widerstand R3 und jene 2 Werte für den Kondensator werden 
 \end{figure}
 
 \begin{figure}[H]
-\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=1500~\Omega$}
+\caption{Messung der Gleichrichterschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=1500~\Omega$.}
 \label{fig:grafik_task3_100_1500}
 {\centering
 \includegraphics[scale=0.6]{bilder/task3_100mu_R1500.png}
@@ -357,7 +378,7 @@ Die 3 Werte für den Widerstand R3 und jene 2 Werte für den Kondensator werden 
 \end{figure}
 
 \begin{figure}[H]
-\caption{Messung der Einwegschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=\infty$}
+\caption{Messung der Gleichrichterschaltung gemäß Versuchsaufbau in Grafik~\ref{fig:aufbau_task3}. $C=100~\mu$F, $R=\infty$.}
 \label{fig:grafik_task3_100_inf}
 {\centering
 \includegraphics[scale=0.6]{bilder/task3_100mu_Rinf.png}
@@ -442,7 +463,88 @@ Der zeitliche Verlauf des Stromes ist in Grafik~\ref{fig:task2_auswertung1} vera
 
 
 
-\subsection{Einweg- bzw. Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
+\subsection{Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
+
+
+\subsubsection{Spannungen an der Diode}
+An dieser Stelle ist Strom und Spannung an der Diode zu berechnen. Die Formeln hierfür sind~\eqref{eq:UD1} und \eqref{eq:ID1}.
+
+
+
+\begin{figure}[H]
+\caption{Berechnung der Diodenspannung, bei $C = 10~\mu$F (oben) und bei $C = 100~\mu$F (unten) und $R = 100~\Omega$. Bei Kondensator mit höherer Kapazität kann die Spannung am Verbraucher länger gehalten werden. Die Entladezeit des Kondensators wäre $\tau = (1.0\pm0.2)~$ms (oben) bzw. $\tau = (1\pm 2)~$ms (unten).}
+\label{fig:grafik_task3_auswertung_10_und_100_R100}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_auswertung_10mu_R100.png}
+\includegraphics[scale=0.6]{bilder/task3_auswertung_100mu_R100.png}
+~
+}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Berechnung der Diodenspannung, bei $C = 10~\mu$F (oben) und bei $C = 100~\mu$F (unten) und $R = 1500~\Omega$. Man sieht, dass durch die höhere Kapazität im Kondensator die Spannung weniger stark abfällt. Die Entladezeit des Kondensators wäre $\tau = (15\pm 3)~$ms (oben) bzw. $\tau = (150\pm 31)~$ms (unten).}
+\label{fig:grafik_task3_auswertung_10_und_100_R1500}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_auswertung_10mu_R1500.png}
+\includegraphics[scale=0.6]{bilder/task3_auswertung_100mu_R1500.png}
+~
+}
+\end{figure}
+
+
+\begin{figure}[H]
+\caption{Berechnung der Diodenspannung, bei $C = 10~\mu$F (oben) und bei $C = 100~\mu$F (unten) und $R = \infty$. Man sieht, dass die Spannung am (nicht angeschlossenen) Verbraucher in beiden Fällen konstant ist. Dies gilt allerdings nur für den Leerlauf. Sobald ein Verbraucher angeschlossen ist, sinkt die Spannung ab. Die Entladezeit wäre in beiden Fällen unendlich groß.}
+\label{fig:grafik_task3_auswertung_10_inf}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_auswertung_10mu_Rinf.png}
+\includegraphics[scale=0.6]{bilder/task3_auswertung_100mu_Rinf.png}
+~
+}
+\end{figure}
+
+
+\newpage
+
+
+\subsubsection{Ströme durch die Diode bzw. durch den Verbraucher}
+
+Weiters ist auch von Interesse, wieviel Strom über den Kondensator bzw. über den Verbraucher läuft. Die Formeln hierfür sind~\eqref{eq:IC1} und \eqref{eq:IR3}.
+
+
+
+\begin{figure}[H]
+\caption{Darstellung der Ströme bei $R=100~\Omega$ und $C=10~\mu$F (oben) bzw. $C=100~\mu$F (unten). Der Strom durch die Diode ergibt sich der Theorie nach (Kirchoff) aus der Summe des Stromes durch den Kondensator und des Verbrauchers. Man sieht, dass bei der Sperrung der Diode der Strom aus dem Kondensator in den Verbraucher fließt (negativer Strom).}
+\label{fig:grafik_task3_auswertung2_10_und_100_R100}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_auswertung2_10mu_R100.png}
+\includegraphics[scale=0.6]{bilder/task3_auswertung2_100mu_R100.png}
+~
+}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\caption{Darstellung der Ströme bei $R=1500~\Omega$ und $C=10~\mu$F (oben) bzw. $C=100~\mu$F (unten). Die Erklärung ergibt sich analog zu Grafik~\ref{fig:grafik_task3_auswertung2_10_und_100_R100}.}
+\label{fig:grafik_task3_auswertung2_10_und_100_R1500}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_auswertung2_10mu_R1500.png}
+\includegraphics[scale=0.6]{bilder/task3_auswertung2_100mu_R1500.png}
+~
+}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\caption{Darstellung der Ströme bei unendlich großem Widerstand im Verbraucher (Leerlauf der Schaltung). Bei einer Spannungsspitze lässt die Diode Strom durch, der dann für die Ladung des Kondensators verwendet wird. Man sieht, dass der Strom am Verbraucher konstant 0 ergibt. Oben ist die Darstellung mit $C=10~\mu$F und unten mit $C=100~\mu$F dargestellt.}
+\label{fig:grafik_task3_auswertung2_10_und_100_inf}
+{\centering
+\includegraphics[scale=0.6]{bilder/task3_auswertung2_10mu_Rinf.png}
+\includegraphics[scale=0.6]{bilder/task3_auswertung2_100mu_Rinf.png}
+~
+}
+\end{figure}
 
 
 
@@ -450,11 +552,23 @@ Der zeitliche Verlauf des Stromes ist in Grafik~\ref{fig:task2_auswertung1} vera
 
 \subsection{Strom-Spannungscharakteristik einer Gleichrichterdiode}
 
-Die Strom-Spannungscharakteristik wurde in den Grafiken~\ref{fig:grafik_task1a} und \ref{fig:grafik_task1b} dargestellt. Bei der Durchlassrichtung ist eine Erhöhung des Stromes zwischen 0.7~V und 0.8~V zu erkennen. Gemäß des Datenblattes von IN4007 Dioden (\cite{conrad_diode1}), sieht man hier eine Übereinstimmung. Das Verhalten ist damit konform mit den Erwartungen. Über die Sperrrichtung lässt das Datenblatt nichts aussagen, da im Datenblatt der Sperrstrom als $<5~\mu$A (bzw. $<50~\mu$A bei 100$^\circ$C) charakteristiert ist. Spannungen im Bereich von Nanoampere sind daher zu vernachlässigen. Um den Strom zu erhöhen, müsste eine Durchbruchspannung angelegt werden, die deutlich größer ist. Dadurch würde die Diode zerstört werden.
+Die Strom-Spannungscharakteristik wurde in den Grafiken~\ref{fig:grafik_task1a} und \ref{fig:grafik_task1b} dargestellt. Bei der Durchlassrichtung ist eine Erhöhung des Stromes zwischen 0.7~V und 0.8~V zu erkennen. Gemäß des Datenblattes von IN4007 Dioden (\cite{conrad_diode1}), sieht man hier eine Übereinstimmung. Das Verhalten ist damit konform mit den Erwartungen. Über die Sperrrichtung lässt sich durch das Datenblatt nichts aussagen, da in diesem der Sperrstrom als $<5~\mu$A (bzw. $<50~\mu$A bei 100$^\circ$C) charakteristiert ist. Spannungen im Bereich von Nanoampere sind daher zu vernachlässigen. Um den Strom zu erhöhen, müsste eine Durchbruchspannung angelegt werden, die deutlich größer ist. Dadurch würde die Diode zerstört werden.
 
 
 
 \subsection{Strom-Spannungscharakteristik einer Zenerdiode}
+
+Die Kennlinie der Zenerdiode ist in Grafik~\ref{fig:task2_auswertung2} gezeichnet. Gemäß der Kennlinie sieht man, dass die Zenerspannung etwas zwischen 4.5~V und 5~V auftritt. Das entspricht den 4.7~V (bzw im angegebenen Bereich) aus dem Datenblatt. Damit scheint die Messung korrekt zu sein.
+
+\subsection{Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}
+
+
+In diesem Fall kann der Verbrauchswiderstand und die Kapazität des Kondensators variieren. Es zeigt sich deutlich, dass die Größe des Kondensators an den Verbrauchswiderstand angepasst werden muss, um eine konstante Gleichspannung zu garantieren. Gemäß \cite{demtroeder} gilt für die Entladungszeit eines Kondensators
+\begin{align*}
+\tau = R\cdot C
+\end{align*}
+wobei nach der Zeitspanne $\tau$ noch $\dfrac{1}{e} \approx 37\%$ der Ladung übrig ist. Daher bleibt die Gleichspannung erhalten, wenn $\tau$ möglichst groß wird. Das geht zum einen durch einen Kondensator mit großer Kapazität. Da wird viel Energie gespeichert, damit der Verbraucher mit positiver Spannung versorgt wird, während die Wechselstromquelle eine negative Phase durchläuft. Bei kleinen Widerständen (und damit höheren Stromfluss) kann die Spannung abfallen, wenn der Kondensator sich zu schnell entlädt. Daher sind bei kleinen Verbraucherwiderständen stärkere Kondensatoren erforderlich. Befindet sich die Schaltung im Leerlauf (kein Verbrauchswiderstand), dann kann auch ein kleiner Kondensator die Spannung halten. Das sieht man in Grafiken~\ref{fig:grafik_task3_10_inf} und \ref{fig:grafik_task3_100_inf}.
+
 
 
 
@@ -466,7 +580,7 @@ Die Strom-Spannungscharakteristik wurde in den Grafiken~\ref{fig:grafik_task1a} 
 \begin{thebibliography}{9}
 \bibitem{moodle} Moodle-Unterlagen zum Versuch, bereitgestellt von der Karl-Franzens-Universität Graz.
 \bibitem{halbleiter} \url{https://www.chemie.de/lexikon/Halbleiter.html}, 22.11.2020 23:25.
-\bibitem{cosmos} \url{https://physik.cosmos-indirekt.de/Physik-Schule/Bändermodell}, 22.11.2020 23:28.
+\bibitem{cosmos} \url{https://physik.cosmos-indirekt.de/Physik-Schule/Bandermodell}, 22.11.2020 23:28.
 \bibitem{greenlane} \url{https://www.greelane.com/wissenschaft-technologie-mathematik/wissenschaft/examples-of-electrical-conductors-and-insulators-608315/}, 22.11.2020 23:29.
 \bibitem{lernhelfer} \url{https://www.lernhelfer.de/schuelerlexikon/physik/artikel/halbleiter}, 22.11.2020 23:32.
 \bibitem{leifiphysik} \url{https://www.leifiphysik.de/elektronik/einfuehrung-die-elektronik/grundwissen/dotierte-halbleiter}, 22.11.2020 23:40.
@@ -474,6 +588,7 @@ Die Strom-Spannungscharakteristik wurde in den Grafiken~\ref{fig:grafik_task1a} 
 \bibitem{kompendium} \url{https://www.elektronik-kompendium.de/sites/grd/0112072.htm}, 24.11.2020 00:09.
 \bibitem{conrad_diode1} \url{https://asset.conrad.com/media10/add/160267/c1/-/gl/000162272DS01/datenblatt-162272-diotec-si-gleichrichterdiode-1n4007-do-204al-1000-v-1-a.pdf},28.11.2020, 09:22.
 \bibitem{conrad_diode2} \url{https://asset.conrad.com/media10/add/160267/c1/-/en/000168265DS01/datenblatt-168265-on-semiconductor-z-diode-1n5337brlg-gehaeuseart-halbleiter-axial-zener-spannung-47-v-leistung-max-ptot-5-w.pdf}, 28.11.2020, 09:35.
+\bibitem{demtroeder} W. Demtröder: \emph{Experimentalphysik 2 - Elektrizität  und Optik}, 7. Auflage, 2017.
 \end{thebibliography}
 
 

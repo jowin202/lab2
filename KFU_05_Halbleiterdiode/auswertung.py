@@ -78,6 +78,19 @@ def read_csv_task3(filename):
 
 
 
+def task3_auswertung(V1,V2,V3,V4,R):
+    UD1 = []
+    ID1 = []
+    IC1 = []
+    IR3 = []
+    for i in range(len(V1)):
+        UD1.append(V2[i] - V4[i])
+        ID1.append(1000 * V1[i]/10) #in mA
+        IC1.append(1000 * V3[i]/10) #in mA
+        IR3.append(1000 * V4[i]/R)  #in mA
+    return UD1, ID1, IC1, IR3
+
+
 
 
 
@@ -180,16 +193,48 @@ time, V1, V2, V3, V4 = read_csv_task3("daten/10muF-R100.csv")
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
-ax.plot(time, V1, 'blue')
-ax.plot(time, V2, 'green')
-ax.plot(time, V3, 'red')
-ax.plot(time, V4, 'magenta')
+ax.plot(time, V1, '#CCCCCC')
+ax.plot(time, V2, 'blue')
+ax.plot(time, V3, '#888888')
+ax.plot(time, V4, 'red')
 ax.legend(['CH1', 'CH2', 'CH3', 'CH4'])
 ax.set_xlabel('time / ms')
 ax.set_ylabel('U / V')
-ax.set_title('Einweg Schaltung C=10µF, R=100 Ohm')
+ax.set_title('Gleichrichter Schaltung C=10µF, R=100 Ohm')
 plt.savefig("bilder/task3_10mu_R100.png")
 plt.close()
+
+UD1, ID1, IC1, IR3 = task3_auswertung(V1,V2,V3,V4, 100)
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+#ax.plot(time, V1, '#000000')
+ax.plot(time, V2, '#444444')
+#ax.plot(time, V3, '#888888')
+ax.plot(time, V4, '#CCCCCC')
+ax.plot(time, UD1, '#FF0000')
+ax.legend(['Eingangsspannung', 'Spannung am Verbraucher', 'Diodenspannung'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('U / V')
+ax.set_title('Auswertung Spannung, C=10µF, R=100 Ohm')
+plt.savefig("bilder/task3_auswertung_10mu_R100.png")
+plt.close()
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(time, IC1, '#007700')
+ax.plot(time, IR3, '#00DD00')
+ax.plot(time, ID1, '#99FF99')
+ax.legend(['Strom am Kondensator', 'Strom am Verbraucher', 'Strom an der Diode'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('I / mA')
+ax.set_title('Auswertung Strom, C=10µF, R=100 Ohm')
+plt.savefig("bilder/task3_auswertung2_10mu_R100.png")
+plt.close()
+
+
+
+
 
 
 
@@ -197,16 +242,46 @@ time, V1, V2, V3, V4 = read_csv_task3("daten/10muF-R1500.csv")
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
-ax.plot(time, V1, 'blue')
-ax.plot(time, V2, 'green')
-ax.plot(time, V3, 'red')
-ax.plot(time, V4, 'magenta')
+ax.plot(time, V1, '#CCCCCC')
+ax.plot(time, V2, 'blue')
+ax.plot(time, V3, '#888888')
+ax.plot(time, V4, 'red')
 ax.legend(['CH1', 'CH2', 'CH3', 'CH4'])
 ax.set_xlabel('time / ms')
 ax.set_ylabel('U / V')
-ax.set_title('Einweg Schaltung C=10µF, R=1500 Ohm')
+ax.set_title('Gleichrichter Schaltung C=10µF, R=1500 Ohm')
 plt.savefig("bilder/task3_10mu_R1500.png")
 plt.close()
+
+UD1, ID1, IC1, IR3 = task3_auswertung(V1,V2,V3,V4, 1500)
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+#ax.plot(time, V1, '#000000')
+ax.plot(time, V2, '#444444')
+#ax.plot(time, V3, '#888888')
+ax.plot(time, V4, '#CCCCCC')
+ax.plot(time, UD1, '#FF0000')
+ax.legend(['Eingangsspannung', 'Spannung am Verbraucher', 'Diodenspannung'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('U / V')
+ax.set_title('Auswertung Spannung, C=10µF, R=1500 Ohm')
+plt.savefig("bilder/task3_auswertung_10mu_R1500.png")
+plt.close()
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(time, IC1, '#007700')
+ax.plot(time, IR3, '#00DD00')
+ax.plot(time, ID1, '#99FF99')
+ax.legend(['Strom am Kondensator', 'Strom am Verbraucher', 'Strom an der Diode'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('I / mA')
+ax.set_title('Auswertung Strom, C=10µF, R=1500 Ohm')
+plt.savefig("bilder/task3_auswertung2_10mu_R1500.png")
+plt.close()
+
+
 
 
 
@@ -214,16 +289,46 @@ time, V1, V2, V3, V4 = read_csv_task3("daten/10muF-Rinfinite.csv")
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
-ax.plot(time, V1, 'blue')
-ax.plot(time, V2, 'green')
-ax.plot(time, V3, 'red')
-ax.plot(time, V4, 'magenta')
+ax.plot(time, V1, '#CCCCCC')
+ax.plot(time, V2, 'blue')
+ax.plot(time, V3, '#888888')
+ax.plot(time, V4, 'red')
 ax.legend(['CH1', 'CH2', 'CH3', 'CH4'])
 ax.set_xlabel('time / ms')
 ax.set_ylabel('U / V')
-ax.set_title('Einweg Schaltung C=10µF, R=INF')
+ax.set_title('Gleichrichter Schaltung C=10µF, R=INF')
 plt.savefig("bilder/task3_10mu_Rinf.png")
 plt.close()
+
+UD1, ID1, IC1, IR3 = task3_auswertung(V1,V2,V3,V4, 99999999999999999999999999999)
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+#ax.plot(time, V1, '#000000')
+ax.plot(time, V2, '#444444')
+#ax.plot(time, V3, '#888888')
+ax.plot(time, V4, '#CCCCCC')
+ax.plot(time, UD1, '#FF0000')
+ax.legend(['Eingangsspannung', 'Spannung am Verbraucher', 'Diodenspannung'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('U / V')
+ax.set_title('Auswertung Spannung, C=10µF, R=INF')
+plt.savefig("bilder/task3_auswertung_10mu_Rinf.png")
+plt.close()
+
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(time, IC1, '#007700')
+ax.plot(time, IR3, '#00DD00')
+ax.plot(time, ID1, '#99FF99')
+ax.legend(['Strom am Kondensator', 'Strom am Verbraucher', 'Strom an der Diode'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('I / mA')
+ax.set_title('Auswertung Strom, C=10µF, R=INF')
+plt.savefig("bilder/task3_auswertung2_10mu_Rinf.png")
+plt.close()
+
 
 
 
@@ -242,16 +347,47 @@ time, V1, V2, V3, V4 = read_csv_task3("daten/100muF-R100.csv")
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
-ax.plot(time, V1, 'blue')
-ax.plot(time, V2, 'green')
-ax.plot(time, V3, 'red')
-ax.plot(time, V4, 'magenta')
+ax.plot(time, V1, '#CCCCCC')
+ax.plot(time, V2, 'blue')
+ax.plot(time, V3, '#888888')
+ax.plot(time, V4, 'red')
 ax.legend(['CH1', 'CH2', 'CH3', 'CH4'])
 ax.set_xlabel('time / ms')
 ax.set_ylabel('U / V')
-ax.set_title('Einweg Schaltung C=100µF, R=100 Ohm')
+ax.set_title('Gleichrichter Schaltung C=100µF, R=100 Ohm')
 plt.savefig("bilder/task3_100mu_R100.png")
 plt.close()
+
+UD1, ID1, IC1, IR3 = task3_auswertung(V1,V2,V3,V4, 100)
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+#ax.plot(time, V1, '#000000')
+ax.plot(time, V2, '#444444')
+#ax.plot(time, V3, '#888888')
+ax.plot(time, V4, '#CCCCCC')
+ax.plot(time, UD1, '#FF0000')
+ax.legend(['Eingangsspannung', 'Spannung am Verbraucher', 'Diodenspannung'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('U / V')
+ax.set_title('Auswertung Spannung, C=100µF, R=100 Ohm')
+plt.savefig("bilder/task3_auswertung_100mu_R100.png")
+plt.close()
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(time, IC1, '#007700')
+ax.plot(time, IR3, '#00DD00')
+ax.plot(time, ID1, '#99FF99')
+ax.legend(['Strom am Kondensator', 'Strom am Verbraucher', 'Strom an der Diode'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('I / mA')
+ax.set_title('Auswertung Strom, C=100µF, R=100 Ohm')
+plt.savefig("bilder/task3_auswertung2_100mu_R100.png")
+plt.close()
+
+
+
 
 
 
@@ -259,16 +395,46 @@ time, V1, V2, V3, V4 = read_csv_task3("daten/100muF-R1500.csv")
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
-ax.plot(time, V1, 'blue')
-ax.plot(time, V2, 'green')
-ax.plot(time, V3, 'red')
-ax.plot(time, V4, 'magenta')
+ax.plot(time, V1, '#CCCCCC')
+ax.plot(time, V2, 'blue')
+ax.plot(time, V3, '#888888')
+ax.plot(time, V4, 'red')
 ax.legend(['CH1', 'CH2', 'CH3', 'CH4'])
 ax.set_xlabel('time / ms')
 ax.set_ylabel('U / V')
-ax.set_title('Einweg Schaltung C=100µF, R=1500 Ohm')
+ax.set_title('Gleichrichter Schaltung C=100µF, R=1500 Ohm')
 plt.savefig("bilder/task3_100mu_R1500.png")
 plt.close()
+
+
+UD1, ID1, IC1, IR3 = task3_auswertung(V1,V2,V3,V4, 1500)
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+#ax.plot(time, V1, '#000000')
+ax.plot(time, V2, '#444444')
+#ax.plot(time, V3, '#888888')
+ax.plot(time, V4, '#CCCCCC')
+ax.plot(time, UD1, '#FF0000')
+ax.legend(['Eingangsspannung', 'Spannung am Verbraucher', 'Diodenspannung'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('U / V')
+ax.set_title('Auswertung Spannung, C=100µF, R=1500 Ohm')
+plt.savefig("bilder/task3_auswertung_100mu_R1500.png")
+plt.close()
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(time, IC1, '#007700')
+ax.plot(time, IR3, '#00DD00')
+ax.plot(time, ID1, '#99FF99')
+ax.legend(['Strom am Kondensator', 'Strom am Verbraucher', 'Strom an der Diode'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('I / mA')
+ax.set_title('Auswertung Strom, C=100µF, R=1500 Ohm')
+plt.savefig("bilder/task3_auswertung2_100mu_R1500.png")
+plt.close()
+
 
 
 
@@ -276,15 +442,44 @@ time, V1, V2, V3, V4 = read_csv_task3("daten/100muF-Rinfinite.csv")
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
-ax.plot(time, V1, 'blue')
-ax.plot(time, V2, 'green')
-ax.plot(time, V3, 'red')
-ax.plot(time, V4, 'magenta')
+ax.plot(time, V1, '#CCCCCC')
+ax.plot(time, V2, 'blue')
+ax.plot(time, V3, '#888888')
+ax.plot(time, V4, 'red')
 ax.legend(['CH1', 'CH2', 'CH3', 'CH4'])
 ax.set_xlabel('time / ms')
 ax.set_ylabel('U / V')
-ax.set_title('Einweg Schaltung C=100µF, R=INF')
+ax.set_title('Gleichrichter Schaltung C=100µF, R=INF')
 plt.savefig("bilder/task3_100mu_Rinf.png")
+plt.close()
+
+UD1, ID1, IC1, IR3 = task3_auswertung(V1,V2,V3,V4, 99999999999999999999999999999)
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+#ax.plot(time, V1, '#000000')
+ax.plot(time, V2, '#444444')
+#ax.plot(time, V3, '#888888')
+ax.plot(time, V4, '#CCCCCC')
+ax.plot(time, UD1, '#FF0000')
+ax.legend(['Eingangsspannung', 'Spannung am Verbraucher', 'Diodenspannung'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('U / V')
+ax.set_title('Auswertung Spannung, C=100µF, R=INF')
+plt.savefig("bilder/task3_auswertung_100mu_Rinf.png")
+plt.close()
+
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(time, IC1, '#007700')
+ax.plot(time, IR3, '#00DD00')
+ax.plot(time, ID1, '#99FF99')
+ax.legend(['Strom am Kondensator', 'Strom am Verbraucher', 'Strom an der Diode'])
+ax.set_xlabel('time / ms')
+ax.set_ylabel('I / mA')
+ax.set_title('Auswertung Strom, C=100µF, R=INF')
+plt.savefig("bilder/task3_auswertung2_100mu_Rinf.png")
 plt.close()
 
 
