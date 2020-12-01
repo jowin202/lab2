@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  30 NOV 2020 07:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  30 NOV 2020 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**05_Halbleiterdiode.tex
-(./05_Halbleiterdiode.tex
+**06_Phase_und_Leistung.tex
+(./06_Phase_und_Leistung.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -439,25 +439,25 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count287
 \l__pdf_internal_box=\box56
 )
-(./05_Halbleiterdiode.aux)
-\openout1 = `05_Halbleiterdiode.aux'.
+(./06_Phase_und_Leistung.aux)
+\openout1 = `06_Phase_und_Leistung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 \AtBeginShipoutBox=\box57
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -500,9 +500,9 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 47.
+(lastpage)             ! on input line 77.
 \c@lstlisting=\count294
-Package hyperref Info: Link coloring OFF on input line 47.
+Package hyperref Info: Link coloring OFF on input line 77.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -515,50 +515,49 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count295
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
 
-(./05_Halbleiterdiode.out) (./05_Halbleiterdiode.out)
+(./06_Phase_und_Leistung.out) (./06_Phase_und_Leistung.out)
 \@outlinefile=\write3
-\openout3 = `05_Halbleiterdiode.out'.
+\openout3 = `06_Phase_und_Leistung.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<Deckblatt.pdf, id=120, 597.53236pt x 845.0471pt>
+<Deckblatt.pdf, id=112, 597.53236pt x 845.0471pt>
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf>
-Package pdftex.def Info: Deckblatt.pdf  used on input line 51.
+Package pdftex.def Info: Deckblatt.pdf  used on input line 81.
 (pdftex.def)             Requested size: 597.5309pt x 845.04504pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf>
-Package pdftex.def Info: Deckblatt.pdf  used on input line 51.
+Package pdftex.def Info: Deckblatt.pdf  used on input line 81.
 (pdftex.def)             Requested size: 597.5309pt x 845.04504pt.
-<Deckblatt.pdf, id=123, page=1, 597.53236pt x 845.0471pt>
+<Deckblatt.pdf, id=115, page=1, 597.53236pt x 845.0471pt>
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 51.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 597.5309pt x 845.04504pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 51.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 562.1455pt x 795.00201pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 51.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 562.1455pt x 795.00201pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 51.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 562.1455pt x 795.00201pt.
 File: Deckblatt.pdf Graphic file (type pdf)
 <use Deckblatt.pdf, page 1>
-Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 51.
+Package pdftex.def Info: Deckblatt.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 562.1455pt x 795.00201pt.
  [1
 
- <./Deckblatt.pdf>]
-(./05_Halbleiterdiode.toc
+ <./Deckblatt.pdf>] (./06_Phase_und_Leistung.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -570,7 +569,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
-\openout4 = `05_Halbleiterdiode.toc'.
+\openout4 = `06_Phase_und_Leistung.toc'.
 
 
 
@@ -579,343 +578,184 @@ Make it at least 22.54448pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (8.43114pt too wide) in paragraph at lines 63--64
-[]\OT1/cmr/m/n/10 Messtechnische Er-mitt-lung der Strom-Spannungscharakteristik
- ei-ner Gleich-
+[2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [3]
+Overfull \hbox (5.52829pt too wide) in paragraph at lines 94--95
+[]\OT1/cmr/m/n/10 Messtechnische Er-mitt-lung der elek-tri-schen Leis-tung in e
+i-ner RC-Schaltung. 
  []
 
 
-Overfull \hbox (1.19508pt too wide) in paragraph at lines 64--65
-[]\OT1/cmr/m/n/10 Automatisierte Auf-nah-me der Strom-Spannungscharakteristik e
-i-ner Zener-
+Overfull \hbox (4.83386pt too wide) in paragraph at lines 95--96
+[]\OT1/cmr/m/n/10 Messtechnische Er-mitt-lung der elek-tri-schen Leis-tung in e
+i-ner RL-Schaltung. 
  []
 
-<baender.png, id=200, 187.4202pt x 72.7518pt>
-File: baender.png Graphic file (type png)
-<use baender.png>
-Package pdftex.def Info: baender.png  used on input line 87.
-(pdftex.def)             Requested size: 318.61298pt x 123.67749pt.
-[3] [4 <./baender.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-[]|\OT1/cmr/m/n/10 InfiniiVision
- []
-
-
-Overfull \hbox (2.38622pt too wide) in paragraph at lines 133--133
-[]|\OT1/cmr/m/n/10 Gleichrichter-
- []
-
-
-Overfull \hbox (6.0113pt too wide) in paragraph at lines 135--135
-[]|\OT1/cmr/m/n/10 Transformator| 
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]|\OT1/cmr/m/n/10 Funktions-
  []
 
 [5]
-<bilder/aufbau_task1a.png, id=244, 179.4705pt x 74.679pt>
-File: bilder/aufbau_task1a.png Graphic file (type png)
-<use bilder/aufbau_task1a.png>
-Package pdftex.def Info: bilder/aufbau_task1a.png  used on input line 170.
-(pdftex.def)             Requested size: 305.09853pt x 126.95374pt.
- [6]
-<bilder/aufbau_task1b.png, id=256, 198.7425pt x 96.8418pt>
-File: bilder/aufbau_task1b.png Graphic file (type png)
-<use bilder/aufbau_task1b.png>
-Package pdftex.def Info: bilder/aufbau_task1b.png  used on input line 186.
-(pdftex.def)             Requested size: 337.8608pt x 164.63031pt.
- [7 <./bilder/aufbau_task1a.png> <./bilder/aufbau_task1b.png>]
-<bilder/aufbau_task2.png, id=266, 198.2607pt x 100.4553pt>
+Overfull \hbox (4.44168pt too wide) in paragraph at lines 187--187
+[]\OT1/cmr/bx/n/12 Untersuchung der An-zei-ge von un-ter-schied-li-chen Span-
+ []
+
+<bilder/aufbau_task1.png, id=243, 271.2534pt x 90.3375pt>
+File: bilder/aufbau_task1.png Graphic file (type png)
+<use bilder/aufbau_task1.png>
+Package pdftex.def Info: bilder/aufbau_task1.png  used on input line 197.
+(pdftex.def)             Requested size: 271.25273pt x 90.33727pt.
+[6 <./bilder/aufbau_task1.png>]
+<bilder/aufbau_task2.png, id=256, 197.538pt x 141.6492pt>
 File: bilder/aufbau_task2.png Graphic file (type png)
 <use bilder/aufbau_task2.png>
-Package pdftex.def Info: bilder/aufbau_task2.png  used on input line 199.
-(pdftex.def)             Requested size: 337.04175pt x 170.77327pt.
-
-Overfull \hbox (11.7875pt too wide) in paragraph at lines 206--206
-[]\OT1/cmr/bx/n/12 Gleichrichterschaltung mit un-ter-schied-li-chen Gl[]attungs
--
- []
-
-[8 <./bilder/aufbau_task2.png>]
-<bilder/aufbau_task3.png, id=282, 182.6022pt x 127.4361pt>
+Package pdftex.def Info: bilder/aufbau_task2.png  used on input line 211.
+(pdftex.def)             Requested size: 197.5375pt x 141.64883pt.
+<bilder/aufbau_task3.png, id=257, 203.3196pt x 138.0357pt>
 File: bilder/aufbau_task3.png Graphic file (type png)
 <use bilder/aufbau_task3.png>
-Package pdftex.def Info: bilder/aufbau_task3.png  used on input line 237.
-(pdftex.def)             Requested size: 310.42241pt x 216.64043pt.
-<bilder/aufbau_task3_vereinfacht.png, id=283, 145.2627pt x 102.1416pt>
-File: bilder/aufbau_task3_vereinfacht.png Graphic file (type png)
-<use bilder/aufbau_task3_vereinfacht.png>
-Package pdftex.def Info: bilder/aufbau_task3_vereinfacht.png  used on input lin
-e 246.
-(pdftex.def)             Requested size: 246.94551pt x 173.63997pt.
- [9 <./bilder/aufbau_task3.png>] [10 <./bilder/aufbau_task3_vereinfacht.png>]
-<bilder/task2.png, id=306, 462.528pt x 346.896pt>
+Package pdftex.def Info: bilder/aufbau_task3.png  used on input line 220.
+(pdftex.def)             Requested size: 203.31909pt x 138.03535pt.
+<bilder/aufbau_task4.png, id=258, 258.0039pt x 147.4308pt>
+File: bilder/aufbau_task4.png Graphic file (type png)
+<use bilder/aufbau_task4.png>
+Package pdftex.def Info: bilder/aufbau_task4.png  used on input line 230.
+(pdftex.def)             Requested size: 258.00327pt x 147.43044pt.
+ [7 <./bilder/aufbau_task2.png> <./bilder/aufbau_task3.png>]
+<bilder/aufbau_task5.png, id=269, 258.4857pt x 141.6492pt>
+File: bilder/aufbau_task5.png Graphic file (type png)
+<use bilder/aufbau_task5.png>
+Package pdftex.def Info: bilder/aufbau_task5.png  used on input line 239.
+(pdftex.def)             Requested size: 258.48506pt x 141.64883pt.
+
+Overfull \hbox (4.44168pt too wide) in paragraph at lines 247--247
+[]\OT1/cmr/bx/n/12 Untersuchung der An-zei-ge von un-ter-schied-li-chen Span-
+ []
+
+<bilder/task1_sin.png, id=274, 462.528pt x 346.896pt>
+File: bilder/task1_sin.png Graphic file (type png)
+<use bilder/task1_sin.png>
+Package pdftex.def Info: bilder/task1_sin.png  used on input line 256.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+[8 <./bilder/aufbau_task4.png> <./bilder/aufbau_task5.png>]
+<bilder/task1_dreieck.png, id=287, 462.528pt x 346.896pt>
+File: bilder/task1_dreieck.png Graphic file (type png)
+<use bilder/task1_dreieck.png>
+Package pdftex.def Info: bilder/task1_dreieck.png  used on input line 263.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+<bilder/task1_rechteck.png, id=288, 462.528pt x 346.896pt>
+File: bilder/task1_rechteck.png Graphic file (type png)
+<use bilder/task1_rechteck.png>
+Package pdftex.def Info: bilder/task1_rechteck.png  used on input line 270.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+ [9 <./bilder/task1_sin.png> <./bilder/task1_dreieck.png>]
+<bilder/task2.png, id=304, 462.528pt x 346.896pt>
 File: bilder/task2.png Graphic file (type png)
 <use bilder/task2.png>
-Package pdftex.def Info: bilder/task2.png  used on input line 316.
-(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [11]
-Overfull \hbox (11.7875pt too wide) in paragraph at lines 321--321
-[]\OT1/cmr/bx/n/12 Gleichrichterschaltung mit un-ter-schied-li-chen Gl[]attungs
--
+Package pdftex.def Info: bilder/task2.png  used on input line 313.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+ [10 <./bilder/task1_rechteck.png>]
+<bilder/task3.png, id=316, 462.528pt x 346.896pt>
+File: bilder/task3.png Graphic file (type png)
+<use bilder/task3.png>
+Package pdftex.def Info: bilder/task3.png  used on input line 320.
+(pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
+
+Overfull \hbox (4.44168pt too wide) in paragraph at lines 331--331
+[]\OT1/cmr/bx/n/12 Untersuchung der An-zei-ge von un-ter-schied-li-chen Span-
  []
 
-<bilder/task3_10mu_R100.png, id=316, 462.528pt x 346.896pt>
-File: bilder/task3_10mu_R100.png Graphic file (type png)
-<use bilder/task3_10mu_R100.png>
-Package pdftex.def Info: bilder/task3_10mu_R100.png  used on input line 335.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-[12 <./bilder/task2.png>]
-<bilder/task3_10mu_R1500.png, id=326, 462.528pt x 346.896pt>
-File: bilder/task3_10mu_R1500.png Graphic file (type png)
-<use bilder/task3_10mu_R1500.png>
-Package pdftex.def Info: bilder/task3_10mu_R1500.png  used on input line 344.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_10mu_Rinf.png, id=329, 462.528pt x 346.896pt>
-File: bilder/task3_10mu_Rinf.png Graphic file (type png)
-<use bilder/task3_10mu_Rinf.png>
-Package pdftex.def Info: bilder/task3_10mu_Rinf.png  used on input line 353.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [13 <./bilder/task3_10mu_R100.png> <./bilder/task3_10mu_R1500.png>]
-<bilder/task3_100mu_R100.png, id=342, 462.528pt x 346.896pt>
-File: bilder/task3_100mu_R100.png Graphic file (type png)
-<use bilder/task3_100mu_R100.png>
-Package pdftex.def Info: bilder/task3_100mu_R100.png  used on input line 366.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_100mu_R1500.png, id=345, 462.528pt x 346.896pt>
-File: bilder/task3_100mu_R1500.png Graphic file (type png)
-<use bilder/task3_100mu_R1500.png>
-Package pdftex.def Info: bilder/task3_100mu_R1500.png  used on input line 375.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [14 <./bilder/task3_10mu_Rinf.png> <./bilder/task3_100mu_R100.png>]
-<bilder/task3_100mu_Rinf.png, id=357, 462.528pt x 346.896pt>
-File: bilder/task3_100mu_Rinf.png Graphic file (type png)
-<use bilder/task3_100mu_Rinf.png>
-Package pdftex.def Info: bilder/task3_100mu_Rinf.png  used on input line 384.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task1a.png, id=359, 462.528pt x 346.896pt>
-File: bilder/task1a.png Graphic file (type png)
-<use bilder/task1a.png>
-Package pdftex.def Info: bilder/task1a.png  used on input line 401.
-(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [15 <./bilder/task3_100mu_R1500.png> <./bilder/task3_100mu_Rinf.png>]
-<bilder/task1b.png, id=369, 462.528pt x 346.896pt>
-File: bilder/task1b.png Graphic file (type png)
-<use bilder/task1b.png>
-Package pdftex.def Info: bilder/task1b.png  used on input line 430.
-(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
-
-[16 <./bilder/task1a.png>]
-<bilder/task2_I.png, id=381, 462.528pt x 346.896pt>
-File: bilder/task2_I.png Graphic file (type png)
-<use bilder/task2_I.png>
-Package pdftex.def Info: bilder/task2_I.png  used on input line 447.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [17 <./bilder/task1b.png>]
-<bilder/task2_IU.png, id=390, 462.528pt x 346.896pt>
-File: bilder/task2_IU.png Graphic file (type png)
-<use bilder/task2_IU.png>
-Package pdftex.def Info: bilder/task2_IU.png  used on input line 459.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-
-Overfull \hbox (11.7875pt too wide) in paragraph at lines 466--466
-[]\OT1/cmr/bx/n/12 Gleichrichterschaltung mit un-ter-schied-li-chen Gl[]attungs
--
+[11 <./bilder/task2.png> <./bilder/task3.png>] (./scripts/spitze_tal.py)
+Overfull \hbox (6.26443pt too wide) in paragraph at lines 364--365
+\OT1/cmr/m/n/10 Die Pha-sen-ver-schie-bung kann theo-re-tisch und prak-tisch be
+-rech-net wer-den. Gem[]a^^Y
  []
 
-<bilder/task3_auswertung_10mu_R100.png, id=393, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung_10mu_R100.png Graphic file (type png)
-<use bilder/task3_auswertung_10mu_R100.png>
-Package pdftex.def Info: bilder/task3_auswertung_10mu_R100.png  used on input l
-ine 478.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_auswertung_100mu_R100.png, id=394, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung_100mu_R100.png Graphic file (type png)
-<use bilder/task3_auswertung_100mu_R100.png>
-Package pdftex.def Info: bilder/task3_auswertung_100mu_R100.png  used on input 
-line 479.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-[18 <./bilder/task2_I.png> <./bilder/task2_IU.png>] [19]
-<bilder/task3_auswertung_10mu_R1500.png, id=409, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung_10mu_R1500.png Graphic file (type png)
-<use bilder/task3_auswertung_10mu_R1500.png>
-Package pdftex.def Info: bilder/task3_auswertung_10mu_R1500.png  used on input 
-line 488.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_auswertung_100mu_R1500.png, id=410, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung_100mu_R1500.png Graphic file (type png)
-<use bilder/task3_auswertung_100mu_R1500.png>
-Package pdftex.def Info: bilder/task3_auswertung_100mu_R1500.png  used on input
- line 489.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [20 <./bilder/task3_auswertung_10mu_R100.png> <./bilder/task3_auswertung_100mu
-_R100.png>]
-<bilder/task3_auswertung_10mu_Rinf.png, id=419, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung_10mu_Rinf.png Graphic file (type png)
-<use bilder/task3_auswertung_10mu_Rinf.png>
-Package pdftex.def Info: bilder/task3_auswertung_10mu_Rinf.png  used on input l
-ine 499.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_auswertung_100mu_Rinf.png, id=420, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung_100mu_Rinf.png Graphic file (type png)
-<use bilder/task3_auswertung_100mu_Rinf.png>
-Package pdftex.def Info: bilder/task3_auswertung_100mu_Rinf.png  used on input 
-line 500.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [21 <./bilder/task3_auswertung_10mu_R1500.png> <./bilder/task3_auswertung_100m
-u_R1500.png>] [22 <./bilder/task3_auswertung_10mu_Rinf.png> <./bilder/task3_aus
-wertung_100mu_Rinf.png>]
-<bilder/task3_auswertung2_10mu_R100.png, id=439, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung2_10mu_R100.png Graphic file (type png)
-<use bilder/task3_auswertung2_10mu_R100.png>
-Package pdftex.def Info: bilder/task3_auswertung2_10mu_R100.png  used on input 
-line 519.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_auswertung2_100mu_R100.png, id=440, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung2_100mu_R100.png Graphic file (type png)
-<use bilder/task3_auswertung2_100mu_R100.png>
-Package pdftex.def Info: bilder/task3_auswertung2_100mu_R100.png  used on input
- line 520.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_auswertung2_10mu_R1500.png, id=443, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung2_10mu_R1500.png Graphic file (type png)
-<use bilder/task3_auswertung2_10mu_R1500.png>
-Package pdftex.def Info: bilder/task3_auswertung2_10mu_R1500.png  used on input
- line 531.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_auswertung2_100mu_R1500.png, id=444, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung2_100mu_R1500.png Graphic file (type png)
-<use bilder/task3_auswertung2_100mu_R1500.png>
-Package pdftex.def Info: bilder/task3_auswertung2_100mu_R1500.png  used on inpu
-t line 532.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [23 <./bilder/task3_auswertung2_10mu_R100.png> <./bilder/task3_auswertung2_100
-mu_R100.png>]
-<bilder/task3_auswertung2_10mu_Rinf.png, id=453, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung2_10mu_Rinf.png Graphic file (type png)
-<use bilder/task3_auswertung2_10mu_Rinf.png>
-Package pdftex.def Info: bilder/task3_auswertung2_10mu_Rinf.png  used on input 
-line 543.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
-<bilder/task3_auswertung2_100mu_Rinf.png, id=454, 462.528pt x 346.896pt>
-File: bilder/task3_auswertung2_100mu_Rinf.png Graphic file (type png)
-<use bilder/task3_auswertung2_100mu_Rinf.png>
-Package pdftex.def Info: bilder/task3_auswertung2_100mu_Rinf.png  used on input
- line 544.
-(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
- [24 <./bilder/task3_auswertung2_10mu_R1500.png> <./bilder/task3_auswertung2_10
-0mu_R1500.png>] [25 <./bilder/task3_auswertung2_10mu_Rinf.png> <./bilder/task3_
-auswertung2_100mu_Rinf.png>]
-Overfull \hbox (11.7875pt too wide) in paragraph at lines 563--563
-[]\OT1/cmr/bx/n/12 Gleichrichterschaltung mit un-ter-schied-li-chen Gl[]attungs
--
+[12]
+Overfull \hbox (4.44168pt too wide) in paragraph at lines 391--391
+[]\OT1/cmr/bx/n/12 Untersuchung der An-zei-ge von un-ter-schied-li-chen Span-
  []
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
-[][]$\OT1/cmtt/m/n/10 https : / / physik . cosmos -[] indirekt . de / Physik -[
-] Schule / Bandermodell$[]\OT1/cmr/m/n/10 ,
+[13]
+Overfull \hbox (4.44168pt too wide) in paragraph at lines 423--423
+[]\OT1/cmr/bx/n/12 Untersuchung der An-zei-ge von un-ter-schied-li-chen Span-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
-[][]$\OT1/cmtt/m/n/10 https : / / www . greelane . com / wissenschaft -[] techn
-ologie -[] mathematik /
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+[]|\OT1/cmr/m/n/10 berechneter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
-\OT1/cmtt/m/n/10 wissenschaft / examples -[] of -[] electrical -[] conductors -
-[] and -[] insulators -[]
+Overfull \hbox (6.05737pt too wide) in paragraph at lines 430--437
+ [][] 
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
+[][]$\OT1/cmtt/m/n/10 https : / / www . leifiphysik . de / elektrizitaetslehre 
+/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--586
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
+\OT1/cmtt/m/n/10 wechselstromtechnik / grundwissen / effektivwerte -[] von -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
 [][]$\OT1/cmtt/m/n/10 https : / / www . lernhelfer . de / schuelerlexikon / phy
-sik / artikel /
+sik -[] abitur /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
-[][]$\OT1/cmtt/m/n/10 https : / / www . leifiphysik . de / elektronik / einfueh
-rung -[] die -[]
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+[][]$\OT1/cmtt/m/n/10 https : / / www . emf . ethz . ch / emf -[] info / themen
+ / physik / verknuepfung -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
-[][]$\OT1/cmtt/m/n/10 https : / / www . leifiphysik . de / elektronik / halblei
-terdiode /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 588--589
-[][]$\OT1/cmtt/m/n/10 https : / / www . elektronik -[] kompendium . de / sites 
-/ grd / 0112072 . htm$[]\OT1/cmr/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
-[][]$\OT1/cmtt/m/n/10 https : / / asset . conrad . com / media10 / add / 160267
- / c1/ -[] /gl /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
-\OT1/cmtt/m/n/10 000162272DS01 / datenblatt -[] 162272 -[] diotec -[] si -[] gl
-eichrichterdiode -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
-[][]$\OT1/cmtt/m/n/10 https : / / asset . conrad . com / media10 / add / 160267
- / c1/ -[] /en /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
-\OT1/cmtt/m/n/10 000168265DS01 / datenblatt -[] 168265 -[] on -[] semiconductor
- -[] z -[] diode -[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
-\OT1/cmtt/m/n/10 1n5337brlg -[] gehaeuseart -[] halbleiter -[] axial -[] zener 
--[] spannung -[] 47 -[] v -[]
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+\OT1/cmtt/m/n/10 von -[] elektrischen -[] und -[] magnetischen -[] feldern / wi
+rkleistung -[]
  []
 
 
 AED: lastpage setting LastPage
-[27]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 635.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 635.
- (./05_Halbleiterdiode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 635.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 635.
-Package rerunfilecheck Info: File `05_Halbleiterdiode.out' has not changed.
-(rerunfilecheck)             Checksum: 15E450547DAEA61D2A055ADFC80EE8FB;2522.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 635.
+[15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 475.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 475.
+ (./06_Phase_und_Leistung.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 475.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 475.
+Package rerunfilecheck Info: File `06_Phase_und_Leistung.out' has not changed.
+(rerunfilecheck)             Checksum: A87E4FECB52BEDEBC8753ECF9853033A;2515.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 475.
  ) 
 Here is how much of TeX's memory you used:
- 11369 strings out of 481239
- 172019 string characters out of 5920377
- 451564 words of memory out of 5000000
- 26310 multiletter control sequences out of 15000+600000
+ 11267 strings out of 481239
+ 167744 string characters out of 5920377
+ 462639 words of memory out of 5000000
+ 26233 multiletter control sequences out of 15000+600000
  536069 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,45p,886b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,45p,882b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb>
-Output written on 05_Halbleiterdiode.pdf (27 pages, 1666697 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b>
+Output written on 06_Phase_und_Leistung.pdf (15 pages, 1197287 bytes).
 PDF statistics:
- 570 PDF objects out of 1000 (max. 8388607)
- 448 compressed objects within 5 object streams
- 102 named destinations out of 1000 (max. 500000)
- 398 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 372 compressed objects within 4 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 
