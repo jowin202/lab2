@@ -113,9 +113,9 @@ Bei der p-Dotierung werden Fremdatome mit nur drei Valenzelektronen, wie zum Bei
 
 Ein pn-Übergang ist der Grenzbereich, der entsteht, wenn man ein p-dotiertes und ein n-dotiertes Material zusammenbringt. Das darauf resultierende Bauelement ist die Halbleiterdiode. Die Stärke der elektrischen Leitfähigkeit einer Diode hängt dabei von der Richtung des Stromflusses ab. Man unterscheidet hier zwischen der Polung in Durchlassrichtung (Pluspol der Spannungsquelle liegt an p-Schicht), bei der der Strom fließt und der Polung in Sperrrichtung (Pluspol der Spannungsquelle liegt an n-Schicht), bei der kein Strom fließen kann. (vgl. \cite{leifiphysik2}, \cite{kompendium}) 
 
-\subsection{Entladung von Kondensatoren}
+\subsection{Welligkeit}
 
-Wird ein Kondensator mit Kapazität $C$ am Widerstand $R$ entladen, dann 
+Die Welligkeit gibt an wie stark der Wechselstromanteil zeitlich vom Gleichstromanteil abweicht. Man unterscheidet hierbei zwischen der Welligkeit beim gleichgerichteten Strom (Verhältnis zwischen Mittelwert des Wechselstromes und Gleichstromstärke) und Welligkeit bei nicht gleichgerichtetem Strom (Verhältnis des Effektivwertes aller Oberschwingungen zum gesamten Effektivwert). Die Welligkeit eines nicht gleichgerichteten Stromes wird auch als Klirrfaktor bezeichnet.
 
 \section{Geräteliste}
 
@@ -548,11 +548,40 @@ Weiters ist auch von Interesse, wieviel Strom über den Kondensator bzw. über d
 
 
 
-\section{Diskussion}
+Die Welligkeit wird durch
+\begin{align*}
+\frac{U_\text{eff}}{|\overline{U}|}
+\end{align*}
+berechnet. Die berechneten Welligkeiten sind in der nachfolgenden Tabelle zusammengefasst.
+
+
+\begin{table}[H]
+\caption{Welligkeit für Gleichrichterschaltungen}
+\label{tab:welligkeit}
+\begin{tabular}{rr|r}
+$C$ / $\mu$F & $R$ / $\Omega$ & Welligkeit $w$  / 1 \\
+\hline
+10 & 100 & $w = 1.25 \pm 0.13$ \\
+10 & 1500 & $w = 0.38 \pm 0.04$ \\
+10 & $\infty$ & $w = (4.98 \pm 0.49)\cdot 10^{-4} $ \\
+100 & 100 & $w = 0.42 \pm 0.04$ \\
+100 & 1500 & $w = (3.87 \pm 0.38) \cdot 10^{-2}$\\
+100 & $\infty$ & $w = (3.18 \pm 0.32) \cdot 10^{-4}$
+\end{tabular}
+
+\end{table}
+
+\section{Diskussion und Zusammenfassung}
 
 \subsection{Strom-Spannungscharakteristik einer Gleichrichterdiode}
 
 Die Strom-Spannungscharakteristik wurde in den Grafiken~\ref{fig:grafik_task1a} und \ref{fig:grafik_task1b} dargestellt. Bei der Durchlassrichtung ist eine Erhöhung des Stromes zwischen 0.7~V und 0.8~V zu erkennen. Gemäß des Datenblattes von IN4007 Dioden (\cite{conrad_diode1}), sieht man hier eine Übereinstimmung. Das Verhalten ist damit konform mit den Erwartungen. Über die Sperrrichtung lässt sich durch das Datenblatt nichts aussagen, da in diesem der Sperrstrom als $<5~\mu$A (bzw. $<50~\mu$A bei 100$^\circ$C) charakteristiert ist. Spannungen im Bereich von Nanoampere sind daher zu vernachlässigen. Um den Strom zu erhöhen, müsste eine Durchbruchspannung angelegt werden, die deutlich größer ist. Dadurch würde die Diode zerstört werden.
+
+
+
+
+
+
 
 
 
@@ -570,9 +599,8 @@ In diesem Fall kann der Verbrauchswiderstand und die Kapazität des Kondensators
 wobei nach der Zeitspanne $\tau$ noch $\dfrac{1}{e} \approx 37\%$ der Spannung übrig ist. Daher bleibt die Gleichspannung erhalten, wenn $\tau$ möglichst groß wird. Das geht zum einen durch einen Kondensator mit großer Kapazität. Da wird viel Energie gespeichert, damit der Verbraucher mit positiver Spannung versorgt wird, während die Wechselstromquelle eine negative Phase durchläuft. Bei kleinen Widerständen (und damit höheren Stromfluss) kann die Spannung abfallen, wenn der Kondensator sich zu schnell entlädt. Daher sind bei kleinen Verbraucherwiderständen stärkere Kondensatoren erforderlich. Befindet sich die Schaltung im Leerlauf (kein Verbrauchswiderstand), dann kann auch ein kleiner Kondensator die Spannung halten. Das sieht man in Grafiken~\ref{fig:grafik_task3_10_inf} und \ref{fig:grafik_task3_100_inf}.
 
 
+Die Welligkeit (zusammengefasst in Tabelle~\ref{tab:welligkeit}) sinkt mit der Größe des Kondensators und des Widerstandes. Im Leerlauf bleibt die Spannung erhalten und daher ist dort auch die Welligkeit am geringsten. Allerdings wird eine Gleichrichterschaltung in der Praxis nicht im Leerlauf betrieben. Daher ist die korrekte Dimensionierung der Kapazität entscheident.
 
-
-\section{Zusammenfassung}
 
 
 

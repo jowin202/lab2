@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {2.2}Bänder und Halbleiter}{3}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Dotierung von Halbleitern}{4}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}pn-Übergang}{5}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Entladung von Kondensatoren}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Welligkeit}{5}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Geräteliste}{6}{section.3}%
 \contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{6}{subsection.4.1}%
@@ -21,9 +21,8 @@
 \contentsline {subsection}{\numberline {6.3}Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}{19}{subsection.6.3}%
 \contentsline {subsubsection}{\numberline {6.3.1}Spannungen an der Diode}{19}{subsubsection.6.3.1}%
 \contentsline {subsubsection}{\numberline {6.3.2}Ströme durch die Diode bzw. durch den Verbraucher}{23}{subsubsection.6.3.2}%
-\contentsline {section}{\numberline {7}Diskussion}{26}{section.7}%
+\contentsline {section}{\numberline {7}Diskussion und Zusammenfassung}{26}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Strom-Spannungscharakteristik einer Gleichrichterdiode}{26}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Strom-Spannungscharakteristik einer Zenerdiode}{26}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Gleichrichterschaltung mit unterschiedlichen Glättungskondensatoren und Belastungswiderständen}{26}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Zusammenfassung}{27}{section.8}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{27}{section.9}%
+\contentsline {section}{\numberline {8}Literaturverzeichnis}{27}{section.8}%

@@ -17,7 +17,7 @@
 \floatsetup[table]{capposition=top}
 
 \usepackage{amsmath, amssymb}
-
+\usepackage{multirow}
 \usepackage[utf8]{inputenc}
 
 \usepackage{xifthen}
@@ -123,8 +123,17 @@ Wichtig zu beachten ist, dass Scheitelfaktor und Formfaktor vom zeitlichen Verla
 
 \subsection{Messung von Gleichrichtwert und Effektivwert}
 
-Um schnelle Änderungen erfassen zu können zeigen Messgeräte meist gemittelte Werte an (elektronisch gemittelt z.B. mit dem Dual-Slope-Verfahren). Diese Erfassung der Wechselgröße erfolgt meist über die Messung der Gleichrichtwertes, da dies im Gegensatz zur Messung des Effektivwertes weniger aufwändig ist.
+Um den Gleichrichtwert bestimmen zu können wird zunächst eine Gleichrichterschaltung aufgebaut und mithilfe dieser kann dann der Betrag der elektrischen Größe gebildet werden. Durch Einsetzen eines Tiefpassfilters erhält man auch das zeitliche Mittel.
 
+Der Zusammenhang zwischen berechnetem Mittelwert und Scheitelwert der Wechselspannung ist gegeben durch
+
+\begin{align*}
+\left|\overline{U}\right| = ... = \frac{2}{\pi}\cdot \hat{U}
+\end{align*}
+
+Bei sinusförmigen Kurven kann hier außerdem noch ein Korrekturwert von $K_{\sin} = \dfrac{\pi}{2\cdot \sqrt{2}} \approx 1.11$ miteinbezogen werden, der sich aus dem Verhältnis vom Mittelwert des Betrags zum tatsächlichen Effektivwert der Spannung ergibt. Diese Messung des Effektivwertes mithilfe des Mittelwerts funktioniert jedoch nur bei sinusförmigen Signalen.
+
+Für beliebige Signale werden andere Methoden verwendet, wie z. B. die termische Umformung, bei der ein Widerstand durch die Wechselgröße aufgeheizt wird. Die Temperatur, die erreicht wird, dient dann als Richtwert für einen zweiten Widerstand, der über einen Gleichstrom erhitzt wird. Beim Temperaturgleichstand wird dann auch die gleiche Leistung umgesetzt. Somit gilt $U_\text{eff} = U_\text{RMS}$ bzw. $I_\text{eff} = I_\text{RMS}$. (vgl. \cite{moodle}, \cite{src3}, \cite{src5})
 
 
 \subsection{Wechselstromwiderstände und deren Leistung}
@@ -149,9 +158,6 @@ S = P^2 + Q^2 = U\cdot I
 \end{align}
 
 
-\subsection{Impedanzen}
-
-
 
 
 \section{Geräteliste}
@@ -161,12 +167,17 @@ S = P^2 + Q^2 = U\cdot I
 
 ~
 
-\begin{tabular}{l|p{2.5cm}p{3cm}lll}
+\begin{tabular}{l|p{2.3cm}p{3cm}lll}
 Abk. & Gerätename    &  Modell/Wert  & Unsicherheit\\
 \hline
 N & Netzgerät & Hameg HM8040-2 \\
 FG & Funktions\-generator & Hameg HM8030-3 \\
-OS & Oszilloskop & DSO-X 2002A \\
+OS & Oszilloskop & DSO-X 2002A  & 2\% (vgl. \cite{oszi_datenblatt}) \\
+MM1 & Multimeter (digital) & TTi 1604 & 0.5\% + 4 digits (vgl. \cite{moodle})\\
+MM2 & Multimeter & M4600 & 0.5\% + 10 digits (vgl. \cite{moodle}) \\
+MM3 & Multimeter & Unigor 4n & 1.5\% (vgl. \cite{moodle} \\
+MM4-6 & Multimeter (digital) & Fluke 175 & 1\% + 3 digits \\
+WM & Wattmeter & HM8115-2 \\
 R & Widerstand & $R=68.0~\Omega$ & $\Delta R = 3.4~\Omega$ \\
 C1 & Kondensator & $C_1=100~\mu$F & $\Delta C_1 = 20~\mu$F \\
 C2 & Kondensator & $C_2=47~\mu$F & $\Delta C_2 = 10~\mu$F \\
@@ -174,6 +185,8 @@ C3 & Kondensator & $C_3=20~\mu$F & $\Delta C_3 = 4~\mu$F \\
 C4 & Kondensator & $C_3=10~\mu$F & $\Delta C_3 = 2~\mu$F \\
 \end{tabular}
 \end{table}
+
+Die Bezeichnungen MM1, MM2 und MM3 entsprechen den Geräten P1, P2 und P3 im Schaltplan von Aufgabe 1. In späteren Plänen ändern sich die Bezeichnungen im Schaltplan, sodass wir zum Zwecke der Eindeutigkeit diese Geräte mit MM1 bezeichnet haben. Das Messgerät MM4 (Fluke 175) liegt mehrfach vor, die weiteren Geräte werden als MM5 und MM6 bezeichnet.
 
 Sämtliche Daten wurden nach den Versuch mit Python3.8 ausgewertet, wobei für Grafiken die Library \texttt{Matplotlib} verwendet wird. 
 
@@ -187,7 +200,7 @@ Sämtliche Daten wurden nach den Versuch mit Python3.8 ausgewertet, wobei für G
 \subsection{Untersuchung  der  Anzeige  von  unterschiedlichen  Spannungsmessinstrumenten  bei verschiedenen Kurvenformen}
 \label{subsec:aufbau_task1}
 
-Der Hameg HM8030-3 Funktionsgenerator wird verwendet um verschiedene Spannungskurven zu erzeugen. Dann wird die Spannung einmal mit dem Oszilloskop gemessen (inkl. Spitze-Spitze-Wert und Effektivwert). Zusätzlich noch mit 3 weiteren Messgeräten: TTi1604, M4600 und Unigor 4.
+Der Hameg HM8030-3 Funktionsgenerator wird verwendet um verschiedene Spannungskurven zu erzeugen. Der Ausgangswiderstand des Funktionsgenerators beträgt 50~$\Omega$. Die Frequenz wird auf 50~Hz gestellt. Dann wird die Spannung einmal mit dem Oszilloskop gemessen (inkl. Spitze-Spitze-Wert und Effektivwert). Zusätzlich werden noch 3 weitere Messgeräte (TTi1604, M4600 und Unigor 4) zur Messung der Spannung parallel geschalten. Die Messung der Effektivwerte soll verglichen werden.
 
 
 \begin{figure}[H]
@@ -223,6 +236,10 @@ Für das Signal wird in beiden Fällen ein Transformator herangezogen. Als Bezug
 
 \subsection{Leistung einer RC- bzw RL-Schaltung}
 
+In diesem Kapitel ist die Leistung einer RC- bzw. RL-Schaltung zu bestimmen. Diese Schaltungen sind in den Grafiken~\ref{fig:aufbau_task4} und \ref{fig:aufbau_task5} dargestellt. Der Aufbau ist im wesentlichen identisch, bis auf den Kondensator in \ref{fig:aufbau_task4} und der Spule in \ref{fig:aufbau_task5}.
+
+
+
 \begin{figure}[H]
 \centering
 \caption{Versuchsaufbau, Aufgabe 4}
@@ -246,28 +263,28 @@ Für das Signal wird in beiden Fällen ein Transformator herangezogen. Als Bezug
 
 \subsection{Untersuchung  der  Anzeige  von  unterschiedlichen  Spannungsmessinstrumenten  bei verschiedenen Kurvenformen}
 
-Abschnitt~\ref{subsec:aufbau_task1} beschreibt den Aufbau des Versuchs. Dieser wird nun mit einer Sinusspannung, einer Dreiecksspannung und einer Rechtecksspannung durchgeführt. Das Oszilloskop zeichnet diese 3 Kurven. Sie sind in Grafiken \ref{fig:task1_sin}, \ref{fig:task1_dreieck} und \ref{fig:task1_rechteck} dargestellt.
+Abschnitt~\ref{subsec:aufbau_task1} beschreibt den Aufbau des Versuchs. Dieser wird nun mit einer Sinusspannung, einer Dreiecksspannung und einer Rechtecksspannung durchgeführt. Diese Kurven sollten jeweils dieselbe Frequenz und Amplitude haben, um die Ergebnisse besser vergleichen zu können. Das Oszilloskop zeichnet diese 3 Kurven. Sie sind in Grafiken \ref{fig:task1_sin}, \ref{fig:task1_dreieck} und \ref{fig:task1_rechteck} dargestellt. Zusätzlich wurde der Effektivwert mit 3 verschiedenen Messgeräten gemessen und soll verglichen werden.
 
 
 \begin{figure}[H]
 \centering
 \caption{Sinusschwingung für Aufgabe 1}
 \label{fig:task1_sin}
-\includegraphics[scale=0.5]{bilder/task1_sin.png}
+\includegraphics[scale=0.4]{daten/pul_1.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{Dreiecksschwingung für Aufgabe 1}
 \label{fig:task1_dreieck}
-\includegraphics[scale=0.5]{bilder/task1_dreieck.png}
+\includegraphics[scale=0.4]{daten/pul_2.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{Rechtecksschwingung für Aufgabe 1}
 \label{fig:task1_rechteck}
-\includegraphics[scale=0.5]{bilder/task1_rechteck.png}
+\includegraphics[scale=0.4]{daten/pul_3.png}
 \end{figure}
 
 
@@ -275,28 +292,29 @@ Die gemessenen Werte werden in Tabellen~\ref{tab:messung_task1_volt} und~\ref{ta
 
 \begin{table}[H]
 \centering
-\caption{Gemessene Effektivwerte im Versuch 1 mit 3 verschiedenen Messgeräten. $U_1$ ist TTi1604, $U_2$ ist M4600 und $U_3$ ist Unigor 4.}
+\caption{Gemessene Effektivwerte im Versuch 1 mit 3 verschiedenen Messgeräten. $U_1$ ist MM1 (P1 laut Schaltplan), $U_2$ ist MM2 (P2 laut Schaltplan) und $U_3$ ist MM3 (P3 laut Schaltplan). Alle Unsicherheiten sind aus den Datenblättern entnommen und in der Geräteliste angegeben.}
 \label{tab:messung_task1_volt}
 \begin{tabular}{r|rrr}
+& P1 & P2 & P3 \\
 Schwingung & $U_{1,\text{eff}}$ / V  & $U_{2,\text{eff}}$ / V & $U_{3,\text{eff}}$ / V \\
 \hline
-Sinus & 3.532 & 3.535 & 3.31 \\
-Dreieck & 2.965 & 2.863 & 2.66 \\
-Rechteck & 5.500 & 6.003 & 5.91
+Sinus & $3.532\pm 0.022$ & $3.535 \pm 0.028$ & $3.31 \pm 0.05$ \\
+Dreieck & $2.965\pm 0.019$ & $2.863 \pm 0.024$ & $2.66 \pm 0.04$ \\
+Rechteck & $5.500\pm 0.032$ & $6.003 \pm 0.040$ & $5.91 \pm 0.09$
 \end{tabular}
 \end{table}
 
 
 \begin{table}[H]
 \centering
-\caption{Messwerte bei Versuch 1 mit Oszilloskop.}
+\caption{Messwerte bei Versuch 1 mit Oszilloskop. Alle Unsicherheiten sind in der Geräteliste angegeben.}
 \label{tab:messung_task1_oszi}
 \begin{tabular}{r|rr}
 Schwingung &  $U_{ss}$ / V &  $U_\text{eff}$ / V  \\
 \hline
-Sinus & 10.15 & 3.55 \\
-Dreieck & 10.28 & 2.97 \\
-Rechteck & 11.01 & 5.48
+Sinus & $10.15 \pm 0.20$ & $3.55 \pm 0.07$ \\
+Dreieck & $10.28 \pm 0.21$ & $2.97 \pm 0.06$ \\
+Rechteck & $11.01 \pm 0.22$ & $5.48 \pm 0.11$
 \end{tabular}
 \end{table}
 
@@ -310,16 +328,79 @@ In diesem Fall werden beide Versuchsaufbauten (Grafiken~\ref{fig:aufbau_task2} u
 \centering
 \caption{Kurve des Kondensators aus Aufgabe 2}
 \label{fig:task2_kurve}
-\includegraphics[scale=0.5]{bilder/task2.png}
+\includegraphics[scale=0.4]{daten/pul_4.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{Kurve der Spule aus Aufgabe 3}
 \label{fig:task3_kurve}
-\includegraphics[scale=0.5]{bilder/task3.png}
+\includegraphics[scale=0.4]{daten/pul_5.png}
 \end{figure}
 
+
+\subsection{Leistung einer RC- bzw RL-Schaltung}
+
+In diesem Teil werden die Daten für die Berechnung der Leistungsaufnahme einer RC- bzw RL-Schaltung gemessen. Für die Messung der Leistung sind sowohl die Eingangsspannung $U_E$, der Strom $I$, sowie die Phasenverschiebung nötig.
+
+Das Wattmeter wird zwischen Transformator und RC/RL-Schaltung geschaltet. Dadurch können die Größen in Tabelle~\ref{tab:task45_wattmeter} ermittelt werden. Diese Werte liefern die Leistungsaufnahme der Schaltung. 
+
+\begin{table}[H]
+\caption{Werte des Wattmeters WM (P5 laut Schaltplan) für die RC bzw. RL Schaltung in den Versuchen 4 und 5}
+\label{tab:task45_wattmeter}
+
+\begin{tabular}{c|rrrrrr}
+& $U_E$ / V & $I$ / A & $P$ / W & $Q$ / W & $S$ / W & $\cos(\phi)$ \\
+\hline 
+RC & 13.3 & 0.137 & 1.342 & 1.22 & 1.182 & 0.74 \\
+RL & 13.9 & 0.051 & 0.256 & 0.65 & 0.699 & 0.37
+\end{tabular}
+\end{table}
+
+
+
+
+
+Zusätzlich befinden sich 3 Messgeräte vom Typ Fluke 175 (MM4, MM5 und MM6 laut Geräteliste, P1, P3, P4 laut Schaltplan) in der Schaltung zur Messung von Spannungen. Für die Messung des Stromes wird ein TTi 1604 (MM1 laut Geräteliste, P2 laut Schaltplan) verwendet. Diese Messungen wurden zusätzlich durchgeführt und in Tabelle~\ref{tab:task45_messungen} aufgelistet.
+
+
+\begin{table}[H]
+\caption{Händisch durchgeführte Messungen mit P1, P2, P3 und P4 laut Schaltplan. Messungen jeweils für RC und RL Schaltung.}
+\label{tab:task45_messungen}
+
+\begin{tabular}{c|rrrrr}
+& P1 & P2 & P3 & P4 & P4 \\
+& $U_E$ / V & $I$ / mA & $U_{R1}$ / V & $U_{C1}$ / V & $U_{L1}$ / V \\
+\hline 
+RC & 13.24 & 136.7 & 9.19 & 8.97 & -- \\
+RL & 13.83 & 51.0 & 3.41 &  -- & 13.07
+\end{tabular}
+\end{table}
+
+
+
+
+Bei den Versuchsaufbauten in Grafik \ref{fig:aufbau_task4} und \ref{fig:aufbau_task5} wird jeweils mit dem Oszilloskop die Spannung an zwei Stellen gemessen. Diese Spannungen sind für die RC-Schaltung in Grafik~\ref{fig:task4_kurve}, und für die RL-Schaltung in Grafik~\ref{fig:task5_kurve} dargestellt.
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungen in einer RC-Schaltung}
+\label{fig:task4_kurve}
+\includegraphics[scale=0.4]{daten/pul_6.png}
+\end{figure}
+ 
+
+
+
+\begin{figure}[H]
+\centering
+\caption{Spannungen in einer RL-Schaltung}
+\label{fig:task5_kurve}
+\includegraphics[scale=0.4]{daten/pul_7.png}
+\end{figure}
+ 
 
 
 
@@ -330,32 +411,60 @@ In diesem Fall werden beide Versuchsaufbauten (Grafiken~\ref{fig:aufbau_task2} u
 
 \subsection{Untersuchung  der  Anzeige  von  unterschiedlichen  Spannungsmessinstrumenten  bei verschiedenen Kurvenformen }
 
-Aus der Kurve soll nun der Spitze-Tal-Wert und der Effektivwert berechnet werden. Hierfür wird die Periodendauer benötigt, die sich aus der Frequenz von $f=50~$Hz ergibt. Diese wäre $\tau = 50.00~$ms.
-
-Die Spitze-Tal Werte wurden berechnet, indem zuerst das globale Minimum bzw das globale Maximum der gesamten gegeben Kurve berechnet wurden und diese anschließend voneinander subtrahiert wurden. Der Algorithmus ist in Listing~\ref{lst:ss} beschrieben.
-
-\lstinputlisting[language=Python,captionpos=b, label=lst:ss,caption={Python Skript zur Bestimmung des Spitze-Tal Wertes}]{scripts/spitze_tal.py}
-
-
-
-Zusätzlich wurde für die Effektivwerte eine numerische Integration durchgeführt. Hierfür wurde auf die Simpson-Formel zurückgegriffen. Diese findet sich im Python-Paket \texttt{scipy}. Im Falle der Sinus-Schwingung und der Dreiecksschwingung wurde über die eine Periode von 2 benachbarten Maxima integriert. Bei der Rechtecksschwigung wurde zwischen 2 steigenden Flanken des Rechtecks integriert. 
 
 
 
 
-
-Daraus ergeben sich die Werte in Tabelle~\ref{tab:task1_ergebnisse}.
+Für die Effektivwerte wurde testweise eine numerische Integration durchgeführt. Hierfür wurde auf die Simpson-Formel zurückgegriffen. Diese findet sich im Python-Paket \texttt{scipy}. Im Falle der Sinus-Schwingung und der Dreiecksschwingung wurde über die eine Periode von 2 benachbarten Maxima integriert. Bei der Rechtecksschwigung wurde zwischen 2 steigenden Flanken des Rechtecks integriert. Daraus ergeben sich die Werte in Tabelle~\ref{tab:task1_num_int}.
 \begin{table}[H]
 \caption{Spitze-Tal Werte für die Kurven.}
-\label{tab:task1_ergebnisse}
-\begin{tabular}{c|cc}
-Schwingung & $U_\text{ss}$ / V & $U_\text{eff}$ / V  \\
+\label{tab:task1_num_int}
+\begin{tabular}{c|c}
+Schwingung &  $U_\text{eff}$ / V  \\
 \hline
-Sinus & 10.15 & 3.56 \\
-Dreieck & 10.29 & 2.98 \\
-Rechteck & 11.01 & 5.49
+Sinus &  3.557 \\
+Dreieck & 2.983 \\
+Rechteck & 5.487
 \end{tabular}
 \end{table}
+
+
+
+Das Oszilloskop berechnet den Spitze-Tal Wert und den Effektivwert direkt. Durch Division durch den Scheitelfaktor kann man aus dem Scheitelwert den Effektivwert berechnen. Der Scheitelfaktor beträgt $\sqrt{2}$ für Sinus, $\sqrt{3}$ für Dreiecksverteilungen und $1$ für die Rechtecksverteilung. Zusätzlich muss $U_{ss}$ noch halbiert werden, damit man den Scheitelwert erhält.
+
+\begin{table}[H]
+\centering
+\caption{Effektivwert mit Oszilloskop. Zum einen der gemessene Wert, zum anderen der berechnete Wert mit Hilfe des Scheitelfaktors.}
+\label{tab:auswertung_task1_oszi}
+\begin{tabular}{r|rrr}
+ & & gemessen & berechnet \\
+ Schwingung &  $U_{ss}$ / V &  $U_\text{eff}$ / V  &  $U_\text{eff}$ / V\\
+\hline
+Sinus & $10.15 \pm 0.20$ & $3.55 \pm 0.07$ & $3.59 \pm 0.07$ \\
+Dreieck & $10.28 \pm 0.21$ & $2.97 \pm 0.06$ & $2.96 \pm 0.06$ \\
+Rechteck & $11.01 \pm 0.22$ & $5.48 \pm 0.11$ & $5.51 \pm 0.11$
+\end{tabular}
+\end{table}
+
+
+
+
+
+\begin{table}[H]
+\centering
+\caption{Gemessene Effektivwerte mit den Messgeräten P1 (MM1), P2 (MM2) und P3 (MM3) nach Grafik~\ref{fig:aufbau_task1}.}
+\label{tab:auswertung_task1_volt}
+\begin{tabular}{r|rrr}
+& P1 & P2 & P3 \\
+Schwingung & $U_{1,\text{eff}}$ / V  & $U_{2,\text{eff}}$ / V & $U_{3,\text{eff}}$ / V \\
+\hline
+Sinus & $3.532\pm 0.022$ & $3.535 \pm 0.028$ & $3.31 \pm 0.05$ \\
+Dreieck & $2.965\pm 0.019$ & $2.863 \pm 0.024$ & $2.66 \pm 0.04$ \\
+Rechteck & $5.500\pm 0.032$ & $6.003 \pm 0.040$ & $5.91 \pm 0.09$
+\end{tabular}
+\end{table}
+
+
 
 
 
@@ -366,7 +475,7 @@ Die Phasenverschiebung kann theoretisch und praktisch berechnet werden. Gemäß 
 Z_2 &= R + Z_{C_1} = R - \frac{i}{2\cdot\pi\cdot f \cdot C_1} \\
 Z_3 &= R + Z_{L} = R + i\cdot 2\cdot\pi\cdot f \cdot L
 \end{align*}
-für die Gesamtimpedanz in den Versuchen 2 und 3.
+für die Gesamtimpedanz $Z_2$ in den Versuch 2 bzw $Z_3$ in Versuch 3.
 
 Für die Phasenverschiebung beim Kondensator aus Aufgabe 2 ($\varphi_2$) gilt daher
 \begin{align*}
@@ -381,7 +490,21 @@ Für die Phasenverschiebung bei der Spule aus Aufgabe 3 ($\varphi_3$) gilt nach 
 \end{align*}
 
 
-Für Aufgabe 2 ergibt sich ein theoretischer Wert $\varphi_2 = (44 \pm 8)^\circ$, die sich der Strom vor der Spannung eines Kondensators befindet. Da für die Spule keine Induktion gegeben ist, kann der theoretische Wert nicht berechnet werden.
+Für Aufgabe 2 ergibt sich ein theoretischer Wert $\varphi_2 = (44 \pm 8)^\circ$, die sich der Strom vor der Spannung eines Kondensators befindet. Dabei wurde allerdings von einem idealen Kondensator ausgegangen (den es real nicht gibt). Es müsste gemäß \cite{moodle} noch der Isolationswiderstand berücksichtigt werden. 
+
+Da für die Spule keine Induktion gegeben ist, kann der theoretische Wert nicht berechnet werden.
+
+
+
+Für die Aufgaben 2 und 3 können nun Zeigerdiagramme erstellt werden. Die Eingangsspannung ist jeweils die Summe über die Spannung am Widerstand und die Spannung am Bauteil (Kondensator bzw. Spule). Es gilt also
+\begin{align*}
+U_E &= U_{R1} + U_{C1}
+\end{align*}
+im Falle des Kondensators und 
+\begin{align*}
+U_E &= U_{R1} + U_{L1}
+\end{align*}
+im Falle der Spule.
 
 
 
@@ -390,11 +513,13 @@ Für Aufgabe 2 ergibt sich ein theoretischer Wert $\varphi_2 = (44 \pm 8)^\circ$
 
 \subsection{Untersuchung  der  Anzeige  von  unterschiedlichen  Spannungsmessinstrumenten  bei verschiedenen Kurvenformen }
 
-Tabelle~\ref{tab:task1_final} zeigt alle berechneten Ergebnisse der Effektivwerte. Generell ist zu sagen, dass die meisten Messgeräte für Sinus-Schwingungen ausgelegt sind und alle anderen Schwingungen durch Sinus-Schwingungen approximieren. Dadurch muss man diese händisch umrechnen. Alternativ kann man die Kurve numerisch integrieren, um auf eine genauere Berechnung zu kommen. Dies ist insbesondere vorteilhaft, falls es bei der Sinus-Schwingung selbst zu möglichen Unregelmäßigkeiten oder Verzerrungen kommt. Das Oszilloskop selbst benutzt zur Berechnung des Effektivwertes auch eine numerische Integration. Dieser Schluss ergibt sich, wenn man die Zahlen vergleicht. Die Messgeräte TTi1604 und M4600 erhalten bei der Sinusschwingung durchaus akzeptable Werte. Lediglich Unigor 4 weicht bei der Sinusschwingung um 0.2~V ab.
 
-Es sollte zusätzlich noch kritisch hinterfragt werden, ob sich die Messgeräte bei gleichzeitiger Messung gegenseitig beeinflussen.
+Generell ist zu sagen, dass die meisten Messgeräte für Sinus-Schwingungen ausgelegt sind und alle anderen Schwingungen durch Sinus-Schwingungen approximieren. Durch diverse Faktoren lassen sich bekannte Funktionsverläufe ineinander umrechnen. Das funktioniert, sofern es keine gröberen Verzerrungen oder Abweichungen von der gewünschten Form gibt. Zusätzlich gelten diese Faktoren nur für definierte Signale mit einer gewissen Regelmäßigkeit. Bei sich mehrmals ändernden oder überlagerten Signalen sollte man auf numerische Integration zurückgreifen.
 
-Im Allgemeinen zeigt sich (wie es sich auch geometrisch vermuten lässt), dass bei nicht exakter Berechnung die Dreiecksspannung einen kleineren Wert ergibt, und die Rechtecksspannung einen größeren. Das liegt an der geometrischen Überlegung, dass die Fläche unter der Dreiecksschwingung kleiner ist als jene bei einer Sinusschwingung und jene eines Rechtecks größer.
+Wir konnten beobachten, dass das Ergebnis der numerischen Integration den Effektivwert genauer bestimmt, als der Weg über den Scheitelwert. Die Simpson-Formel für die numerische Integration liefert nach den Erkentnissen der numerischen Analysis hervorragende Werte, insbesondere für Sinusschwingungen. Es liegt daher der Schluss nahe, dass das Oszilloskop intern ebenfalls eine numerische Integration durchführt.
+
+Es sollte zusätzlich noch kritisch hinterfragt werden, ob sich die Messgeräte bei gleichzeitiger Messung gegenseitig beeinflussen. Bei der Spannungsmessung sollte ein Messgerät über einen sehr hohen Innenwiderstand verfügen. Durch die parallelen Messungen werden diese Innenwiderstände parallel geschalten, was eine Senkung des Gesamtwiderstandes zur Folge hat. Es wäre daher besser, die Messungen nacheinander anstatt parallel durchzuführen.
+
 
 \subsection{Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}
 
@@ -415,6 +540,7 @@ Analog könnte man bei gegebener Induktivität einen theoretischen Wert für die
 
 \subsection{Leistung einer RC- bzw RL-Schaltung}
 
+Die Leistung wird einmal durch ein Wattmeter gemessen und einmal durch manuelles Messen der Phasenverschiebung, des Stromes und der Spannung. Grundsätzlich sollte man dasselbe Ergebnis erhalten. Das Problem ist allerdings, dass hier von sämtlichen Messgeräten verschiedene Innenwiderstände überlagert werden.  Da jedes Messgerät die Messgröße geringfügig belastet, wäre hier zu klären, ob man bei einzelnen Messungen ein genaueres Messergebnis erhält. 
 
 
 
@@ -423,18 +549,7 @@ Analog könnte man bei gegebener Induktivität einen theoretischen Wert für die
 \subsection{Untersuchung  der  Anzeige  von  unterschiedlichen  Spannungsmessinstrumenten  bei verschiedenen Kurvenformen }
 
 
-\begin{table}[H]
-\centering
-\caption{Gemessene Effektivwerte mit 3 verschiedenen Messgeräten und dem Oszilloskop. $U_1$ ist TTi1604, $U_2$ ist M4600 und $U_3$ ist Unigor 4.}
-\label{tab:task1_final}
-\begin{tabular}{r|rrrr|p{2cm}}
-Schwingung & Oszi\-loskop & $U_{1,\text{eff}}$ / V  & $U_{2,\text{eff}}$ / V & $U_{3,\text{eff}}$ / V & berechneter Effektivwert\\
-\hline
-Sinus & 3.55 & 3.532 & 3.535 & 3.31 & \hfill3.56\\
-Dreieck & 2.97 & 2.965 & 2.863 & 2.66 & \hfill2.98 \\
-Rechteck & 5.48 & 5.500 & 6.003 & 5.91 & \hfill5.49
-\end{tabular}
-\end{table}
+
 
 
 
@@ -455,6 +570,8 @@ Rechteck & 5.48 & 5.500 & 6.003 & 5.91 & \hfill5.49
 \bibitem{src6} \url{https://www.emf.ethz.ch/emf-info/themen/physik/verknuepfung-von-elektrischen-und-magnetischen-feldern/wirkleistung-blindleistung-scheinleistung/}
 
 \bibitem{demtroeder} W. Demtröder: \emph{Experimentalphysik 2 - Elektrizität  und Optik}, 7. Auflage, 2017.
+
+\bibitem{oszi_datenblatt} \url{https://www.keysight.com/at/de/assets/7018-02733/data-sheets/5990-6618.pdf}
 \end{thebibliography}
 
 
