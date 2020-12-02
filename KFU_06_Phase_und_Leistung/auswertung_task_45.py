@@ -1,8 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import simps
-from math import log,sqrt,pi
+from math import log,sqrt,pi,cos,sin
 import math
+
 
 
 def read_csv(filename):
@@ -115,6 +116,86 @@ ax.set_ylabel('U / V')
 ax.set_title('RL-Schaltung')
 plt.savefig("bilder/task5.png")
 plt.close()
+
+
+
+
+
+
+#impedanzen
+f = 50 #Hz
+Delta_f = 0.02 #Hz
+R = 68
+Delta_R = 3.4
+C = 47*10**-6
+Delta_C = C/5
+
+tan_phi4 = 1/(2*pi) * 1/(f*R*C)
+delta_tan_phi4 = 1/(2*pi) * (Delta_f*R*C + f*Delta_R*C + f*R*Delta_C)/(f*R*C)**2
+
+phi4 = math.atan(tan_phi4)/pi*180
+phi4_upper = math.atan(tan_phi4 + delta_tan_phi4)/pi*180
+phi4_lower = math.atan(tan_phi4 - delta_tan_phi4)/pi*180
+print("psi4 range: " + str(phi4_lower) + ", " + str(phi4) + ", " + str(phi4_upper))
+
+
+
+
+
+
+
+UL = 13.07
+Delta_UL = 0.16
+
+IL = 0.051
+Delta_IL = 0.0007
+
+L =UL/(2*pi*f*IL)
+Delta_L = (Delta_UL * IL*f + UL * Delta_IL * f + UL*IL*Delta_f)/(IL**2*f**2)
+
+print("L: " + str(L) + " +- " + str(Delta_L))
+
+
+
+
+tan_phi5 = 2*pi*f*L/R
+delta_tan_phi5 = 2*pi * (Delta_f *L * R + f * Delta_L * R + f* L * Delta_R)/R**2
+
+phi5 = math.atan(tan_phi5)/pi*180
+phi5_upper = math.atan(tan_phi5 + delta_tan_phi5)/pi*180
+phi5_lower = math.atan(tan_phi5 - delta_tan_phi5)/pi*180
+print("psi5 range: " + str(phi5_lower) + ", " + str(phi5) + ", " + str(phi5_upper))
+
+
+
+
+
+print("")
+print("")
+print("")
+print("")
+
+
+#finale tabelle
+UE_RC = 13.24
+Delta_UE_RC = 0.16
+UE_RL = 13.83
+Delta_UE_RL = 0.16
+
+I_RC = 136.7/1000
+Delta_I_RC = 1.1/1000
+I_RL = 51/1000
+Delta_I_RL = 0.7/1000
+
+
+print("S RC: " + str(UE_RC * I_RC) + " +- " + str(Delta_UE_RC * I_RC + UE_RC * Delta_I_RC) )
+print("S RL: " + str(UE_RL * I_RL) + " +- " + str(Delta_UE_RL * I_RL + UE_RL * Delta_I_RL) )
+
+print("P RC: " + str(UE_RC * I_RC * cos(math.atan(tan_phi4))) + " +- " + str(Delta_UE_RC * I_RC + UE_RC * Delta_I_RC) )
+print("P RL: " + str(UE_RL * I_RL * cos(math.atan(tan_phi4))) + " +- " + str(Delta_UE_RL * I_RL + UE_RL * Delta_I_RL) )
+
+
+
 
 
 

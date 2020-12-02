@@ -81,11 +81,14 @@ def phasenverschiebung(t, V1, V2, offset):
 
 f = 20 # in ms
 
-print("Phasenverschiebungen:")
+
 t, V1, V2 = read_csv("daten/pul_4.csv")
 
 phase_t = phasenverschiebung(t,V1,V2,0)
 print("praktische phasenverschiebung C: " + str(phase_t/f*360))
+print("Scheitelspannung UR (RC): " + str(spitze_tal(V1)/2))
+print("Scheitelstrom (RC): " + str(spitze_tal(V1)/2/68))
+print("Scheitelspannung über C: " + str(spitze_tal(V2)/2))
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
@@ -106,6 +109,10 @@ plt.close()
 t, V1, V2 = read_csv("daten/pul_5.csv")
 phase_t = phasenverschiebung(t,V1,V2,900)
 print("praktische phasenverschiebung L: " + str(phase_t/f*360))
+print("Scheitelspannung UR (RL): " + str(spitze_tal(V1)/2))
+print("Scheitelstrom (RL): " + str(spitze_tal(V1)/2/68))
+print("Scheitelspannung über L: " + str(spitze_tal(V2)/2))
+
 
 fig, ax = plt.subplots() 
 #ax.axis([400, 800, 0, 1])
@@ -122,18 +129,3 @@ plt.close()
 
 
 
-
-
-#impedanzen
-f = 50 #Hz
-Delta_f = 0.02 #Hz
-R = 68
-Delta_R = 3.4
-C = 47*10**-6
-Delta_C = C/5
-print("Theoretische Phasenverschiebungen:")
-phi2 = 1/(2*pi) * 1/(f*R*C)
-delta_phi2 = 1/(2*pi) * (Delta_f*R*C + f*Delta_R*C + f*R*Delta_C)/(f*R*C)**2
-print("phi2: " + str(phi2) + " +- " + str(delta_phi2))
-print("phi2 range: " + str(180/pi*math.atan(phi2+delta_phi2)) + ", " + str(180/pi*math.atan(phi2-delta_phi2)))
-print("theoretisch exakter Wert phi2: " + str(180/pi * math.atan(phi2)))

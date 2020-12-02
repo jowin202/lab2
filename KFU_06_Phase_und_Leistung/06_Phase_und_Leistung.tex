@@ -3,6 +3,9 @@
 \usepackage[hyphens]{url} 
 
 
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
 \usepackage[utf8]{inputenc}
 
 \usepackage{pdfpages}
@@ -179,10 +182,7 @@ MM3 & Multimeter & Unigor 4n & 1.5\% (vgl. \cite{moodle} \\
 MM4-6 & Multimeter (digital) & Fluke 175 & 1\% + 3 digits \\
 WM & Wattmeter & HM8115-2 \\
 R & Widerstand & $R=68.0~\Omega$ & $\Delta R = 3.4~\Omega$ \\
-C1 & Kondensator & $C_1=100~\mu$F & $\Delta C_1 = 20~\mu$F \\
-C2 & Kondensator & $C_2=47~\mu$F & $\Delta C_2 = 10~\mu$F \\
-C3 & Kondensator & $C_3=20~\mu$F & $\Delta C_3 = 4~\mu$F \\
-C4 & Kondensator & $C_3=10~\mu$F & $\Delta C_3 = 2~\mu$F \\
+C1 & Kondensator & $C_2=47~\mu$F & $\Delta C_1 = 10~\mu$F \\
 \end{tabular}
 \end{table}
 
@@ -352,7 +352,7 @@ Das Wattmeter wird zwischen Transformator und RC/RL-Schaltung geschaltet. Dadurc
 \begin{tabular}{c|rrrrrr}
 & $U_E$ / V & $I$ / A & $P$ / W & $Q$ / W & $S$ / W & $\cos(\phi)$ \\
 \hline 
-RC & 13.3 & 0.137 & 1.342 & 1.22 & 1.182 & 0.74 \\
+RC & 13.3 & 0.137 & 1.342 & 1.22 & 1.812 & 0.74 \\
 RL & 13.9 & 0.051 & 0.256 & 0.65 & 0.699 & 0.37
 \end{tabular}
 \end{table}
@@ -372,8 +372,8 @@ Zusätzlich befinden sich 3 Messgeräte vom Typ Fluke 175 (MM4, MM5 und MM6 laut
 & P1 & P2 & P3 & P4 & P4 \\
 & $U_E$ / V & $I$ / mA & $U_{R1}$ / V & $U_{C1}$ / V & $U_{L1}$ / V \\
 \hline 
-RC & 13.24 & 136.7 & 9.19 & 8.97 & -- \\
-RL & 13.83 & 51.0 & 3.41 &  -- & 13.07
+RC & $13.24 \pm 0.16$ & $136.7\pm1.1$ & $9.19 \pm 0.12$ & $8.97 \pm 0.12$ & -- \\
+RL & $13.83 \pm 0.16$ & $51.0\pm0.7$ & $3.41 \pm 0.06$ &  -- & $13.07 \pm 0.16$
 \end{tabular}
 \end{table}
 
@@ -470,41 +470,166 @@ Rechteck & $5.500\pm 0.032$ & $6.003 \pm 0.040$ & $5.91 \pm 0.09$
 
 \subsection{Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}
 
+
+Aus den Spannungskurven ergeben sich Werte für Scheitelspannung am Widerstand $\hat U_R$, Strom durch das jeweilige Bauteil $\hat I$ (durch Berechnung mit Ohm'schen Gesetz), die Scheitelspannung durch Spule $\hat U_L$ bzw. $\hat U_C$ und die Phasenverschiebung $\varphi$. Das Vorzeichen von $\varphi$ ist so gewählt, dass die Phasenverschiebung vom Strom zur Spannung gewählt wird, also positiv bei Konensator und negativ bei Spule. Bei den Zeigerdiagrammen orientieren wir uns farblich an der Ausgabe des Oszilloskop (also orange für die Spannung am Widerstand und grün für die Spannung am jeweiligen Bauteil).
+
+Diese Werte sind in Tabelle~\ref{tab:task23_auswertung} zusammengefasst.
+\begin{table}[H]
+\caption{Werte für Aufgabe 2 und 3}
+\label{tab:task23_auswertung}
+\begin{tabular}{r|rrrrr}
+& $\hat U_R$ / V & $\hat I$ / mA & $\hat U_C$ / V & $\hat U_L$ / V & $\varphi$ / ${}^\circ$ \\
+\hline
+RC & 13.47 & 19.8 & 12.86 & -- & 92.30\\
+RL & 5.07 & 74.5 & -- &  17.89 & -83.94
+\end{tabular}
+
+\end{table}
+
+
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+
+
+\begin{figure}[H]
+\caption{Zeigerdiagramm für Aufgabe 2. Die Achsenbeschriftung ist in Volt angegeben. Für den Strom (roter Pfeil) entspricht eine Achseneinheit 10~mA.}
+\label{fig:task2_zeiger}
+
+\definecolor{cccccc}{rgb}{0.8,0.8,0.8}
+\definecolor{ffzzqq}{rgb}{1,0.6,0}
+\definecolor{wwwwff}{rgb}{0.4,0.4,1}
+\definecolor{qqcctt}{rgb}{0,0.8,0.2}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=0.7]
+\draw[->,color=black] (-1,0) -- (15,0);
+\foreach \x in {,2,4,6,8,10,12,14}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-14) -- (0,1);
+\foreach \y in {-12,-10,-8,-6,-4,-2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1,-14) rectangle (15,2);
+\draw [shift={(0,0)},color=wwwwff,fill=wwwwff,fill opacity=0.05] (0,0) -- (-92.3:2.3) arc (-92.3:0:2.3) -- cycle;
+\draw [->,line width=2.8pt,color=qqcctt] (0,0) -- (13.47,0);
+\draw [->,line width=2pt,color=ffzzqq] (0,0) -- (-0.52,-12.85);
+\draw [->,line width=2pt,color=cccccc] (0,0) -- (12.86,-12.85);
+\draw [->,color=red] (0,0) -- (2,0);
+%\begin{scriptsize}
+\draw[color=qqcctt] (7.05,-1.3) node {\Huge $U_R$};
+\draw[color=wwwwff] (0.7,-1.37) node {$92.3\textrm{\degre}$};
+\draw[color=ffzzqq] (1.4,-6.67) node {\Huge $U_C$};
+\draw[color=cccccc] (7.5,-6) node {\Huge $U_E$};
+\draw[color=red] (2.08,0.76) node {\Huge $I$};
+%\end{scriptsize}
+\end{tikzpicture}
+
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\caption{Zeigerdiagramm für Aufgabe 3. Die Achsenbeschriftung ist in Volt angegeben. Für den Strom (schwarzer Pfeil) entspricht eine Achseneinheit 10~mA.}
+\label{fig:task3_zeiger}
+
+\definecolor{wwwwff}{rgb}{0.4,0.4,1}
+\definecolor{cccccc}{rgb}{0.8,0.8,0.8}
+\definecolor{ffzzqq}{rgb}{1,0.6,0}
+\definecolor{qqcctt}{rgb}{0,0.8,0.2}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=0.7]
+\draw[->,color=black] (-1,0) -- (8,0);
+\foreach \x in {,2,4,6}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-2) -- (0,18);
+\foreach \y in {,2,4,6,8,10,12,14,16}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1,-2) rectangle (8,18);
+\draw [shift={(0,0)},color=wwwwff,fill=wwwwff,fill opacity=0.05] (0,0) -- (0:3.34) arc (0:83.94:3.34) -- cycle;
+\draw [->,line width=2.8pt,color=qqcctt] (0,0) -- (5.07,0);
+\draw [->,line width=2pt,color=ffzzqq] (0,0) -- (1.89,17.79);
+\draw [->,line width=2pt,color=cccccc] (0,0) -- (5.07,17.79);
+\draw [->,color=red] (0,0) -- (7.5,0);
+%\begin{scriptsize}
+\draw[color=qqcctt] (5.3,1.22) node {\Huge $U_R$};
+\draw[color=ffzzqq] (2.4,13) node {\Huge $U_L$};
+\draw[color=cccccc] (4.8,12.25) node {\Huge $U_E$};
+\draw[color=red] (2.4,-0.8) node {\Huge $I$};
+\draw[color=wwwwff] (1.83,1.56) node {$83.94\textrm{\degre}$};
+%\end{scriptsize}
+\end{tikzpicture}
+
+\end{figure}
+
+
+
+
+\subsection{Leistung einer RC- bzw RL-Schaltung}
+
+Versuch 4 soll die Leistung einer RC-Schaltung bestimmen. Dieser Versuch ist ähnlich zu Versuch 2, wo auch schon eine RC-Schaltung gegeben war. 
+
+Versuch 5 soll die Leistung einer RL-Schaltung bestimmen. Dieser Versuch ist ähnlich zu Versuch 3, wo auch schon eine RL-Schaltung gegeben war. 
+
+Im folgenden beziehen sich alle Größen mit dem Index 4 auf RC-Schaltung mit Kondensator und alle Größen mit Index 5 auf die RL-Schaltung mit der Induktivität.
+
+Im vorherigen Abschnitt wurden Phasenverschiebungen mit dem griechischen Buchstaben $\varphi$ bezeichnet. Diese Verschiebungen bezogen sich auf Strom und Spannung des Kondensators bzw. der Induktivität. Im folgenden wird die Phasenverschiebung der Eingangsspannung und des Gesamtstromes berechnet. Um den Unterschied zu verdeutlichen wird hier für die Phasenverschiebung der Buchstabe $\psi$ verwendet.
+
+
 Die Phasenverschiebung kann theoretisch und praktisch berechnet werden. Gemäß der Formel für die Impedanz ergibt sich nach der Theorie (vgl. \cite{demtroeder})
 \begin{align*}
-Z_2 &= R + Z_{C_1} = R - \frac{i}{2\cdot\pi\cdot f \cdot C_1} \\
-Z_3 &= R + Z_{L} = R + i\cdot 2\cdot\pi\cdot f \cdot L
+Z_4 &= R + Z_{C_1} = R - \frac{i}{2\cdot\pi\cdot f \cdot C_1} \\
+Z_5 &= R + Z_{L} = R + i\cdot 2\cdot\pi\cdot f \cdot L
 \end{align*}
-für die Gesamtimpedanz $Z_2$ in den Versuch 2 bzw $Z_3$ in Versuch 3.
 
-Für die Phasenverschiebung beim Kondensator aus Aufgabe 2 ($\varphi_2$) gilt daher
-\begin{align*}
-\tan\left(\varphi_2\right) &= \frac{\Im(Z_2)}{\Re(Z_2)} \\
+Für die Phasenverschiebung beim Kondensator aus Aufgabe 4 ($\psi_4$) gilt daher
+\begin{align}\nonumber
+\tan\left(\psi_4\right) &= \frac{\Im(Z_4)}{\Re(Z_4)} \\
 &= \frac{1}{2\cdot\pi} \cdot\left(\frac{1}{ f\cdot R \cdot C_1} \pm  \frac{\Delta f\cdot R \cdot C_1 + f\cdot \Delta R \cdot C_1 + f\cdot R \cdot \Delta C_1}{ (f \cdot R\cdot C_1)^2} \right)
-\end{align*}
+\end{align}
 
-Für die Phasenverschiebung bei der Spule aus Aufgabe 3 ($\varphi_3$) gilt nach der Theorie
+Für die Phasenverschiebung bei der Spule aus Aufgabe 5 ($\psi_5$) gilt nach der Theorie
+\begin{align}\nonumber
+\tan\left(\psi_5\right) &= \frac{\Im(Z_5)}{\Re(Z_5)} \\
+&= 2\cdot \pi\cdot \left( \frac{f \cdot L}{R} \pm \frac{\Delta f\cdot L\cdot R + f\cdot \Delta L\cdot R + f\cdot L \cdot \Delta R}{R^2} \right)\label{eq:phase_spule}
+\end{align}
+
+
+Für Aufgabe 4 ergibt sich bei bekanntem Widerstand von $R=(68.0\pm3.4)~\Omega$ und bei bekannter Kapazität $C_1 = (47\pm10)~\mu$F ein theoretischer Wert 
 \begin{align*}
-\tan\left(\varphi_3\right) &= \frac{\Im(Z_3)}{\Re(Z_3)} \\
-&= 2\cdot \pi\cdot \left( \frac{f \cdot L}{R} \pm \frac{\Delta f\cdot L\cdot R + f\cdot \Delta L\cdot R + f\cdot L \cdot \Delta R}{R^2} \right)
+\psi_4 = (44 \pm 8)^\circ
 \end{align*}
+ die sich der Strom vor der Spannung eines Kondensators befindet. Dabei wurde allerdings von einem idealen Kondensator ausgegangen 
 
-
-Für Aufgabe 2 ergibt sich ein theoretischer Wert $\varphi_2 = (44 \pm 8)^\circ$, die sich der Strom vor der Spannung eines Kondensators befindet. Dabei wurde allerdings von einem idealen Kondensator ausgegangen (den es real nicht gibt). Es müsste gemäß \cite{moodle} noch der Isolationswiderstand berücksichtigt werden. 
-
-Da für die Spule keine Induktion gegeben ist, kann der theoretische Wert nicht berechnet werden.
-
-
-
-Für die Aufgaben 2 und 3 können nun Zeigerdiagramme erstellt werden. Die Eingangsspannung ist jeweils die Summe über die Spannung am Widerstand und die Spannung am Bauteil (Kondensator bzw. Spule). Es gilt also
+Da für die Spule keine Induktivität gegeben ist, muss man die Induktivität der Spule aus den Daten berechnen. Es gilt nach dem Ohm'schen Gesetz
 \begin{align*}
-U_E &= U_{R1} + U_{C1}
+Z_L = \frac{U_L}{I_L} \pm \frac{\Delta U_L\cdot I_L + U_L\cdot \Delta I_L}{I_L^2}
 \end{align*}
-im Falle des Kondensators und 
+Die Impedanz einer Induktvität ist gegeben als $Z_L = i\cdot \omega \cdot L$. Insgesamt folgt dann
 \begin{align*}
-U_E &= U_{R1} + U_{L1}
+L &= \frac{1}{2\cdot \pi}\cdot \left(\frac{U_L}{ f \cdot I_L} \pm \frac{\Delta U_L\cdot f\cdot  I_L + U_L\cdot f\cdot  \Delta I_L + U_L\cdot I_L\cdot \Delta f}{f^2\cdot I_L^2}\right)\\
+L &= (815.7 \pm 135.1)~\text{mH}
 \end{align*}
-im Falle der Spule.
+In~\eqref{eq:phase_spule} eingesetzt ergibt das für die Phasenverschiebung
+\begin{align*}
+\psi_5 = (75 \pm 4)~^\circ
+\end{align*}
+
+
+Insgesamt kann nun die benötigte Leistung der RC- und RL-Schaltung berechnet werden.
+
+\begin{table}[H]
+\caption{Berechnete Leistung für die Versuche 4 und 5}
+\label{tab:task45_leistung_ergebnis}
+
+\begin{tabular}{c|rrrrrr}
+& $U_E$ / V & $I$ / mA & $P$ / W & $Q$ / W & $S$ / W & $\psi$ / $^\circ$ \\
+\hline 
+RC & $13.24\pm0.16$ & $136.7\pm1.1$ &  &  & $1.81\pm 0.04$ &  \\
+RL & $13.83\pm0.16$ & $51.0\pm0.7$ &  &  & $0.70 \pm 0.02$ & 
+\end{tabular}
+\end{table}
+
+
 
 
 
@@ -523,19 +648,19 @@ Es sollte zusätzlich noch kritisch hinterfragt werden, ob sich die Messgeräte 
 
 \subsection{Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}
 
-Für den Kondensator wurde eine Phasenverschiebung von $\varphi_2 = 92.30^\circ$ gemessen. Das ist nach der Theorie nicht möglich, da ein perfekter Kondensator ohne Widerstand eine Impedanz von 
-\begin{align*}
-Z_C = \frac{1}{i\cdot\omega \cdot C}
-\end{align*}
-aufweist. In der Beziehung $U=Z_C\cdot I$ entsteht dadurch eine $90^\circ$ Phasenverschiebung zwischen $I$ und $U$. Der Isolationswiderstand, welcher in \cite{moodle} beschrieben ist, würde diese Phasenverschiebung höchstens verkleinern. Der theoretische Wert der Phasenverschiebung wäre $\varphi_2 = (44\pm8)^\circ$ unter Vernachlässigung des Isolationswiderstandes und der Annahme eines perfekten Kondensators für die gegebenen Werte $R = 68~\Omega$, $f=50~$Hz und $C=47~\mu$F.
-
-~
-
-Die Impedanz einer Spule wäre 
-\begin{align*}
-Z_L = i\cdot\omega \cdot L
-\end{align*}
-Analog könnte man bei gegebener Induktivität einen theoretischen Wert für die Phasenverschiebung berechnen, sofern $L$ gegeben wäre. Die Phasenverschiebung würde sich durch das Vorzeichen von jener beim Kondensator unterscheiden.
+%Für den Kondensator wurde eine Phasenverschiebung von $\varphi_2 = 92.30^\circ$ gemessen. Das ist nach der Theorie nicht möglich, da ein perfekter Kondensator ohne Widerstand eine Impedanz von 
+%\begin{align*}
+%Z_C = \frac{1}{i\cdot\omega \cdot C}
+%\end{align*}
+%aufweist. In der Beziehung $U=Z_C\cdot I$ entsteht dadurch eine $90^\circ$ Phasenverschiebung zwischen $I$ und $U$. Der Isolationswiderstand, welcher in \cite{moodle} beschrieben ist, würde diese Phasenverschiebung höchstens verkleinern. Der theoretische Wert der Phasenverschiebung wäre $\varphi_2 = (44\pm8)^\circ$ unter Vernachlässigung des Isolationswiderstandes und der Annahme eines perfekten Kondensators für die gegebenen Werte $R = 68~\Omega$, $f=50~$Hz und $C=47~\mu$F.
+%
+%~
+%
+%Die Impedanz einer Spule wäre 
+%\begin{align*}
+%Z_L = i\cdot\omega \cdot L
+%\end{align*}
+%Analog könnte man bei gegebener Induktivität einen theoretischen Wert für die Phasenverschiebung berechnen, sofern $L$ gegeben wäre. Die Phasenverschiebung würde sich durch das Vorzeichen von jener beim Kondensator unterscheiden.
 
 
 \subsection{Leistung einer RC- bzw RL-Schaltung}
