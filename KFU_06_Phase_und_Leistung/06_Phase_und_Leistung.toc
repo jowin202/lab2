@@ -20,9 +20,9 @@
 \contentsline {section}{\numberline {7}Diskussion}{20}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Untersuchung der Anzeige von unterschiedlichen Spannungsmessinstrumenten bei verschiedenen Kurvenformen }{20}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}{20}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Leistung einer RC- bzw RL-Schaltung}{20}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.3}Leistung einer RC- bzw RL-Schaltung}{21}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Zusammenfassung}{21}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Untersuchung der Anzeige von unterschiedlichen Spannungsmessinstrumenten bei verschiedenen Kurvenformen }{21}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}{21}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Leistung einer RC- bzw RL-Schaltung}{21}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{21}{section.9}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{22}{section.9}%

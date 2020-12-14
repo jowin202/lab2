@@ -132,6 +132,8 @@ Delta_C = C/5
 
 tan_phi4 = 1/(2*pi) * 1/(f*R*C)
 delta_tan_phi4 = 1/(2*pi) * (Delta_f*R*C + f*Delta_R*C + f*R*Delta_C)/(f*R*C)**2
+cos_phi4 = 1/sqrt(1+tan_phi4**2)
+sin_phi4 = sqrt(1-cos_phi4**2)
 
 phi4 = math.atan(tan_phi4)/pi*180
 phi4_upper = math.atan(tan_phi4 + delta_tan_phi4)/pi*180
@@ -160,6 +162,9 @@ print("L: " + str(L) + " +- " + str(Delta_L))
 
 tan_phi5 = 2*pi*f*L/R
 delta_tan_phi5 = 2*pi * (Delta_f *L * R + f * Delta_L * R + f* L * Delta_R)/R**2
+cos_phi5 = 1/sqrt(1+tan_phi5**2)
+sin_phi5 = sqrt(1-cos_phi5**2)
+
 
 phi5 = math.atan(tan_phi5)/pi*180
 phi5_upper = math.atan(tan_phi5 + delta_tan_phi5)/pi*180
@@ -191,8 +196,14 @@ Delta_I_RL = 0.7/1000
 print("S RC: " + str(UE_RC * I_RC) + " +- " + str(Delta_UE_RC * I_RC + UE_RC * Delta_I_RC) )
 print("S RL: " + str(UE_RL * I_RL) + " +- " + str(Delta_UE_RL * I_RL + UE_RL * Delta_I_RL) )
 
-print("P RC: " + str(UE_RC * I_RC * cos(math.atan(tan_phi4))) + " +- " + str(Delta_UE_RC * I_RC + UE_RC * Delta_I_RC) )
-print("P RL: " + str(UE_RL * I_RL * cos(math.atan(tan_phi4))) + " +- " + str(Delta_UE_RL * I_RL + UE_RL * Delta_I_RL) )
+
+
+print("Q RC: " + str(UE_RC * I_RC * sin_phi4) + " +- " + str(Delta_UE_RC * I_RC + UE_RC * Delta_I_RC) )
+print("Q RL: " + str(UE_RL * I_RL * sin_phi5) + " +- " + str(Delta_UE_RL * I_RL + UE_RL * Delta_I_RL) )
+
+print("W RC: " + str(UE_RC * I_RC * cos_phi4) + " +- " + str(Delta_UE_RC * I_RC + UE_RC * Delta_I_RC) )
+print("W RL: " + str(UE_RL * I_RL * cos_phi5) + " +- " + str(Delta_UE_RL * I_RL + UE_RL * Delta_I_RL) )
+
 
 
 

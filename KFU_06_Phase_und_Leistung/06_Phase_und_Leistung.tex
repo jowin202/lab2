@@ -322,7 +322,7 @@ Rechteck & $11.01 \pm 0.22$ & $5.48 \pm 0.11$
 
 \subsection{Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}
 
-In diesem Fall werden beide Versuchsaufbauten (Grafiken~\ref{fig:aufbau_task2} und \ref{fig:aufbau_task3}) vermessen und man erhält die jeweiligen Kurven. Diese sind in Grafiken~\ref{fig:task2_kurve} und \ref{fig:task3_kurve} zu sehen. Gemäß der jeweiligen Versuchsaufbauten ist CH1 proportional zu den Strom durch Spule bzw. Kondensator. Man erkennt in Grafik~\ref{fig:task2_kurve} deutlich, dass der Strom (CH1) der Spannung (CH2) vorausgeht. Bei der Spule in Grafik~\ref{fig:task3_kurve} ist es genau umgekehrt.
+In diesem Fall werden beide Versuchsaufbauten (Grafiken~\ref{fig:aufbau_task2} und \ref{fig:aufbau_task3}) vermessen und man erhält die jeweiligen Kurven. Diese sind in Grafiken~\ref{fig:task2_kurve} und \ref{fig:task3_kurve} zu sehen. Gemäß der jeweiligen Versuchsaufbauten ist CH1 proportional zu dem Strom durch Spule bzw. Kondensator. Man erkennt in Grafik~\ref{fig:task2_kurve} deutlich, dass der Strom (CH1) der Spannung (CH2) vorausgeht. Bei der Spule in Grafik~\ref{fig:task3_kurve} ist es genau umgekehrt.
 
 \begin{figure}[H]
 \centering
@@ -417,7 +417,7 @@ Bei den Versuchsaufbauten in Grafik \ref{fig:aufbau_task4} und \ref{fig:aufbau_t
 
 Für die Effektivwerte wurde testweise eine numerische Integration durchgeführt. Hierfür wurde auf die Simpson-Formel zurückgegriffen. Diese findet sich im Python-Paket \texttt{scipy}. Im Falle der Sinus-Schwingung und der Dreiecksschwingung wurde über die eine Periode von 2 benachbarten Maxima integriert. Bei der Rechtecksschwigung wurde zwischen 2 steigenden Flanken des Rechtecks integriert. Daraus ergeben sich die Werte in Tabelle~\ref{tab:task1_num_int}.
 \begin{table}[H]
-\caption{Spitze-Tal Werte für die Kurven.}
+\caption{Effektivwerte berechnet durch numerische Integration.}
 \label{tab:task1_num_int}
 \begin{tabular}{c|c}
 Schwingung &  $U_\text{eff}$ / V  \\
@@ -471,7 +471,7 @@ Rechteck & $5.500\pm 0.032$ & $6.003 \pm 0.040$ & $5.91 \pm 0.09$
 \subsection{Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}
 
 
-Aus den Spannungskurven ergeben sich Werte für Scheitelspannung am Widerstand $\hat U_R$, Strom durch das jeweilige Bauteil $\hat I$ (durch Berechnung mit Ohm'schen Gesetz), die Scheitelspannung durch Spule $\hat U_L$ bzw. $\hat U_C$ und die Phasenverschiebung $\varphi$. Das Vorzeichen von $\varphi$ ist so gewählt, dass die Phasenverschiebung vom Strom zur Spannung gewählt wird, also positiv bei Konensator und negativ bei Spule. Bei den Zeigerdiagrammen orientieren wir uns farblich an der Ausgabe des Oszilloskop (also orange für die Spannung am Widerstand und grün für die Spannung am jeweiligen Bauteil).
+Aus den Spannungskurven ergeben sich Werte für Scheitelspannung am Widerstand $\hat U_R$, Strom durch das jeweilige Bauteil $\hat I$ (durch Berechnung mit Ohm'schen Gesetz), die Scheitelspannung durch Spule $\hat U_L$ bzw. $\hat U_C$ und die Phasenverschiebung $\varphi$. Das Vorzeichen von $\varphi$ ist so gewählt, dass die Phasenverschiebung vom Strom zur Spannung gewählt wird, also positiv bei Kondensator und negativ bei Spule. Bei den Zeigerdiagrammen orientieren wir uns farblich an der Ausgabe des Oszilloskop (also orange für die Spannung am Widerstand und grün für die Spannung am jeweiligen Bauteil).
 
 Diese Werte sind in Tabelle~\ref{tab:task23_auswertung} zusammengefasst.
 \begin{table}[H]
@@ -611,7 +611,7 @@ L &= (815.7 \pm 135.1)~\text{mH}
 \end{align*}
 In~\eqref{eq:phase_spule} eingesetzt ergibt das für die Phasenverschiebung
 \begin{align*}
-\psi_5 = (75 \pm 4)~^\circ
+\psi_5 = (-75 \pm 4)~^\circ
 \end{align*}
 
 
@@ -621,11 +621,11 @@ Insgesamt kann nun die benötigte Leistung der RC- und RL-Schaltung berechnet we
 \caption{Berechnete Leistung für die Versuche 4 und 5}
 \label{tab:task45_leistung_ergebnis}
 
-\begin{tabular}{c|rrrrrr}
-& $U_E$ / V & $I$ / mA & $P$ / W & $Q$ / W & $S$ / W & $\psi$ / $^\circ$ \\
+\begin{tabular}{c|rrrrr}
+& $U_E$ / V & $I$ / mA & $P$ / W & $Q$ / W & $S$ / W \\
 \hline 
-RC & $13.24\pm0.16$ & $136.7\pm1.1$ &  &  & $1.81\pm 0.04$ &  \\
-RL & $13.83\pm0.16$ & $51.0\pm0.7$ &  &  & $0.70 \pm 0.02$ & 
+RC & $13.24\pm0.16$ & $136.7\pm1.1$ & $1.28\pm 0.08$  & $1.28 \pm 0.07$ & $1.81\pm 0.04$   \\
+RL & $13.83\pm0.16$ & $51.0\pm0.7$ & $0.18\pm0.06$  & $0.68 \pm 0.08$ & $0.70 \pm 0.02$ 
 \end{tabular}
 \end{table}
 
@@ -648,6 +648,11 @@ Es sollte zusätzlich noch kritisch hinterfragt werden, ob sich die Messgeräte 
 
 \subsection{Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}
 
+Die Theorie besagt, dass die Phasenverschiebung zwischen Strom und Spannung bei Kondensatoren exakt 90$^\circ$ ist. Es wurden allerdings knapp über diesen Betrag gemessen. Rein rechnerisch hätte ein Zusatzwiderstand die Phase verkleinert. Das Messergebnis wurde durch Verzerrungen im Signal hervorgerufen. Es ist bei Rauschen relativ schwierig, zwei Punkte derselben Phase zu finden. Bei den Maximas ist aufgrund der flachen Steigung und des Rauschens den exakten Extrempunkt zu finden. Alternativ kann man die Nulldurchgänge beobachten, aber auch hier kann es Verzerrungen geben. Zusätzlich wird die Periodendauer zur Umrechnung benötigt. Diese kann ebenfalls fehlerbehaftet sein, sodass sich ein Wert über 90$^\circ$ ergibt.
+
+Bei der Induktivität gibt eines eine Phasenverschiebung in die andere Richtung um ca 83.49$^\circ$. Die Abweichung von den theoretisch vorhergesagten 90$^\circ$ werden durch den Wicklungswiderstand hervorgerufen.
+
+
 %Für den Kondensator wurde eine Phasenverschiebung von $\varphi_2 = 92.30^\circ$ gemessen. Das ist nach der Theorie nicht möglich, da ein perfekter Kondensator ohne Widerstand eine Impedanz von 
 %\begin{align*}
 %Z_C = \frac{1}{i\cdot\omega \cdot C}
@@ -669,21 +674,28 @@ Die Leistung wird einmal durch ein Wattmeter gemessen und einmal durch manuelles
 
 
 
+
 \section{Zusammenfassung}
 
 \subsection{Untersuchung  der  Anzeige  von  unterschiedlichen  Spannungsmessinstrumenten  bei verschiedenen Kurvenformen }
 
+Die hierbei untersuchten Kurvenformen waren eine Sinusspannung, eine Dreiecksspannung und eine Rechteckspannung mit jeweils der gleichen Frequenz und Amplitude. Der Effektivwert wurde dann zum einen mit dem Oszilloskop gemessen bzw. mithilfe des Scheitelwertes berechnet und zum anderen mit drei verschiedenen Messgeräten bestimmt.
 
+Tabelle~\ref{tab:auswertung_task1_oszi} enthält die Gegenüberstellung der gemessenen und berechneten Werte des Oszilloskops. Tabelle~\ref{tab:auswertung_task1_volt} enthält die Gegenüberstellung dreier zusätzlich verwendeter Messgeräte. 
 
 
 
 
 \subsection{Phasenlage von Strom und Spannung an einem Kondensator bzw. einer Spule}
 
+Die Zeigerdiagramme sind in Grafiken~\ref{fig:task2_zeiger} und~\ref{fig:task3_zeiger} zu sehen.
+
 
 \subsection{Leistung einer RC- bzw RL-Schaltung}
+Die Phasenverschiebung für die RC-Schaltung beträgt $\psi_4 = (44\pm 8)^\circ$. Die Phasenverschiebung bei der Spule beträgt $\psi_5 = (-75 \pm 4)^\circ$.
+Für beide Berechnungen dient die Formel für die Impedanz als Grundlage.
 
-
+Mithilfe der errechneten Phasenverschiebungen konnte die benötigte Leistung für die RC- bzw. die RL-Schaltung berechnet werden. Diese sind in Tabelle~\ref{tab:task45_leistung_ergebnis} zusammengefasst.
 
 
 \begin{thebibliography}{9}

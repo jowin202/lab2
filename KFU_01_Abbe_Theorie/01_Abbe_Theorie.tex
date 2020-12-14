@@ -73,23 +73,25 @@ Licht trifft also auf ein Gitter, es bilden sich kugelförmige Wellen und es kan
 \begin{align}
 N_A = n\cdot\sin(\alpha)
 \end{align}
-Betrachtet man nun zwei Punkte eines Gitters, die im Abstand $x$ voneinander entfernt sind und ebenfalls jeweils eine kugelförmige Welle aussenden, so ergibt sich der Zusammenhang
+Betrachtet man nun zwei Punkte eines Gitters, die im Abstand $d$ voneinander entfernt sind und ebenfalls jeweils eine kugelförmige Welle aussenden, so ergibt sich der Zusammenhang
 \begin{align}
-\sin(\alpha) = \frac{\lambda}{x\cdot n}
+d \ge \frac{\lambda}{\sin(\alpha)\cdot n}
 \end{align}
-bzw. durch Umformung
+bzw. durch Einsetzen
 \begin{align}
-x = \frac{\lambda}{n\cdot \sin(\alpha)} = \frac{\lambda}{N_A} 
+d \ge \frac{\lambda}{N_A} 
 \end{align}
-wobei $\alpha$ hier dem Winkel zwischen nullter und erster Ordnung der Maxima und $\lambda$ der Wellenlänge des eingestrahlten Lichts entspricht.
+$\alpha$ entspricht in diesen Formeln dem Winkel zwischen nullter und erster Ordnung der Maxima und $\lambda$ entspricht der Wellenlänge des eingestrahlten Lichts.
 
 
-Der kleinstmögliche Abstand $x_{\operatorname{min}}$ ist dann gegeben durch
+Der kleinstmögliche Abstand $d_{\operatorname{min}}$ ist dann gegeben durch
 \begin{align}
-x_{\text{min}} = 0.61 \cdot \frac{\lambda}{N_A}
+\label{eq:theor_aufl}
+d_{\text{min}} = 0.61 \cdot \frac{\lambda}{N_A}
 \end{align}
 Außerdem kann für $r<<f$ und $n=1$ (also Luft bzw Vakuum) angenommen werden, dass
 \begin{align}
+\label{eq:na}
 N_A \approx r/f
 \end{align}
 wobei $f$ der Abstand zwischen Linse und Blende und $r$ der Radius der Lochblende ist.  (vgl. \cite{quelle1} \cite{quelle2} \cite{quelle3})
@@ -99,14 +101,16 @@ Zum ähnlichen Überlegungen kommt man aufgrund des Rayleigh-Kriteriums zur opti
 x = \frac{\frac{1.22}{2}\cdot \lambda}{N_A}
 \end{align}
 
-%\begin{figure}[H]
-%\caption{Transformator}
-%\label{fig:transformator}
-%{\centering
-%\includegraphics[scale=0.4]{transformator.png}
-%~
-%}
-%\end{figure}
+
+
+\begin{figure}[H]
+\caption{Intensitätsverteilung bei einem Beugungsgitter mit 8 Spalten. Quelle: \cite{demtroeder}}
+\label{fig:beugung}
+{\centering
+\includegraphics[scale=0.9]{demtr_10_44.png}
+~
+}
+\end{figure}
 
 
 
@@ -124,15 +128,15 @@ Abk. & Bezeichnung  & Typ & Gerätenummer & Unsicherheit \\
 \hline
 LA & Diodenge\-pumpter Festkörperlaser THOR-Labs  & Festkörperlaser $\lambda~=~531.9~$nm & LDS5 & $\Delta \lambda = 0.05~$nm \\
 \hline
-RL & Rote LED &  $\lambda=470~$nm & & $\Delta \lambda = 0.05~$nm \\
+BL & Blaue LED &  $\lambda=470~$nm & & $\Delta \lambda = 5~$nm \\
 \hline
-BL & Blaue LED &  $\lambda=635~$nm & & $\Delta \lambda = 0.05~$nm \\
+RL & Rote LED &  $\lambda=635~$nm & & $\Delta \lambda = 5~$nm \\
 \hline
 TO & Testobjekt & 1951 USAF Target  \\
 \hline
-L1 & Abbildungslinse 1 & $f_1 = 200~$mm & & $\Delta f_1 = 1~$mm \\
+L1 & Linse 1 & $f_1 = 200~$mm & & $\Delta f_1 = 1~$mm \\
 \hline
-L2 & Abbildungslinse 2 & $f_2= 60~$mm, freier Durchmesser: $21.4$ mm, achromatisches Linsenpaar & & $\Delta f_2 = 1~$mm\\
+L2 & Abbildungslinse 2 & $f_2= 60~$mm & & $\Delta f_2 = 1~$mm\\
 \hline
 L3 & Hilfslinse & $f_3 = 50~$mm, klappbar & & $\Delta f_3 = 1~$mm \\
 \hline
@@ -140,7 +144,7 @@ B & Lochblenden und Irisblende & $d_1=2~$mm ~ ~ ~ ~ $d_2=3~$mm   ~~~~~~~~~~~~ $d
 \hline
 F & Filterrad für LEDs & \\
 \hline
-K & Kamera
+K & Kamera & & DMK42AUC03
 \end{tabular}
 
 \end{table}
@@ -166,7 +170,7 @@ Als darzustellendes Objekt wird Grafik \ref{fig:usaf} verwendet. Diese dient zur
 
 
 \begin{table}[H]
-\caption{Auflösungsvermögen je nach nach Element und Gruppe mit der Einheit mm$^{-1}$.}
+\caption{Auflösungsvermögen je nach nach Element und Gruppe mit der Einheit mm$^{-1}$. Entnommen aus \cite{quelle6}. Die Werte stellen die räumliche Frequenz in der Einheit 1/mm dar.}
 \label{tab:aufl}
 \begin{tabular}{|l||l|l|l|l|l|l|l|l|l|l|l|}
 \hline
@@ -196,7 +200,7 @@ Als darzustellendes Objekt wird Grafik \ref{fig:usaf} verwendet. Diese dient zur
 
 \begin{figure}[H]
 \caption{Aufbau (inkl. Abmessungen) des Versuchs; $L_1$: $f_1= 200~$mm, $F$: Filterrad mit 2 LEDs, Graufilter und freiem Durchgang, $T$: Testobjekt; $L_2$: $f_2= 60~$mm; $B$: Filterrad mit 3 Lochblenden, einer Irisblende und einer Drahtblende, $L_3$ (einklappbar): $f_3= 50~$mm. Quelle: \cite{quelle6}}
-\label{fig:usaf}
+\label{fig:aufbau}
 {\centering
 \includegraphics[scale=1]{versuch.png}
 ~
@@ -221,13 +225,14 @@ Zuerst wurde die geöffnete Irisblende am Filterrand $B$ in den Strahlengang ged
 Mit Hilfe der Irisblende kann die Anzahl der Beugungsordnungen reduziert werden.
 
 Die Aufnahmen von Tanja Maier sind hier als Abbildungen~\ref{fig:bbild_0_tm} bis \ref{fig:bild_voll_tm} aufgelistet.
-Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw} bis \ref{fig:bild_voll_jw} aufgelistet.
+Die Aufnahmen von Johannes Winkler wurden wegen COVID-19 durch die zur Verfügung gestellten Aufnahmen ersetzt. Diese sind als Abbildungen~\ref{fig:bbild_0_jw} bis \ref{fig:bild_voll_jw} aufgelistet.
 
+\subsubsection{Bilder aufgenommen von Tanja Maier}
  
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Beugungsbild_0.jpg}
-\caption{Aufnahme des Beugungsbildes 0. Ordnung. Aufgenommen von Tanja Maier.}
+\caption{Aufnahme des Beugungsbildes 0. Ordnung.}
 \label{fig:bbild_0_tm}
 \end{figure}
 \end{minipage}
@@ -236,14 +241,15 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Bild_0.jpg}
-\caption{Aufnahme des Bildes 0. Ordnung. Aufgenommen von Tanja Maier.}\label{fig:bild_0_tm}
+\caption{Aufnahme des Bildes 0. Ordnung.}
+\label{fig:bild_0_tm}
 \end{figure}
 \end{minipage}
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Beugungsbild_1.jpg}
-\caption{Aufnahme des Beugungsbildes 1. Ordnung. Aufgenommen von Tanja Maier.}
+\caption{Aufnahme des Beugungsbildes 1. Ordnung.}
 \label{fig:bbild_1_tm}
 \end{figure}
 \end{minipage}
@@ -252,7 +258,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Bild_1.jpg}
-\caption{Aufnahme des Bildes 1. Ordnung. Aufgenommen von Tanja Maier.}\label{fig:bild_1_tm}
+\caption{Aufnahme des Bildes 1. Ordnung.}
+\label{fig:bild_1_tm}
 \end{figure}
 \end{minipage}
 
@@ -261,7 +268,7 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Beugungsbild_3.jpg}
-\caption{Aufnahme des Beugungsbildes 3. Ordnung. Aufgenommen von Tanja Maier.}
+\caption{Aufnahme des Beugungsbildes 3. Ordnung.}
 \label{fig:bbild_3_tm}
 \end{figure}
 \end{minipage}
@@ -270,7 +277,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Bild_3.jpg}
-\caption{Aufnahme des Bildes 3. Ordnung. Aufgenommen von Tanja Maier.}\label{fig:bild_3_tm}
+\caption{Aufnahme des Bildes 3. Ordnung.}
+\label{fig:bild_3_tm}
 \end{figure}
 \end{minipage}
 
@@ -282,7 +290,7 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Beugungsbild_5.jpg}
-\caption{Aufnahme des Beugungsbildes 5. Ordnung. Aufgenommen von Tanja Maier.}
+\caption{Aufnahme des Beugungsbildes 5. Ordnung.}
 \label{fig:bbild_5_tm}
 \end{figure}
 \end{minipage}
@@ -291,7 +299,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Bild_5.jpg}
-\caption{Aufnahme des Bildes 5. Ordnung. Aufgenommen von Tanja Maier.}\label{fig:bild_5_tm}
+\caption{Aufnahme des Bildes 5. Ordnung.}
+\label{fig:bild_5_tm}
 \end{figure}
 \end{minipage}
 
@@ -301,7 +310,7 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Beugungsbild_7.jpg}
-\caption{Aufnahme des Beugungsbildes 7. Ordnung. Aufgenommen von Tanja Maier.}
+\caption{Aufnahme des Beugungsbildes 7. Ordnung.}
 \label{fig:bbild_7_tm}
 \end{figure}
 \end{minipage}
@@ -310,7 +319,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Bild_7.jpg}
-\caption{Aufnahme des Bildes 7. Ordnung. Aufgenommen von Tanja Maier.}\label{fig:bild_7_tm}
+\caption{Aufnahme des Bildes 7. Ordnung.}
+\label{fig:bild_7_tm}
 \end{figure}
 \end{minipage}
 
@@ -319,7 +329,7 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Beugungsbild_voll.jpg}
-\caption{Aufnahme des Beugungsbildes mit vollständig offener Irisblende. Aufgenommen von Tanja Maier.}
+\caption{Aufnahme des Beugungsbildes mit vollständig offener Irisblende.}
 \label{fig:bbild_voll_tm}
 \end{figure}
 \end{minipage}
@@ -328,7 +338,7 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
 \includegraphics[scale=0.1]{tm/Bild_voll.jpg}
-\caption{Aufnahme des Bildes 7. Ordnung mit vollständig offener Irisblende. Aufgenommen von Tanja Maier.}\label{fig:bild_voll_tm}
+\caption{Aufnahme des Bildes 7. Ordnung mit vollständig offener Irisblende.}\label{fig:bild_voll_tm}
 \end{figure}
 \end{minipage}
 
@@ -342,14 +352,15 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 
 
 
+\subsubsection{Bilder aus Mitschrift von Moodle entnommen}
 
 
 
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Beugungsbild_0.jpg}
-\caption{Aufnahme des Beugungsbildes 0. Ordnung. Aufgenommen von Johannes Winkler.}
+\includegraphics[scale=0.1]{jw/L_BB_5.jpg}
+\caption{Aufnahme des Beugungsbildes 0. Ordnung. Aufnahme wurde zur Verfügung gestellt.}
 \label{fig:bbild_0_jw}
 \end{figure}
 \end{minipage}
@@ -357,15 +368,15 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Bild_0.jpg}
-\caption{Aufnahme des Bildes 0. Ordnung. Aufgenommen von Johannes Winkler.}\label{fig:bild_0_jw}
+\includegraphics[scale=0.1]{jw/L_OB_5.jpg}
+\caption{Aufnahme des Bildes 0. Ordnung. Aufnahme wurde zur Verfügung gestellt.}\label{fig:bild_0_jw}
 \end{figure}
 \end{minipage}
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Beugungsbild_1.jpg}
-\caption{Aufnahme des Beugungsbildes 1. Ordnung. Aufgenommen von Johannes Winkler.}
+\includegraphics[scale=0.1]{jw/L_BB_4.jpg}
+\caption{Aufnahme des Beugungsbildes 1. Ordnung. Aufnahme wurde zur Verfügung gestellt.}
 \label{fig:bbild_1_jw}
 \end{figure}
 \end{minipage}
@@ -373,8 +384,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Bild_1.jpg}
-\caption{Aufnahme des Bildes 1. Ordnung. Aufgenommen von Johannes Winkler.}\label{fig:bild_1_jw}
+\includegraphics[scale=0.1]{jw/L_OB_4.jpg}
+\caption{Aufnahme des Bildes 1. Ordnung. Aufnahme wurde zur Verfügung gestellt.}\label{fig:bild_1_jw}
 \end{figure}
 \end{minipage}
 
@@ -382,8 +393,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Beugungsbild_3.jpg}
-\caption{Aufnahme des Beugungsbildes 3. Ordnung. Aufgenommen von Johannes Winkler.}
+\includegraphics[scale=0.1]{jw/L_BB_3.jpg}
+\caption{Aufnahme des Beugungsbildes 3. Ordnung. Aufnahme wurde zur Verfügung gestellt.}
 \label{fig:bbild_3_jw}
 \end{figure}
 \end{minipage}
@@ -391,8 +402,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Bild_3.jpg}
-\caption{Aufnahme des Bildes 3. Ordnung. Aufgenommen von Johannes Winkler.}\label{fig:bild_3_jw}
+\includegraphics[scale=0.1]{jw/L_OB_3.jpg}
+\caption{Aufnahme des Bildes 3. Ordnung. Aufnahme wurde zur Verfügung gestellt.}\label{fig:bild_3_jw}
 \end{figure}
 \end{minipage}
 
@@ -403,8 +414,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Beugungsbild_5.jpg}
-\caption{Aufnahme des Beugungsbildes 5. Ordnung. Aufgenommen von Johannes Winkler.}
+\includegraphics[scale=0.1]{jw/L_BB_2.jpg}
+\caption{Aufnahme des Beugungsbildes 5. Ordnung. Aufnahme wurde zur Verfügung gestellt.}
 \label{fig:bbild_5_jw}
 \end{figure}
 \end{minipage}
@@ -412,36 +423,20 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Bild_5.jpg}
-\caption{Aufnahme des Bildes 5. Ordnung. Aufgenommen von Johannes Winkler.}\label{fig:bild_5_jw}
+\includegraphics[scale=0.1]{jw/L_OB_2.jpg}
+\caption{Aufnahme des Bildes 5. Ordnung. Aufnahme wurde zur Verfügung gestellt.}\label{fig:bild_5_jw}
 \end{figure}
 \end{minipage}
 
 
 
 
-\begin{minipage}[t]{.45\textwidth}
-\begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Beugungsbild_7.jpg}
-\caption{Aufnahme des Beugungsbildes 7. Ordnung. Aufgenommen von Johannes Winkler.}
-\label{fig:bbild_7_jw}
-\end{figure}
-\end{minipage}
-\hfill
-\noindent
-\begin{minipage}[t]{.45\textwidth}
-\begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Bild_7.jpg}
-\caption{Aufnahme des Bildes 7. Ordnung. Aufgenommen von Johannes Winkler.}\label{fig:bild_7_jw}
-\end{figure}
-\end{minipage}
-
 
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Beugungsbild_voll.jpg}
-\caption{Aufnahme des Beugungsbildes mit vollständig offener Irisblende. Aufgenommen von Johannes Winkler.}
+\includegraphics[scale=0.1]{jw/L_BB_1.jpg}
+\caption{Aufnahme des Beugungsbildes mit vollständig offener Irisblende. Aufnahme wurde zur Verfügung gestellt.}
 \label{fig:bbild_voll_jw}
 \end{figure}
 \end{minipage}
@@ -449,8 +444,8 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{jw/Bild_voll.jpg}
-\caption{Aufnahme des Bildes 7. Ordnung mit vollständig offener Irisblende. Aufgenommen von Johannes Winkler.}\label{fig:bild_voll_jw}
+\includegraphics[scale=0.1]{jw/L_OB_1.jpg}
+\caption{Aufnahme des Objektbildes mit vollständig offener Irisblende. Aufnahme wurde zur Verfügung gestellt.}\label{fig:bild_voll_jw}
 \end{figure}
 \end{minipage}
 
@@ -471,22 +466,26 @@ Die Aufnahmen von Johannes Winkler sind hier als Abbildungen~\ref{fig:bbild_0_jw
 
 
 
-Hier wurden beide LEDs als Lichtquellen verwendet und die numerische Apertur mit 3 Lochblenden variiert. Dann wurden jene Elemente gesucht, bei denen die horizontalen und vertikalen Balken nicht mehr unterscheidbar sind. Von den gefundenen Elementen wurden wieder die Bilder aufgenommen, sowie die eingestellten Lochblenden und die Farbe der LED-Lampe notiert.
+Hier wurden beide LEDs (blau und rot) als Lichtquellen verwendet und die numerische Apertur mit 3 Lochblenden mit verschiedenen Durchmessern variiert. Dann wurden jene Elemente gesucht, bei denen die horizontalen und vertikalen Balken nicht mehr unterscheidbar sind. Von den gefundenen Elementen wurden wieder die Bilder aufgenommen, sowie die eingestellten Lochblenden und die Farbe der LED-Lampe notiert. 
 
+Die von Tanja Maier aufgenommenen Bilder sind in Abbildungen~\ref{fig:bbild_2_blau_tm} bis \ref{fig:bbild_6_rot_tm} gelistet. Die Bilder von Johannes Winkler sind durch die im Moodle gegebenen Aufnahmen ersetzt. Diese wären Abbildungen~\ref{fig:bbild_2_blau_jw} bis \ref{fig:bbild_6_rot_jw}.
 
+\newpage 
+\subsubsection{Bilder aufgenommen von Tanja Maier}
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{tm/Bild_blau_kleine Lochblende.jpg}
-\caption{Bild des Objektes bei Beleuchtung mit blauem LED mit einem Blendendurchmesse $d_1=(2.0\pm0.1)~$mm. Aufgenommen von Tanja Maier.}
-\label{fig:bbild_klein_blau_tm}
+\includegraphics[scale=0.5]{tm/Bild_blau_kleine Lochblende.jpg}
+\caption{Beleuchtung mit blauem LED mit einem Blendendurchmesser $d_1=(2.0\pm0.1)~$mm.}
+\label{fig:bbild_2_blau_tm}
 \end{figure}
 \end{minipage}
 \hfill
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{tm/Bild_rot_kleine Lochblende.jpg}
-\caption{Bild des Objektes bei Beleuchtung mit rotem LED mit einem Blendendurchmesse $d_1=(2.0\pm0.1)~$mm. Aufgenommen von Tanja Maier.}
+\includegraphics[scale=0.5]{tm/Bild_rot_kleine Lochblende.jpg}
+\caption{Beleuchtung mit rotem LED mit einem Blendendurchmesser $d_1=(2.0\pm0.1)~$mm.}
+\label{fig:bbild_2_rot_tm}
 \end{figure}
 \end{minipage}
 
@@ -494,17 +493,18 @@ Hier wurden beide LEDs als Lichtquellen verwendet und die numerische Apertur mit
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{tm/Bild_blau_mittlere Lochblende.jpg}
-\caption{Bild des Objektes bei Beleuchtung mit blauem LED mit einem Blendendurchmesse $d_2=(3.0\pm0.1)~$mm. Aufgenommen von Tanja Maier.}
-\label{fig:bbild_klein_blau_tm}
+\includegraphics[scale=0.5]{tm/Bild_blau_mittlere Lochblende.jpg}
+\caption{Beleuchtung mit blauem LED mit einem Blendendurchmesser $d_2=(3.0\pm0.1)~$mm.}
+\label{fig:bbild_3_blau_tm}
 \end{figure}
 \end{minipage}
 \hfill
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{tm/Bild_rot_mittlere Lochblende.jpg}
-\caption{Bild des Objektes bei Beleuchtung mit rotem LED mit einem Blendendurchmesse $d_2=(3.0\pm0.1)~$mm. Aufgenommen von Tanja Maier.}
+\includegraphics[scale=0.5]{tm/Bild_rot_mittlere Lochblende.jpg}
+\caption{Beleuchtung mit rotem LED mit einem Blendendurchmesser $d_2=(3.0\pm0.1)~$mm.}
+\label{fig:bbild_3_rot_tm}
 \end{figure}
 \end{minipage}
 
@@ -513,19 +513,83 @@ Hier wurden beide LEDs als Lichtquellen verwendet und die numerische Apertur mit
 
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{tm/Bild_blau_grosse Lochblende.jpg}
-\caption{Bild des Objektes bei Beleuchtung mit blauem LED mit einem Blendendurchmesse $d_3=(6.0\pm0.1)~$mm. Aufgenommen von Tanja Maier.}
-\label{fig:bbild_klein_blau_tm}
+\includegraphics[scale=0.5]{tm/Bild_blau_grosse Lochblende.jpg}
+\caption{Beleuchtung mit blauem LED mit einem Blendendurchmesser $d_3=(6.0\pm0.1)~$mm.}
+\label{fig:bbild_6_blau_tm}
 \end{figure}
 \end{minipage}
 \hfill
 \noindent
 \begin{minipage}[t]{.45\textwidth}
 \begin{figure}[H]
-\includegraphics[scale=0.1]{tm/Bild_rot_grosse Lochblende.jpg}
-\caption{Bild des Objektes bei Beleuchtung mit rotem LED mit einem Blendendurchmesse $d_3=(6.0\pm0.1)~$mm. Aufgenommen von Tanja Maier.}
+\includegraphics[scale=0.5]{tm/Bild_rot_grosse Lochblende.jpg}
+\caption{Beleuchtung mit rotem LED mit einem Blendendurchmesser $d_3=(6.0\pm0.1)~$mm.}
+\label{fig:bbild_6_rot_tm}
 \end{figure}
 \end{minipage}
+
+
+\newpage
+
+
+
+
+\subsubsection{Bilder aus Mitschrift von Moodle entnommen}
+
+
+\begin{minipage}[t]{.45\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{jw/B_B2_mark.jpg}
+\caption{Beleuchtung mit blauem LED mit einem Blendendurchmesser $d_1=(2.0\pm0.1)~$mm.}
+\label{fig:bbild_2_blau_jw}
+\end{figure}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[t]{.45\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{jw/R_B2_mark.jpg}
+\caption{Beleuchtung mit rotem LED mit einem Blendendurchmesser $d_1=(2.0\pm0.1)~$mm.}
+\label{fig:bbild_2_rot_jw}
+\end{figure}
+\end{minipage}
+
+
+\begin{minipage}[t]{.45\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{jw/B_B3_mark.jpg}
+\caption{Beleuchtung mit blauem LED mit einem Blendendurchmesser $d_2=(3.0\pm0.1)~$mm.}
+\label{fig:bbild_3_blau_jw}
+\end{figure}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[t]{.45\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{jw/R_B3_mark.jpg}
+\caption{Beleuchtung mit rotem LED mit einem Blendendurchmesser $d_2=(3.0\pm0.1)~$mm.}
+\label{fig:bbild_3_rot_jw}
+\end{figure}
+\end{minipage}
+
+
+\begin{minipage}[t]{.45\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{jw/B_B6_mark.jpg}
+\caption{Beleuchtung mit blauem LED mit einem Blendendurchmesser $d_3=(6.0\pm0.1)~$mm.}
+\label{fig:bbild_6_blau_jw}
+\end{figure}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[t]{.45\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=0.5]{jw/R_B6_mark.jpg}
+\caption{Beleuchtung mit rotem LED mit einem Blendendurchmesser $d_3=(6.0\pm0.1)~$mm.}
+\label{fig:bbild_6_rot_jw}
+\end{figure}
+\end{minipage}
+
 
 
 
@@ -549,53 +613,100 @@ Dieser Versuch läuft qualitativ ab. Hierbei zeigt sich in der Abbe-Theorie, das
 \subsection{Auflösevermögen und Numerische Apertur}
 
 
-Der Fehler wird nach der Größtfehlermethode berechnet und es gilt
+Nach Gleichung~\eqref{eq:na} wird zuerst die numerische Apertur berechnet.
 \begin{align*}
-x_b &= \frac{1}{a_{i,j}} \\
-\Delta x_b &= \frac{1}{a_{i,j}^2}\cdot \Delta a_{i,j}
+N_A \approx \frac{d}{2\cdot f} \pm \frac{1}{2}\cdot \left( \frac{\Delta d\cdot f +  d\cdot \Delta f}{f^2}\right)
 \end{align*}
-wobei $a_{i,j}$ aus Tabelle~\ref{tab:aufl} genommen genommen wird. 
+wobei $f=f_2$ die Brennweite von L2 ist. Gemäß Geräteliste gilt $f = (60\pm1)~$mm und $\Delta d =  0.01~$mm.
 
 
 \begin{table}[H]
-\caption{Gemessene Auflösungsvermögen für das blaue LED. $d$ Linsendurchmesser, $\Delta d = \pm 0.1$~mm, $E_b$ gefundenes Element für blaues Licht, $x_b$ Auflösungsvermögen vom blauen Licht (s. Tabelle \ref{tab:aufl}), $\Delta x_b$ Unsicherheit zum Auflösungsvermögen.}
-
-\begin{tabular}{llll}
-$d$ / mm & $E_b$ & $x_b$ / mm & $\Delta x_b$ / mm \\
+\caption{Berechnung der numerische Apertur $N_A$. berechnet mit Gleichung~\eqref{eq:na} mit $f=(60\pm1)~$mm. $d$ Durchmesser (Blende), $\Delta d = \pm 0.1$~mm,}
+\label{tab:na}
+\begin{tabular}{ll}
+$d$ / mm  & $N_A$ / 1 \\
 \hline
-2 & 6/1 & ... & .. \\
-3 & 6/3 & ... & .. \\
-6 & 7/1 & ... & .. 
+2 & $(16.7 \pm 1.1)\cdot 10^{-3}$ \\
+3 & $(25.0 \pm 1.3)\cdot 10^{-3}$ \\
+6 & $(50.0 \pm 1.7)\cdot 10^{-3}$
 \end{tabular}
 \end{table}
 
 
-\begin{table}[H]
-\caption{Gemessene Auflösungsvermögen für das rote LED. $d$ Linsendurchmesser, $\Delta d = \pm 0.1$~mm, $E_r$ gefundenes Element für rote Licht, $x_r$ Auflösungsvermögen vom rotem Licht (s. Tabelle \ref{tab:aufl}), $\Delta x_b$ Unsicherheit zum Auflösungsvermögen.}
 
-\begin{tabular}{llll}
-$d$ / mm & $E_r$ & $x_r$ / mm & $\Delta x_r$ / mm \\
+
+
+\begin{table}[H]
+\caption{Gefundene Elemente des 1951 USAF Targets, wo sich die Längs- und Querstreifen nicht mehr unterscheiden lassen. Einmal für die Messungen von Tanja Maier, einmal von den Messergebnissen aus Moodle. $d$ Durchmesser (Blende), $E_b$ bzw. $E_r$ in Versuch 2 gefundenes Element für blaues bzw. rotes Licht.}
+
+\begin{tabular}{l|rr|rr}
+& \multicolumn{2}{p{2.5cm}|}{Werte von  ~~ Tanja Maier} & \multicolumn{2}{p{2.5cm}}{Werte von Labor\-mitschrift} \\
+$d$ / mm  & $E_b$ & $E_r$ & $E_b$ & $E_r$   \\
 \hline
-2 & 4/4 & ... & .. \\
-3 & 5/6 & ... & .. \\
-6 & 6/6 & ... & .. 
+2 &  6/1 & 5/6 & 6/1 & 5/6 \\
+3 &  6/4 & 6/1 & 6/4 & 6/1 \\
+6 &  7/2 & 6/6 & 7/4 & 6/6
 \end{tabular}
 \end{table}
 
 
+Man kann dann die theoretische Auflösung mit der gemessenen Auflösung vergleichen. Die theoretische Auflösung $d_{\text{theor}}$ erhält man durch Formel~\eqref{eq:theor_aufl}. Die theoretischen Auflösungen sind auch in Tabelle~\ref{tab:theor_aufl} aufgelistet.
+
+
+\begin{table}[H]
+\caption{Theoretische Auflösungen $d_\text{theor}$ in Abhängigkeit der numerische Apertur $N_A$ berechnet mit Gleichung~\eqref{eq:theor_aufl}. Berechnung jeweils für rotes und blaues Licht der gegebenen Wellenlängen.}
+\label{tab:theor_aufl}
+\begin{tabular}{l|l|rr}
+$d$ / mm  & $N_A$ / 1 & $d_\text{theor,blau}$ / $\mu$m & $d_\text{theor,rot}$ / $\mu$m\\
+\hline
+2 & $(16.7 \pm 1.1)\cdot 10^{-3}$ & $17.2 \pm 1.3$ & $23.2 \pm 1.7$ \\
+3 & $(25.0 \pm 1.3)\cdot 10^{-3}$ & $11.5 \pm 0.7$ & $15.5 \pm 0.9$ \\
+6 & $(50.0 \pm 1.7)\cdot 10^{-3}$ & $5.7 \pm 0.3$ & $7.7 \pm 0.3$ 
+\end{tabular}
+\end{table}
+
+Die theoretischen Auflösungen in Abhängigkeit von der numerischen Apertur werden auch für die Kurven in Grafik~\ref{fig:kurven} verwendet, die Auflösung und numerische Apertur für eine bestimmte Wellenlänge verknüpft.
+
+Die gemessenen Auflösungen ergeben sich aus Tabelle~\ref{tab:aufl}. Dort kann für jedes Element $E_b$ und $E_r$ die räumliche Frequenz gesucht werden. Der dazugehörige Kehrwert ist die gemessene Auflösung. Die gemessenen Werte für die Auflösung sind in Tabelle~\ref{tab:gem_aufl} zu sehen.
+
+\begin{table}[H]
+\caption{Gemessene Auflösungen für blaues und rotes Licht bei dem jeweiligen Durchmesser $d$ der Blende. $d_{\text{gem,blau}}$ bzw. $d_{\text{gem,rot}}$. Zusätzliche Aufteilungen in Messergebnisse von Tanja Maier und den Werten aus Moodle.}
+\label{tab:gem_aufl}
+
+\begin{tabular}{l|rr|rr}
+& \multicolumn{2}{p{2.5cm}|}{Werte von  ~~ Tanja Maier} & \multicolumn{2}{p{2.5cm}}{Werte von Labor\-mitschrift} \\
+$d$ / mm  & $d_{\text{gem,blau}}$ / $\mu$m & $d_{\text{gem,rot}}$ / $\mu$m & $d_{\text{gem,blau}}$ / $\mu$m & $d_{\text{gem,rot}}$ / $\mu$m   \\
+\hline
+2 &  $15.6\pm1.8$ & $17.5\pm2.0$ & $15.6\pm1.8$ & $17.5\pm2.0$ \\
+3 &  $11.0\pm1.3$ & $15.6\pm1.8$ & $11.0\pm1.3$ & $15.6\pm1.8$ \\
+6 &  $6.9\pm0.8$ & $8.8\pm1.0$ & $5.5\pm0.6$ & $8.8\pm1.0$
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+\begin{figure}[H]
+\caption{Kurven für die theoretische Auflösung in Abhängigkeit von der numerischen Apertur. Die berechneten Werte für die Auflösung sind zusätzlich eingezeichnet. Ein Ausreisser bei einer numerischen Apertur von 0.05 wrude entsprechend markiert.}
+\label{fig:kurven}
+\includegraphics[scale=0.7]{plot.png}
+
+\end{figure}
 
 
 
 
 \section{Zusammenfassung und Diskussion}
 
-Es zeigt sich hier deutlich, dass ein Zusammenhang zwischen der Schärfe des Bildes und der Anzahl der Beugungsordnungen gilt. Und zwar wird das Bild mit der Anzahl der verwendeten Beugungsordnungen schärfer.
+Es zeigt sich hier deutlich, dass ein Zusammenhang zwischen der Schärfe des Bildes und der Anzahl der Beugungsordnungen gilt. Und zwar wird das Bild mit der Anzahl der verwendeten Beugungsordnungen schärfer. Damit kann die Abbe Theorie experimentell verifiziert werden.
 
 ~
 
-Im zweiten Teil zeigt sich, dass das Bild bei rotem LED besser aufgelöst ist. Dies liegt an der höheren Wellenlänge vom roten Licht.
+Im zweiten Teil zeigt sich, dass das Bild bei blauem LED höher aufgelöst (also $d$ kleiner) ist. Dies liegt an der kürzeren Wellenlänge von blauem Licht. Zwischen den Messwerten von Tanja Maier und den zur Verfügung gestellten Messwerten aus Moodle gab es im wesentlichen einen Unterschied beim Blendendurchmesser von 6~mm. Während der von Tanja Maier gemessene Wert 6.9~$\mu$m beträgt, ergab der Wert aus Moodle 5.5~$\mu$m. Tendenziell sieht man, dass bei höheren Auflösungen (kleineren Wertern für $d$) die Abweichung von den theoretischen Werten kleiner ist. Die Ursache dafür könnten Ablesefehler sein.
 
-Zusätzlich muss auch der Durchmesser der Blende berücksichtigt werden. Bei höheren Durchmesser wird die Unsicherheit geringer. Das liegt daran, dass bei einem größeren Durchmesser mehrere Beugungsmaxima genutzt werden können.
 
 
 
@@ -643,6 +754,7 @@ Zusätzlich muss auch der Durchmesser der Blende berücksichtigt werden. Bei hö
 \bibitem{quelle4} \url{https://physik.cosmos-indirekt.de/Physik-Schule/Rayleigh-Kriterium}, 07.11.2020, 00:26 Uhr
 \bibitem{quelle5} \url{https://www.youtube.com/watch?v=PZaUY45ce8k}, 07.11.2020, 00:27 Uhr
 \bibitem{quelle6} Unterlagen aus Moodle, H. Ditlbacher, bereitgestellt von der KF Universität Graz
+\bibitem{demtroeder} W. Demtröder: \emph{Experimentalphysik 2 - Elektrizität  und Optik}, 7. Auflage, 2017.
 \end{thebibliography}
 
 

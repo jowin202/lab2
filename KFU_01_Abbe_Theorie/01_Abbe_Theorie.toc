@@ -1,13 +1,17 @@
 \contentsline {section}{Inhaltsverzeichnis}{2}%
 \contentsline {section}{\numberline {1}Aufgabenstellung}{3}%
 \contentsline {section}{\numberline {2}Voraussetzungen und Grundlagen}{3}%
-\contentsline {section}{\numberline {3}Geräteliste}{4}%
+\contentsline {section}{\numberline {3}Geräteliste}{5}%
 \contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{5}%
 \contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{6}%
 \contentsline {subsection}{\numberline {5.1}Beugungsordnungen und Auflösung}{6}%
+\contentsline {subsubsection}{\numberline {5.1.1}Bilder aufgenommen von Tanja Maier}{7}%
+\contentsline {subsubsection}{\numberline {5.1.2}Bilder aus Mitschrift von Moodle entnommen}{9}%
 \contentsline {subsection}{\numberline {5.2}Auflösevermögen und Numerische Apertur}{11}%
-\contentsline {section}{\numberline {6}Auswertung}{13}%
-\contentsline {subsection}{\numberline {6.1}Beugungsordnungen und Auflösung}{13}%
-\contentsline {subsection}{\numberline {6.2}Auflösevermögen und Numerische Apertur}{13}%
-\contentsline {section}{\numberline {7}Zusammenfassung und Diskussion}{13}%
-\contentsline {section}{\numberline {8}Literaturverzeichnis}{14}%
+\contentsline {subsubsection}{\numberline {5.2.1}Bilder aufgenommen von Tanja Maier}{12}%
+\contentsline {subsubsection}{\numberline {5.2.2}Bilder aus Mitschrift von Moodle entnommen}{13}%
+\contentsline {section}{\numberline {6}Auswertung}{14}%
+\contentsline {subsection}{\numberline {6.1}Beugungsordnungen und Auflösung}{14}%
+\contentsline {subsection}{\numberline {6.2}Auflösevermögen und Numerische Apertur}{14}%
+\contentsline {section}{\numberline {7}Zusammenfassung und Diskussion}{16}%
+\contentsline {section}{\numberline {8}Literaturverzeichnis}{17}%
