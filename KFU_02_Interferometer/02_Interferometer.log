@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  14 DEC 2020 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.2)  14 DEC 2020 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -605,38 +605,45 @@ Overfull \hbox (21.5389pt too wide) in paragraph at lines 340--340
  Koh[]arenz 
  []
 
-<filter.png, id=111, 462.528pt x 346.896pt>
+[11 <./moodle/img_noShift.png> <./moodle/img_Shift.png>]
+<filter.png, id=116, 462.528pt x 346.896pt>
 File: filter.png Graphic file (type png)
 <use filter.png>
-Package pdftex.def Info: filter.png  used on input line 381.
+Package pdftex.def Info: filter.png  used on input line 397.
 (pdftex.def)             Requested size: 341.43306pt x 256.08499pt.
-[11 <./moodle/img_noShift.png> <./moodle/img_Shift.png>]
-<shift_noshift.png, id=117, 462.528pt x 346.896pt>
+ [12 <./filter.png>]
+<shift_noshift.png, id=121, 462.528pt x 346.896pt>
 File: shift_noshift.png Graphic file (type png)
 <use shift_noshift.png>
-Package pdftex.def Info: shift_noshift.png  used on input line 396.
+Package pdftex.def Info: shift_noshift.png  used on input line 412.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
- [12 <./filter.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+
+Overfull \hbox (21.5389pt too wide) in paragraph at lines 415--415
+[]\OT1/cmr/bx/n/12 Teil 4: Ma-xi-ma-le Gr[]o^^Ye des Lichts f[]ur r[]aum-li-che
+ Koh[]arenz 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
 []$\OT1/cmtt/m/n/10 https : / / www . spektrum . de / lexikon / physik / abbesc
 he-[]theorie / 13$\OT1/cmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 []$\OT1/cmtt/m/n/10 https : / / www . univie . ac . at / mikroskopie / 1 _ grun
 dlagen / optik / opt _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 []$\OT1/cmtt/m/n/10 https : / / physik . cosmos-[]indirekt . de / Physik-[]Schu
 le /
  []
 
-
+[13 <./shift_noshift.png>] 
 AED: lastpage setting LastPage
-[13 <./shift_noshift.png>] (./02_Interferometer.aux) ) 
+[14] (./02_Interferometer.aux) ) 
 Here is how much of TeX's memory you used:
  7816 strings out of 481239
  113938 string characters out of 5920377
@@ -645,22 +652,22 @@ Here is how much of TeX's memory you used:
  536069 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,18n,45p,884b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 02_Interferometer.pdf (13 pages, 1439451 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 02_Interferometer.pdf (14 pages, 1441689 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 170 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
