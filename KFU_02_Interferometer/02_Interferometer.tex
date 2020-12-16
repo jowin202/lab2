@@ -84,7 +84,28 @@ wobei $I$ die Intensität, $f_1$ die Brennweite der Sammellinse vor dem Doppelsp
 \begin{align}
 \Delta s_0 = \Delta s + t\cdot (n_1-n_2) = d\cdot\sin(\theta)\cdot t\cdot (n_1-n_2)
 \end{align}
-wobei $t$ die Dicke der Probe, $n_1$ der Brechungsindex der Probe und $n_2$ der Brechungsindex der Umgebung (hier: Luft, also n2 = 1) ist.
+wobei $t$ die Dicke der Probe, $n_1$ der Brechungsindex der Probe und $n_2$ der Brechungsindex der Umgebung (hier: Luft, also $n_2 = 1$) ist. Durch Umformung ergibt sich
+\begin{align}
+\label{eq:schichtdicke}
+t = \frac{d\cdot \sin(\theta)}{n_1-1}
+\end{align}
+
+
+Zusätzlich wird noch der Umrechnungsfaktor zwischen Pixel und $\mu$m benötigt. Dieser ergibt sich aus der elementaren geometrischen Überlegung, dass eine Distanz $b$ im Interferenzmuster trigonometrisch in folgender Beziehung dargestellt werden kann
+\begin{align}
+\label{eq:theta}
+\tan(\theta) = \frac{b}{f}
+\end{align}
+wobei $f$ die Brennweite ist. Weil zusätzlich $d\cdot \sin(\theta) = m\cdot \lambda$ gilt, folgt insgesamt
+\begin{align*}
+b = f\cdot \tan\left(\operatorname{arcsin}\left(\frac{m\cdot \lambda}{d}\right)\right)
+\end{align*}
+Wenn $f$ in $\mu$m angegeben wird, dann ist auch $b$ in $\mu$m. Man kann entsprechende Distanz zwischen $0$-ten und $m$-ten Maximum auch in Pixel messen. Division ergibt das Verhältnis
+\begin{align}
+\label{eq:umrechnung}
+Z = \frac{b}{|x_0-x_m|} = \frac{f\cdot \tan\left(\operatorname{arcsin}\left(\frac{m\cdot \lambda}{d}\right)\right)}{|x_0-x_m|}
+\end{align}
+
 
 
 %\begin{figure}[H]
@@ -120,11 +141,11 @@ L3 & Sammellinse 3 & $f_3 = 40~$mm & & $\Delta f_3 = 0.5~$mm \\
 \hline
 L4 & Sammellinse 4 & $f_4 = 30~$mm & & $\Delta f_4 = 0.5~$mm \\
 \hline
-DS1 & Doppelspalt & $d_1=0.43~$mm \\
+DS1 & Doppelspalt & $d_1=0.43~$mm  & & $\Delta d_1 = 0.005~$mm \\
 \hline
-DS2 & Doppelspalt & $d_2=0.23$~mm \\
+DS2 & Doppelspalt & $d_2=0.23$~mm  & & $\Delta d_2 = 0.005~$mm\\
 \hline
-DS3 & Doppelspalt & $d_3=0.13$~mm\\
+DS3 & Doppelspalt & $d_3=0.13$~mm & & $\Delta d_3 = 0.005~$mm\\
 \hline
 
 
@@ -141,12 +162,13 @@ K & Kamera
 \end{table}
 
 
+\newpage
 
 \section{Beschreibung der Versuchsanordnung}
 
 Der Versuchsaufbau ist maßstabsgetreu in Grafik \ref{fig:aufbau} dargestellt.
 \begin{figure}[H]
-\caption{Versuchsaufbau. $L_1,L_2,L_3,L_4$ Linsen, $S$ Spaltblende, $DS$ Doppelspalt, $F$ Filterrad, $O$ Substrat mit Polyacrylat-Schicht, $K$ Kamera. Maßstab 1:20}
+\caption{Versuchsaufbau. $L_1,L_2,L_3,L_4$ Linsen, $S$ Spaltblende, $DS$ Doppelspalt, $F$ Filterrad, $O$ Substrat mit Polyacrylat-Schicht, $K$ Kamera. Als Maßstab ist 1 Quadrat gleich 20~mm.}
 \label{fig:aufbau}
 \includegraphics[scale=1]{aufbau.png}
 \end{figure}
@@ -155,11 +177,12 @@ Der Versuchsaufbau ist maßstabsgetreu in Grafik \ref{fig:aufbau} dargestellt.
 Die von der Lampe ausgehenden Lichtstrahlen werden in $L_3$ parallelisiert, da der Abstand zur Lampe genau die Brennweite von $L_3$ ist. In $L_4$ wird der Strahl auf den Spalt fokussiert. Die einstellbare Spaltblende liegt exakt im Brennpunkt von $L_1$ und $L_4$, daher werden die ausgehenden Strahlen in $L_1$ wieder parallelisiert. Danach trifft das Licht auf den Doppelspalt, wo Beugung stattfindet. Danach dringt das Licht durch das Substrat, dass teilweise mit einer Schicht Polyacrylat versehen ist. Das Beugungsmuster wird von $L_2$ auf eine Kamera umgeleitet, die sich genau im Brennpunkt von $L_2$ befindet. Zwischen $L_2$ und der Kamera ist zusätzlich noch ein Filterrad, welches wo man wahlweise einen Bandpass (633~nm) oder einen Langpass dazwischen schalten kann. Grafik \ref{fig:strahlen} zeigt den Strahlengang im Interferometer. 
 
 \begin{figure}[H]
-\caption{Strahlengang im Interferometer. Die Strahlen sind in blau eingezeichnet, die 1. Beugungsordnung in orange. Maßstab 1:20}
+\caption{Strahlengang im Interferometer. Die Strahlen sind in blau eingezeichnet, die 1. Beugungsordnung in orange. Maßstab Als Maßstab ist 1 Quadrat gleich 20~mm.}
 \label{fig:strahlen}
 \includegraphics[scale=1]{strahlen.png}
 \end{figure}
 
+\newpage
 
 
 \section{Versuchsdurchführung und Messwerte}
@@ -167,7 +190,7 @@ Die von der Lampe ausgehenden Lichtstrahlen werden in $L_3$ parallelisiert, da d
 Die Versuchsergebnisse werden von der Kamera aufgenommen. Diese wird mit einem Computer und der Software \textit{IC Capture} gesteuert.
 
 
-\subsection{Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
+\subsection{Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
 
 Bei einer großen Lichtquelle kann räumliche Kohärenz auftreten. Daraus resultiert ein schwächerer Konstrast. Die Größe der Lichtquelle wird durch die verstellbare Spaltblende realisiert. Für diesen Versuch wurde monochromatisches Licht verwendet. Dann wurde der $633~$nm Bandpassfilter in den Strahlengang gedreht und der  Doppelspalt mit $d_2 = 0.23~$mm in den Strahlengang geschoben.
 
@@ -300,7 +323,7 @@ $2\cdot w$ / mm & $I_0$ & $I_{-1}$ & $I_{+1}$ & $\overline{I_{1}}$ \\
 
 
 \newpage
-\subsection{Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}
+\subsection{Zusammenhang zwischen spektraler Breite und Interferenzmuster}
 
 Beim zweiten Versuch ist diesmal das Licht räumlich kohärent, dafür variiert die spektrale Breite (und damit die zeitliche Kohärenz). Die Theorie sagt, dass die 0. Beugungsordnung mit der höchsten Intensität dargestellt wird und die Intensität nach außen hin nachlässt. Es wurde die Spaltblende so eingestellt, dass das Licht mit 0.43 mm Spaltabstand räumlich gut kohärent ist. Danach wurde ein Beugungsbild mit dem 633 nm Bandpassfilter, mit dem Langpassfilter und ohne Filter aufgenommen. 
 
@@ -330,7 +353,7 @@ Beim zweiten Versuch ist diesmal das Licht räumlich kohärent, dafür variiert 
 
 
 
-\subsection{Teil 3: Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}
+\subsection{Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}
 
 Hier wurde der vorderste Doppelspalt mit 0.43 mm Spaltabstand verwendet und alle Filter aus dem Strahlengang gedreht. Danach wurde die mit Polyacrylat überzogene Probe in den Strahlengang eingebracht und mit einer Justierschraube verschoben, sodass die Polyacrylat-Schicht nur einen der beiden Spalte abdeckt. Dann wurde das Bild des verschobenen und ein Bild des nicht verschobenen Beugungsmusters, sowie ein Bild ohne Polyacrylat als Referenzwert aufgenommen.
 
@@ -342,7 +365,7 @@ Hier wurde der vorderste Doppelspalt mit 0.43 mm Spaltabstand verwendet und alle
 \end{figure}
 
 
-\subsection{Teil 4: Maximale Größe des Lichts für räumliche Kohärenz}
+\subsection{Maximale Größe des Lichts für räumliche Kohärenz}
 
 In diesem Versuch wurde wieder monochromatisches Licht mit einem Bandpass von 633 nm verwendet. Für drei Doppelspalten ($d_1=0.43~$mm, $d_2=0.23$~mm und $d_3=0.13$~mm) wird die Blende so reguliert, dass der Kontrast gerade verschwindet. Die Werte werden an der $\mu$m-Schraube abgelesen.
 
@@ -363,12 +386,15 @@ $\sigma_i$ & 0.004 & 0.014 & 0.113
 \end{table}
 
 
+\newpage
+
+
 
 \section{Auswertung}
 
 
 
-\subsection{Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
+\subsection{Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
 
 Gleichung~\eqref{eq:kontrast} berechnet den Kontrast. Zusätzlich betrachten wir den Betrag des Kontrasts, da wir in der Messreihe eine Nullstelle des Kontrasts haben. Mit Fehlerrechnung ergibt sich
 \begin{align*}
@@ -395,7 +421,7 @@ Man kann nun den gemessenen Kontrast mit dem theoretischen Kontrast vergleichen.
 
 \begin{figure}[H]
 \centering
-\caption{Kontrast abhängig von der Größe der Lichtquelle.}
+\caption{Kontrast abhängig von der Größe der Lichtquelle. Die blaue Linie ist der theoretische Kontrastverlauf abhängig von der Öffnung der Spaltblende. Die roten Punkte sind die gemessenen Kontraste.}
 \label{fig:curve_task1}
 \includegraphics[width=12cm]{curve_task1.png}
 \end{figure}
@@ -403,7 +429,7 @@ Man kann nun den gemessenen Kontrast mit dem theoretischen Kontrast vergleichen.
 
 
 
-\subsection{Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}
+\subsection{Zusammenhang zwischen spektraler Breite und Interferenzmuster}
 
 Da das Beugungsbild beim Interferenzmuster ohne Filter nach außen hin unscharf wird, wird auch der Kontrast geringer. Das sieht man in Grafik~\ref{fig:filter_kurven}. Zusätzlich sieht man, dass der Bandpass-Filter am wenigsten Frequenz durchlässt. Hier ist der Kontrast auch weiter außen noch größer. Grafisch erkennt man es, dass das Interferenzmuster beim Bandpass-Filter nach außen hin am wenigsten verschwommen ist.
 
@@ -416,11 +442,11 @@ Da das Beugungsbild beim Interferenzmuster ohne Filter nach außen hin unscharf 
 
 
 
-\subsection{Teil 3: Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}
+\subsection{Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}
 
 Es werden die beiden 0. Ordnungen verglichen. Ohne Polyacrylatschicht ist das gesuchte Maximum bei Pixel 534, während es ohne Polyacrylatschicht bei 467 ist. Als Unsicherheit werden 2 Pixel angenommen, da die unmittelbar benachbarten Grauwerte relativ ähnlich sind. Als Verschiebung ergibt sich
 \begin{align*}
-\delta = (67 \pm 4)~\text{pixel}
+x_{\delta} = (67 \pm 4)~\text{pixel}
 \end{align*}
 
 \begin{figure}[H]
@@ -429,39 +455,127 @@ Es werden die beiden 0. Ordnungen verglichen. Ohne Polyacrylatschicht ist das ge
 \includegraphics[width=9cm]{shift_noshift.png}
 \end{figure}
 
-\subsection{Teil 4: Maximale Größe des Lichts für räumliche Kohärenz}
+
+Es muss nun die Anzahl der Pixel in $\mu$m umgerechnet werden. Hierfür wird die Formel~\eqref{eq:umrechnung} verwendet. Dafür wird zuerst die Distanz zwischen dem $0$-tem und dem $4$-ten Maximum benötigt. Wir verwenden als Referenz zur Bestimmung der $\mu$ pro Pixel das Interferenzmuster mit dem Bandpass-Filter aus Aufgabe 2, dafür die Formel ein konstantes $\lambda$ gebraucht wird. Die beiden Maxima sind in Grafik~\ref{fig:633nm_task3} dargestellt.
+
+\begin{figure}[H]
+\centering
+\caption{Beugungsmuster des 633 nm Bandpassfilters, wobei das 0. und das 4. Maximum eingezeichnet sind. (rote Kreuze)}
+\label{fig:633nm_task3}
+\includegraphics[scale=1]{633_for_task3.png}
+\end{figure}
+
+Aus Grafik~\ref{fig:633nm_task3} ergibt sich
+\begin{align*}
+|x_0-x_4| = (238 \pm 4)~\text{pixel}
+\end{align*}
+Der Umrechnungsfaktor zwischen Pixel und $\mu$m ergibt sich nun aus Formel~\eqref{eq:umrechnung}.
+\begin{align*}
+Z = \frac{f\cdot \tan\left(\operatorname{arcsin}\left(\frac{4\cdot \lambda}{d}\right)\right)}{|x_0-x_4|}
+\end{align*}
+wobei $f=150~$mm die Brennweite der Linse, $\lambda=633~$nm die Frequenz des Lichtes und $d=0.43~$mm der Spaltabstand ist (s. Versuch 2). Insgesamt ergibt sich inkl. Fehlerrechnung
+\begin{align}
+Z = (3.71 \pm 0.24)~\mu\text{m} / \text{pixel}
+\end{align}
+
+Mit der Umrechnung kann man jetzt $b=x_\delta\cdot Z$ berechnen. Damit hat man die Verschiebung $b$ in $\mu$m. Diese
+\begin{align*}
+b = (248.65\pm23.65)~\mu\text{m}
+\end{align*}
+Durch die Formel~\eqref{eq:theta} kann man nun den Winkel $\theta$ berechnen. Diesen in Formel~\eqref{eq:schichtdicke} eingesetzt ergibt dann insgesamt
+\begin{align*}
+t = (1.45\pm0.11)~\mu\text{m}
+\end{align*}
 
 
 
-\section{Diskussion}
+\subsection{Maximale Größe des Lichts für räumliche Kohärenz}
 
-\subsection{Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
 
-Man sieht deutlich, dass der Kontrast zuerst mit Größe des Spaltes abnimmt. Nach einem Minimum steigt der Kontrast wieder. Der Kontrast selbst ist immer positiv, ändert sich aber mit der Größe der Lichtquelle. Der grafische Zusammenhang wird in Grafik~\ref{fig:curve_task1} veranschaulicht.
+Aus der bekannten Beziehung $2\cdot w \le \lambda\cdot f_1 /d$ ergibt sich inkl. Fehlerrechung
+\begin{align*}
+2\cdot w = \frac{\Delta f_1 \cdot d \cdot \lambda + f_1\cdot\lambda\cdot \Delta d + f_1\cdot d\cdot \Delta \lambda }{d^2}
+\end{align*}
+Aus $\le$ wird Gleichheitszeichen, da ein Maximum für $2\cdot w$ gesucht wird.
+
+
+Durch Einsetzen erhält man
+\begin{table}[H]
+\caption{Größe des Lichts ($2\cdot w$) bei gegebenem Doppelspaltabstand $d_i$. Zusätzlich die gemessenen Werte $x_i$.}
+\label{tab:task4}
+\begin{tabular}{r|rr}
+$d_i$ / mm & $2\cdot w$ / $\mu$m & $x_i$ / $\mu$m \\
+\hline
+0.43 & $441 \pm 15$ & 320 \\
+0.23 & $825 \pm 36$ & 714\\
+0.13 & $1460 \pm 89$ & 1790
+\end{tabular}
+
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\caption{Maximale Größe des Lichts ($2\cdot w$) abhängig vom Doppelspaltabstand $d$.}
+\label{fig:task4}
+\includegraphics[scale=0.7]{task4.png}
+\end{figure}
+
+Als Unsicherheiten verwenden wir hier $\Delta\lambda=10~$nm, $\Delta f_1 = 2$~mm, $\Delta d_i = 0.005~$mm.
+
+\newpage
+\section{Diskussion und Zusammenfassung}
+
+\subsection{Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
+
+Man sieht deutlich, dass der Kontrast zuerst mit Größe des Spaltes abnimmt. Nach einem Minimum steigt der Kontrast wieder. Der Kontrast selbst ist immer positiv, ändert sich aber mit der Größe der Lichtquelle. Der grafische Zusammenhang wird in Grafik~\ref{fig:curve_task1} veranschaulicht. Im wesentlichen bestätigen die Experimente die durch die Vorbereitung gelernten Inhalte. Die Grundlage dieses Versuchs ist Grafik~\ref{fig:versuch1_grundlagen}.
 
 
 \begin{figure}[H]
 \caption{Theoretischer Hintergrund zu diesem Versuch: mehrere Wellen gleicher Wellenlänge (und unterschiedlicher Phasenverschiebung) überlagert lassen den Kontrast gleichmäßig abnehmen. Quelle: \cite{quelle6}.}
+\label{fig:versuch1_grundlagen}
 \includegraphics[width=10cm]{diskussion2.png}
 \end{figure}
 
 
 
 
-\subsection{Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}
+\subsection{Zusammenhang zwischen spektraler Breite und Interferenzmuster}
 
 
-Dieser Versuch zeigt, dass bei verschiedenen Frequenzen der Kontrast des Beugungsbildes nach außen hin abnimmt, während bei einheitlicher Wellenlänge der Kontrast nach außen hin erhalten bleibt. Dies deckt sich mit der Theorie aus~\cite{quelle6}.
+Dieser Versuch zeigt, dass bei verschiedenen Frequenzen der Kontrast des Beugungsbildes nach außen hin abnimmt, während bei einheitlicher Wellenlänge der Kontrast nach außen hin erhalten bleibt. Dies deckt sich mit der Theorie aus~\cite{quelle6}. Wie zu erwarten war hat das Beugungsbild beim Bandpass-Filter den höchsten Kontrast. Durch die einheitliche Wellenlänge wird der Kontrast nach außen nicht kleiner. Dieser Versuch veranschaulicht Grafik~\ref{fig:versuch2_grundlagen}.
 
 \begin{figure}[H]
 \caption{Theoretischer Hintergrund zu diesem Versuch: mehrere Wellen unterschiedlicher Wellenlänge überlagert lassen den Kontrast nach außen hin abnehmen. Quelle: \cite{quelle6}.}
+\label{fig:versuch2_grundlagen}
 \includegraphics[width=10cm]{diskussion1.png}
 \end{figure}
 
 
 
-\section{Zusammenfassung}
 
+\subsection{Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}
+
+Die Schichtdicke wurde bestimmt, indem man zuerst die Verschiebung eines charakteristischen Punktes (z.B.: Maximum 0. Ordnung) misst. Diese Verschiebung betrug im Versuch 67 Pixel. Danach wurde der Abstand zwischen 0. und 4. Begungsmaximum rechnerisch in $\mu$m bestimmt und aus der entsprechenden Grafik auch in Pixel abgelesen. Durch Verhältnisbildung konnte man die Verschiebung $b$ in $\mu$m feststellen. Daraus folgte durch trigonometrische Überlegung der Beugungswinkel $\theta$, aus dem dann die Schichtdicke berechnet werden konnte.
+
+Bei den Berechnungen kamen einige trigonometrische Funktionen vor. Durch algebraische Vereinfachung konnte man teilweise auch die direkte Berechnung von Winkeln vermeiden, um die Genauigkeit zu steigern. Beispielhaft ist das an folgender Formel veranschaulicht.
+\begin{align*}
+b = f\cdot \tan\left(\operatorname{arcsin}\left(\frac{m\cdot \lambda}{d}\right)\right) = f\cdot \frac{m\cdot \lambda}{\sqrt{d^2 - m^2\cdot \lambda^2}}
+\end{align*}
+
+
+Die berechnete Schichtdicke ist
+\begin{align*}
+t = (1.45\pm0.11)~\mu\text{m}
+\end{align*}
+
+
+
+\subsection{Maximale Größe des Lichts für räumliche Kohärenz}
+
+Grafik~\ref{fig:task4} zeigt den Verlauf der Kurve mit den theoretischen Werten für die maximale Größe der Lichtquelle. Da wir nur Werte für 3 verschiedene Doppelspalten haben, ist es nicht möglich einen statistischen Zusammenhang zu bestimmen. Allerdings scheint dieser optisch erkennbar zu sein.
+
+Durch die Wahl der Unsicherheiten liegen die Messwerte außerhalb der theoretischen Kurve. Es wäre zu diskutieren, ob die Unsicherheiten zu streng gewählt wurden und dass man unter anderen Annahmen eine Übereinstimmung sehen würden.
 
 
 
@@ -499,6 +613,8 @@ Dieser Versuch zeigt, dass bei verschiedenen Frequenzen der Kontrast des Beugung
 
 %\lstinputlisting[language=Python,captionpos=b, label=lst:test,caption={Zerstreuungslinse Auswertung}]{generate_numbers_zerstreuungslinse.py}
 
+
+\newpage
 
 \begin{thebibliography}{9}
 \bibitem{quelle1} \url{https://www.youtube.com/watch?v=oFJCEGcwUiQ}, 07.11.2020, 00:15 Uhr

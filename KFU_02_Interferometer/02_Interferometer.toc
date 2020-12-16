@@ -1,20 +1,21 @@
 \contentsline {section}{Inhaltsverzeichnis}{2}%
 \contentsline {section}{\numberline {1}Aufgabenstellung}{3}%
 \contentsline {section}{\numberline {2}Voraussetzungen und Grundlagen}{3}%
-\contentsline {section}{\numberline {3}Geräteliste}{4}%
-\contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{4}%
-\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{6}%
-\contentsline {subsection}{\numberline {5.1}Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}{6}%
-\contentsline {subsection}{\numberline {5.2}Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}{11}%
-\contentsline {subsection}{\numberline {5.3}Teil 3: Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}{11}%
-\contentsline {subsection}{\numberline {5.4}Teil 4: Maximale Größe des Lichts für räumliche Kohärenz}{12}%
-\contentsline {section}{\numberline {6}Auswertung}{12}%
-\contentsline {subsection}{\numberline {6.1}Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}{12}%
-\contentsline {subsection}{\numberline {6.2}Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}{13}%
-\contentsline {subsection}{\numberline {6.3}Teil 3: Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}{14}%
-\contentsline {subsection}{\numberline {6.4}Teil 4: Maximale Größe des Lichts für räumliche Kohärenz}{15}%
-\contentsline {section}{\numberline {7}Diskussion}{15}%
-\contentsline {subsection}{\numberline {7.1}Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}{15}%
-\contentsline {subsection}{\numberline {7.2}Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}{16}%
-\contentsline {section}{\numberline {8}Zusammenfassung}{16}%
-\contentsline {section}{\numberline {9}Literaturverzeichnis}{16}%
+\contentsline {section}{\numberline {3}Geräteliste}{5}%
+\contentsline {section}{\numberline {4}Beschreibung der Versuchsanordnung}{6}%
+\contentsline {section}{\numberline {5}Versuchsdurchführung und Messwerte}{8}%
+\contentsline {subsection}{\numberline {5.1}Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}{8}%
+\contentsline {subsection}{\numberline {5.2}Zusammenhang zwischen spektraler Breite und Interferenzmuster}{13}%
+\contentsline {subsection}{\numberline {5.3}Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}{13}%
+\contentsline {subsection}{\numberline {5.4}Maximale Größe des Lichts für räumliche Kohärenz}{14}%
+\contentsline {section}{\numberline {6}Auswertung}{15}%
+\contentsline {subsection}{\numberline {6.1}Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}{15}%
+\contentsline {subsection}{\numberline {6.2}Zusammenhang zwischen spektraler Breite und Interferenzmuster}{16}%
+\contentsline {subsection}{\numberline {6.3}Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}{17}%
+\contentsline {subsection}{\numberline {6.4}Maximale Größe des Lichts für räumliche Kohärenz}{20}%
+\contentsline {section}{\numberline {7}Diskussion und Zusammenfassung}{22}%
+\contentsline {subsection}{\numberline {7.1}Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}{22}%
+\contentsline {subsection}{\numberline {7.2}Zusammenhang zwischen spektraler Breite und Interferenzmuster}{22}%
+\contentsline {subsection}{\numberline {7.3}Bestimmung der Dicke der Polyacrylat-Schicht anhand des Interferenzmusters}{23}%
+\contentsline {subsection}{\numberline {7.4}Maximale Größe des Lichts für räumliche Kohärenz}{23}%
+\contentsline {section}{\numberline {8}Literaturverzeichnis}{24}%

@@ -84,6 +84,23 @@ plt.savefig("filter.png")
 
 
 
+mx = [551,789]
+my = [102.835 ,29.47]
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(x_bp, y_bp, 'green')
+ax.plot(mx,my,ls='',marker='x', color='red')
+#ax.legend(['Kein Filter', '633 nm Bandpass', 'Langpass'])
+ax.set_xlabel('pixel')
+ax.set_ylabel('gray value')
+ax.set_title('Beugungsmuster vom 633 nm Bandpass-Filter')
+plt.savefig("633_for_task3.png")
+
+#ax.set_title('Aufgabe 3,  t=100 ns')
+#plt.savefig("bilder/task3/task3_100ns.png")
+plt.close()
+
 
 
 
