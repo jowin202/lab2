@@ -77,9 +77,10 @@ b_n = f_2 \cdot \tan\left( \operatorname{arcsin}\left(\frac{n\cdot\lambda}{d}\ri
 \end{align}
 wobei $f_2$ die Brennweite der Sammellinse nach dem Doppelspalt ist. Außerdem kann man noch den Kontrast $K$ des Inferenzmusters bestimmen, welcher von der jeweiligen Intensität der Lichtquelle abhängt.
 \begin{align}
-K = \frac{I_\text{0,max}-I_\text{1,min}}{I_\text{0,max}+I_\text{1,min}} \label{eq:kontrast}
+K = \frac{I_\text{0,max}-I_\text{1,min}}{I_\text{0,max}+I_\text{1,min}} = \left| \frac{\sin\left(\frac{\pi\cdot d\cdot 2\cdot w}{\lambda\cdot f_1}\right)}{ \frac{\pi\cdot d\cdot 2\cdot w}{\lambda\cdot f_1} }\right|
+ \label{eq:kontrast}
 \end{align}
-wobei $I$ die Intensität, $f_1$ die Brennweite der Sammellinse vor dem Doppelspalt und $\omega$ der Radius der Lichtquelle ist. Außerdem wird bei diesem Experiment auch eine Probe mit Polyacrylat verwendet, welche eine zusätzliche Phasenverschiebung am Doppelspalt bewirkt. Diese Phasenverschiebung kann beschrieben werden durch
+wobei $I$ die Intensität, $f_1$ die Brennweite der Sammellinse vor dem Doppelspalt und $w$ der Durchmesser der Spaltblende ist (wird als \textit{Größe} der Lichtquelle gesehen). Außerdem wird bei diesem Experiment auch eine Probe mit Polyacrylat verwendet, welche eine zusätzliche Phasenverschiebung am Doppelspalt bewirkt. Diese Phasenverschiebung kann beschrieben werden durch
 \begin{align}
 \Delta s_0 = \Delta s + t\cdot (n_1-n_2) = d\cdot\sin(\theta)\cdot t\cdot (n_1-n_2)
 \end{align}
@@ -119,7 +120,11 @@ L3 & Sammellinse 3 & $f_3 = 40~$mm & & $\Delta f_3 = 0.5~$mm \\
 \hline
 L4 & Sammellinse 4 & $f_4 = 30~$mm & & $\Delta f_4 = 0.5~$mm \\
 \hline
-DS & Doppelspalt \\
+DS1 & Doppelspalt & $d_1=0.43~$mm \\
+\hline
+DS2 & Doppelspalt & $d_2=0.23$~mm \\
+\hline
+DS3 & Doppelspalt & $d_3=0.13$~mm\\
 \hline
 
 
@@ -164,9 +169,9 @@ Die Versuchsergebnisse werden von der Kamera aufgenommen. Diese wird mit einem C
 
 \subsection{Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
 
-Bei einer großen Lichtquelle kann räumliche Kohärenz auftreten. Daraus resultiert ein schwächerer Konstrast. Die Größe der Lichtquelle wird durch die verstellbare Spaltblende realisiert. Für diesen Versuch wurde monochromatisches Licht verwendet. Dann wurde der $633~$nm Bandpassfilter in den Strahlengang gedreht und der mittlere Doppelspalt in den Strahlengang geschoben.
+Bei einer großen Lichtquelle kann räumliche Kohärenz auftreten. Daraus resultiert ein schwächerer Konstrast. Die Größe der Lichtquelle wird durch die verstellbare Spaltblende realisiert. Für diesen Versuch wurde monochromatisches Licht verwendet. Dann wurde der $633~$nm Bandpassfilter in den Strahlengang gedreht und der  Doppelspalt mit $d_2 = 0.23~$mm in den Strahlengang geschoben.
 
-Dann wurden 6 geeignete Größen der Lichtquelle gewählt, um den Verlauf des Kontrastes gemäß im Bereich $0 < 2\cdot w < 1.5 \cdot \lambda\cdot f_1 / d$ darstellen zu können. Dafür wurde zunächst die Spaltbreite des Kontrast-Minimums bestimmt. Beim Wert 0 der Mikrometerschraube war der Spalt jedoch noch nicht ganz geschlossen, sodass mit einer negativen Spaltbreite begonnen wurde, um den Spalt auch ganz geschlossen zu halten.
+Dann wurden 6 geeignete Größen der Lichtquelle gewählt, um den Verlauf des Kontrastes gemäß im Bereich $0 < 2\cdot w < 1.5 \cdot \lambda\cdot f_1 / d$ darstellen zu können. Dafür wurde zunächst die Spaltbreite des Kontrast-Minimums bestimmt. Beim Wert 0 der Mikrometerschraube war der Spalt jedoch noch nicht ganz geschlossen, sodass mit einer negativen Spaltbreite $A=(-0.23 \pm 0.06)$~mm begonnen wurde, um den Spalt auch ganz geschlossen zu halten. Die ersten Bilder wurden dann bei dem Ablesewert $A=0~$mm durchgeführt, sodass dieser unter Berücksichtigung des Offsets eigentlich bei $0.23~$mm ist.
 Für die gewählten Größen der Lichtquelle wurde jeweils ein Foto des Beugungsmusters aufgenommen und zusätzlich werden die Grauwerte mit dem Programm ImageJ grafisch dargestellt.
 
 Der Konstrast kann nun mit Formel~\ref{eq:kontrast} berechnet werden.
@@ -175,13 +180,13 @@ Die Aufnahmen der Interferenzmuster und die grafische Darstellung der Grauwerte 
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Interferenzmuster für $2\cdot w \approx (0.23\pm0.06)~$mm}
 \includegraphics[width=9cm]{moodle/img2.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Grafische Darstellung der Intensitäten beim Interferenzmuster für $2\cdot w \approx (0.23\pm0.06)~$mm.}
 \includegraphics[width=9cm]{moodle/img2_graph.png}
 \end{figure}
 
@@ -189,13 +194,13 @@ Die Aufnahmen der Interferenzmuster und die grafische Darstellung der Grauwerte 
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Interferenzmuster für $2\cdot w \approx (0.48\pm0.06)~$mm}
 \includegraphics[width=9cm]{moodle/img3.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Grafische Darstellung der Intensitäten beim Interferenzmuster für $2\cdot w \approx (0.48\pm0.06)~$mm.}
 \includegraphics[width=9cm]{moodle/img3_graph.png}
 \end{figure}
 
@@ -203,13 +208,13 @@ Die Aufnahmen der Interferenzmuster und die grafische Darstellung der Grauwerte 
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Interferenzmuster für $2\cdot w \approx (0.73\pm0.06)~$mm}
 \includegraphics[width=9cm]{moodle/img4.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Grafische Darstellung der Intensitäten beim Interferenzmuster für $2\cdot w \approx (0.73\pm0.06)~$mm.}
 \includegraphics[width=9cm]{moodle/img4_graph.png}
 \end{figure}
 
@@ -218,13 +223,13 @@ Die Aufnahmen der Interferenzmuster und die grafische Darstellung der Grauwerte 
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Interferenzmuster für $2\cdot w \approx (0.97\pm0.06)~$mm}
 \includegraphics[width=9cm]{moodle/img5.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Grafische Darstellung der Intensitäten beim Interferenzmuster für $2\cdot w \approx (0.97\pm0.06)~$mm.}
 \includegraphics[width=9cm]{moodle/img5_graph.png}
 \end{figure}
 
@@ -232,13 +237,13 @@ Die Aufnahmen der Interferenzmuster und die grafische Darstellung der Grauwerte 
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Interferenzmuster für $2\cdot w \approx (1.23\pm0.06)~$mm}
 \includegraphics[width=9cm]{moodle/img6.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Grafische Darstellung der Intensitäten beim Interferenzmuster für $2\cdot w \approx (1.23\pm0.06)~$mm.}
 \includegraphics[width=9cm]{moodle/img6_graph.png}
 \end{figure}
 
@@ -248,13 +253,13 @@ Die Aufnahmen der Interferenzmuster und die grafische Darstellung der Grauwerte 
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Interferenzmuster für $2\cdot w \approx (1.45\pm0.06)~$mm}
 \includegraphics[width=9cm]{moodle/img7.png}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\caption{...}
+\caption{Grafische Darstellung der Intensitäten beim Interferenzmuster für $2\cdot w \approx (1.45\pm0.06)~$mm.}
 \includegraphics[width=9cm]{moodle/img7_graph.png}
 \end{figure}
 
@@ -263,14 +268,14 @@ Die Aufnahmen der Interferenzmuster und die grafische Darstellung der Grauwerte 
 \begin{table}[H]
 \caption{Beugungsextremum 0. Ordnung, bezeichnet als $I_0$, Beugungsextrema 1. Ordnung $I_{-1}$ links von $I_0$ und $I_{+1}$ rechts von $I_0$. Die 0. Ordnung ist bei den ersten Messungen ein Maximum, wird aber später zu Minimum wegen Nullstelle im Kontrast.}
 \begin{tabular}{l|rrrr}
-Spaltbreite & $I_0$ & $I_{-1}$ & $I_{+1}$ & $\overline{I_{1}}$ \\
+$2\cdot w$ / mm & $I_0$ & $I_{-1}$ & $I_{+1}$ & $\overline{I_{1}}$ \\
 \hline
- & 114.891 & 7.118 & 7.597 & 7.358 \\
- & 114.552 & 24.817 & 25.261 & 25.039 \\
- & 128.655 & 69.862 & 69.026 & 69.444 \\
- & 135.926 & 117.512 & 107.198 & 112.355 \\
- & 94.551 & 124.517 & 128.076 & 126.297 \\
- & 95.355 &  119.835 & 122.570 & 121.202
+0.23 & 114.891 & 7.118 & 7.597 & 7.358 \\
+0.48 & 114.552 & 24.817 & 25.261 & 25.039 \\
+0.73 & 128.655 & 69.862 & 69.026 & 69.444 \\
+0.97 & 135.926 & 117.512 & 107.198 & 112.355 \\
+1.23 & 94.551 & 124.517 & 128.076 & 126.297 \\
+1.45 & 95.355 &  119.835 & 122.570 & 121.202
 \end{tabular}
 \end{table}
 
@@ -375,25 +380,37 @@ K = \left|\frac{I_\text{0,max}-I_\text{1,min}}{I_\text{0,max}+I_\text{1,min}} \r
 \begin{table}[H]
 \caption{Berechnung des Kontrasts, Beugungsextremum 0. Ordnung $I_0$, mittleres Beugungsextremum 1. Ordnung $I_1$.}
 \begin{tabular}{l|rr|r}
-Spaltbreite & $I_0$ & $I_1$ & $K$ \\
+$2\cdot w$ / mm & $I_0$ & $I_1$ & $K$ \\
 \hline
- & 114.891 &   7.358 & $0.880$ \\
- & 114.552 &  25.039 & $0.641$ \\
- & 128.655 &  69.444 & $0.299$ \\
- & 135.926 & 112.355 & $0.095$ \\
- & 94.551  & 126.297 & $0.144$ \\
- & 95.355 &  121.202 & $0.119$
+0.23 & 114.891 &   7.358 & $0.880$ \\
+0.48 & 114.552 &  25.039 & $0.641$ \\
+0.73 & 128.655 &  69.444 & $0.299$ \\
+0.97 & 135.926 & 112.355 & $0.095$ \\
+1.23 & 94.551  & 126.297 & $0.144$ \\
+1.45 & 95.355 &  121.202 & $0.119$
 \end{tabular}
 \end{table}
+
+Man kann nun den gemessenen Kontrast mit dem theoretischen Kontrast vergleichen. Dazu zeichnet die Kurve des theoretischen Kontrasts gemäß Gleichung~\eqref{eq:kontrast}.
+
+\begin{figure}[H]
+\centering
+\caption{Kontrast abhängig von der Größe der Lichtquelle.}
+\label{fig:curve_task1}
+\includegraphics[width=12cm]{curve_task1.png}
+\end{figure}
+
 
 
 
 \subsection{Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}
 
+Da das Beugungsbild beim Interferenzmuster ohne Filter nach außen hin unscharf wird, wird auch der Kontrast geringer. Das sieht man in Grafik~\ref{fig:filter_kurven}. Zusätzlich sieht man, dass der Bandpass-Filter am wenigsten Frequenz durchlässt. Hier ist der Kontrast auch weiter außen noch größer. Grafisch erkennt man es, dass das Interferenzmuster beim Bandpass-Filter nach außen hin am wenigsten verschwommen ist.
 
 \begin{figure}[H]
 \centering
 \caption{Darstellung der Intensitäten der Beugungsmaxima abhängig vom Filter.}
+\label{fig:filter_kurven}
 \includegraphics[width=12cm]{filter.png}
 \end{figure}
 
@@ -420,9 +437,26 @@ Es werden die beiden 0. Ordnungen verglichen. Ohne Polyacrylatschicht ist das ge
 
 \subsection{Teil 1: Zusammenhang zwischen Größe der Lichtquelle und Interferenzmuster}
 
+Man sieht deutlich, dass der Kontrast zuerst mit Größe des Spaltes abnimmt. Nach einem Minimum steigt der Kontrast wieder. Der Kontrast selbst ist immer positiv, ändert sich aber mit der Größe der Lichtquelle. Der grafische Zusammenhang wird in Grafik~\ref{fig:curve_task1} veranschaulicht.
 
-Man sieht deutlich, dass der Kontrast zuerst mit Größe des Spaltes abnimmt. Nach einem Minimum steigt der Kontrast wieder.
 
+\begin{figure}[H]
+\caption{Theoretischer Hintergrund zu diesem Versuch: mehrere Wellen gleicher Wellenlänge (und unterschiedlicher Phasenverschiebung) überlagert lassen den Kontrast gleichmäßig abnehmen. Quelle: \cite{quelle6}.}
+\includegraphics[width=10cm]{diskussion2.png}
+\end{figure}
+
+
+
+
+\subsection{Teil 2: Zusammenhang zwischen spektraler Breite und Interferenzmuster}
+
+
+Dieser Versuch zeigt, dass bei verschiedenen Frequenzen der Kontrast des Beugungsbildes nach außen hin abnimmt, während bei einheitlicher Wellenlänge der Kontrast nach außen hin erhalten bleibt. Dies deckt sich mit der Theorie aus~\cite{quelle6}.
+
+\begin{figure}[H]
+\caption{Theoretischer Hintergrund zu diesem Versuch: mehrere Wellen unterschiedlicher Wellenlänge überlagert lassen den Kontrast nach außen hin abnehmen. Quelle: \cite{quelle6}.}
+\includegraphics[width=10cm]{diskussion1.png}
+\end{figure}
 
 
 

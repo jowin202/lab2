@@ -59,19 +59,19 @@ plt.close()
 
 
 fig, (ax1,ax2,ax3) = plt.subplots(3,1) 
-#ax1.axis([400, 800, 0.6, 1])
+ax1.axis([0, 1280, 0, 150])
 ax1.plot(x_nofilter, y_nofilter, 'blue')
 ax1.legend(['Ohne Filter'])
 ax1.set_ylabel('gray value')
 ax1.set_title('Beugungsmuster nach Filter')
 #plt.savefig("Transmission_Methyl.png")
 
-#ax2.axis([400, 800, 0, 0.3])
+ax2.axis([0, 1280, 0, 150])
 ax2.plot(x_bp, y_bp, 'green')
 ax2.legend(['633 nm Bandpass'])
 ax2.set_ylabel('gray value')
 
-#ax3.axis([400, 800, 0, 0.3])
+ax3.axis([0, 1280, 0, 150])
 ax3.plot(x_lp, y_lp, 'red')
 ax3.legend(['Langpass'])
 ax3.set_xlabel('pixel')

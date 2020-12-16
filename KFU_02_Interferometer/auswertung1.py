@@ -1,4 +1,52 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from math import pi, sin
 
+
+
+
+def curve(w):
+    d = 0.23 * 10**-3
+    f = 300 * 10**-3
+    l = 633 * 10**-9
+    return abs( sin(pi* d * w / (l*f)) / (pi* d * w / (l*f)))
+    
+    
+
+
+
+
+
+
+
+dots_x = [0.23, 0.48, 0.73, 0.97, 1.23, 1.45]
+dots_y = [0.88, 0.64, 0.29, 0.09, 0.14, 0.11]
+
+
+x = [i/100 for i in range(1,181)]
+y = [curve(w*10**-3) for w in x]
+
+
+
+
+fig, ax = plt.subplots() 
+#ax.axis([400, 800, 0, 1])
+ax.plot(x, y, 'blue')
+ax.plot(dots_x, dots_y, 'red', ls='', marker='o')
+#ax.plot(x_noshift, y_noshift, 'green')
+#ax.legend(['Mit Polyacrylatschicht', 'Ohne Polyacrylatschicht'])
+ax.set_xlabel('2w / mm')
+ax.set_ylabel('Kontrast / 1')
+ax.set_title('Breite der Lichtquelle gegenüber Kontrast')
+plt.savefig("curve_task1.png")
+
+#ax.set_title('Aufgabe 3,  t=100 ns')
+#plt.savefig("bilder/task3/task3_100ns.png")
+plt.close()
+
+
+
+exit(0)
 
 def read_from_file(filename):
     f = open(filename, "r")
